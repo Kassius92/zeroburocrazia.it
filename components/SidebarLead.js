@@ -4,6 +4,8 @@ import { useState } from 'react';
 export default function SidebarLead({ guida = '' }) {
   const [cap, setCap] = useState('');
   const [telefono, setTelefono] = useState('');
+  const [privacy, setPrivacy] = useState(false);
+  const [contatto, setContatto] = useState(false);
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
   const [error, setError] = useState('');
@@ -12,6 +14,7 @@ export default function SidebarLead({ guida = '' }) {
     setError('');
     if (!cap || cap.replace(/\D/g, '').length < 4) { setError('CAP non valido'); return; }
     if (!telefono || telefono.replace(/\D/g, '').length < 8) { setError('Telefono non valido'); return; }
+    if (!privacy || !contatto) { setError('Accetta entrambe le caselle'); return; }
     setLoading(true);
     try {
       await fetch('/api/lead', {
@@ -38,8 +41,16 @@ export default function SidebarLead({ guida = '' }) {
       <div className="sb-lead-t">📍 Trova professionista</div>
       <div className="sb-lead-d">CAF, commercialista o consulente nella tua zona.</div>
       {error && <div className="sb-lead-err">{error}</div>}
-      <input type="text" placeholder="Il tuo CAP" maxLength={5} value={cap} onChange={e => setCap(e.target.value)} className="sb-lead-input" />
-      <input type="tel" placeholder="Telefono" value={telefono} onChange={e => setTelefono(e.target.value)} className="sb-lead-input" />
+      <input type="text" placeholder="Il tuo CAP *" maxLength={5} value={cap} onChange={e => setCap(e.target.value)} className="sb-lead-input" />
+      <input type="tel" placeholder="Telefono *" value={telefono} onChange={e => setTelefono(e.target.value)} className="sb-lead-input" />
+      <label className="sb-lead-check">
+        <input type="checkbox" checked={privacy} onChange={e => setPrivacy(e.target.checked)} />
+        <span>Accetto la <a href="/privacy" target="_blank" rel="noopener">privacy policy</a></span>
+      </label>
+      <label className="sb-lead-check">
+        <input type="checkbox" checked={contatto} onChange={e => setContatto(e.target.checked)} />
+        <span>Acconsento al contatto da professionisti</span>
+      </label>
       <button className="sb-lead-btn" onClick={handleSubmit} disabled={loading}>
         {loading ? 'Invio…' : 'Trova →'}
       </button>
