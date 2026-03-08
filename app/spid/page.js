@@ -63,6 +63,7 @@ export default function Page() {
   ];
 
   return (
+    <div className="cat-documenti">
     <>
       <Nav variant="scheda" />
       <ScrollReveal />
@@ -93,6 +94,7 @@ export default function Page() {
 
         <div className="hero-c">
           <div className="hero-left">
+            <div className="cat-badge">🪪 Documenti</div>
             <div className="hero-tag"><span className="tag-dot"></span> Guida gratuita completa</div>
             <h1>Faccio lo <em>SPID</em></h1>
             <p className="hero-sub">La tua identità digitale, spiegata semplice. Come ottenerla in 15 minuti, quale provider scegliere e perché nel 2026 non puoi farne a meno.</p>
@@ -377,5 +379,6 @@ export default function Page() {
       <BrevoForm pageName="spid" />
       <Footer variant="scheda" />
     </>
+    </div>
   );
 }

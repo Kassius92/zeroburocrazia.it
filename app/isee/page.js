@@ -65,6 +65,7 @@ export default function Page() {
   ];
 
   return (
+    <div className="cat-fisco">
     <>
       <Nav variant="scheda" />
       <ScrollReveal />
@@ -95,6 +96,7 @@ export default function Page() {
 
         <div className="hero-c">
           <div className="hero-left">
+            <div className="cat-badge">💰 Fisco e soldi</div>
             <div className="hero-tag"><span className="tag-dot"></span> Guida gratuita completa</div>
             <h1>Faccio l&apos;<em>ISEE</em></h1>
             <p className="hero-sub">Cos&apos;&egrave;, a cosa serve, come si fa, quali documenti servono. Se devi chiedere un bonus o un&apos;agevolazione, parti da qui.</p>
@@ -389,5 +391,6 @@ export default function Page() {
       <BrevoForm pageName="isee" />
       <Footer variant="scheda" />
     </>
+    </div>
   );
 }

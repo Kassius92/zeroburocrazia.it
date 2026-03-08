@@ -58,6 +58,7 @@ export default function Page() {
   ];
 
   return (
+    <div className="cat-fisco">
     <>
       <Nav variant="scheda" />
       <ScrollReveal />
@@ -70,6 +71,7 @@ export default function Page() {
         <div className="shimmer-line"></div>
         <div className="hero-c">
           <div className="hero-left">
+            <div className="cat-badge">💰 Fisco e soldi</div>
             <div className="hero-tag"><span className="tag-dot"></span> Guida gratuita completa</div>
             <h1>Apro <em>partita IVA</em></h1>
             <p className="hero-sub">Forfettario o ordinario, costi reali, tasse, contributi INPS, codice ATECO. Tutto quello che devi sapere prima di metterti in proprio, senza paroloni.</p>
@@ -364,5 +366,6 @@ export default function Page() {
       <BrevoForm pageName="piva" />
       <Footer variant="scheda" />
     </>
+    </div>
   );
 }

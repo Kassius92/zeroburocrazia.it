@@ -78,6 +78,7 @@ export default function Pagina730() {
   ];
 
   return (
+    <div className="cat-fisco">
     <>
       <Nav variant="scheda" />
       <ScrollReveal />
@@ -103,6 +104,7 @@ export default function Pagina730() {
         <div className="shimmer-line"></div>
         <div className="hero-c">
           <div className="hero-left">
+            <div className="cat-badge">💰 Fisco e soldi</div>
             <div className="hero-tag"><span className="tag-dot"></span> Guida gratuita completa</div>
             <h1>Faccio il <em>730</em></h1>
             <p className="hero-sub">Tutto quello che devi sapere sulla dichiarazione dei redditi: chi deve farla, quando, quanto costa, e come ottenere il rimborso più alto possibile.</p>
@@ -436,5 +438,6 @@ export default function Pagina730() {
       <BrevoForm pageName="730" />
       <Footer />
     </>
+    </div>
   );
 }

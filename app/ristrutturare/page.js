@@ -61,6 +61,7 @@ export default function Page() {
   ];
 
   return (
+    <div className="cat-casa">
     <>
       <Nav variant="scheda" />
       <ScrollReveal />
@@ -91,7 +92,8 @@ export default function Page() {
 
   <div className="hero-c">
     <div className="hero-left">
-      <div className="hero-tag"><span className="tag-dot"></span> Guida gratuita completa</div>
+      <div className="cat-badge">🏠 Casa</div>
+            <div className="hero-tag"><span className="tag-dot"></span> Guida gratuita completa</div>
       <h1>Ristrutturare <em>casa</em></h1>
       <p className="hero-sub">Bonus, permessi, preventivi e IVA agevolata: tutto quello che devi sapere prima di iniziare i lavori, spiegato come si deve.</p>
       <div className="hero-pills">
@@ -396,5 +398,6 @@ export default function Page() {
       <BrevoForm pageName="ristrutturare" />
       <Footer />
     </>
+    </div>
   );
 }

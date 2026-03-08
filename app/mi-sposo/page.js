@@ -67,6 +67,7 @@ export default function Page() {
   ];
 
   return (
+    <div className="cat-famiglia">
     <>
       <Nav variant="scheda" />
       <ScrollReveal />
@@ -86,6 +87,7 @@ export default function Page() {
         <div className="shimmer-line"></div>
         <div className="hero-c">
           <div className="hero-left">
+            <div className="cat-badge">👨‍👩‍👧 Famiglia</div>
             <div className="hero-tag"><span className="tag-dot"></span> Guida gratuita completa</div>
             <h1>Mi <em>sposo</em></h1>
             <p className="hero-sub">Tutta la burocrazia del matrimonio, spiegata semplice. Documenti, pubblicazioni, costi, regime patrimoniale e cosa fare dopo le nozze.</p>
@@ -347,5 +349,6 @@ export default function Page() {
       <BrevoForm pageName="mi-sposo" />
       <Footer variant="scheda" />
     </>
+    </div>
   );
 }

@@ -63,6 +63,7 @@ export default function Page() {
   ];
 
   return (
+    <div className="cat-casa">
     <>
       <Nav variant="scheda" />
       <ScrollReveal />
@@ -90,6 +91,7 @@ export default function Page() {
         <div className="shimmer-line"></div>
         <div className="hero-c">
           <div className="hero-left">
+            <div className="cat-badge">🏠 Casa</div>
             <div className="hero-tag"><span className="tag-dot"></span> Guida gratuita completa</div>
             <h1>Compro <em>casa</em></h1>
             <p className="hero-sub">Tutto quello che devi sapere per comprare casa senza sorprese: iter, imposte, mutuo, documenti e i costi che nessuno ti dice in anticipo.</p>
@@ -338,5 +340,6 @@ export default function Page() {
       <BrevoForm pageName="compro-casa" />
       <Footer variant="scheda" />
     </>
+    </div>
   );
 }

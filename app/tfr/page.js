@@ -66,6 +66,7 @@ export default function Page() {
   ];
 
   return (
+    <div className="cat-lavoro">
     <>
       <Nav variant="scheda" />
       <ScrollReveal />
@@ -93,6 +94,7 @@ export default function Page() {
         <div className="shimmer-line"></div>
         <div className="hero-c">
           <div className="hero-left">
+            <div className="cat-badge">💼 Lavoro</div>
             <div className="hero-tag"><span className="tag-dot"></span> Guida gratuita completa</div>
             <h1>Il mio <em>TFR</em></h1>
             <p className="hero-sub">La liquidazione spiegata semplice. Quanto ti spetta, come si calcola, come viene tassata e la scelta tra azienda e fondo pensione.</p>
@@ -333,5 +335,6 @@ export default function Page() {
       <BrevoForm pageName="tfr" />
       <Footer variant="scheda" />
     </>
+    </div>
   );
 }

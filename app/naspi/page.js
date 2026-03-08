@@ -69,6 +69,7 @@ export default function Page() {
   ];
 
   return (
+    <div className="cat-lavoro">
     <>
       <Nav variant="scheda" />
       <ScrollReveal />
@@ -99,6 +100,7 @@ export default function Page() {
 
         <div className="hero-c">
           <div className="hero-left">
+            <div className="cat-badge">💼 Lavoro</div>
             <div className="hero-tag"><span className="tag-dot"></span> Guida gratuita completa</div>
             <h1>Ho perso il <em>lavoro</em></h1>
             <p className="hero-sub">NASpI: la disoccupazione spiegata semplice. Quanto ti spetta, come fare domanda, le scadenze da non perdere e gli errori che ti fanno perdere soldi.</p>
@@ -434,5 +436,6 @@ export default function Page() {
       <BrevoForm pageName="naspi" />
       <Footer variant="scheda" />
     </>
+    </div>
   );
 }

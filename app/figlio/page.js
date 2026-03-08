@@ -59,6 +59,7 @@ export default function Page() {
   ];
 
   return (
+    <div className="cat-famiglia">
     <>
       <Nav variant="scheda" />
       <ScrollReveal />
@@ -89,7 +90,8 @@ export default function Page() {
 
   <div className="hero-c">
     <div className="hero-left">
-      <div className="hero-tag"><span className="tag-dot"></span> Guida gratuita completa</div>
+      <div className="cat-badge">👨‍👩‍👧 Famiglia</div>
+            <div className="hero-tag"><span className="tag-dot"></span> Guida gratuita completa</div>
       <h1>Aspetto un <em>figlio</em></h1>
       <p className="hero-sub">Congedi, bonus, assegno unico, documenti del neonato — tutto quello che devi fare e chiedere, mese per mese, spiegato come si deve.</p>
       <div className="hero-pills">
@@ -441,5 +443,6 @@ export default function Page() {
       <BrevoForm pageName="figlio" />
       <Footer />
     </>
+    </div>
   );
 }

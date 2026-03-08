@@ -66,6 +66,7 @@ export default function Page() {
   ];
 
   return (
+    <div className="cat-lavoro">
     <>
       <Nav variant="scheda" />
       <ScrollReveal />
@@ -96,6 +97,7 @@ export default function Page() {
 
         <div className="hero-c">
           <div className="hero-left">
+            <div className="cat-badge">💼 Lavoro</div>
             <div className="hero-tag"><span className="tag-dot"></span> Guida gratuita completa</div>
             <h1>Mi <em>dimetto</em></h1>
             <p className="hero-sub">Come dare le dimissioni nel modo giusto. Procedura online, preavviso, TFR e gli errori che ti costano soldi.</p>
@@ -375,5 +377,6 @@ export default function Page() {
       <BrevoForm pageName="dimissioni" />
       <Footer variant="scheda" />
     </>
+    </div>
   );
 }
