@@ -9,8 +9,6 @@ import SidebarToggle from '@/components/SidebarToggle';
 import QuizTfr from '@/components/QuizTfr';
 import CalcTfr from '@/components/CalcTfr';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
-import LeadBox from '@/components/LeadBox';
-import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: 'TFR 2026: Calcolo, Tassazione, Anticipo e Quando Spetta',
@@ -189,11 +187,7 @@ export default function Page() {
               <p>Quota annua: 30.000 ÷ 13,5 = 2.222€ (meno contributo INPS 0,5% = ~2.072€ netti). In 8 anni: ~16.578€ lordi + rivalutazione ~1.660€ = <strong>~18.238€ lordi</strong>. Dopo la tassazione separata (~23%): <strong>TFR netto circa 14.500€</strong>.</p>
             </div>
           </div>
-
-          <LeadBox guida="tfr" titolo="Ti serve un consulente?" sottotitolo="Trova chi ti aiuta con TFR e liquidazione nella tua zona. Gratis per te." />
-
-
-          {/* TASSAZIONE */}
+{/* TASSAZIONE */}
           <div className="sec r" id="tassazione">
             <div className="sec-tag">Le tasse</div>
             <h2>Come viene tassato il TFR</h2>
@@ -320,8 +314,7 @@ export default function Page() {
         </main>
 
         <aside className="aside">
-          <SidebarLead guida="tfr" />
-          <div className="sbsec">
+<div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">✅</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Verifica la tua situazione</div></div></a>
             <a href="#calcolo" className="sbtool"><span className="sbtool-i">📊</span><div><div className="sbtool-n">Calcolatore TFR</div><div className="sbtool-d">Stima lordo e netto</div></div></a>

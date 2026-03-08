@@ -11,8 +11,6 @@ import Calculator730 from '@/components/Calculator730';
 import PrintButton from '@/components/PrintButton';
 import SidebarToggle from '@/components/SidebarToggle';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
-import LeadBox from '@/components/LeadBox';
-import SidebarLead from '@/components/SidebarLead';
 import Tip from '@/components/Tip';
 
 export const metadata = {
@@ -290,9 +288,7 @@ export default function Pagina730() {
           </div>
 
           {/* LEAD BOX — dopo costi, momento decisionale */}
-          <LeadBox guida="730" titolo="Ti serve un CAF o commercialista?" sottotitolo="Dicci dove sei e ti mettiamo in contatto con un professionista della tua zona. Gratis." />
-
-          {/* AFFILIAZIONE */}
+{/* AFFILIAZIONE */}
           <div className="aff-block r">
             <div className="aff-label">Strumento consigliato</div>
             <div className="aff-body">
@@ -420,8 +416,7 @@ export default function Pagina730() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <SidebarLead guida="730" />
-          <div className="sbsec">
+<div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">🎯</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Scopri se devi farlo</div></div></a>
             <a href="#calcolatore" className="sbtool"><span className="sbtool-i">🧮</span><div><div className="sbtool-n">Calcolatore rimborso</div><div className="sbtool-d">Stima quanto recuperi</div></div></a>

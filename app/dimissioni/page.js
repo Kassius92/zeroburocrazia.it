@@ -8,8 +8,6 @@ import PrintButton from '@/components/PrintButton';
 import SidebarToggle from '@/components/SidebarToggle';
 import QuizDimissioni from '@/components/QuizDimissioni';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
-import LeadBox from '@/components/LeadBox';
-import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: 'Dimissioni Volontarie Online 2026: Procedura, Preavviso e TFR',
@@ -208,11 +206,7 @@ export default function Page() {
               <p>Calcola il preavviso prima di compilare il modulo. Sbagliare la data è l&apos;errore più comune — leggi la sezione preavviso qui sotto.</p>
             </div>
           </div>
-
-          <LeadBox guida="dimissioni" titolo="Ti serve un consulente del lavoro?" sottotitolo="Trova chi ti assiste con dimissioni e TFR nella tua zona. Gratis per te." />
-
-
-          {/* PREAVVISO */}
+{/* PREAVVISO */}
           <div className="sec r" id="preavviso">
             <div className="sec-tag">Le tempistiche</div>
             <h2>Il preavviso: quanti giorni devi dare</h2>
@@ -361,8 +355,7 @@ export default function Page() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <SidebarLead guida="dimissioni" />
-          <div className="sbsec">
+<div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">✅</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Verifica la procedura</div></div></a>
             <a href="#preavviso" className="sbtool"><span className="sbtool-i">📊</span><div><div className="sbtool-n">Tabelle preavviso</div><div className="sbtool-d">Commercio e Metalmeccanici</div></div></a>

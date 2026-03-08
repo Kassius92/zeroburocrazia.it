@@ -9,8 +9,6 @@ import SidebarToggle from '@/components/SidebarToggle';
 import QuizComproCasa from '@/components/QuizComproCasa';
 import CalcComproCasa from '@/components/CalcComproCasa';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
-import LeadBox from '@/components/LeadBox';
-import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: 'Comprare Casa nel 2026: Mutuo, Bonus Prima Casa, Costi e Documenti',
@@ -214,11 +212,7 @@ export default function Page() {
               <p>L&apos;imposta di registro si calcola sul valore catastale rivalutato, non sul prezzo pagato. Il valore catastale &egrave; quasi sempre molto inferiore al prezzo di mercato — le imposte effettive sono spesso inferiori alle aspettative.</p>
             </div>
           </div>
-
-          <LeadBox guida="compro-casa" titolo="Ti serve un professionista?" sottotitolo="Notaio, broker mutui o agenzia nella tua zona. Gratis per te." />
-
-
-          {/* MUTUO */}
+{/* MUTUO */}
           <div className="sec r" id="mutuo">
             <div className="sec-tag">Finanziamento</div>
             <h2>Il mutuo: quello che devi sapere prima di firmarlo</h2>
@@ -325,8 +319,7 @@ export default function Page() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <SidebarLead guida="compro-casa" />
-          <div className="sbsec">
+<div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti</div>
             <a href="#calcolatore" className="sbtool"><span className="sbtool-i">🧮</span><div><div className="sbtool-n">Calcolatore costi</div><div className="sbtool-d">Stima imposte e spese</div></div></a>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">✅</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Scopri il tuo caso</div></div></a>

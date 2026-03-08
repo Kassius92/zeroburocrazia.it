@@ -8,8 +8,6 @@ import PrintButton from '@/components/PrintButton';
 import SidebarToggle from '@/components/SidebarToggle';
 import QuizSpid from '@/components/QuizSpid';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
-import LeadBox from '@/components/LeadBox';
-import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: 'Come Fare lo SPID nel 2026: Costo, Tempi e Provider Migliore',
@@ -248,11 +246,7 @@ export default function Page() {
               <p>Se hai una <strong>CIE</strong> (carta d&apos;identità elettronica, quella con il chip) e un telefono con NFC: scegli un provider che supporta il riconoscimento via CIE (Poste, Lepida, InfoCert). Avvicini la carta al telefono, confermi il PIN, e lo SPID è attivo in 5 minuti. Senza uscire di casa.</p>
             </div>
           </div>
-
-          <LeadBox guida="spid" titolo="Preferisci farti aiutare?" sottotitolo="Un operatore della tua zona può attivare lo SPID per te. Gratis." />
-
-
-          {/* PROVIDER */}
+{/* PROVIDER */}
           <div className="sec breve-hide r" id="provider">
             <div className="sec-tag">Confronto</div>
             <h2>Quale provider scegliere</h2>
@@ -363,8 +357,7 @@ export default function Page() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <SidebarLead guida="spid" />
-          <div className="sbsec">
+<div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">✅</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Scopri se ti serve</div></div></a>
             <a href="#provider" className="sbtool"><span className="sbtool-i">📊</span><div><div className="sbtool-n">Confronto provider</div><div className="sbtool-d">Costi e metodi</div></div></a>

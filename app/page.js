@@ -99,8 +99,8 @@ export default function HomePage() {
             </div>
             <div className="step r">
               <div className="step-number">3</div>
-              <h3>Trova chi ti aiuta <span className="lead-soon-badge" style={{fontSize:'11px',verticalAlign:'middle',marginLeft:'8px'}}>Prossimamente</span></h3>
-              <p>Se ti serve un professionista, te lo troviamo nella tua zona. Commercialisti, CAF, broker — gratis per te.</p>
+              <h3>Resta aggiornato</h3>
+              <p>Scadenze, bonus, novità — ti avvisiamo noi quando cambia qualcosa che ti riguarda. Iscriviti alla newsletter, è gratis.</p>
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@ export default function HomePage() {
           <div className="pricing-header r">
             <div className="section-label">Perché è gratis</div>
             <h2 className="section-title">Nessun trucco. È gratis davvero.</h2>
-            <p className="section-subtitle">ZeroBurocrazia nasce per rendere la burocrazia accessibile a tutti. Le guide sono gratuite, complete e senza registrazione. Presto offriremo anche la possibilità di metterti in contatto con professionisti della tua zona — anche quello sarà gratuito per te.</p>
+            <p className="section-subtitle">ZeroBurocrazia nasce per rendere la burocrazia accessibile a tutti. Le guide sono gratuite, complete e senza registrazione. Ci sosteniamo con link di affiliazione verso servizi utili — non costa nulla in più a te e ci permette di restare gratuiti.</p>
           </div>
         </div>
       </section>

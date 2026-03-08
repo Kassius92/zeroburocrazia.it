@@ -11,7 +11,7 @@ const nextConfig = {
       {
         source: '/professionisti',
         destination: '/',
-        permanent: false,
+        permanent: true,
       },
     ];
   },

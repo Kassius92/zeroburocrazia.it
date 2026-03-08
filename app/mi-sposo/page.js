@@ -8,8 +8,6 @@ import PrintButton from '@/components/PrintButton';
 import SidebarToggle from '@/components/SidebarToggle';
 import QuizSposo from '@/components/QuizSposo';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
-import LeadBox from '@/components/LeadBox';
-import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: 'Sposarsi nel 2026: Documenti, Costi, Procedura e Regime Patrimoniale',
@@ -233,11 +231,7 @@ export default function Page() {
               <p>Se vi sposate nella sala del Comune, in orario d&apos;ufficio, il costo totale è solo la marca da bollo (16-32€). Le tariffe salgono se scegliete location comunali di pregio, orari serali/weekend, o sale esterne convenzionate.</p>
             </div>
           </div>
-
-          <LeadBox guida="mi-sposo" titolo="Ti serve un professionista?" sottotitolo="Wedding planner, avvocato o commercialista nella tua zona. Gratis per te." />
-
-
-          {/* REGIME PATRIMONIALE */}
+{/* REGIME PATRIMONIALE */}
           <div className="sec r" id="regime">
             <div className="sec-tag">La scelta importante</div>
             <h2>Comunione o separazione dei beni?</h2>
@@ -333,8 +327,7 @@ export default function Page() {
         </main>
 
         <aside className="aside">
-          <SidebarLead guida="mi-sposo" />
-          <div className="sbsec">
+<div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">✅</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Quale procedura seguire</div></div></a>
             <a href="#regime" className="sbtool"><span className="sbtool-i">⚖️</span><div><div className="sbtool-n">Comunione vs separazione</div><div className="sbtool-d">Tabella comparativa</div></div></a>

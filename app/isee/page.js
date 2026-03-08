@@ -8,8 +8,6 @@ import PrintButton from '@/components/PrintButton';
 import SidebarToggle from '@/components/SidebarToggle';
 import QuizIsee from '@/components/QuizIsee';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
-import LeadBox from '@/components/LeadBox';
-import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: "ISEE 2026: Come Farlo, Documenti Necessari, Costi e Simulazione",
@@ -245,11 +243,7 @@ export default function Page() {
               <p><strong>Se hai dimestichezza con SPID e computer</strong> → fallo online con la precompilata. Ci metti 15–20 minuti ed &egrave; tutto gratis.<br/><strong>Se non ti fidi o preferisci un aiuto</strong> → vai al CAF. &Egrave; gratis, ci metti mezz&apos;ora, e lo fanno loro. Prenota a gennaio per evitare le code.<br/><strong>Se hai situazioni complesse</strong> (immobili all&apos;estero, separazione in corso) → vai dal commercialista. Paga di pi&ugrave; ma evita errori.</p>
             </div>
           </div>
-
-          <LeadBox guida="isee" titolo="Ti serve aiuto con l'ISEE?" sottotitolo="Un CAF della tua zona può farlo per te in 30 minuti. Gratis per te." />
-
-
-          {/* DOCUMENTI */}
+{/* DOCUMENTI */}
           <div className="sec r" id="documenti">
             <div className="sec-tag">Checklist</div>
             <h2>Documenti necessari</h2>
@@ -375,8 +369,7 @@ export default function Page() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <SidebarLead guida="isee" />
-          <div className="sbsec">
+<div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">🎯</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Scopri se ti serve</div></div></a>
             <a href="#costi" className="sbtool"><span className="sbtool-i">📊</span><div><div className="sbtool-n">Confronto metodi</div><div className="sbtool-d">Online vs CAF vs commercialista</div></div></a>

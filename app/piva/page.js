@@ -9,8 +9,6 @@ import SidebarToggle from '@/components/SidebarToggle';
 import QuizPiva from '@/components/QuizPiva';
 import CalcPiva from '@/components/CalcPiva';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
-import LeadBox from '@/components/LeadBox';
-import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: 'Aprire Partita IVA nel 2026: Costi, Tasse, Forfettario e Procedura',
@@ -259,11 +257,7 @@ export default function Page() {
             </div>
             <div className="ib tip r"><div className="ib-t">💡 Consiglio onesto</div><p>Se sei in forfettario con un&apos;attivit&agrave; semplice (freelance, consulente, artigiano), un <strong>commercialista online</strong> basta e avanza. Paghi 200-500€/anno, hai tutto gestito e non devi pensare a nulla. &Egrave; il miglior rapporto qualit&agrave;-prezzo.</p></div>
           </div>
-
-          <LeadBox guida="piva" titolo="Ti serve un commercialista?" sottotitolo="Trova un commercialista nella tua zona che ti segue dall'apertura in poi. Gratis per te." />
-
-
-          {/* AFFILIAZIONI */}
+{/* AFFILIAZIONI */}
           <div className="aff-block r">
             <div className="aff-label">Strumento consigliato</div>
             <div className="aff-body">
@@ -349,8 +343,7 @@ export default function Page() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <SidebarLead guida="piva" />
-          <div className="sbsec">
+<div className="sbsec">
             <div className="sbsec-t">🔧 Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">✅</span><div><div className="sbtool-n">Quiz: serve a me?</div><div className="sbtool-d">Scopri se ti serve</div></div></a>
             <a href="#calcolatore" className="sbtool"><span className="sbtool-i">🧮</span><div><div className="sbtool-n">Calcolatore tasse</div><div className="sbtool-d">Stima personalizzata</div></div></a>

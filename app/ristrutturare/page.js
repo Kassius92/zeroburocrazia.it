@@ -9,8 +9,6 @@ import SidebarToggle from '@/components/SidebarToggle';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
 import QuizRistrutturare from '@/components/QuizRistrutturare';
 import CalcRistrutturare from '@/components/CalcRistrutturare';
-import LeadBox from '@/components/LeadBox';
-import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: 'Ristrutturare Casa nel 2026: Bonus, Detrazioni, Permessi e Costi',
@@ -278,11 +276,7 @@ export default function Page() {
     <p>Ristrutturare casa senza perdere il bonus richiede di seguire un ordine preciso. Ecco i passaggi.</p>
     <div className="steps">
       <div className="step r d1"><div className="stepn">1</div><div className="stepb"><strong>Chiedi almeno 3 preventivi</strong><p>Confronta sempre più imprese. Il preventivo deve dettagliare ogni voce: manodopera, materiali, smaltimento, spese tecniche. Diffida di chi ti dà un prezzo "a corpo" senza voci.</p></div></div>
-
-          <LeadBox guida="ristrutturare" titolo="Ti serve un professionista?" sottotitolo="Geometra, impresa edile o consulente nella tua zona. Gratis per te." />
-
-
-  {/* BLOCCO AFFILIAZIONE: PREVENTIVI ONLINE */}
+{/* BLOCCO AFFILIAZIONE: PREVENTIVI ONLINE */}
   <div className="aff-block r">
     <div className="aff-label">Strumento consigliato</div>
     <div className="aff-body">
@@ -380,8 +374,7 @@ export default function Page() {
 
 {/* SIDEBAR */}
         <aside className="aside">
-          <SidebarLead guida="ristrutturare" />
-          <div className="sbsec">
+<div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti</div>
             <a href="#calcolatore" className="sbtool"><span className="sbtool-i">🧮</span><div><div className="sbtool-n">Calcolatore detrazione</div><div className="sbtool-d">Stima il tuo bonus</div></div></a>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">✅</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Scopri il tuo caso</div></div></a>
