@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
 import SchemaOrg from '@/components/SchemaOrg';
 import OpenMenuButton from '@/components/OpenMenuButton';
+import LeadBox from '@/components/LeadBox';
 import './home.css';
 
 export const metadata = {
@@ -105,6 +106,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section style={{ maxWidth: '700px', margin: '0 auto', padding: '0 28px 40px' }}>
+        <LeadBox guida="homepage" titolo="Sai già cosa ti serve?" sottotitolo="Dicci dove sei e ti mettiamo in contatto con il professionista giusto. Gratis, senza impegno." />
       </section>
 
       <section className="preview" id="esempio">

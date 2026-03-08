@@ -9,6 +9,7 @@ import SidebarToggle from '@/components/SidebarToggle';
 import QuizSposo from '@/components/QuizSposo';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
 import LeadBox from '@/components/LeadBox';
+import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: 'Sposarsi nel 2026: Documenti, Costi, Procedura e Regime Patrimoniale',
@@ -233,6 +234,9 @@ export default function Page() {
             </div>
           </div>
 
+          <LeadBox guida="mi-sposo" titolo="Ti serve un professionista?" sottotitolo="Wedding planner, avvocato o commercialista nella tua zona. Gratis per te." />
+
+
           {/* REGIME PATRIMONIALE */}
           <div className="sec r" id="regime">
             <div className="sec-tag">La scelta importante</div>
@@ -336,11 +340,7 @@ export default function Page() {
         </main>
 
         <aside className="aside">
-          <div className="sb-cta">
-            <div className="sb-ct">Ti serve un professionista?</div>
-            <div className="sb-cd">Trova chi ti aiuta nella tua zona. Gratis.</div>
-            <a href="#trova-professionista" className="sb-cb">Trova professionista →</a>
-          </div>
+          <SidebarLead guida="mi-sposo" />
           <div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">✅</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Quale procedura seguire</div></div></a>

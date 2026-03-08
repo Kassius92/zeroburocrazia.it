@@ -3,7 +3,8 @@ import { useState } from 'react';
 
 export default function LeadBox({ guida = '', titolo = 'Non vuoi farlo da solo?', sottotitolo = 'Trova un professionista nella tua zona. Gratis, senza impegno.' }) {
   const [cap, setCap] = useState('');
-  const [contatto, setContatto] = useState('');
+  const [telefono, setTelefono] = useState('');
+  const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
   const [error, setError] = useState('');
@@ -14,20 +15,24 @@ export default function LeadBox({ guida = '', titolo = 'Non vuoi farlo da solo?'
       setError('Inserisci un CAP valido.');
       return;
     }
-    if (!contatto || (!contatto.includes('@') && contatto.replace(/\D/g, '').length < 8)) {
-      setError('Inserisci un\'email o un numero di telefono.');
+    if (!telefono || telefono.replace(/\D/g, '').length < 8) {
+      setError('Inserisci un numero di telefono valido.');
       return;
     }
     setLoading(true);
     try {
-      const res = await fetch('/api/lead', {
+      await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ guida, cap: cap.trim(), contatto: contatto.trim() }),
+        body: JSON.stringify({
+          guida,
+          cap: cap.trim(),
+          telefono: telefono.trim(),
+          email: email.trim() || '',
+        }),
       });
-      if (!res.ok) throw new Error();
     } catch {
-      // fallback: log via image pixel to Google Sheet
+      // silent fail
     }
     setLoading(false);
     setDone(true);
@@ -38,7 +43,7 @@ export default function LeadBox({ guida = '', titolo = 'Non vuoi farlo da solo?'
       <div className="lead-box lead-box-done" id="trova-professionista">
         <div className="lead-icon">✅</div>
         <div className="lead-done-title">Richiesta ricevuta!</div>
-        <p>Ti metteremo in contatto con un professionista della tua zona entro 24 ore. Nessun obbligo, nessun costo per te.</p>
+        <p>Un professionista della tua zona ti contatterà entro 24 ore. Nessun obbligo, nessun costo per te.</p>
       </div>
     );
   }
@@ -55,7 +60,7 @@ export default function LeadBox({ guida = '', titolo = 'Non vuoi farlo da solo?'
       {error && <div className="lead-error">{error}</div>}
       <div className="lead-fields">
         <div className="lead-field">
-          <label htmlFor={`cap-${guida}`}>Il tuo CAP</label>
+          <label htmlFor={`cap-${guida}`}>Il tuo CAP *</label>
           <input
             type="text"
             id={`cap-${guida}`}
@@ -66,13 +71,23 @@ export default function LeadBox({ guida = '', titolo = 'Non vuoi farlo da solo?'
           />
         </div>
         <div className="lead-field">
-          <label htmlFor={`contatto-${guida}`}>Email o telefono</label>
+          <label htmlFor={`tel-${guida}`}>Telefono *</label>
           <input
-            type="text"
-            id={`contatto-${guida}`}
-            placeholder="Es. mario@email.it o 333 123 4567"
-            value={contatto}
-            onChange={e => setContatto(e.target.value)}
+            type="tel"
+            id={`tel-${guida}`}
+            placeholder="Es. 333 123 4567"
+            value={telefono}
+            onChange={e => setTelefono(e.target.value)}
+          />
+        </div>
+        <div className="lead-field">
+          <label htmlFor={`email-${guida}`}>Email <span style={{opacity:.5}}>(facoltativa)</span></label>
+          <input
+            type="email"
+            id={`email-${guida}`}
+            placeholder="Es. mario@email.it"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
           />
         </div>
         <button className="lead-btn" onClick={handleSubmit} disabled={loading}>
@@ -80,7 +95,7 @@ export default function LeadBox({ guida = '', titolo = 'Non vuoi farlo da solo?'
         </button>
       </div>
       <div className="lead-privacy">
-        🔒 Nessun costo. Ti contattiamo entro 24h. <a href="/privacy">Privacy policy</a>
+        🔒 Nessun costo per te. Ti chiamano entro 24h. <a href="/privacy">Privacy policy</a>
       </div>
     </div>
   );

@@ -12,6 +12,7 @@ import PrintButton from '@/components/PrintButton';
 import SidebarToggle from '@/components/SidebarToggle';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
 import LeadBox from '@/components/LeadBox';
+import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: '730 Precompilato 2026: Come Farlo, Detrazioni, Scadenze e Rimborso',
@@ -280,6 +281,9 @@ export default function Pagina730() {
             <Link href="/isee" className="xlink r"><span className="xlink-em">📋</span><div className="xlink-t"><strong>Faccio l&apos;ISEE</strong> — Molti documenti sono gli stessi. Fai entrambi.</div><span className="xlink-ar">→</span></Link>
           </div>
 
+          {/* LEAD BOX — dopo costi, momento decisionale */}
+          <LeadBox guida="730" titolo="Ti serve un CAF o commercialista?" sottotitolo="Dicci dove sei e ti mettiamo in contatto con un professionista della tua zona. Gratis." />
+
           {/* AFFILIAZIONE */}
           <div className="aff-block r">
             <div className="aff-label">Strumento consigliato</div>
@@ -369,7 +373,11 @@ export default function Pagina730() {
           </div>
 
           {/* CTA BANNER */}
-          <LeadBox guida="730" />
+          <div className="ctab r">
+            <h3>Preferisci farti aiutare?</h3>
+            <p>Un professionista della tua zona può occuparsi di tutto. Gratis per te.</p>
+            <a href="#trova-professionista" className="btnc">Trova professionista →</a>
+          </div>
 
           {/* RELATED */}
           <div className="related r">
@@ -384,11 +392,7 @@ export default function Pagina730() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <div className="sb-cta">
-            <div className="sb-ct">Ti serve un professionista?</div>
-            <div className="sb-cd">Trova chi ti aiuta nella tua zona. Gratis.</div>
-            <a href="#trova-professionista" className="sb-cb">Trova professionista →</a>
-          </div>
+          <SidebarLead guida="730" />
           <div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">🎯</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Scopri se devi farlo</div></div></a>

@@ -9,6 +9,7 @@ import SidebarToggle from '@/components/SidebarToggle';
 import QuizDimissioni from '@/components/QuizDimissioni';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
 import LeadBox from '@/components/LeadBox';
+import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: 'Dimissioni Volontarie Online 2026: Procedura, Preavviso e TFR',
@@ -208,6 +209,9 @@ export default function Page() {
             </div>
           </div>
 
+          <LeadBox guida="dimissioni" titolo="Ti serve un consulente del lavoro?" sottotitolo="Trova chi ti assiste con dimissioni e TFR nella tua zona. Gratis per te." />
+
+
           {/* PREAVVISO */}
           <div className="sec r" id="preavviso">
             <div className="sec-tag">Le tempistiche</div>
@@ -363,11 +367,7 @@ export default function Page() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <div className="sb-cta">
-            <div className="sb-ct">Ti serve un professionista?</div>
-            <div className="sb-cd">Trova chi ti aiuta nella tua zona. Gratis.</div>
-            <a href="#trova-professionista" className="sb-cb">Trova professionista →</a>
-          </div>
+          <SidebarLead guida="dimissioni" />
           <div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">✅</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Verifica la procedura</div></div></a>

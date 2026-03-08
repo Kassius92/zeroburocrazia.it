@@ -10,6 +10,7 @@ import QuizPiva from '@/components/QuizPiva';
 import CalcPiva from '@/components/CalcPiva';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
 import LeadBox from '@/components/LeadBox';
+import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: 'Aprire Partita IVA nel 2026: Costi, Tasse, Forfettario e Procedura',
@@ -259,6 +260,9 @@ export default function Page() {
             <div className="ib tip r"><div className="ib-t">💡 Consiglio onesto</div><p>Se sei in forfettario con un&apos;attivit&agrave; semplice (freelance, consulente, artigiano), un <strong>commercialista online</strong> basta e avanza. Paghi 200-500€/anno, hai tutto gestito e non devi pensare a nulla. &Egrave; il miglior rapporto qualit&agrave;-prezzo.</p></div>
           </div>
 
+          <LeadBox guida="piva" titolo="Ti serve un commercialista?" sottotitolo="Trova un commercialista nella tua zona che ti segue dall'apertura in poi. Gratis per te." />
+
+
           {/* AFFILIAZIONI */}
           <div className="aff-block r">
             <div className="aff-label">Strumento consigliato</div>
@@ -328,7 +332,7 @@ export default function Page() {
           </div>
 
           {/* CTA BANNER */}
-          <LeadBox guida="piva" />
+          
 
           {/* RELATED */}
           <div className="related r">
@@ -345,8 +349,7 @@ export default function Page() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <div className="sb-cta"><div className="sb-ct">Ti serve un professionista?</div>
-            <div className="sb-cd">Trova chi ti aiuta nella tua zona. Gratis.</div><a href="#trova-professionista" className="sb-cb">Trova professionista →</a></div>
+          <SidebarLead guida="piva" />
           <div className="sbsec">
             <div className="sbsec-t">🔧 Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">✅</span><div><div className="sbtool-n">Quiz: serve a me?</div><div className="sbtool-d">Scopri se ti serve</div></div></a>

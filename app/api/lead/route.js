@@ -4,10 +4,10 @@ const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzwgeKBMEUseNbkEGq5c8
 
 export async function POST(request) {
   try {
-    const { guida, cap, contatto } = await request.json();
+    const { guida, cap, telefono, email } = await request.json();
 
-    if (!cap || !contatto) {
-      return NextResponse.json({ error: 'Campi obbligatori mancanti' }, { status: 400 });
+    if (!cap || !telefono) {
+      return NextResponse.json({ error: 'CAP e telefono sono obbligatori' }, { status: 400 });
     }
 
     // Log to Google Sheet (fire-and-forget)
@@ -15,7 +15,8 @@ export async function POST(request) {
       tipo: 'lead',
       guida: guida || 'non specificata',
       cap,
-      contatto,
+      telefono,
+      email: email || '',
       data: new Date().toISOString(),
     });
 

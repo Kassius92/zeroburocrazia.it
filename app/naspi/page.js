@@ -10,6 +10,7 @@ import QuizNaspi from '@/components/QuizNaspi';
 import CalcNaspi from '@/components/CalcNaspi';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
 import LeadBox from '@/components/LeadBox';
+import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: 'NASpI 2026: Requisiti, Importo, Durata e Come Fare Domanda',
@@ -318,6 +319,9 @@ export default function Page() {
             <p>Entro <strong>15 giorni</strong> dalla domanda, devi andare al Centro per l&apos;Impiego per firmare il <strong>Patto di Servizio Personalizzato</strong>. Verrai iscritto automaticamente al SIISL (la piattaforma digitale per la ricerca di lavoro). Se non ti presenti, l&apos;INPS può sospendere la NASpI.</p>
           </div>
 
+          <LeadBox guida="naspi" titolo="Ti serve aiuto con la domanda?" sottotitolo="Un patronato della tua zona può fare la domanda per te. Gratis per te." />
+
+
           {/* ERRORI DA EVITARE */}
           <div className="sec breve-hide r" id="errori">
             <div className="sec-tag">Attenzione</div>
@@ -421,11 +425,7 @@ export default function Page() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <div className="sb-cta">
-            <div className="sb-ct">Ti serve un professionista?</div>
-            <div className="sb-cd">Trova chi ti aiuta nella tua zona. Gratis.</div>
-            <a href="#trova-professionista" className="sb-cb">Trova professionista →</a>
-          </div>
+          <SidebarLead guida="naspi" />
           <div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">✅</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Verifica i requisiti</div></div></a>

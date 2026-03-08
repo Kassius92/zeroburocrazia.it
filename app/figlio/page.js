@@ -9,6 +9,7 @@ import SidebarToggle from '@/components/SidebarToggle';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
 import QuizFiglio from '@/components/QuizFiglio';
 import LeadBox from '@/components/LeadBox';
+import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: 'Aspetto un Figlio nel 2026: Bonus, Congedo, Assegno Unico e Documenti',
@@ -287,6 +288,9 @@ export default function Page() {
     <a href="/730" className="xlink r"><span className="xlink-em">🧾</span><div className="xlink-t"><strong>Faccio il 730</strong> — Molte spese legate ai figli si detraggono. Non lasciare soldi sul tavolo.</div><span className="xlink-ar">→</span></a>
   </div>
 
+          <LeadBox guida="figlio" titolo="Ti serve aiuto con le pratiche?" sottotitolo="Un patronato della tua zona può seguirti su bonus, congedi e ISEE. Gratis per te." />
+
+
   {/* DOCUMENTI NEONATO */}
     {/* BLOCCO AFFILIAZIONE: PRODOTTI NEONATO */}
   <div className="aff-block r">
@@ -392,7 +396,7 @@ export default function Page() {
     <a href="#trova-professionista" className="btnc">Trova professionista nella tua zona →</a>
   </div>
 
-  <LeadBox guida="figlio" />
+  
 
           {/* RELATED */}
   <div className="related r">
@@ -429,11 +433,7 @@ export default function Page() {
 
 {/* SIDEBAR */}
         <aside className="aside">
-          <div className="sb-cta">
-            <div className="sb-ct">Ti serve un professionista?</div>
-            <div className="sb-cd">Trova chi ti aiuta nella tua zona. Gratis.</div>
-            <a href="#trova-professionista" className="sb-cb">Trova professionista →</a>
-          </div>
+          <SidebarLead guida="figlio" />
           <div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti utili</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">✅</span><div><div className="sbtool-n">Quiz: serve a me?</div><div className="sbtool-d">Scopri se questa guida fa per te</div></div></a>

@@ -10,6 +10,7 @@ import QuizComproCasa from '@/components/QuizComproCasa';
 import CalcComproCasa from '@/components/CalcComproCasa';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
 import LeadBox from '@/components/LeadBox';
+import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: 'Comprare Casa nel 2026: Mutuo, Bonus Prima Casa, Costi e Documenti',
@@ -214,6 +215,9 @@ export default function Page() {
             </div>
           </div>
 
+          <LeadBox guida="compro-casa" titolo="Ti serve un professionista?" sottotitolo="Notaio, broker mutui o agenzia nella tua zona. Gratis per te." />
+
+
           {/* MUTUO */}
           <div className="sec r" id="mutuo">
             <div className="sec-tag">Finanziamento</div>
@@ -327,11 +331,7 @@ export default function Page() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <div className="sb-cta">
-            <div className="sb-ct">Ti serve un professionista?</div>
-            <div className="sb-cd">Trova chi ti aiuta nella tua zona. Gratis.</div>
-            <a href="#trova-professionista" className="sb-cb">Trova professionista →</a>
-          </div>
+          <SidebarLead guida="compro-casa" />
           <div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti</div>
             <a href="#calcolatore" className="sbtool"><span className="sbtool-i">🧮</span><div><div className="sbtool-n">Calcolatore costi</div><div className="sbtool-d">Stima imposte e spese</div></div></a>

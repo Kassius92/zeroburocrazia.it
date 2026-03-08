@@ -10,6 +10,7 @@ import QuizTfr from '@/components/QuizTfr';
 import CalcTfr from '@/components/CalcTfr';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
 import LeadBox from '@/components/LeadBox';
+import SidebarLead from '@/components/SidebarLead';
 
 export const metadata = {
   title: 'TFR 2026: Calcolo, Tassazione, Anticipo e Quando Spetta',
@@ -189,6 +190,9 @@ export default function Page() {
             </div>
           </div>
 
+          <LeadBox guida="tfr" titolo="Ti serve un consulente?" sottotitolo="Trova chi ti aiuta con TFR e liquidazione nella tua zona. Gratis per te." />
+
+
           {/* TASSAZIONE */}
           <div className="sec r" id="tassazione">
             <div className="sec-tag">Le tasse</div>
@@ -323,11 +327,7 @@ export default function Page() {
         </main>
 
         <aside className="aside">
-          <div className="sb-cta">
-            <div className="sb-ct">Ti serve un professionista?</div>
-            <div className="sb-cd">Trova chi ti aiuta nella tua zona. Gratis.</div>
-            <a href="#trova-professionista" className="sb-cb">Trova professionista →</a>
-          </div>
+          <SidebarLead guida="tfr" />
           <div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">✅</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Verifica la tua situazione</div></div></a>
