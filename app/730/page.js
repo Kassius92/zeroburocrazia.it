@@ -38,19 +38,11 @@ export const metadata = {
 const tocItems = [
   { id: 'sintesi', label: 'In sintesi' },
   { id: 'cose', label: "Cos'è" },
-  { id: 'quanto-perdi', label: 'Quanto perdi', bh: true },
-  { id: 'novita', label: 'Novità 2026', bh: true },
   { id: 'detrazioni', label: 'Detrazioni', bh: true },
-  { id: 'chi-deve', label: 'Chi deve farlo' },
   { id: 'come', label: 'Come si fa' },
-  { id: 'costi', label: 'Costi', bh: true },
   { id: 'documenti', label: 'Documenti' },
-  { id: 'errori', label: 'Errori', bh: true },
-  { id: 'calendario', label: 'Calendario' },
-  { id: 'dove', label: 'Dove andare' },
-  { id: 'calcolatore', label: 'Calcolatore', bh: true },
+  { id: 'calendario', label: 'Scadenze' },
   { id: 'esempio', label: 'Esempio pratico' },
-  { id: 'ritardo', label: 'Se sei in ritardo' },
   { id: 'faq', label: 'FAQ', bh: true },
 ];
 
