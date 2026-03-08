@@ -60,7 +60,7 @@ export default function MegaMenu({ isOpen, onClose, variant = 'scheda' }) {
                       <div className="mega-sub-title" onClick={() => toggleSub(key)}>
                         {sub.title}
                       </div>
-                      <div className="mega-sub-links" style={isSubOpen ? { maxHeight: '400px', paddingBottom: '8px' } : {}}>
+                      <div className="mega-sub-links">
                         {sub.links.map((link, li) => (
                           link.soon ? (
                             <span key={li} className="mega-link soon">

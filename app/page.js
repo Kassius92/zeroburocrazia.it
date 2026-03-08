@@ -84,7 +84,7 @@ export default function HomePage() {
         <div className="container">
           <div className="how-header r" style={{ textAlign: 'center' }}>
             <div className="section-label">Come funziona</div>
-            <h2 className="section-title">Due passi. Nessun giro di parole.</h2>
+            <h2 className="section-title">Tre passi. Nessun giro di parole.</h2>
           </div>
           <div className="steps">
             <div className="step r">
@@ -96,6 +96,11 @@ export default function HomePage() {
               <div className="step-number">2</div>
               <h3>Leggi la guida gratis</h3>
               <p>Tutto quello che devi sapere: costi reali, documenti, bonus, errori da evitare, scadenze. 100% gratuito, nessuna registrazione.</p>
+            </div>
+            <div className="step r">
+              <div className="step-number">3</div>
+              <h3>Trova chi ti aiuta <span className="lead-soon-badge" style={{fontSize:'11px',verticalAlign:'middle',marginLeft:'8px'}}>Prossimamente</span></h3>
+              <p>Se ti serve un professionista, te lo troviamo nella tua zona. Commercialisti, CAF, broker — gratis per te.</p>
             </div>
           </div>
         </div>
