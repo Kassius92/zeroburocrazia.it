@@ -349,12 +349,6 @@ export default function Page() {
           </div>
 
           {/* CTA FINALE */}
-          <div className="ctabanner r">
-            <h3>Vuoi sapere tutti i bonus a cui hai diritto?</h3>
-            <p>Ti facciamo un elenco personalizzato dei bonus e agevolazioni che puoi richiedere con lo SPID nella tua situazione.</p>
-            <a href="#trova-professionista" className="btnc">Trova professionista nella tua zona →</a>
-          </div>
-
           {/* GUIDE CORRELATE */}
           <div className="related r">
             <h2>Guide correlate</h2>

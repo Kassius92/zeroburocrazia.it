@@ -147,8 +147,7 @@ export default function NovitaContent() {
           <div className="sub-icon">📬</div>
           <div className="sub-title">Non perderti le scadenze</div>
           <div className="sub-desc">Ricevi le novità importanti direttamente nella tua email. Niente spam — solo quando cambia qualcosa che ti riguarda.</div>
-          <input className="sub-input" type="email" placeholder="la-tua@email.it" />
-          <button className="sub-btn">Iscrivimi</button>
+          <div className="lead-soon-badge" style={{marginTop:'12px'}}>Prossimamente</div>
         </div>
 
         {/* POST 6 */}

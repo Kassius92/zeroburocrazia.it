@@ -11,7 +11,6 @@ export default function Footer({ variant = 'scheda' }) {
           </div>
           <div className="footer-links">
             <Link href="/chi-siamo">Chi siamo</Link>
-            <Link href="/professionisti">Per professionisti</Link>
             <Link href="/privacy">Privacy</Link>
             <Link href="/termini">Termini</Link>
             <Link href="/contatti">Contatti</Link>
@@ -29,7 +28,6 @@ export default function Footer({ variant = 'scheda' }) {
         </Link>
         <div className="flinks">
           <Link href="/chi-siamo">Chi siamo</Link>
-          <Link href="/professionisti">Per professionisti</Link>
           <Link href="/privacy">Privacy</Link>
           <Link href="/termini">Termini</Link>
           <Link href="/contatti">Contatti</Link>

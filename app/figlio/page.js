@@ -390,14 +390,6 @@ export default function Page() {
   </div>
 
   {/* CTA BANNER */}
-  <div className="ctabanner r">
-    <h3>Hai la testa piena di scadenze?</h3>
-    <p>Ti prepariamo un promemoria personalizzato: tutti i bonus, le date e i documenti che servono alla tua famiglia — con il tuo ISEE e la tua situazione.</p>
-    <a href="#trova-professionista" className="btnc">Trova professionista nella tua zona →</a>
-  </div>
-
-  
-
           {/* RELATED */}
   <div className="related r">
     <h2>Guide correlate</h2>

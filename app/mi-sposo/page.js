@@ -321,13 +321,6 @@ export default function Page() {
             <h2>Domande frequenti</h2>
             <FAQ items={faqItems} />
           </div>
-
-          <div className="ctabanner r">
-            <h3>Vuoi una checklist personalizzata per il tuo matrimonio?</h3>
-            <p>Ti prepariamo la lista completa dei documenti e delle scadenze per la tua situazione specifica.</p>
-            <a href="#trova-professionista" className="btnc">Trova professionista nella tua zona →</a>
-          </div>
-
           <div className="related r">
             <h2>Guide correlate</h2>
             <div className="rg">

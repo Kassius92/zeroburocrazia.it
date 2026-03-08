@@ -373,12 +373,6 @@ export default function Pagina730() {
           </div>
 
           {/* CTA BANNER */}
-          <div className="ctab r">
-            <h3>Preferisci farti aiutare?</h3>
-            <p>Un professionista della tua zona può occuparsi di tutto. Gratis per te.</p>
-            <a href="#trova-professionista" className="btnc">Trova professionista →</a>
-          </div>
-
           {/* RELATED */}
           <div className="related r">
             <h2>Guide correlate</h2>

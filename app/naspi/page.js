@@ -405,12 +405,6 @@ export default function Page() {
           </div>
 
           {/* CTA FINALE */}
-          <div className="ctabanner r">
-            <h3>Vuoi sapere esattamente quanto ti spetta?</h3>
-            <p>Ti calcoliamo l&apos;importo preciso della NASpI nella tua situazione, con le scadenze da rispettare e i bonus a cui hai diritto.</p>
-            <a href="#trova-professionista" className="btnc">Trova professionista nella tua zona →</a>
-          </div>
-
           {/* GUIDE CORRELATE */}
           <div className="related r">
             <h2>Guide correlate</h2>

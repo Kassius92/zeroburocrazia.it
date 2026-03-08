@@ -311,12 +311,6 @@ export default function Page() {
           </div>
 
           {/* CTA FINALE */}
-          <div className="ctabanner r">
-            <h3>Vuoi una guida personalizzata per la tua casa?</h3>
-            <p>Ti calcoliamo le imposte esatte, i costi del mutuo, le detrazioni disponibili e le scadenze nel tuo Comune.</p>
-            <a href="#trova-professionista" className="btnc">Trova professionista nella tua zona →</a>
-          </div>
-
           {/* GUIDE CORRELATE */}
           <div className="related r">
             <h2>Guide correlate</h2>

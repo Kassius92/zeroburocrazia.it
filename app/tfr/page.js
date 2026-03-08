@@ -308,13 +308,6 @@ export default function Page() {
             <h2>Domande frequenti</h2>
             <FAQ items={faqItems} />
           </div>
-
-          <div className="ctabanner r">
-            <h3>Vuoi sapere esattamente quanto TFR ti spetta?</h3>
-            <p>Ti calcoliamo il TFR netto nella tua situazione, con la tassazione corretta e il confronto azienda vs fondo pensione.</p>
-            <a href="#trova-professionista" className="btnc">Trova professionista nella tua zona →</a>
-          </div>
-
           <div className="related r">
             <h2>Guide correlate</h2>
             <div className="rg">

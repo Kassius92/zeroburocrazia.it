@@ -8,6 +8,11 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/professionisti',
+        destination: '/',
+        permanent: false,
+      },
     ];
   },
 };

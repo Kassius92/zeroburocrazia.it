@@ -842,3 +842,11 @@ body.mega-open .toc { display: none; }
 .sb-lead-check{display:flex;align-items:flex-start;gap:6px;font-size:10px;color:rgba(255,255,255,.55);line-height:1.3;margin-bottom:6px;cursor:pointer;}
 .sb-lead-check input[type="checkbox"]{margin-top:1px;flex-shrink:0;accent-color:#E36414;width:14px;height:14px;}
 .sb-lead-check a{color:rgba(255,255,255,.7);text-decoration:underline;}
+
+/* ─── PROSSIMAMENTE BADGES ─── */
+.lead-soon{text-align:center;padding:8px 0 0;position:relative;z-index:1;}
+.lead-soon p{font-size:13px;color:rgba(255,255,255,.5);margin-top:8px;line-height:1.5;}
+.lead-soon-badge{display:inline-block;padding:6px 16px;border-radius:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.7);font-size:13px;font-weight:600;letter-spacing:.5px;}
+.lead-box-soon{padding:24px 20px;}
+.sb-lead-soon{text-align:center;}
+.sb-lead-soon-badge{display:inline-block;margin-top:10px;padding:5px 12px;border-radius:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.6);font-size:11px;font-weight:600;}
