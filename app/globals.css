@@ -853,10 +853,9 @@ body.mega-open .toc { display: none; }
 .sb-lead-soon-badge{display:inline-block;margin-top:10px;padding:5px 12px;border-radius:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.6);font-size:11px;font-weight:600;}
 
 /* ─── TOOLTIP PAROLE ─── */
-.tip-wrap{display:inline;}
-.tip-word{border-bottom:1px dotted rgba(15,76,92,.35);cursor:help;transition:border-color .2s;}
+.tip-word{border-bottom:1px dotted rgba(15,76,92,.35);cursor:help;transition:border-color .2s;display:inline;}
 .tip-word:hover{border-color:#E36414;}
-.tip-bubble{background:#1A1A2E;color:#fff;font-size:12px;font-weight:400;line-height:1.5;padding:8px 12px;border-radius:8px;white-space:normal;width:240px;max-width:240px;z-index:9999;pointer-events:none;box-shadow:0 4px 16px rgba(0,0,0,.15);text-transform:none;letter-spacing:0;}
+.tip-bubble{background:#1A1A2E;color:#fff;font-size:12px;font-weight:400;line-height:1.5;padding:8px 12px;border-radius:8px;white-space:normal;width:240px;max-width:240px;z-index:99999;pointer-events:none;box-shadow:0 4px 16px rgba(0,0,0,.15);text-transform:none;letter-spacing:0;}
 @media(max-width:600px){.tip-bubble{max-width:200px;width:200px;font-size:11px;}}
 
 /* GLOSSARY */
