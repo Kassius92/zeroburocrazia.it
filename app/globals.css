@@ -914,7 +914,7 @@ body.mega-open .toc { display: none; }
 :is(.cat-casa,.cat-famiglia,.cat-lavoro,.cat-documenti) .badge{background:var(--cat) !important;color:#fff !important;}
 
 /* Table header */
-:is(.cat-casa,.cat-famiglia,.cat-lavoro,.cat-documenti) thead th{background:linear-gradient(135deg,var(--cat-h),var(--cat)) !important;}
+:is(.cat-fisco,.cat-casa,.cat-famiglia,.cat-lavoro,.cat-documenti) thead th{background:linear-gradient(135deg,var(--cat-h),var(--cat)) !important;}
 
 /* Riga raccomandata */
 :is(.cat-casa,.cat-famiglia,.cat-lavoro,.cat-documenti) tr.rec{background:rgba(var(--cat-rgb),.04) !important;}
