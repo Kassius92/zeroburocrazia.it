@@ -127,8 +127,8 @@ export default function Page() {
             <span className="perc-label">Guide correlate</span>
             <div className="perc-steps">
               <a href="/isee" className="ps">📋 Faccio l'ISEE</a>
-              <a href="/730" className="ps">🧾 Faccio il 730</a>
-              <a href="/naspi" className="ps">💼 NASpI</a>
+              <span className="ps ps-soon">🪪 Carta identità elettronica <span className="ps-tag">Presto</span></span>
+              <span className="ps ps-soon">✉️ PEC obbligatoria <span className="ps-tag">Presto</span></span>
             </div>
           </div>
 
@@ -328,9 +328,9 @@ export default function Page() {
           <div className="related r">
             <h2>Guide correlate</h2>
             <div className="rg">
-              <a href="/isee" className="rc"><span className="rc-e">{'\uD83D\uDCCB'}</span><div className="rc-t">Faccio l&apos;ISEE</div><div className="rc-d">Il passo successivo: serve lo SPID per farlo online.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/730" className="rc"><span className="rc-e">{'\uD83E\uDDFE'}</span><div className="rc-t">Faccio il 730</div><div className="rc-d">La dichiarazione dei redditi online, passo per passo.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/compro-casa" className="rc"><span className="rc-e">{'\uD83C\uDFE0'}</span><div className="rc-t">Compro casa</div><div className="rc-d">Imposte, mutuo, documenti e i costi che nessuno ti dice.</div><span className="rc-ar">{'\u2192'}</span></a>
+              <a href="/isee" className="rc"><span className="rc-e">📋</span><div className="rc-t">Faccio l'ISEE</div><div className="rc-d">Con lo SPID fai l'ISEE online in 15 minuti.</div><span className="rc-ar">→</span></a>
+              <a href="/730" className="rc"><span className="rc-e">🧾</span><div className="rc-t">Faccio il 730</div><div className="rc-d">Accedi al precompilato con SPID.</div><span className="rc-ar">→</span></a>
+              <a href="/naspi" className="rc"><span className="rc-e">💼</span><div className="rc-t">NASpI</div><div className="rc-d">La domanda NASpI si fa online con SPID.</div><span className="rc-ar">→</span></a>
             </div>
           </div>
 
@@ -347,9 +347,9 @@ export default function Page() {
           </div>
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDCDA'} Guide correlate</div>
-            <a href="/isee" className="sbguide">{'\uD83D\uDCCB'} Faccio l&apos;ISEE<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/730" className="sbguide">{'\uD83E\uDDFE'} Faccio il 730<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/compro-casa" className="sbguide">{'\uD83C\uDFE0'} Compro casa<span className="sbg-ar">{'\u2192'}</span></a>
+            <a href="/isee" className="sbguide">📋 Faccio l'ISEE<span className="sbg-ar">→</span></a>
+            <span className="sbguide sbguide-soon">🪪 Carta identità elettronica<span className="sbg-soon">Presto</span></span>
+            <span className="sbguide sbguide-soon">✉️ PEC obbligatoria<span className="sbg-soon">Presto</span></span>
           </div>
         </aside>
       </div>

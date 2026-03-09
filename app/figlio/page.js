@@ -110,9 +110,9 @@ export default function Page() {
           <div className="perc r">
             <span className="perc-label">Guide correlate</span>
             <div className="perc-steps">
-              <a href="/isee" className="ps">📋 Faccio l'ISEE</a>
               <a href="/mi-sposo" className="ps">💍 Mi sposo</a>
-              <a href="/730" className="ps">🧾 Faccio il 730</a>
+              <span className="ps ps-soon">🏫 Bonus nido <span className="ps-tag">Presto</span></span>
+              <span className="ps ps-soon">👶 Congedo parentale <span className="ps-tag">Presto</span></span>
             </div>
           </div>
 
@@ -386,10 +386,9 @@ export default function Page() {
           <div className="related r">
             <h2>Guide correlate</h2>
             <div className="rg">
-              <a href="/isee" className="rc r d1"><span className="rc-e">{'\uD83D\uDCCB'}</span><div className="rc-t">Faccio l&apos;ISEE</div><div className="rc-d">Il primo passo per accedere a tutti i bonus.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/spid" className="rc r d2"><span className="rc-e">{'\uD83D\uDD10'}</span><div className="rc-t">Faccio lo SPID</div><div className="rc-d">Serve per tutte le pratiche INPS online.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/730" className="rc r d3"><span className="rc-e">{'\uD83E\uDDFE'}</span><div className="rc-t">Faccio il 730</div><div className="rc-d">Le spese mediche e del nido si detraggono.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/compro-casa" className="rc r d4"><span className="rc-e">{'\uD83C\uDFE0'}</span><div className="rc-t">Compro casa</div><div className="rc-d">Per chi sta pensando anche a un posto pi&ugrave; grande.</div><span className="rc-ar">{'\u2192'}</span></a>
+              <a href="/mi-sposo" className="rc"><span className="rc-e">💍</span><div className="rc-t">Mi sposo</div><div className="rc-d">Documenti, costi e regime patrimoniale.</div><span className="rc-ar">→</span></a>
+              <a href="/isee" className="rc"><span className="rc-e">📋</span><div className="rc-t">Faccio l'ISEE</div><div className="rc-d">Senza ISEE perdi assegno unico e bonus nido.</div><span className="rc-ar">→</span></a>
+              <a href="/730" className="rc"><span className="rc-e">🧾</span><div className="rc-t">Faccio il 730</div><div className="rc-d">Detrazioni figli, spese mediche e asilo.</div><span className="rc-ar">→</span></a>
             </div>
           </div>
 
@@ -406,10 +405,9 @@ export default function Page() {
           </div>
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDCDA'} Guide correlate</div>
-            <a href="/isee" className="sbguide">{'\uD83D\uDCCB'} Faccio l&apos;ISEE<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/spid" className="sbguide">{'\uD83D\uDD10'} Faccio lo SPID<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/730" className="sbguide">{'\uD83E\uDDFE'} Faccio il 730<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/compro-casa" className="sbguide">{'\uD83C\uDFE0'} Compro casa<span className="sbg-ar">{'\u2192'}</span></a>
+            <a href="/mi-sposo" className="sbguide">💍 Mi sposo<span className="sbg-ar">→</span></a>
+            <span className="sbguide sbguide-soon">🏫 Bonus nido<span className="sbg-soon">Presto</span></span>
+            <span className="sbguide sbguide-soon">👶 Congedo parentale<span className="sbg-soon">Presto</span></span>
           </div>
         </aside>
       </div>

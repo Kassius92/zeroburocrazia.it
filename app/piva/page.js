@@ -99,9 +99,9 @@ export default function Page() {
           <div className="perc r">
             <span className="perc-label">Guide correlate</span>
             <div className="perc-steps">
+              <span className="ps ps-soon">📨 Fattura elettronica <span className="ps-tag">Presto</span></span>
+              <span className="ps ps-soon">📊 Regime forfettario <span className="ps-tag">Presto</span></span>
               <a href="/730" className="ps">🧾 Faccio il 730</a>
-              <a href="/isee" className="ps">📋 Faccio l'ISEE</a>
-              <a href="/dimissioni" className="ps">✍️ Dimissioni</a>
             </div>
           </div>
 
@@ -373,10 +373,9 @@ export default function Page() {
           <div className="related r">
             <h2>Guide correlate</h2>
             <div className="rg">
-              <a href="/730" className="rc"><span className="rc-e">{'\uD83E\uDDFE'}</span><div className="rc-t">Faccio il 730</div><div className="rc-d">Detrazioni, rimborso, scadenze</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/spid" className="rc"><span className="rc-e">{'\uD83D\uDD10'}</span><div className="rc-t">Faccio lo SPID</div><div className="rc-d">Gratis, in 15 minuti</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/isee" className="rc"><span className="rc-e">{'\uD83D\uDCCB'}</span><div className="rc-t">Faccio l&apos;ISEE</div><div className="rc-d">Bonus, documenti, procedura</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/compro-casa" className="rc"><span className="rc-e">{'\uD83C\uDFE0'}</span><div className="rc-t">Compro casa</div><div className="rc-d">Mutuo, tasse, notaio</div><span className="rc-ar">{'\u2192'}</span></a>
+              <a href="/730" className="rc"><span className="rc-e">🧾</span><div className="rc-t">Faccio il 730</div><div className="rc-d">Con P.IVA forfettaria non fai il 730, ma conviene sapere perché.</div><span className="rc-ar">→</span></a>
+              <a href="/isee" className="rc"><span className="rc-e">📋</span><div className="rc-t">Faccio l'ISEE</div><div className="rc-d">Il reddito da P.IVA entra nell'ISEE.</div><span className="rc-ar">→</span></a>
+              <a href="/dimissioni" className="rc"><span className="rc-e">✍️</span><div className="rc-t">Dimissioni</div><div className="rc-d">Ti dimetti per aprire P.IVA? Leggi prima questa.</div><span className="rc-ar">→</span></a>
             </div>
           </div>
 
@@ -394,10 +393,9 @@ export default function Page() {
           </div>
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDCDA'} Guide correlate</div>
-            <a href="/730" className="sbguide">{'\uD83E\uDDFE'} Faccio il 730<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/spid" className="sbguide">{'\uD83D\uDD10'} Faccio lo SPID<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/isee" className="sbguide">{'\uD83D\uDCCB'} Faccio l&apos;ISEE<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/compro-casa" className="sbguide">{'\uD83C\uDFE0'} Compro casa<span className="sbg-ar">{'\u2192'}</span></a>
+            <span className="sbguide sbguide-soon">📨 Fattura elettronica<span className="sbg-soon">Presto</span></span>
+            <span className="sbguide sbguide-soon">📊 Regime forfettario<span className="sbg-soon">Presto</span></span>
+            <a href="/730" className="sbguide">🧾 Faccio il 730<span className="sbg-ar">→</span></a>
           </div>
         </aside>
       </div>

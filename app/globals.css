@@ -109,6 +109,10 @@ body.breve .bh{display:none !important;}
 .perc-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--cat, #E36414);white-space:nowrap;}
 .ps{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:var(--t2);text-decoration:none;padding:5px 12px;border-radius:10px;transition:all .2s;}
 .ps:hover{background:rgba(var(--cat-rgb, 227,100,20),.08);color:var(--cat, #E36414);}
+.ps-soon{opacity:.45;cursor:default;pointer-events:none;}
+.ps-tag{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;background:var(--bd);color:var(--t3);padding:2px 6px;border-radius:4px;margin-left:4px;}
+.sbguide-soon{opacity:.45;cursor:default;}
+.sbg-soon{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--t3);margin-left:auto;}
 .pa{font-size:13px;color:var(--bd);margin:0 2px;}
 
 /* SECTION */

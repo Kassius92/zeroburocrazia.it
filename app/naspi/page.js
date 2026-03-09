@@ -108,7 +108,7 @@ export default function Page() {
             <div className="perc-steps">
               <a href="/dimissioni" className="ps">✍️ Dimissioni</a>
               <a href="/tfr" className="ps">💰 TFR</a>
-              <a href="/isee" className="ps">📋 Faccio l'ISEE</a>
+              <span className="ps ps-soon">💼 Primo lavoro <span className="ps-tag">Presto</span></span>
             </div>
           </div>
 
@@ -346,9 +346,9 @@ export default function Page() {
           <div className="related r">
             <h2>Guide correlate</h2>
             <div className="rg">
-              <a href="/isee" className="rc"><span className="rc-e">{'\uD83D\uDCCB'}</span><div className="rc-t">Faccio l&apos;ISEE</div><div className="rc-d">Con la NASpI il tuo reddito cala: aggiorna l&apos;ISEE per accedere a pi&ugrave; bonus.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/730" className="rc"><span className="rc-e">{'\uD83E\uDDFE'}</span><div className="rc-t">Faccio il 730</div><div className="rc-d">Anche con la NASpI devi dichiarare. E potresti avere un rimborso.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/piva" className="rc"><span className="rc-e">{'\uD83D\uDCBC'}</span><div className="rc-t">Apro partita IVA</div><div className="rc-d">Vuoi metterti in proprio? Puoi usare la NASpI anticipata come capitale.</div><span className="rc-ar">{'\u2192'}</span></a>
+              <a href="/dimissioni" className="rc"><span className="rc-e">✍️</span><div className="rc-t">Dimissioni volontarie</div><div className="rc-d">Come dimettersi correttamente online.</div><span className="rc-ar">→</span></a>
+              <a href="/tfr" className="rc"><span className="rc-e">💰</span><div className="rc-t">TFR</div><div className="rc-d">Quando te ne vai, ti spetta anche la liquidazione.</div><span className="rc-ar">→</span></a>
+              <a href="/isee" className="rc"><span className="rc-e">📋</span><div className="rc-t">Faccio l'ISEE</div><div className="rc-d">Con la NASpI il reddito cala: fai l'ISEE corrente.</div><span className="rc-ar">→</span></a>
             </div>
           </div>
 
@@ -365,10 +365,9 @@ export default function Page() {
           </div>
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDCDA'} Guide correlate</div>
-            <a href="/isee" className="sbguide">{'\uD83D\uDCCB'} Faccio l&apos;ISEE<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/730" className="sbguide">{'\uD83E\uDDFE'} Faccio il 730<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/piva" className="sbguide">{'\uD83D\uDCBC'} Apro partita IVA<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/spid" className="sbguide">{'\uD83D\uDD10'} Faccio lo SPID<span className="sbg-ar">{'\u2192'}</span></a>
+            <a href="/dimissioni" className="sbguide">✍️ Dimissioni<span className="sbg-ar">→</span></a>
+            <a href="/tfr" className="sbguide">💰 TFR<span className="sbg-ar">→</span></a>
+            <span className="sbguide sbguide-soon">💼 Primo lavoro<span className="sbg-soon">Presto</span></span>
           </div>
         </aside>
       </div>

@@ -136,8 +136,8 @@ export default function Pagina730() {
             <span className="perc-label">Guide correlate</span>
             <div className="perc-steps">
               <a href="/isee" className="ps">📋 Faccio l'ISEE</a>
-              <a href="/spid" className="ps">🪪 Faccio lo SPID</a>
               <a href="/ristrutturare" className="ps">🔨 Ristrutturare casa</a>
+              <span className="ps ps-soon">🩺 Spese mediche detraibili <span className="ps-tag">Presto</span></span>
             </div>
           </div>
 
@@ -409,9 +409,9 @@ export default function Pagina730() {
           <div className="related r">
             <h2>Guide correlate</h2>
             <div className="rg">
-              <Link href="/isee" className="rc"><span className="rc-e">📋</span><div className="rc-t">Faccio l&apos;ISEE</div><div className="rc-d">Ti serve per accedere a bonus. Spesso lo fai prima del 730.</div><span className="rc-ar">→</span></Link>
-              <Link href="/spid" className="rc"><span className="rc-e">🔐</span><div className="rc-t">Faccio lo SPID</div><div className="rc-d">Serve per la precompilata online. Come farlo in 15 minuti.</div><span className="rc-ar">→</span></Link>
-              <Link href="/compro-casa" className="rc"><span className="rc-e">🏠</span><div className="rc-t">Compro casa</div><div className="rc-d">Se hai comprato casa, ci sono detrazioni importanti nel 730.</div><span className="rc-ar">→</span></Link>
+              <a href="/isee" className="rc"><span className="rc-e">📋</span><div className="rc-t">Faccio l'ISEE</div><div className="rc-d">Serve per accedere a bonus e agevolazioni.</div><span className="rc-ar">→</span></a>
+              <a href="/ristrutturare" className="rc"><span className="rc-e">🔨</span><div className="rc-t">Ristrutturare casa</div><div className="rc-d">Detrai il 50% dei lavori nel 730.</div><span className="rc-ar">→</span></a>
+              <a href="/spid" className="rc"><span className="rc-e">🪪</span><div className="rc-t">Faccio lo SPID</div><div className="rc-d">Ti serve per accedere al precompilato.</div><span className="rc-ar">→</span></a>
             </div>
           </div>
         </main>
@@ -428,9 +428,9 @@ export default function Pagina730() {
           </div>
           <div className="sbsec">
             <div className="sbsec-t">📚 Guide correlate</div>
-            <Link href="/isee" className="sbguide">📋 Faccio l&apos;ISEE<span className="sbg-ar">→</span></Link>
-            <Link href="/spid" className="sbguide">🔐 Faccio lo SPID<span className="sbg-ar">→</span></Link>
-            <Link href="/compro-casa" className="sbguide">🏠 Compro casa<span className="sbg-ar">→</span></Link>
+            <a href="/isee" className="sbguide">📋 Faccio l'ISEE<span className="sbg-ar">→</span></a>
+            <a href="/ristrutturare" className="sbguide">🔨 Ristrutturare casa<span className="sbg-ar">→</span></a>
+            <span className="sbguide sbguide-soon">🩺 Spese mediche detraibili<span className="sbg-soon">Presto</span></span>
           </div>
         </aside>
       </div>

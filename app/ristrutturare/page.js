@@ -106,8 +106,8 @@ export default function Page() {
             <span className="perc-label">Guide correlate</span>
             <div className="perc-steps">
               <a href="/compro-casa" className="ps">🏠 Compro casa</a>
-              <a href="/730" className="ps">🧾 Faccio il 730</a>
-              <a href="/isee" className="ps">📋 Faccio l'ISEE</a>
+              <span className="ps ps-soon">🪑 Bonus mobili <span className="ps-tag">Presto</span></span>
+              <span className="ps ps-soon">🌿 Ecobonus <span className="ps-tag">Presto</span></span>
             </div>
           </div>
 
@@ -351,10 +351,9 @@ export default function Page() {
           <div className="related r">
             <h2>Guide correlate</h2>
             <div className="rg">
-              <a href="/730" className="rc"><span className="rc-e">{'\uD83E\uDDFE'}</span><div className="rc-t">Faccio il 730</div><div className="rc-d">Come inserire le rate di detrazione nella dichiarazione.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/compro-casa" className="rc"><span className="rc-e">{'\uD83C\uDFE0'}</span><div className="rc-t">Compro casa</div><div className="rc-d">Imposte, mutuo e bonus prima casa.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/spid" className="rc"><span className="rc-e">{'\uD83D\uDD10'}</span><div className="rc-t">Faccio lo SPID</div><div className="rc-d">Serve per ENEA e la dichiarazione precompilata.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/isee" className="rc"><span className="rc-e">{'\uD83D\uDCCB'}</span><div className="rc-t">Faccio l&apos;ISEE</div><div className="rc-d">L&apos;immobile ristrutturato pu&ograve; cambiare il tuo ISEE.</div><span className="rc-ar">{'\u2192'}</span></a>
+              <a href="/compro-casa" className="rc"><span className="rc-e">🏠</span><div className="rc-t">Compro casa</div><div className="rc-d">Hai appena comprato? Ristruttura con il bonus 50%.</div><span className="rc-ar">→</span></a>
+              <a href="/730" className="rc"><span className="rc-e">🧾</span><div className="rc-t">Faccio il 730</div><div className="rc-d">Il bonus ristrutturazione si recupera nel 730.</div><span className="rc-ar">→</span></a>
+              <a href="/isee" className="rc"><span className="rc-e">📋</span><div className="rc-t">Faccio l'ISEE</div><div className="rc-d">L'ISEE serve per bonus caldaia e altri incentivi.</div><span className="rc-ar">→</span></a>
             </div>
           </div>
 
@@ -371,10 +370,9 @@ export default function Page() {
           </div>
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDCDA'} Guide correlate</div>
-            <a href="/730" className="sbguide">{'\uD83E\uDDFE'} Faccio il 730<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/compro-casa" className="sbguide">{'\uD83C\uDFE0'} Compro casa<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/spid" className="sbguide">{'\uD83D\uDD10'} Faccio lo SPID<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/isee" className="sbguide">{'\uD83D\uDCCB'} Faccio l&apos;ISEE<span className="sbg-ar">{'\u2192'}</span></a>
+            <a href="/compro-casa" className="sbguide">🏠 Compro casa<span className="sbg-ar">→</span></a>
+            <span className="sbguide sbguide-soon">🪑 Bonus mobili<span className="sbg-soon">Presto</span></span>
+            <span className="sbguide sbguide-soon">🌿 Ecobonus<span className="sbg-soon">Presto</span></span>
           </div>
         </aside>
       </div>

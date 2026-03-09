@@ -118,8 +118,8 @@ export default function Page() {
             <span className="perc-label">Guide correlate</span>
             <div className="perc-steps">
               <a href="/dimissioni" className="ps">✍️ Dimissioni</a>
-              <a href="/naspi" className="ps">💼 NASpI</a>
-              <a href="/730" className="ps">🧾 Faccio il 730</a>
+              <span className="ps ps-soon">📈 Fondo pensione <span className="ps-tag">Presto</span></span>
+              <span className="ps ps-soon">🧓 Quando vado in pensione <span className="ps-tag">Presto</span></span>
             </div>
           </div>
 
@@ -341,9 +341,9 @@ export default function Page() {
           <div className="related r">
             <h2>Guide correlate</h2>
             <div className="rg">
-              <a href="/dimissioni" className="rc"><span className="rc-e">{'\u270D\uFE0F'}</span><div className="rc-t">Dimissioni volontarie</div><div className="rc-d">Come dimettersi online, preavviso e cosa ti spetta.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/naspi" className="rc"><span className="rc-e">{'\uD83D\uDCBC'}</span><div className="rc-t">NASpI &mdash; Disoccupazione</div><div className="rc-d">Se hai perso il lavoro, quanto ti spetta e come fare domanda.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/730" className="rc"><span className="rc-e">{'\uD83E\uDDFE'}</span><div className="rc-t">Faccio il 730</div><div className="rc-d">Il TFR compare nella CU. Fai il 730 per non perdere detrazioni.</div><span className="rc-ar">{'\u2192'}</span></a>
+              <a href="/dimissioni" className="rc"><span className="rc-e">✍️</span><div className="rc-t">Dimissioni volontarie</div><div className="rc-d">Come dimettersi online e cosa ti spetta.</div><span className="rc-ar">→</span></a>
+              <a href="/naspi" className="rc"><span className="rc-e">💼</span><div className="rc-t">NASpI</div><div className="rc-d">Se hai perso il lavoro, quanto ti spetta.</div><span className="rc-ar">→</span></a>
+              <a href="/730" className="rc"><span className="rc-e">🧾</span><div className="rc-t">Faccio il 730</div><div className="rc-d">Il TFR compare nella CU. Fai il 730.</div><span className="rc-ar">→</span></a>
             </div>
           </div>
 
@@ -359,9 +359,9 @@ export default function Page() {
           </div>
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDCDA'} Guide correlate</div>
-            <a href="/dimissioni" className="sbguide">{'\u270D\uFE0F'} Dimissioni<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/naspi" className="sbguide">{'\uD83D\uDCBC'} NASpI<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/730" className="sbguide">{'\uD83E\uDDFE'} Faccio il 730<span className="sbg-ar">{'\u2192'}</span></a>
+            <a href="/dimissioni" className="sbguide">✍️ Dimissioni<span className="sbg-ar">→</span></a>
+            <span className="sbguide sbguide-soon">📈 Fondo pensione<span className="sbg-soon">Presto</span></span>
+            <span className="sbguide sbguide-soon">🧓 Quando vado in pensione<span className="sbg-soon">Presto</span></span>
           </div>
         </aside>
       </div>

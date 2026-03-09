@@ -128,9 +128,9 @@ export default function Page() {
           <div className="perc r">
             <span className="perc-label">Guide correlate</span>
             <div className="perc-steps">
-              <a href="/spid" className="ps">🔐 Faccio lo SPID</a>
-              <a href="/730" className="ps">🧾 Faccio il 730</a>
-              <a href="/figlio" className="ps">👶 Aspetto un figlio</a>
+              <span className="ps ps-soon">👶 Assegno unico <span className="ps-tag">Presto</span></span>
+              <span className="ps ps-soon">🏫 Bonus nido <span className="ps-tag">Presto</span></span>
+              <span className="ps ps-soon">⚡ Bonus bollette <span className="ps-tag">Presto</span></span>
             </div>
           </div>
 
@@ -344,9 +344,9 @@ export default function Page() {
           <div className="related r">
             <h2>Guide correlate</h2>
             <div className="rg">
-              <a href="/730" className="rc"><span className="rc-e">{'\uD83E\uDDFE'}</span><div className="rc-t">Faccio il 730</div><div className="rc-d">I redditi del 730 sono tra i dati che servono per l&apos;ISEE.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/spid" className="rc"><span className="rc-e">{'\uD83D\uDD10'}</span><div className="rc-t">Faccio lo SPID</div><div className="rc-d">Per fare l&apos;ISEE online ti serve lo SPID. Come farlo in 15 minuti.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/compro-casa" className="rc"><span className="rc-e">{'\uD83C\uDFE0'}</span><div className="rc-t">Compro casa</div><div className="rc-d">L&apos;immobile entra nell&apos;ISEE. Scopri come viene calcolato.</div><span className="rc-ar">{'\u2192'}</span></a>
+              <a href="/figlio" className="rc"><span className="rc-e">👶</span><div className="rc-t">Aspetto un figlio</div><div className="rc-d">Assegno unico, bonus nido: servono l'ISEE.</div><span className="rc-ar">→</span></a>
+              <a href="/spid" className="rc"><span className="rc-e">🔐</span><div className="rc-t">Faccio lo SPID</div><div className="rc-d">Per fare l'ISEE online ti serve lo SPID.</div><span className="rc-ar">→</span></a>
+              <a href="/730" className="rc"><span className="rc-e">🧾</span><div className="rc-t">Faccio il 730</div><div className="rc-d">I redditi del 730 sono tra i dati dell'ISEE.</div><span className="rc-ar">→</span></a>
             </div>
           </div>
 
@@ -363,9 +363,9 @@ export default function Page() {
           </div>
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDCDA'} Guide correlate</div>
-            <a href="/730" className="sbguide">{'\uD83E\uDDFE'} Faccio il 730<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/spid" className="sbguide">{'\uD83D\uDD10'} Faccio lo SPID<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/compro-casa" className="sbguide">{'\uD83C\uDFE0'} Compro casa<span className="sbg-ar">{'\u2192'}</span></a>
+            <span className="sbguide sbguide-soon">👶 Assegno unico<span className="sbg-soon">Presto</span></span>
+            <span className="sbguide sbguide-soon">🏫 Bonus nido<span className="sbg-soon">Presto</span></span>
+            <span className="sbguide sbguide-soon">⚡ Bonus bollette<span className="sbg-soon">Presto</span></span>
           </div>
         </aside>
       </div>
