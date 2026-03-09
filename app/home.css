@@ -498,7 +498,7 @@
 
   /* ---- RESPONSIVE ---- */
   @media (max-width: 768px) {
-    .nav-links a:not(.nav-cta) { display: none; }
+    .nav-links a:not(.nav-cta) { display: none; } .nav-links button:not(.nav-cta) { display: none; }
     .how-it-works .steps { grid-template-columns: 1fr; gap: 32px; }
     .how-it-works .steps::before { display: none; }
     .preview-container { grid-template-columns: 1fr; }

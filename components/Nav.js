@@ -42,7 +42,7 @@ export default function Nav({ variant = 'scheda' }) {
                   Novità<span className="nav-dot" />
                 </Link>
                 <a href="#come-funziona">Come funziona</a>
-                <a href="#situazioni" className="nav-cta">Inizia gratis</a>
+                <button className="nav-cta" onClick={() => setMenuOpen(!menuOpen)}>Tutte le guide</button>
               </div>
             </>
           )}
