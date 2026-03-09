@@ -4,6 +4,7 @@ export const categories = [
     subs: [
       { title: 'Dichiarazione redditi', links: [
         { name: '730', href: '/730' },
+        { name: 'Spese mediche detraibili', href: '/spese-mediche' },
         { name: '730 precompilato', href: '#', soon: true },
         { name: '730 senza sostituto', href: '#', soon: true },
       ]},

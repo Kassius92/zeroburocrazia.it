@@ -137,7 +137,7 @@ export default function Pagina730() {
             <div className="perc-steps">
               <a href="/isee" className="ps">📋 Faccio l'ISEE</a>
               <a href="/ristrutturare" className="ps">🔨 Ristrutturare casa</a>
-              <span className="ps ps-soon">🩺 Spese mediche detraibili <span className="ps-tag">Presto</span></span>
+              <a href="/spese-mediche" className="ps">🩺 Spese mediche detraibili</a>
             </div>
           </div>
 
@@ -430,7 +430,7 @@ export default function Pagina730() {
             <div className="sbsec-t">📚 Guide correlate</div>
             <a href="/isee" className="sbguide">📋 Faccio l'ISEE<span className="sbg-ar">→</span></a>
             <a href="/ristrutturare" className="sbguide">🔨 Ristrutturare casa<span className="sbg-ar">→</span></a>
-            <span className="sbguide sbguide-soon">🩺 Spese mediche detraibili<span className="sbg-soon">Presto</span></span>
+            <a href="/spese-mediche" className="sbguide">🩺 Spese mediche detraibili<span className="sbg-ar">→</span></a>
           </div>
         </aside>
       </div>
