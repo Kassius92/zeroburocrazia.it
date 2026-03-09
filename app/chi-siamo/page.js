@@ -56,7 +56,7 @@ export default function ChiSiamoPage() {
             <div className="val">
               <div className="val-icon">🚫</div>
               <div className="val-title">Zero pubblicità</div>
-              <div className="val-text">Non vendiamo spazi pubblicitari. Non facciamo affiliate marketing. Non suggeriamo prodotti in cambio di commissioni.</div>
+              <div className="val-text">Non vendiamo spazi pubblicitari. Quando consigliamo un servizio (come un commercialista online), lo facciamo perch&eacute; lo riteniamo utile &mdash; e lo segnaliamo sempre in trasparenza.</div>
             </div>
           </div>
 

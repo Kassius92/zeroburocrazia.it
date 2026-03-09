@@ -297,6 +297,18 @@ export default function Page() {
             </div>
           </div>
 
+          <div className="aff-block r">
+            <div className="aff-label">Ti dimetti per metterti in proprio?</div>
+            <div className="aff-body">
+              <div className="aff-left">
+                <div className="aff-title">Fiscozen &mdash; Commercialista online per partite IVA</div>
+                <div className="aff-text">Se apri partita IVA, Fiscozen ti gestisce tutto: apertura gratuita, fatturazione elettronica, commercialista dedicato. Forfettario e ordinario semplificato. Da 299&euro;/anno.</div>
+                <div className="aff-note">* Link in partnership &mdash; se ti iscrivi, ZeroBurocrazia riceve una piccola commissione. A te non cambia nulla sul prezzo.</div>
+              </div>
+              <a href="FISCOZEN_LINK" target="_blank" rel="noopener sponsored" className="aff-btn">Prova Fiscozen gratis {'\u2192'}</a>
+            </div>
+          </div>
+
           {/* FAQ */}
           <div className="sec breve-hide r" id="faq">
             <div className="sec-tag">Risposte rapide</div>

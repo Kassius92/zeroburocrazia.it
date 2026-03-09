@@ -81,7 +81,7 @@ export default function MegaMenu({ isOpen, onClose, variant = 'scheda' }) {
           </div>
           <div className="mega-foot">
             <div className="mega-foot-left">
-              <strong>12</strong> guide pronte · 40+ in arrivo
+              <strong>14</strong> guide pronte · 40+ in arrivo
             </div>
             <div className="mega-foot-right">
               <Link href="/tg" className="mega-btn mega-btn-ghost" onClick={onClose}>{'\uD83D\uDCCA'} Questa Settimana</Link>

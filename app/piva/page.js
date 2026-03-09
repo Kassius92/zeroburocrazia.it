@@ -99,8 +99,8 @@ export default function Page() {
           <div className="perc r">
             <span className="perc-label">Guide correlate</span>
             <div className="perc-steps">
-              <span className="ps ps-soon">📨 Fattura elettronica <span className="ps-tag">Presto</span></span>
-              <span className="ps ps-soon">📊 Regime forfettario <span className="ps-tag">Presto</span></span>
+              <a href="/fattura-elettronica" className="ps">📨 Fattura elettronica</a>
+              <a href="/regime-forfettario" className="ps">📊 Regime forfettario</a>
               <a href="/730" className="ps">🧾 Faccio il 730</a>
             </div>
           </div>
@@ -276,11 +276,11 @@ export default function Page() {
             <div className="aff-label">Strumento consigliato</div>
             <div className="aff-body">
               <div className="aff-left">
-                <div className="aff-title">Apri la partita IVA e gestisci tutto online</div>
-                <div className="aff-text">Apertura gratuita, fatturazione elettronica inclusa, commercialista dedicato da 200€/anno. Pensato per forfettari.</div>
-                <div className="aff-note">* Link in partnership — se ti iscrivi, ZeroBurocrazia riceve una piccola commissione. Non cambia nulla per te.</div>
+                <div className="aff-title">Fiscozen &mdash; Commercialista online per partite IVA</div>
+                <div className="aff-text">Apertura P.IVA gratuita, fatturazione elettronica inclusa, commercialista dedicato. Gestisce forfettario e ordinario semplificato. Da 299&euro;/anno tutto incluso.</div>
+                <div className="aff-note">* Link in partnership &mdash; se ti iscrivi, ZeroBurocrazia riceve una piccola commissione. A te non cambia nulla sul prezzo.</div>
               </div>
-              <a href="QUI_LINK_AFFILIATO_PIVA_COMM" target="_blank" rel="noopener sponsored" className="aff-btn">Scopri il servizio {'\u2192'}</a>
+              <a href="FISCOZEN_LINK" target="_blank" rel="noopener sponsored" className="aff-btn">Prova Fiscozen gratis {'\u2192'}</a>
             </div>
           </div>
           <div className="aff-block r">
@@ -393,8 +393,8 @@ export default function Page() {
           </div>
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDCDA'} Guide correlate</div>
-            <span className="sbguide sbguide-soon">📨 Fattura elettronica<span className="sbg-soon">Presto</span></span>
-            <span className="sbguide sbguide-soon">📊 Regime forfettario<span className="sbg-soon">Presto</span></span>
+            <a href="/fattura-elettronica" className="sbguide">📨 Fattura elettronica<span className="sbg-ar">→</span></a>
+            <a href="/regime-forfettario" className="sbguide">📊 Regime forfettario<span className="sbg-ar">→</span></a>
             <a href="/730" className="sbguide">🧾 Faccio il 730<span className="sbg-ar">→</span></a>
           </div>
         </aside>
