@@ -20,9 +20,9 @@ export const metadata = {
     description: 'Tutto sul forfettario: requisiti, tasse al 5-15%, INPS, coefficienti. Guida gratuita aggiornata.',
     url: 'https://zeroburocrazia.it/regime-forfettario',
     type: 'article', siteName: 'ZeroBurocrazia', locale: 'it_IT',
-    images: [{ url: 'https://zeroburocrazia.it/oghome.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://zeroburocrazia.it/ogregimeforfettario.png', width: 1200, height: 630 }],
   },
-  twitter: { card: 'summary_large_image', title: 'Regime Forfettario 2026: Guida Completa', description: 'Requisiti, tasse, INPS, coefficienti, vantaggi e svantaggi del forfettario.', images: ['https://zeroburocrazia.it/oghome.png'] },
+  twitter: { card: 'summary_large_image', title: 'Regime Forfettario 2026: Guida Completa', description: 'Requisiti, tasse, INPS, coefficienti, vantaggi e svantaggi del forfettario.', images: ['https://zeroburocrazia.it/ogregimeforfettario.png'] },
 };
 
 const tocItems = [
@@ -49,7 +49,7 @@ const faqItems = [
 
 export default function Page() {
   const schemas = [
-    articleSchema({ title: 'Regime forfettario 2026: requisiti, tassazione e come funziona', description: 'Guida completa al regime forfettario 2026.', url: '/regime-forfettario', image: 'oghome.png', datePublished: '2026-03-09', dateModified: '2026-03-09' }),
+    articleSchema({ title: 'Regime forfettario 2026: requisiti, tassazione e come funziona', description: 'Guida completa al regime forfettario 2026.', url: '/regime-forfettario', image: 'ogregimeforfettario.png', datePublished: '2026-03-09', dateModified: '2026-03-09' }),
     faqSchema(faqItems),
   ];
 

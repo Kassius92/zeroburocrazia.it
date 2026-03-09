@@ -22,13 +22,13 @@ export const metadata = {
     type: 'article',
     siteName: 'ZeroBurocrazia',
     locale: 'it_IT',
-    images: [{ url: 'https://zeroburocrazia.it/oghome.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://zeroburocrazia.it/ogspesemediche.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Spese Mediche Detraibili 2026: Elenco Completo e 730',
     description: 'Elenco spese mediche detraibili, franchigia 129,11\u20AC, come pagare e quanto recuperi nel 730.',
-    images: ['https://zeroburocrazia.it/oghome.png'],
+    images: ['https://zeroburocrazia.it/ogspesemediche.png'],
   },
 };
 
@@ -60,7 +60,7 @@ export default function Page() {
       title: 'Spese mediche detraibili 2026: elenco completo e come scaricarle nel 730',
       description: 'Guida completa alle spese mediche detraibili nel 730 2026: elenco, franchigia, come pagare, documenti e calcolo del rimborso.',
       url: '/spese-mediche',
-      image: 'oghome.png',
+      image: 'ogspesemediche.png',
       datePublished: '2026-03-09',
       dateModified: '2026-03-09',
     }),

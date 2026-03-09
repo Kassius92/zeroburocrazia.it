@@ -20,9 +20,9 @@ export const metadata = {
     description: 'Guida completa alla fattura elettronica: come funziona, chi deve farla, strumenti gratuiti e a pagamento.',
     url: 'https://zeroburocrazia.it/fattura-elettronica',
     type: 'article', siteName: 'ZeroBurocrazia', locale: 'it_IT',
-    images: [{ url: 'https://zeroburocrazia.it/oghome.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://zeroburocrazia.it/ogfatturaelettronica.png', width: 1200, height: 630 }],
   },
-  twitter: { card: 'summary_large_image', title: 'Fattura Elettronica 2026: Guida Completa', description: 'Come fare la fattura elettronica, chi deve farla, software gratis e errori da evitare.', images: ['https://zeroburocrazia.it/oghome.png'] },
+  twitter: { card: 'summary_large_image', title: 'Fattura Elettronica 2026: Guida Completa', description: 'Come fare la fattura elettronica, chi deve farla, software gratis e errori da evitare.', images: ['https://zeroburocrazia.it/ogfatturaelettronica.png'] },
 };
 
 const tocItems = [
@@ -48,7 +48,7 @@ const faqItems = [
 
 export default function Page() {
   const schemas = [
-    articleSchema({ title: 'Fattura elettronica 2026: come farla, obblighi e software gratis', description: 'Guida completa alla fattura elettronica 2026.', url: '/fattura-elettronica', image: 'oghome.png', datePublished: '2026-03-09', dateModified: '2026-03-09' }),
+    articleSchema({ title: 'Fattura elettronica 2026: come farla, obblighi e software gratis', description: 'Guida completa alla fattura elettronica 2026.', url: '/fattura-elettronica', image: 'ogfatturaelettronica.png', datePublished: '2026-03-09', dateModified: '2026-03-09' }),
     faqSchema(faqItems),
   ];
 

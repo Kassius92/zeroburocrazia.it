@@ -16,7 +16,7 @@ export const metadata = {
     type: 'article',
     siteName: 'ZeroBurocrazia',
     locale: 'it_IT',
-    images: [{ url: 'https://zeroburocrazia.it/oghome.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://zeroburocrazia.it/ogtg.png', width: 1200, height: 630 }],
   },
 };
 
