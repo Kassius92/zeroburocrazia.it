@@ -107,8 +107,7 @@ export default function Page() {
               <span className="pill pill-s">{'\u2713'} Aggiornato marzo 2026</span>
             </div>
             <div className="hero-source"><strong>Fonti:</strong> INPS · Agenzia delle Entrate · Ministero del Lavoro e delle Politiche Sociali</div>
-            <PrintButton />
-            <VersionToggle />
+            <div className="hero-actions"><PrintButton /><VersionToggle /></div>
           </div>
           <div className="hero-right">
             <div className="hstat"><div className="hn">0€</div><div className="hl">online con SPID<br/>o gratis al CAF</div></div>
@@ -355,7 +354,7 @@ export default function Page() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <VersionToggle />
+          <SidebarToggle />
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDEE0'} Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">{'\uD83C\uDFAF'}</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Scopri se ti serve</div></div></a>
@@ -368,7 +367,6 @@ export default function Page() {
             <a href="/spid" className="sbguide">{'\uD83D\uDD10'} Faccio lo SPID<span className="sbg-ar">{'\u2192'}</span></a>
             <a href="/compro-casa" className="sbguide">{'\uD83C\uDFE0'} Compro casa<span className="sbg-ar">{'\u2192'}</span></a>
           </div>
-          <SidebarToggle />
         </aside>
       </div>
 

@@ -80,8 +80,7 @@ export default function Page() {
               <span className="pill pill-s">{'\u23F1'} 20 min di lettura</span>
             </div>
             <div className="hero-source"><strong>Fonti:</strong> Agenzia delle Entrate · INPS Circolare 14/2026 · Legge di Bilancio 2026</div>
-            <PrintButton />
-            <VersionToggle />
+            <div className="hero-actions"><PrintButton /><VersionToggle /></div>
           </div>
           <div className="hero-right">
             <div className="hstat"><div className="hn">0€</div><div className="hl">costo apertura<br/>all&apos;Agenzia Entrate</div></div>
@@ -385,7 +384,7 @@ export default function Page() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <VersionToggle />
+          <SidebarToggle />
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDD27'} Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">{'\u2705'}</span><div><div className="sbtool-n">Quiz: serve a me?</div><div className="sbtool-d">Scopri se ti serve</div></div></a>
@@ -400,7 +399,6 @@ export default function Page() {
             <a href="/isee" className="sbguide">{'\uD83D\uDCCB'} Faccio l&apos;ISEE<span className="sbg-ar">{'\u2192'}</span></a>
             <a href="/compro-casa" className="sbguide">{'\uD83C\uDFE0'} Compro casa<span className="sbg-ar">{'\u2192'}</span></a>
           </div>
-          <SidebarToggle />
         </aside>
       </div>
 

@@ -115,8 +115,7 @@ export default function Pagina730() {
               <span className="pill pill-s">✓ Aggiornato marzo 2026</span>
             </div>
             <div className="hero-source"><strong>Fonti:</strong> Agenzia delle Entrate · INPS · Ministero dell&apos;Economia e delle Finanze · Legge di Bilancio 2026</div>
-            <PrintButton />
-            <VersionToggle />
+            <div className="hero-actions"><PrintButton /><VersionToggle /></div>
           </div>
           <div className="hero-right">
             <div className="hstat"><div className="hn">0€</div><div className="hl">con la <Tip t="Il 730 che l'Agenzia delle Entrate prepara per te, già parzialmente compilato.">precompilata</Tip><br/>fai da solo gratis</div></div>
@@ -419,7 +418,7 @@ export default function Pagina730() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <VersionToggle />
+          <SidebarToggle />
 <div className="sbsec">
             <div className="sbsec-t">🛠 Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">🎯</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Scopri se devi farlo</div></div></a>
@@ -433,7 +432,6 @@ export default function Pagina730() {
             <Link href="/spid" className="sbguide">🔐 Faccio lo SPID<span className="sbg-ar">→</span></Link>
             <Link href="/compro-casa" className="sbguide">🏠 Compro casa<span className="sbg-ar">→</span></Link>
           </div>
-          <SidebarToggle />
         </aside>
       </div>
 

@@ -91,8 +91,7 @@ export default function Page() {
               <span className="pill pill-s">{'\u2713'} Aggiornato marzo 2026</span>
             </div>
             <div className="hero-source"><strong>Fonti:</strong> INPS · D.Lgs. 151/2001 · Legge di Bilancio 2026 (L. 199/2025)</div>
-            <PrintButton />
-            <VersionToggle />
+            <div className="hero-actions"><PrintButton /><VersionToggle /></div>
           </div>
           <div className="hero-right">
             <div className="hstat"><div className="hn">5 mesi</div><div className="hl">congedo maternit&agrave;<br/>obbligatorio all&apos;80%</div></div>
@@ -398,7 +397,7 @@ export default function Page() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <VersionToggle />
+          <SidebarToggle />
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDEE0'} Strumenti utili</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">{'\u2705'}</span><div><div className="sbtool-n">Quiz: serve a me?</div><div className="sbtool-d">Scopri se questa guida fa per te</div></div></a>
@@ -412,7 +411,6 @@ export default function Page() {
             <a href="/730" className="sbguide">{'\uD83E\uDDFE'} Faccio il 730<span className="sbg-ar">{'\u2192'}</span></a>
             <a href="/compro-casa" className="sbguide">{'\uD83C\uDFE0'} Compro casa<span className="sbg-ar">{'\u2192'}</span></a>
           </div>
-          <SidebarToggle />
         </aside>
       </div>
 

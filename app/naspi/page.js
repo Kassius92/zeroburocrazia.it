@@ -87,8 +87,7 @@ export default function Page() {
               <span className="pill pill-s">{'\u2713'} Aggiornato marzo 2026</span>
             </div>
             <div className="hero-source"><strong>Fonti:</strong> INPS · Circolare n. 4/2026 · Legge di Bilancio 2026 · D.Lgs. 22/2015</div>
-            <PrintButton />
-            <VersionToggle />
+            <div className="hero-actions"><PrintButton /><VersionToggle /></div>
           </div>
           <div className="hero-right">
             <div className="hstat"><div className="hn">1.584€</div><div className="hl">massimo mensile<br/>lordo 2026</div></div>
@@ -357,7 +356,7 @@ export default function Page() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <VersionToggle />
+          <SidebarToggle />
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDEE0'} Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">{'\u2705'}</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Verifica i requisiti</div></div></a>
@@ -371,7 +370,6 @@ export default function Page() {
             <a href="/piva" className="sbguide">{'\uD83D\uDCBC'} Apro partita IVA<span className="sbg-ar">{'\u2192'}</span></a>
             <a href="/spid" className="sbguide">{'\uD83D\uDD10'} Faccio lo SPID<span className="sbg-ar">{'\u2192'}</span></a>
           </div>
-          <SidebarToggle />
         </aside>
       </div>
 

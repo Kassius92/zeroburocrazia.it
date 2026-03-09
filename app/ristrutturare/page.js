@@ -86,8 +86,7 @@ export default function Page() {
               <span className="pill pill-s">{'\u2713'} Aggiornato marzo 2026</span>
             </div>
             <div className="hero-source"><strong>Fonti:</strong> Agenzia delle Entrate · ENEA · DPR 380/2001 · Legge di Bilancio 2026</div>
-            <PrintButton />
-            <VersionToggle />
+            <div className="hero-actions"><PrintButton /><VersionToggle /></div>
           </div>
           <div className="hero-right">
             <div className="hstat"><div className="hn">50%</div><div className="hl">detrazione bonus<br/>prima casa 2026</div></div>
@@ -363,7 +362,7 @@ export default function Page() {
 
         {/* SIDEBAR */}
         <aside className="aside">
-          <VersionToggle />
+          <SidebarToggle />
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDEE0'} Strumenti</div>
             <a href="#calcolatore" className="sbtool"><span className="sbtool-i">{'\uD83E\uDDEE'}</span><div><div className="sbtool-n">Calcolatore detrazione</div><div className="sbtool-d">Stima il tuo bonus</div></div></a>
@@ -377,7 +376,6 @@ export default function Page() {
             <a href="/spid" className="sbguide">{'\uD83D\uDD10'} Faccio lo SPID<span className="sbg-ar">{'\u2192'}</span></a>
             <a href="/isee" className="sbguide">{'\uD83D\uDCCB'} Faccio l&apos;ISEE<span className="sbg-ar">{'\u2192'}</span></a>
           </div>
-          <SidebarToggle />
         </aside>
       </div>
 

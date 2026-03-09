@@ -99,8 +99,7 @@ export default function Page() {
               <span className="pill pill-s">{'\u2713'} Aggiornato marzo 2026</span>
             </div>
             <div className="hero-source"><strong>Fonti:</strong> Art. 2120 Codice Civile &middot; INPS &middot; Legge di Bilancio 2026 &middot; Agenzia delle Entrate</div>
-            <PrintButton />
-            <VersionToggle />
+            <div className="hero-actions"><PrintButton /><VersionToggle /></div>
           </div>
           <div className="hero-right">
             <div className="hstat"><div className="hn">~1 mese</div><div className="hl">di stipendio<br/>per ogni anno</div></div>
@@ -351,7 +350,7 @@ export default function Page() {
         </main>
 
         <aside className="aside">
-          <VersionToggle />
+          <SidebarToggle />
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDEE0'} Strumenti</div>
             <a href="#quiz-serve" className="sbtool"><span className="sbtool-i">{'\u2705'}</span><div><div className="sbtool-n">Quiz &quot;serve a me?&quot;</div><div className="sbtool-d">Verifica la tua situazione</div></div></a>
@@ -364,7 +363,6 @@ export default function Page() {
             <a href="/naspi" className="sbguide">{'\uD83D\uDCBC'} NASpI<span className="sbg-ar">{'\u2192'}</span></a>
             <a href="/730" className="sbguide">{'\uD83E\uDDFE'} Faccio il 730<span className="sbg-ar">{'\u2192'}</span></a>
           </div>
-          <SidebarToggle />
         </aside>
       </div>
 

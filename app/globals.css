@@ -65,6 +65,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--t1);-w
 .btn-print{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:500;color:var(--t3);background:rgba(255,255,255,.55);backdrop-filter:blur(8px);border:1px solid var(--bd);cursor:pointer;padding:8px 18px;border-radius:100px;transition:all .2s;font-family:'DM Sans',sans-serif;}
 .btn-print:hover{background:var(--wh);color:var(--warm-brown);border-color:var(--warm-brown);}
 .btn-print svg{width:13px;height:13px;}
+.hero-actions{display:flex;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap;}
+.hero-actions .tog{margin-left:0;}
 .hero-right{display:flex;flex-direction:column;gap:14px;flex-shrink:0;}
 @keyframes fadeRight{from{opacity:0;transform:translateX(30px);}to{opacity:1;transform:translateX(0);}}
 .hstat{background:rgba(255,255,255,.72);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border:1px solid rgba(232,223,211,.9);border-radius:18px;padding:18px 22px;min-width:170px;box-shadow:0 4px 24px rgba(15,76,92,.09),0 1px 4px rgba(15,76,92,.04);transition:all .35s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden;}
