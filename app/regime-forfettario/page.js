@@ -209,7 +209,7 @@ export default function Page() {
               <div className="aff-body">
                 <div className="aff-left">
                   <div className="aff-title">Fiscozen &mdash; Commercialista online per forfettari</div>
-                  <div className="aff-text">Apertura P.IVA gratuita, fatturazione elettronica, scadenze, F24, dichiarazione dei redditi. Commercialista dedicato. Da 299&euro;/anno tutto incluso.</div>
+                  <div className="aff-text">Apertura P.IVA gratuita, fatturazione elettronica, scadenze, F24, dichiarazione dei redditi. Commercialista dedicato. Tutto incluso.</div>
                   <div className="aff-note">* Link in partnership &mdash; se ti iscrivi, ZeroBurocrazia riceve una piccola commissione. A te non cambia nulla sul prezzo.</div>
                 </div>
                 <a href="FISCOZEN_LINK" target="_blank" rel="noopener sponsored" className="aff-btn">Prova Fiscozen gratis {'\u2192'}</a>
@@ -229,7 +229,7 @@ export default function Page() {
               <div className="db-row"><span className="db-label">Coefficiente redditivit&agrave; (78%)</span><span className="db-old"></span><span className="db-arrow"></span><span className="db-new">27.300&euro; imponibile</span></div>
               <div className="db-row"><span className="db-label">Imposta sostitutiva (5%)</span><span className="db-old"></span><span className="db-arrow"></span><span className="db-new">-1.365&euro;</span></div>
               <div className="db-row"><span className="db-label">INPS gestione separata (26,07%)</span><span className="db-old"></span><span className="db-arrow"></span><span className="db-new">-7.117&euro;</span></div>
-              <div className="db-row"><span className="db-label">Fiscozen (commercialista)</span><span className="db-old"></span><span className="db-arrow"></span><span className="db-new">-299&euro;</span></div>
+              <div className="db-row"><span className="db-label">Commercialista online</span><span className="db-old"></span><span className="db-arrow"></span><span className="db-new">incluso</span></div>
               <div className="db-row db-total"><span className="db-label">Netto in tasca</span><span className="db-val">~26.219&euro;</span></div>
             </div>
 

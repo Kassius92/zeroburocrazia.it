@@ -188,7 +188,7 @@ export default function Page() {
               <div className="aff-body">
                 <div className="aff-left">
                   <div className="aff-title">Fiscozen &mdash; Fatturazione + commercialista, tutto incluso</div>
-                  <div className="aff-text">Crea e invia fatture elettroniche in 30 secondi. Commercialista dedicato, scadenze, F24, dichiarazione dei redditi. Forfettario e ordinario semplificato. Da 299&euro;/anno.</div>
+                  <div className="aff-text">Crea e invia fatture elettroniche in 30 secondi. Commercialista dedicato, scadenze, F24, dichiarazione dei redditi. Forfettario e ordinario semplificato.</div>
                   <div className="aff-note">* Link in partnership &mdash; se ti iscrivi, ZeroBurocrazia riceve una piccola commissione. A te non cambia nulla sul prezzo.</div>
                 </div>
                 <a href="FISCOZEN_LINK" target="_blank" rel="noopener sponsored" className="aff-btn">Prova Fiscozen gratis {'\u2192'}</a>
@@ -221,7 +221,7 @@ export default function Page() {
             <div className="dark-block r">
               <div className="db-row"><span className="db-label">Tempo per fattura</span><span className="db-old">15 minuti</span><span className="db-arrow">{'\u2192'}</span><span className="db-new">30 secondi</span></div>
               <div className="db-row"><span className="db-label">Scadenze fiscali</span><span className="db-old">Le dimenticava</span><span className="db-arrow">{'\u2192'}</span><span className="db-new">Notifiche automatiche</span></div>
-              <div className="db-row"><span className="db-label">Costo commercialista</span><span className="db-old">500&euro;/anno (separato)</span><span className="db-arrow">{'\u2192'}</span><span className="db-new">299&euro;/anno (tutto incluso)</span></div>
+              <div className="db-row"><span className="db-label">Costo commercialista</span><span className="db-old">Separato e caro</span><span className="db-arrow">{'\u2192'}</span><span className="db-new">Tutto incluso</span></div>
               <div className="db-row db-total"><span className="db-label">Risparmio annuo</span><span className="db-val">~200&euro; + ore di tempo</span></div>
             </div>
           </div>
