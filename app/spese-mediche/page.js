@@ -117,8 +117,8 @@ export default function Page() {
             <span className="perc-label">Guide correlate</span>
             <div className="perc-steps">
               <a href="/730" className="ps">{'\uD83E\uDDFE'} Faccio il 730</a>
-              <a href="/isee" className="ps">{'\uD83D\uDCCB'} Faccio l&apos;ISEE</a>
-              <a href="/ristrutturare" className="ps">{'\uD83D\uDD28'} Ristrutturare casa</a>
+              <span className="ps ps-soon">{'\uD83C\uDFE5'} Esenzione ticket <span className="ps-tag">Presto</span></span>
+              <span className="ps ps-soon">{'\uD83E\uDDE0'} Bonus psicologo <span className="ps-tag">Presto</span></span>
             </div>
           </div>
 
@@ -147,11 +147,11 @@ export default function Page() {
 
             <p>Per&ograve; c&apos;&egrave; una soglia minima: i primi <strong>129,11&euro;</strong> di spese mediche dell&apos;anno restano a carico tuo. La <Tip t="Il minimo che resta a tuo carico. La detrazione del 19% si calcola solo sulla parte che supera i 129,11&euro;. Se spendi 200&euro;, detrai il 19% di 70,89&euro; (= 13,47&euro;).">franchigia</Tip> funziona cos&igrave;: se in un anno spendi 500&euro; di spese mediche, la detrazione non si calcola su 500 ma su 370,89&euro; (500 meno 129,11). Il 19% di 370,89&euro; fa circa <strong>70&euro; di rimborso</strong>.</p>
 
-            <p>Questo rimborso ti arriva come minor IRPEF da pagare oppure come soldi in pi&ugrave; nella busta paga di luglio, quando il tuo datore di lavoro fa il conguaglio dopo il <a href="/730">730</a>.</p>
+            <p>Questo rimborso ti arriva come minor <Tip t="Imposta sul Reddito delle Persone Fisiche. &Egrave; la tassa principale che paghi sui tuoi guadagni. Le detrazioni riducono l'IRPEF che devi pagare.">IRPEF</Tip> da pagare oppure come soldi in pi&ugrave; nella busta paga di luglio, quando il tuo datore di lavoro fa il <Tip t="Il ricalcolo che il datore di lavoro fa a luglio dopo aver ricevuto il risultato del tuo 730. Se hai diritto a un rimborso, te lo mette direttamente in busta paga.">conguaglio</Tip> dopo il <a href="/730">730</a>.</p>
 
             <h3>Le parole che devi conoscere</h3>
             <div className="glossary r">
-              <div className="gl-item r d1"><strong>Detrazione</strong> &mdash; Uno sconto diretto sulle tasse. Se hai 100&euro; di detrazione, paghi 100&euro; di IRPEF in meno. Le spese mediche danno una detrazione del 19%.</div>
+              <div className="gl-item r d1"><strong>Detrazione</strong> &mdash; Uno sconto diretto sulle tasse. Se hai 100&euro; di detrazione, paghi 100&euro; di <Tip t="Imposta sul Reddito delle Persone Fisiche. La tassa principale che paghi sullo stipendio o la pensione. Le aliquote nel 2026: 23% fino a 28.000&euro;, 33% fino a 50.000&euro;, 43% oltre.">IRPEF</Tip> in meno. Le spese mediche danno una detrazione del 19%.</div>
               <div className="gl-item r d2"><strong>Franchigia</strong> &mdash; I primi 129,11&euro; di spese mediche restano a tuo carico. La detrazione del 19% si calcola solo sulla parte che supera questa soglia.</div>
               <div className="gl-item r d3"><strong>Scontrino parlante</strong> &mdash; Lo scontrino della farmacia che riporta: natura del prodotto (&quot;farmaco&quot; o &quot;medicinale&quot;), il codice AIC e il tuo codice fiscale. Senza queste informazioni non puoi detrarre.</div>
               <div className="gl-item r d4"><strong>Pagamento tracciabile</strong> &mdash; Carta di credito, bancomat, carta prepagata, bonifico o assegno. Tutto tranne i contanti. Obbligatorio per quasi tutte le spese mediche private dal 2020.</div>
@@ -172,7 +172,7 @@ export default function Page() {
 
             <h3>{'\uD83D\uDC8A'} Farmaci e medicinali</h3>
             <ul className="cl">
-              <li className="cli r d1"><div className="ci">{'\u2705'}</div><div className="clb"><strong>Farmaci con ricetta medica</strong><span className="note">Scontrino parlante con codice fiscale. Pagamento anche in contanti</span></div></li>
+              <li className="cli r d1"><div className="ci">{'\u2705'}</div><div className="clb"><strong>Farmaci con ricetta medica</strong><span className="note"><Tip t="Lo scontrino della farmacia che riporta: il tipo di prodotto ('farmaco'), il codice AIC del medicinale e il tuo codice fiscale. Senza queste tre informazioni non puoi detrarre.">Scontrino parlante</Tip> con codice fiscale. Pagamento anche in contanti</span></div></li>
               <li className="cli r d2"><div className="ci">{'\u2705'}</div><div className="clb"><strong>Farmaci da banco (senza ricetta)</strong><span className="note">Scontrino parlante. Dal 2025: <strong>pagamento tracciabile obbligatorio</strong></span></div></li>
               <li className="cli r d3"><div className="ci">{'\u2705'}</div><div className="clb"><strong>Farmaci omeopatici classificati come medicinali</strong><span className="note">Con dicitura &quot;omeopatico&quot; sullo scontrino</span></div></li>
               <li className="cli r d4"><div className="ci">{'\u274C'}</div><div className="clb"><strong>Integratori, parafarmaci, fitoterapici</strong><span className="note">NON detraibili &mdash; non sono farmaci</span></div></li>
@@ -186,12 +186,12 @@ export default function Page() {
               <li className="cli r d4"><div className="ci">{'\u2705'}</div><div className="clb"><strong>Cure odontoiatriche</strong><span className="note">Carie, estrazioni, protesi, apparecchi, pulizia. No sbiancamento estetico</span></div></li>
               <li className="cli r d1"><div className="ci">{'\u2705'}</div><div className="clb"><strong>Fisioterapia, logopedia, riabilitazione</strong><span className="note">Da professionisti abilitati iscritti all&apos;albo</span></div></li>
               <li className="cli r d2"><div className="ci">{'\u2705'}</div><div className="clb"><strong>Psicologo e psicoterapeuta</strong><span className="note">Iscritto all&apos;albo. Dal 2026 precaricato nel 730</span></div></li>
-              <li className="cli r d3"><div className="ci">{'\u2705'}</div><div className="clb"><strong>Ticket SSN</strong><span className="note">Per visite, esami e pronto soccorso</span></div></li>
+              <li className="cli r d3"><div className="ci">{'\u2705'}</div><div className="clb"><strong>Ticket <Tip t="Servizio Sanitario Nazionale. Il sistema sanitario pubblico italiano. Le strutture SSN sono ospedali pubblici e cliniche private convenzionate con lo Stato.">SSN</Tip></strong><span className="note">Per visite, esami e pronto soccorso</span></div></li>
             </ul>
 
             <h3>{'\uD83D\uDC53'} Dispositivi medici</h3>
             <ul className="cl">
-              <li className="cli r d1"><div className="ci">{'\u2705'}</div><div className="clb"><strong>Occhiali da vista e lenti a contatto</strong><span className="note">Con marcatura CE. Anche la soluzione per lenti</span></div></li>
+              <li className="cli r d1"><div className="ci">{'\u2705'}</div><div className="clb"><strong>Occhiali da vista e lenti a contatto</strong><span className="note">Con <Tip t="Conformit&agrave; Europea. Un marchio che certifica che il prodotto rispetta gli standard di sicurezza europei. Lo trovi stampato sulla confezione o sul prodotto stesso.">marcatura CE</Tip>. Anche la soluzione per lenti</span></div></li>
               <li className="cli r d2"><div className="ci">{'\u2705'}</div><div className="clb"><strong>Apparecchi acustici, misuratori di pressione, aerosol</strong><span className="note">Con marcatura CE e scontrino/fattura</span></div></li>
               <li className="cli r d3"><div className="ci">{'\u2705'}</div><div className="clb"><strong>Plantari, protesi, ausili ortopedici</strong><span className="note">Su prescrizione medica</span></div></li>
             </ul>
@@ -233,7 +233,7 @@ export default function Page() {
             <p>Per detrarre le spese mediche devi conservare la documentazione per <strong>5 anni</strong> dalla dichiarazione. Ecco cosa serve:</p>
 
             <ul className="cl">
-              <li className="cli r d1"><div className="ci">{'\uD83D\uDCDC'}</div><div className="clb"><strong>Scontrini parlanti</strong><span className="note">Per farmaci: devono avere codice fiscale, natura (&quot;farmaco&quot;) e codice AIC</span></div></li>
+              <li className="cli r d1"><div className="ci">{'\uD83D\uDCDC'}</div><div className="clb"><strong>Scontrini parlanti</strong><span className="note">Per farmaci: devono avere codice fiscale, natura (&quot;farmaco&quot;) e <Tip t="Autorizzazione all'Immissione in Commercio. Un codice numerico che identifica in modo univoco ogni farmaco venduto in Italia. Lo trovi sullo scontrino della farmacia.">codice AIC</Tip></span></div></li>
               <li className="cli r d2"><div className="ci">{'\uD83D\uDCC4'}</div><div className="clb"><strong>Fatture mediche</strong><span className="note">Di medici, dentisti, fisioterapisti, psicologi, laboratori, cliniche</span></div></li>
               <li className="cli r d3"><div className="ci">{'\uD83D\uDCB3'}</div><div className="clb"><strong>Ricevuta del pagamento tracciabile</strong><span className="note">Estratto conto, ricevuta bancomat, o annotazione in fattura da parte del medico</span></div></li>
               <li className="cli r d4"><div className="ci">{'\uD83C\uDFE5'}</div><div className="clb"><strong>Ricevute del ticket SSN</strong><span className="note">Per visite, esami e pronto soccorso nelle strutture pubbliche</span></div></li>
@@ -241,7 +241,7 @@ export default function Page() {
 
             <div className="ib warn r">
               <div className="ib-t">{'\u26A0\uFE0F'} Novit&agrave; 2026: molte spese sono gi&agrave; nel precompilato</div>
-              <p>Farmacie, medici, ospedali e laboratori inviano i dati all&apos;Agenzia delle Entrate. Molte spese le trovi gi&agrave; nel <a href="/730">730 precompilato</a>. Ma <strong>controlla sempre</strong> che siano tutte &mdash; alcune potrebbero mancare (es. spese all&apos;estero, strutture non ancora collegate). Se accetti il precompilato senza modifiche, non ti chiedono i documenti. Se modifichi, tienili pronti.</p>
+              <p>Farmacie, medici, ospedali e laboratori inviano i dati all&apos;Agenzia delle Entrate. Molte spese le trovi gi&agrave; nel <a href="/730">730 <Tip t="La versione del 730 gi&agrave; compilata dall'Agenzia delle Entrate con i dati che ha ricevuto da farmacie, medici, banche e datori di lavoro. Tu devi solo controllare e confermare (o integrare).">precompilato</Tip></a>. Ma <strong>controlla sempre</strong> che siano tutte &mdash; alcune potrebbero mancare (es. spese all&apos;estero, strutture non ancora collegate). Se accetti il precompilato senza modifiche, non ti chiedono i documenti. Se modifichi, tienili pronti.</p>
             </div>
           </div>
 
@@ -249,7 +249,7 @@ export default function Page() {
           <div className="sec breve-hide r" id="errori">
             <div className="sec-tag">Da evitare</div>
             <h2>Gli errori che fanno tutti</h2>
-            <div className="ib warn r"><div className="ib-t">{'\u26A0\uFE0F'} Pagare in contanti il dentista</div><p>Il dentista privato non &egrave; una struttura SSN. Se lo paghi in contanti, <strong>perdi tutta la detrazione</strong>. Anche se hai la fattura perfetta. Serve il pagamento tracciabile. Questo errore costa centinaia di euro a migliaia di italiani ogni anno.</p></div>
+            <div className="ib warn r"><div className="ib-t">{'\u26A0\uFE0F'} Pagare in contanti il dentista</div><p>Il dentista privato non &egrave; una struttura <Tip t="Servizio Sanitario Nazionale. Il sistema pubblico. Ospedali pubblici e cliniche private convenzionate. Solo in queste strutture puoi pagare in contanti e detrarre lo stesso.">SSN</Tip>. Se lo paghi in contanti, <strong>perdi tutta la detrazione</strong>. Anche se hai la fattura perfetta. Serve il pagamento tracciabile. Questo errore costa centinaia di euro a migliaia di italiani ogni anno.</p></div>
             <div className="ib warn r d1"><div className="ib-t">{'\u26A0\uFE0F'} Detrarre gli integratori</div><p>Gli integratori alimentari (vitamine, omega-3, probiotici) <strong>non sono farmaci</strong> e non sono detraibili. Nemmeno se li ha prescritti il medico. Lo scontrino deve riportare &quot;farmaco&quot; o &quot;medicinale&quot;, non &quot;parafarmaco&quot; o &quot;integratore&quot;.</p></div>
             <div className="ib warn r d2"><div className="ib-t">{'\u26A0\uFE0F'} Non controllare il precompilato</div><p>Il 730 precompilato contiene gi&agrave; molte spese mediche, ma <strong>non tutte</strong>. Spese all&apos;estero, strutture non ancora collegate, farmaci online: possono mancare. Se non le aggiungi, perdi la detrazione.</p></div>
             <div className="ib warn r d3"><div className="ib-t">{'\u26A0\uFE0F'} Buttare gli scontrini</div><p>L&apos;Agenzia delle Entrate pu&ograve; chiederti i documenti fino a <strong>5 anni dopo</strong>. Se non ce li hai, ti revocano la detrazione e devi restituire i soldi + interessi. Conserva tutto in una busta anno per anno.</p></div>
@@ -298,8 +298,8 @@ export default function Page() {
             <h2>Guide correlate</h2>
             <div className="rg">
               <a href="/730" className="rc"><span className="rc-e">{'\uD83E\uDDFE'}</span><div className="rc-t">Faccio il 730</div><div className="rc-d">Le spese mediche si scaricano nel 730. Guida completa.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/isee" className="rc"><span className="rc-e">{'\uD83D\uDCCB'}</span><div className="rc-t">Faccio l&apos;ISEE</div><div className="rc-d">Serve per accedere a esenzioni ticket e bonus sanitari.</div><span className="rc-ar">{'\u2192'}</span></a>
-              <a href="/ristrutturare" className="rc"><span className="rc-e">{'\uD83D\uDD28'}</span><div className="rc-t">Ristrutturare casa</div><div className="rc-d">Anche la ristrutturazione si detrae al 50% nel 730.</div><span className="rc-ar">{'\u2192'}</span></a>
+              <a href="/isee" className="rc"><span className="rc-e">{'\uD83D\uDCCB'}</span><div className="rc-t">Faccio l&apos;ISEE</div><div className="rc-d">Con ISEE basso puoi ottenere l&apos;esenzione dal ticket sanitario.</div><span className="rc-ar">{'\u2192'}</span></a>
+              <a href="/spid" className="rc"><span className="rc-e">{'\uD83E\uDEAA'}</span><div className="rc-t">Faccio lo SPID</div><div className="rc-d">Ti serve per accedere al 730 precompilato e verificare le spese.</div><span className="rc-ar">{'\u2192'}</span></a>
             </div>
           </div>
 
@@ -316,10 +316,9 @@ export default function Page() {
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDCDA'} Guide correlate</div>
             <a href="/730" className="sbguide">{'\uD83E\uDDFE'} Faccio il 730<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/isee" className="sbguide">{'\uD83D\uDCCB'} Faccio l&apos;ISEE<span className="sbg-ar">{'\u2192'}</span></a>
-            <a href="/ristrutturare" className="sbguide">{'\uD83D\uDD28'} Ristrutturare casa<span className="sbg-ar">{'\u2192'}</span></a>
+            <span className="sbguide sbguide-soon">{'\uD83C\uDFE5'} Esenzione ticket<span className="sbg-soon">Presto</span></span>
+            <span className="sbguide sbguide-soon">{'\uD83E\uDDE0'} Bonus psicologo<span className="sbg-soon">Presto</span></span>
           </div>
-          <SidebarToggle />
         </aside>
       </div>
 
