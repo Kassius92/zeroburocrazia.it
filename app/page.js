@@ -126,21 +126,21 @@ export default function HomePage() {
           <div className="tg-preview-grid">
             <a href="/tg" className="tg-prev-card r">
               <span className="tg-prev-cat tg-prev-fisco">Fisco</span>
-              <span className="tg-prev-tag tg-prev-tag-scadenza">{'\u23F0'} Scadenza</span>
-              <div className="tg-prev-title">730 precompilato: online dal 30 aprile</div>
-              <div className="tg-prev-body">Novit&agrave; sulle detrazioni figli a carico e nuovo tetto spese scolastiche.</div>
+              <span className="tg-prev-tag tg-prev-tag-novita">{'\u2728'} Novit&agrave;</span>
+              <div className="tg-prev-title">ISEE 2026: l&apos;INPS aggiorna automaticamente tutte le attestazioni</div>
+              <div className="tg-prev-body">Non serve rifare la DSU: le attestazioni gi&agrave; presentate sono state aggiornate ai nuovi modelli.</div>
             </a>
             <a href="/tg" className="tg-prev-card r">
               <span className="tg-prev-cat tg-prev-famiglia">Famiglia</span>
-              <span className="tg-prev-tag tg-prev-tag-bonus">{'\uD83D\uDCB0'} Bonus</span>
-              <div className="tg-prev-title">Assegno unico: importi aggiornati da marzo</div>
-              <div className="tg-prev-body">Con ISEE sotto 17.500&euro; salgono a 204,10&euro; per figlio.</div>
+              <span className="tg-prev-tag tg-prev-tag-scadenza">{'\u26A0\uFE0F'} Attenzione</span>
+              <div className="tg-prev-title">Assegno unico marzo: chi non ha l&apos;ISEE prende il minimo</div>
+              <div className="tg-prev-body">Da marzo si applica il nuovo ISEE. Senza DSU: solo 58,30&euro; per figlio invece di 203,80&euro;.</div>
             </a>
             <a href="/tg" className="tg-prev-card r">
-              <span className="tg-prev-cat tg-prev-lavoro">Lavoro</span>
-              <span className="tg-prev-tag tg-prev-tag-novita">{'\u2728'} Novit&agrave;</span>
-              <div className="tg-prev-title">NASpI: il modulo di domanda ora &egrave; precompilato</div>
-              <div className="tg-prev-body">L&apos;INPS ha semplificato la procedura. Il termine resta 68 giorni.</div>
+              <span className="tg-prev-cat tg-prev-fisco">Fisco</span>
+              <span className="tg-prev-tag tg-prev-tag-scadenza">{'\u23F0'} Scadenza</span>
+              <div className="tg-prev-title">730 precompilato 2026: approvati i modelli definitivi</div>
+              <div className="tg-prev-body">Disponibile dal 30 aprile. Novit&agrave;: detrazioni figli fino a 30 anni, tetto spese scolastiche a 1.000&euro;.</div>
             </a>
           </div>
           <div className="tg-preview-cta">
