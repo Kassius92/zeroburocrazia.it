@@ -15,12 +15,12 @@ export const searchIndex = [
 
   // ═══ ISEE ═══
   { keywords: ['isee', 'indicatore situazione economica'], guide: 'ISEE', href: '/isee', desc: "Guida completa all'ISEE" },
-  { keywords: ['dsu', 'dichiarazione sostitutiva unica'], guide: 'ISEE', href: '/isee#come-si-fa', desc: 'Come si compila la DSU per l'ISEE' },
-  { keywords: ['isee precompilato', 'isee online'], guide: 'ISEE', href: '/isee#come-si-fa', desc: 'Fare l'ISEE online (precompilato)' },
-  { keywords: ['documenti isee', 'saldo 31 dicembre', 'giacenza media'], guide: 'ISEE', href: '/isee#documenti', desc: 'Documenti necessari per l'ISEE' },
-  { keywords: ['isee basso', 'abbassare isee', 'isee agevolazioni'], guide: 'ISEE', href: '/isee#serve', desc: 'A cosa serve l'ISEE (bonus e agevolazioni)' },
+  { keywords: ['dsu', 'dichiarazione sostitutiva unica'], guide: 'ISEE', href: '/isee#come-si-fa', desc: 'Come si compila la DSU per l\u2019ISEE' },
+  { keywords: ['isee precompilato', 'isee online'], guide: 'ISEE', href: '/isee#come-si-fa', desc: 'Fare l\u2019ISEE online (precompilato)' },
+  { keywords: ['documenti isee', 'saldo 31 dicembre', 'giacenza media'], guide: 'ISEE', href: '/isee#documenti', desc: 'Documenti necessari per l\u2019ISEE' },
+  { keywords: ['isee basso', 'abbassare isee', 'isee agevolazioni'], guide: 'ISEE', href: '/isee#serve', desc: 'A cosa serve l\u2019ISEE (bonus e agevolazioni)' },
   { keywords: ['isee corrente', 'variazione reddito'], guide: 'ISEE', href: '/isee#faq', desc: 'ISEE corrente per variazione di reddito' },
-  { keywords: ['nucleo familiare', 'composizione nucleo', 'chi fa parte isee'], guide: 'ISEE', href: '/isee#cose', desc: 'Nucleo familiare: chi conta per l'ISEE' },
+  { keywords: ['nucleo familiare', 'composizione nucleo', 'chi fa parte isee'], guide: 'ISEE', href: '/isee#cose', desc: 'Nucleo familiare: chi conta per l\u2019ISEE' },
 
   // ═══ SPID ═══
   { keywords: ['spid', 'identità digitale', 'sistema pubblico identità'], guide: 'SPID', href: '/spid', desc: 'Guida completa allo SPID' },
@@ -31,7 +31,7 @@ export const searchIndex = [
 
   // ═══ COMPRO CASA ═══
   { keywords: ['comprare casa', 'acquisto casa', 'compro casa'], guide: 'Compro casa', href: '/compro-casa', desc: 'Guida completa per comprare casa' },
-  { keywords: ['rogito', 'atto notarile', 'notaio casa'], guide: 'Compro casa', href: '/compro-casa#iter', desc: 'Il rogito e l'iter di acquisto' },
+  { keywords: ['rogito', 'atto notarile', 'notaio casa'], guide: 'Compro casa', href: '/compro-casa#iter', desc: 'Il rogito e l\u2019iter di acquisto' },
   { keywords: ['compromesso', 'preliminare', 'proposta acquisto', 'caparra'], guide: 'Compro casa', href: '/compro-casa#iter', desc: 'Compromesso, proposta e caparra' },
   { keywords: ['prima casa', 'agevolazioni prima casa', 'imposta registro'], guide: 'Compro casa', href: '/compro-casa#prima-casa', desc: 'Agevolazioni prima casa' },
   { keywords: ['mutuo', 'mutuo casa', 'tasso fisso', 'tasso variabile', 'rata mutuo'], guide: 'Compro casa', href: '/compro-casa#mutuo', desc: 'Mutuo: tasso fisso o variabile' },
@@ -73,7 +73,7 @@ export const searchIndex = [
   { keywords: ['naspi durata', 'quanti mesi naspi', 'durata disoccupazione'], guide: 'NASpI', href: '/naspi#quanto-spetta', desc: 'Durata della NASpI' },
   { keywords: ['domanda naspi', 'come richiedere naspi', 'naspi online', '68 giorni'], guide: 'NASpI', href: '/naspi#domanda', desc: 'Come fare domanda di NASpI' },
   { keywords: ['naspi e lavoro', 'lavorare con naspi', 'naspi partita iva'], guide: 'NASpI', href: '/naspi#lavorare', desc: 'Lavorare mentre prendi la NASpI' },
-  { keywords: ['naspi anticipata', 'naspi tutta insieme', 'naspi impresa'], guide: 'NASpI', href: '/naspi#anticipata', desc: 'NASpI anticipata in un'unica soluzione' },
+  { keywords: ['naspi anticipata', 'naspi tutta insieme', 'naspi impresa'], guide: 'NASpI', href: '/naspi#anticipata', desc: 'NASpI anticipata in un\u2019unica soluzione' },
   { keywords: ['licenziamento', 'licenziato'], guide: 'NASpI', href: '/naspi#requisiti', desc: 'Licenziamento: hai diritto alla NASpI' },
 
   // ═══ DIMISSIONI ═══
@@ -131,10 +131,10 @@ export const searchIndex = [
   { keywords: ['forfettario quanto si paga', 'tasse forfettario', 'calcolo tasse piva'], guide: 'Regime forfettario', href: '/regime-forfettario#tasse', desc: 'Quanto paghi in forfettario (calcolo)' },
 
   // ═══ ASSEGNO UNICO ═══
-  { keywords: ['assegno unico', 'assegno universale', 'auu', 'assegno figli'], guide: 'Assegno unico', href: '/assegno-unico', desc: 'Guida completa all'Assegno Unico 2026' },
+  { keywords: ['assegno unico', 'assegno universale', 'auu', 'assegno figli'], guide: 'Assegno unico', href: '/assegno-unico', desc: 'Guida completa all\u2019Assegno Unico 2026' },
   { keywords: ['importo assegno unico', 'tabella isee assegno', 'quanto prendo assegno'], guide: 'Assegno unico', href: '/assegno-unico#importi', desc: 'Importi per fascia ISEE' },
   { keywords: ['maggiorazione', 'maggiorazione figli', 'figli sotto 3 anni', 'neonato assegno'], guide: 'Assegno unico', href: '/assegno-unico#importi', desc: 'Maggiorazioni (neonati, disabilità, numerosi)' },
-  { keywords: ['domanda assegno unico', 'richiedere assegno unico', 'inps assegno'], guide: 'Assegno unico', href: '/assegno-unico#domanda', desc: 'Come fare domanda all'INPS' },
+  { keywords: ['domanda assegno unico', 'richiedere assegno unico', 'inps assegno'], guide: 'Assegno unico', href: '/assegno-unico#domanda', desc: 'Come fare domanda all\u2019INPS' },
   { keywords: ['assegno unico gravidanza', 'assegno 7 mese', 'nascituri'], guide: 'Assegno unico', href: '/assegno-unico#domanda', desc: 'Assegno dal 7° mese di gravidanza' },
   { keywords: ['assegno unico senza isee', 'minimo assegno', '58 euro'], guide: 'Assegno unico', href: '/assegno-unico#importi', desc: 'Assegno minimo senza ISEE (58,30€)' },
   { keywords: ['scadenza 30 giugno', 'arretrati assegno', 'domanda giugno'], guide: 'Assegno unico', href: '/assegno-unico#domanda', desc: 'Scadenza 30 giugno per arretrati' },
