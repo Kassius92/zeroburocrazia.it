@@ -110,9 +110,9 @@ export default function Page() {
           <div className="perc r">
             <span className="perc-label">Guide correlate</span>
             <div className="perc-steps">
+              <a href="/assegno-unico" className="ps">💰 Assegno unico</a>
               <a href="/mi-sposo" className="ps">💍 Mi sposo</a>
               <span className="ps ps-soon">🏫 Bonus nido <span className="ps-tag">Presto</span></span>
-              <span className="ps ps-soon">👶 Congedo parentale <span className="ps-tag">Presto</span></span>
             </div>
           </div>
 
@@ -376,9 +376,9 @@ export default function Page() {
           <div className="related r">
             <h2>Guide correlate</h2>
             <div className="rg">
-              <a href="/mi-sposo" className="rc"><span className="rc-e">💍</span><div className="rc-t">Mi sposo</div><div className="rc-d">Documenti, costi e regime patrimoniale.</div><span className="rc-ar">→</span></a>
+              <a href="/assegno-unico" className="rc"><span className="rc-e">💰</span><div className="rc-t">Assegno unico</div><div className="rc-d">Quanto prendi per ogni figlio e come fare domanda.</div><span className="rc-ar">→</span></a>
               <a href="/isee" className="rc"><span className="rc-e">📋</span><div className="rc-t">Faccio l'ISEE</div><div className="rc-d">Senza ISEE perdi assegno unico e bonus nido.</div><span className="rc-ar">→</span></a>
-              <a href="/730" className="rc"><span className="rc-e">🧾</span><div className="rc-t">Faccio il 730</div><div className="rc-d">Detrazioni figli, spese mediche e asilo.</div><span className="rc-ar">→</span></a>
+              <a href="/mi-sposo" className="rc"><span className="rc-e">💍</span><div className="rc-t">Mi sposo</div><div className="rc-d">Documenti, costi e regime patrimoniale.</div><span className="rc-ar">→</span></a>
             </div>
           </div>
 
@@ -395,9 +395,9 @@ export default function Page() {
           </div>
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDCDA'} Guide correlate</div>
+            <a href="/assegno-unico" className="sbguide">💰 Assegno unico<span className="sbg-ar">→</span></a>
             <a href="/mi-sposo" className="sbguide">💍 Mi sposo<span className="sbg-ar">→</span></a>
             <span className="sbguide sbguide-soon">🏫 Bonus nido<span className="sbg-soon">Presto</span></span>
-            <span className="sbguide sbguide-soon">👶 Congedo parentale<span className="sbg-soon">Presto</span></span>
           </div>
         </aside>
       </div>

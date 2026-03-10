@@ -128,7 +128,7 @@ export default function Page() {
           <div className="perc r">
             <span className="perc-label">Guide correlate</span>
             <div className="perc-steps">
-              <span className="ps ps-soon">👶 Assegno unico <span className="ps-tag">Presto</span></span>
+              <a href="/assegno-unico" className="ps">👶 Assegno unico</a>
               <span className="ps ps-soon">🏫 Bonus nido <span className="ps-tag">Presto</span></span>
               <span className="ps ps-soon">⚡ Bonus bollette <span className="ps-tag">Presto</span></span>
             </div>
@@ -353,7 +353,7 @@ export default function Page() {
           </div>
           <div className="sbsec">
             <div className="sbsec-t">{'\uD83D\uDCDA'} Guide correlate</div>
-            <span className="sbguide sbguide-soon">👶 Assegno unico<span className="sbg-soon">Presto</span></span>
+            <a href="/assegno-unico" className="sbguide">👶 Assegno unico<span className="sbg-ar">→</span></a>
             <span className="sbguide sbguide-soon">🏫 Bonus nido<span className="sbg-soon">Presto</span></span>
             <span className="sbguide sbguide-soon">⚡ Bonus bollette<span className="sbg-soon">Presto</span></span>
           </div>

@@ -11,7 +11,7 @@ export const categories = [
       { title: 'ISEE e bonus', links: [
         { name: 'ISEE', href: '/isee' },
         { name: 'ISEE corrente', href: '#', soon: true },
-        { name: 'Assegno unico', href: '#', soon: true },
+        { name: 'Assegno unico', href: '/assegno-unico' },
         { name: 'Bonus e detrazioni 2026', href: '#', soon: true },
       ]},
       { title: 'Tasse e imposte', links: [
@@ -48,6 +48,7 @@ export const categories = [
     subs: [
       { title: 'Figli', links: [
         { name: 'Aspetto un figlio', href: '/figlio' },
+        { name: 'Assegno unico', href: '/assegno-unico' },
         { name: 'Congedo parentale', href: '#', soon: true },
         { name: 'Bonus nido', href: '#', soon: true },
       ]},
