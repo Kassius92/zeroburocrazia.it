@@ -10,6 +10,7 @@ import SidebarToggle from '@/components/SidebarToggle';
 import Tip from '@/components/Tip';
 import VersionToggle from '@/components/VersionToggle';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
+import CalcIMU from '@/components/CalcIMU';
 
 export const metadata = {
   title: 'IMU 2026: Calcolo, Aliquote, Esenzioni, Scadenze e Come Pagarla',
@@ -36,6 +37,7 @@ const tocItems = [
   { id: 'scadenze', label: 'Scadenze e come pagare' },
   { id: 'agevolazioni', label: 'Agevolazioni e riduzioni' },
   { id: 'casi', label: 'Casi particolari' },
+  { id: 'calcolatore', label: 'Calcolatore', bh: true },
   { id: 'esempio', label: 'Esempio pratico' },
   { id: 'faq', label: 'FAQ', bh: true },
 ];
@@ -252,6 +254,14 @@ export default function PaginaIMU() {
             <div className="ib warn r"><div className="ib-t">⚠️ Residenza &quot;finta&quot; = rischio accertamento</div>
               <p>Alcuni proprietari spostano la residenza in un immobile solo per non pagare l&apos;IMU, senza viverci davvero. I Comuni effettuano controlli incrociati (utenze, consumi, vigili). Se scoprono che la dimora abituale &egrave; altrove, dovrai pagare l&apos;IMU arretrata come seconda casa, pi&ugrave; sanzioni del 30% e interessi.</p>
             </div>
+          </div>
+
+          {/* CALCOLATORE */}
+          <div className="sec bh r" id="calcolatore">
+            <div className="sec-tag">Strumento</div>
+            <h2>Calcola la tua IMU</h2>
+            <p>Inserisci la rendita catastale e l&apos;aliquota del tuo Comune per avere una stima dell&apos;IMU annua.</p>
+            <CalcIMU />
           </div>
 
           {/* ESEMPIO */}

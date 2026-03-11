@@ -10,6 +10,7 @@ import SidebarToggle from '@/components/SidebarToggle';
 import Tip from '@/components/Tip';
 import VersionToggle from '@/components/VersionToggle';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
+import CalcCedolare from '@/components/CalcCedolare';
 
 export const metadata = {
   title: 'Cedolare Secca 2026: Cos\u2019è, Aliquote 10% e 21%, Calcolo e Quando Conviene',
@@ -37,6 +38,7 @@ const tocItems = [
   { id: 'come-si-sceglie', label: 'Come si sceglie e si paga' },
   { id: 'affitti-brevi', label: 'Affitti brevi: novità 2026' },
   { id: 'errori', label: 'Errori da evitare' },
+  { id: 'calcolatore', label: 'Calcolatore', bh: true },
   { id: 'esempio', label: 'Esempi pratici', bh: true },
   { id: 'faq', label: 'FAQ' },
 ];
@@ -282,6 +284,14 @@ export default function PaginaCedolareSecca() {
               <div className="gl-item"><strong>4. Dimenticare l&apos;acconto</strong> &mdash; la cedolare si paga con acconto (come l&apos;IRPEF). Se &egrave; il primo anno, l&apos;acconto non &egrave; dovuto. Ma dal secondo anno in poi: 100% dell&apos;importo dell&apos;anno prima, in una o due rate. Se non paghi, scattano sanzioni e interessi.</div>
               <div className="gl-item"><strong>5. Non revocare in tempo</strong> &mdash; se vuoi tornare all&apos;IRPEF, hai 30 giorni dalla scadenza dell&apos;annualit&agrave; per revocare con il Modello RLI. Se dimentichi, resti in cedolare per un altro anno.</div>
             </div>
+          </div>
+
+          {/* CALCOLATORE */}
+          <div className="sec bh r" id="calcolatore">
+            <div className="sec-tag">Strumento</div>
+            <h2>Calcola se ti conviene la cedolare secca</h2>
+            <p>Inserisci il tuo canone mensile e il tuo reddito: il calcolatore ti mostra subito se risparmi con la cedolare secca rispetto all&apos;IRPEF.</p>
+            <CalcCedolare />
           </div>
 
           {/* ESEMPIO */}

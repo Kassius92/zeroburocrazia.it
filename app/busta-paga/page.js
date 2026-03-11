@@ -10,6 +10,7 @@ import SidebarToggle from '@/components/SidebarToggle';
 import Tip from '@/components/Tip';
 import VersionToggle from '@/components/VersionToggle';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
+import CalcBustaPaga from '@/components/CalcBustaPaga';
 
 export const metadata = {
   title: 'Busta Paga 2026: Come Leggerla, Voci, Dal Lordo al Netto',
@@ -35,6 +36,7 @@ const tocItems = [
   { id: 'lordo-netto', label: 'Dal lordo al netto', bh: true },
   { id: 'voci', label: 'Le voci importanti' },
   { id: 'novita', label: 'Novit\u00e0 2026' },
+  { id: 'calcolatore', label: 'Calcolatore', bh: true },
   { id: 'esempio', label: 'Esempio pratico' },
   { id: 'faq', label: 'FAQ', bh: true },
 ];
@@ -222,6 +224,14 @@ export default function PaginaBustaPaga() {
             <div className="ib tip r"><div className="ib-t">🆕 Bonus fino a 960&euro; per redditi sotto 20.000&euro;</div>
               <p>Per i lavoratori dipendenti con reddito complessivo fino a 20.000&euro;, &egrave; previsto un importo variabile fino a <strong>960&euro;/anno</strong> escluso dalla base imponibile. Lo troverai come voce specifica nel cedolino.</p>
             </div>
+          </div>
+
+          {/* CALCOLATORE */}
+          <div className="sec bh r" id="calcolatore">
+            <div className="sec-tag">Strumento</div>
+            <h2>Calcola il tuo netto in busta</h2>
+            <p>Inserisci la tua RAL per avere una stima del netto mensile, con il dettaglio di INPS, IRPEF e addizionali.</p>
+            <CalcBustaPaga />
           </div>
 
           {/* ESEMPIO PRATICO */}
