@@ -141,7 +141,7 @@ export default function Page() {
               <div className="gl-item r d2"><strong>XML</strong> &mdash; Il formato obbligatorio della fattura elettronica. Non devi crearlo a mano: lo genera il software o il portale che usi. Tu compili i campi, il sistema crea l&apos;XML.</div>
               <div className="gl-item r d3"><strong>Codice destinatario</strong> &mdash; Un codice di 7 caratteri che dice al SDI dove consegnare la fattura. Se il cliente non ne ha uno, usi 0000000 (sette zeri) e inserisci la sua PEC.</div>
               <div className="gl-item r d4"><strong>Nota di credito</strong> &mdash; Il documento per annullare o correggere una fattura gi&agrave; inviata. Non puoi &quot;cancellare&quot; una fattura elettronica: devi emetterne una di segno opposto.</div>
-              <div className="gl-item r d1"><strong>Cassetto fiscale</strong> &mdash; L&apos;area riservata dell&apos;Agenzia delle Entrate dove vengono depositate le fatture elettroniche. Sia le tue che quelle che ricevi. Accedi con SPID.</div>
+              <div className="gl-item r d1"><strong>Cassetto fiscale</strong> &mdash; L&apos;area riservata dell&apos;Agenzia delle Entrate dove vengono depositate le fatture elettroniche. Sia le tue che quelle che ricevi. Accedi con <a href="/spid">SPID</a> o <a href="/cie">CIE</a>.</div>
               <div className="gl-item r d2"><strong>FatturAE</strong> &mdash; L&apos;app gratuita dell&apos;Agenzia delle Entrate per creare e inviare fatture elettroniche dal telefono. Funzionale ma basica.</div>
             </div>
           </div>

@@ -318,7 +318,7 @@ export default function Page() {
               <div className="db-row db-total"><span className="db-label">Rimborso in busta paga (luglio)</span><span className="db-val">+319&euro;</span></div>
             </div>
 
-            <p>Giulia riceve <strong>319&euro; in pi&ugrave; nella busta paga di luglio</strong>. Tutto perch&eacute; ha conservato scontrini e fatture e ha pagato con la carta. Se avesse pagato il dentista in contanti (480&euro;), avrebbe perso 91&euro; di detrazione solo su quella voce.</p>
+            <p>Giulia riceve <strong>319&euro; in pi&ugrave; nella <a href="/busta-paga">busta paga</a> di luglio</strong>. Tutto perch&eacute; ha conservato scontrini e fatture e ha pagato con la carta. Se avesse pagato il dentista in contanti (480&euro;), avrebbe perso 91&euro; di detrazione solo su quella voce.</p>
 
             <div className="ib tip r">
               <div className="ib-t">{'\uD83D\uDCA1'} La morale</div>

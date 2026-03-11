@@ -203,7 +203,7 @@ export default function Page() {
           <div className="sec r" id="quanto-spetta">
             <div className="sec-tag">I soldi</div>
             <h2>Quanto spetta di NASpI nel 2026</h2>
-            <p>L&apos;importo si calcola sulla <strong>retribuzione media <Tip t="L'importo su cui si calcolano i contributi. Non è il netto in busta: è più alto del netto ma più basso del lordo totale.">imponibile</Tip> degli ultimi 4 anni</strong>. Non &egrave; il tuo ultimo stipendio — &egrave; una media di tutto quello che hai guadagnato come dipendente nei 4 anni prima di perdere il lavoro.</p>
+            <p>L&apos;importo si calcola sulla <strong>retribuzione media <Tip t="L'importo su cui si calcolano i contributi. Non è il netto in busta: è più alto del netto ma più basso del lordo totale.">imponibile</Tip> degli ultimi 4 anni</strong>. Non &egrave; il tuo ultimo stipendio — &egrave; una media di tutto quello che hai guadagnato come dipendente nei 4 anni prima di perdere il lavoro. Lo trovi nella <a href="/busta-paga">busta paga</a> alla voce &quot;imponibile previdenziale&quot;.</p>
 
             <h3>Il calcolo</h3>
             <div className="icgrid r">

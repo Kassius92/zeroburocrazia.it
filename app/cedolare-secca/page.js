@@ -227,7 +227,7 @@ export default function PaginaCedolareSecca() {
             <div className="glossary">
               <div className="gl-item"><strong>1. Alla registrazione del contratto</strong> &mdash; compili il <Tip t="Modulo telematico dell'Agenzia delle Entrate per la registrazione dei contratti di locazione e affitto. Si compila online o tramite intermediario.">Modello RLI</Tip> e selezioni l&apos;opzione &quot;cedolare secca&quot;. Non paghi imposta di registro n&eacute; bollo. Devi aver inviato la raccomandata all&apos;inquilino prima della registrazione.</div>
               <div className="gl-item"><strong>2. Nelle annualit&agrave; successive</strong> &mdash; puoi optare per la cedolare anche su un contratto gi&agrave; registrato in regime IRPEF. Hai 30 giorni dalla scadenza dell&apos;annualit&agrave;. Presenti il Modello RLI.</div>
-              <div className="gl-item"><strong>3. Solo per affitti brevi (&le;30 gg)</strong> &mdash; non serve registrare il contratto. L&apos;opzione si esercita direttamente in dichiarazione dei redditi (730 o Redditi PF).</div>
+              <div className="gl-item"><strong>3. Solo per affitti brevi (&le;30 gg)</strong> &mdash; non serve registrare il contratto. L&apos;opzione si esercita direttamente in dichiarazione dei redditi (<a href="/730">730</a> o Redditi PF).</div>
             </div>
 
             <p style={{ marginTop: '20px' }}><strong>Per pagare</strong> la cedolare usi il <strong>Modello F24</strong>, con le stesse scadenze dell&apos;IRPEF:</p>

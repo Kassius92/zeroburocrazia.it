@@ -307,7 +307,7 @@ export default function Page() {
 
             <p><strong>Davide ha 38 anni</strong>, lavora come tecnico informatico a Milano da 12 anni nella stessa azienda. RAL attuale: <strong>32.000&euro;</strong> (circa 1.750&euro; netti al mese). Ha deciso di cambiare lavoro &mdash; si &egrave; gi&agrave; <a href="/dimissioni">dimesso online</a>. Non ha mai spostato il TFR nel fondo pensione, &egrave; rimasto tutto in azienda.</p>
 
-            <p>Davide non ha mai guardato il TFR in busta paga. Sa che gli spetta &quot;la liquidazione&quot; ma non ha idea di quanto sia. Pensa &quot;saranno un paio di migliaia di euro&quot;.</p>
+            <p>Davide non ha mai guardato il TFR in <a href="/busta-paga">busta paga</a>. Sa che gli spetta &quot;la liquidazione&quot; ma non ha idea di quanto sia. Pensa &quot;saranno un paio di migliaia di euro&quot;.</p>
 
             <h3>Il calcolo</h3>
             <p>RAL media negli ultimi 12 anni: circa 28.000&euro; (ha avuto aumenti nel tempo). Quota annua media: 28.000 &divide; 13,5 = ~2.074&euro;. Meno il contributo INPS 0,5% = ~1.934&euro; netti/anno.</p>
