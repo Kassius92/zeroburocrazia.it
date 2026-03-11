@@ -141,4 +141,16 @@ export const searchIndex = [
   { keywords: ['assegno disabilità', 'figli disabili assegno', '104 assegno'], guide: 'Assegno unico', href: '/assegno-unico#importi', desc: 'Maggiorazione per figli con disabilità' },
   { keywords: ['separati assegno', 'divorziati assegno', 'affido condiviso'], guide: 'Assegno unico', href: '/assegno-unico#faq', desc: 'Assegno per genitori separati/divorziati' },
   { keywords: ['pagamento assegno unico', 'quando arriva assegno', 'date pagamento'], guide: 'Assegno unico', href: '/assegno-unico#faq', desc: 'Date di pagamento INPS' },
+
+  // ═══ CAMBIO RESIDENZA ═══
+  { keywords: ['cambio residenza', 'cambio di residenza', 'cambiare residenza'], guide: 'Cambio residenza', href: '/cambio-residenza', desc: 'Guida completa al cambio di residenza' },
+  { keywords: ['cambio residenza online', 'anpr', 'anagrafe nazionale', 'residenza online'], guide: 'Cambio residenza', href: '/cambio-residenza#come', desc: 'Come fare il cambio online su ANPR' },
+  { keywords: ['documenti residenza', 'cosa serve residenza', 'contratto affitto residenza'], guide: 'Cambio residenza', href: '/cambio-residenza#sportello', desc: 'Documenti necessari per il cambio' },
+  { keywords: ['tempi residenza', 'quanto ci vuole residenza', '45 giorni', 'accertamento'], guide: 'Cambio residenza', href: '/cambio-residenza#come', desc: 'Tempi: 2 gg registrazione + 45 gg verifica' },
+  { keywords: ['residenza stesso comune', 'cambio indirizzo', 'cambio abitazione'], guide: 'Cambio residenza', href: '/cambio-residenza#quando', desc: 'Cambio indirizzo nello stesso comune' },
+  { keywords: ['medico base', 'asl', 'nuovo medico', 'scegliere medico'], guide: 'Cambio residenza', href: '/cambio-residenza#dopo', desc: 'Scegliere il nuovo medico di base' },
+  { keywords: ['patente residenza', 'libretto auto', 'carta circolazione', 'aggiornare auto'], guide: 'Cambio residenza', href: '/cambio-residenza#dopo', desc: 'Aggiornamento auto e patente dopo il cambio' },
+  { keywords: ['18 mesi residenza', 'prima casa residenza', 'agevolazioni residenza'], guide: 'Cambio residenza', href: '/cambio-residenza#quando', desc: 'Obbligo 18 mesi per agevolazioni prima casa' },
+  { keywords: ['sanzioni residenza', 'multa residenza', 'falso residenza'], guide: 'Cambio residenza', href: '/cambio-residenza#errori', desc: 'Sanzioni per mancato cambio o falsa dichiarazione' },
+  { keywords: ['delega residenza', 'residenza senza contratto', 'rimpatrio aire'], guide: 'Cambio residenza', href: '/cambio-residenza#faq', desc: 'Delega, senza contratto, rientro dall\u2019estero' },
 ];

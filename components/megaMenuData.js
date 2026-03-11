@@ -37,7 +37,7 @@ export const categories = [
         { name: 'Bonus caldaia', href: '#', soon: true },
       ]},
       { title: 'Vivere in casa', links: [
-        { name: 'Cambio residenza', href: '#', soon: true },
+        { name: 'Cambio residenza', href: '/cambio-residenza' },
         { name: 'Affitto', href: '#', soon: true },
         { name: 'Voltura utenze', href: '#', soon: true },
       ]},
