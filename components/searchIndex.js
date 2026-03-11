@@ -153,4 +153,16 @@ export const searchIndex = [
   { keywords: ['18 mesi residenza', 'prima casa residenza', 'agevolazioni residenza'], guide: 'Cambio residenza', href: '/cambio-residenza#quando', desc: 'Obbligo 18 mesi per agevolazioni prima casa' },
   { keywords: ['sanzioni residenza', 'multa residenza', 'falso residenza'], guide: 'Cambio residenza', href: '/cambio-residenza#errori', desc: 'Sanzioni per mancato cambio o falsa dichiarazione' },
   { keywords: ['delega residenza', 'residenza senza contratto', 'rimpatrio aire'], guide: 'Cambio residenza', href: '/cambio-residenza#faq', desc: 'Delega, senza contratto, rientro dall\u2019estero' },
+
+  // ═══ MUTUO ═══
+  { keywords: ['mutuo', 'mutuo prima casa', 'mutuo casa'], guide: 'Mutuo', href: '/mutuo', desc: 'Guida completa al mutuo prima casa' },
+  { keywords: ['consap', 'fondo garanzia', 'garanzia statale', 'mutuo 100'], guide: 'Mutuo', href: '/mutuo#consap', desc: 'Garanzia Consap: mutuo con lo Stato garante' },
+  { keywords: ['mutuo under 36', 'mutuo giovani', 'mutuo under36'], guide: 'Mutuo', href: '/mutuo#consap', desc: 'Mutuo agevolato per under 36' },
+  { keywords: ['tasso fisso', 'tasso variabile', 'spread', 'euribor', 'irs'], guide: 'Mutuo', href: '/mutuo#tassi', desc: 'Tasso fisso vs variabile: come scegliere' },
+  { keywords: ['requisiti mutuo', 'rata mutuo', 'quanto posso chiedere'], guide: 'Mutuo', href: '/mutuo#requisiti', desc: 'Requisiti e calcolo della rata sostenibile' },
+  { keywords: ['documenti mutuo', 'buste paga mutuo', 'istruttoria'], guide: 'Mutuo', href: '/mutuo#come', desc: 'Documenti e procedura per richiedere il mutuo' },
+  { keywords: ['surroga', 'surroga mutuo', 'cambiare banca mutuo'], guide: 'Mutuo', href: '/mutuo#faq', desc: 'Surroga: cambiare banca gratis' },
+  { keywords: ['interessi mutuo', 'detrazione interessi', 'detrazione mutuo 730'], guide: 'Mutuo', href: '/mutuo#faq', desc: 'Detrazione 19% interessi passivi nel 730' },
+  { keywords: ['perizia', 'notaio mutuo', 'costi mutuo', 'spese mutuo'], guide: 'Mutuo', href: '/mutuo#esempio', desc: 'Costi extra: notaio, perizia, agenzia, imposte' },
+  { keywords: ['ipoteca', 'pignoramento', 'non pago rate mutuo'], guide: 'Mutuo', href: '/mutuo#faq', desc: 'Cosa succede se non paghi le rate' },
 ];

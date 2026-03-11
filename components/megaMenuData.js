@@ -27,7 +27,7 @@ export const categories = [
     subs: [
       { title: 'Comprare e vendere', links: [
         { name: 'Compro casa', href: '/compro-casa' },
-        { name: 'Mutuo', href: '#', soon: true },
+        { name: 'Mutuo', href: '/mutuo' },
         { name: 'Vendo casa', href: '#', soon: true },
       ]},
       { title: 'Lavori e bonus', links: [
