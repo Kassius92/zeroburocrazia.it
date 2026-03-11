@@ -31,12 +31,14 @@ export const metadata = {
 const tocItems = [
   { id: 'sintesi', label: 'In sintesi' },
   { id: 'cose', label: "Cos\u2019è e come funziona" },
+  { id: 'chi-puo', label: 'Chi può (e chi no)' },
   { id: 'aliquote', label: 'Aliquote: 21%, 10% e 26%' },
   { id: 'conviene', label: 'Quando conviene (confronto)', bh: true },
   { id: 'come-si-sceglie', label: 'Come si sceglie e si paga' },
   { id: 'affitti-brevi', label: 'Affitti brevi: novità 2026' },
-  { id: 'esempio', label: 'Esempio pratico' },
-  { id: 'faq', label: 'FAQ', bh: true },
+  { id: 'errori', label: 'Errori da evitare' },
+  { id: 'esempio', label: 'Esempi pratici', bh: true },
+  { id: 'faq', label: 'FAQ' },
 ];
 
 const faqItems = [
@@ -153,6 +155,28 @@ export default function PaginaCedolareSecca() {
           </div>
 
           {/* ALIQUOTE */}
+          <div className="sec r" id="chi-puo">
+            <div className="sec-tag">Requisiti</div>
+            <h2>Chi pu&ograve; scegliere la cedolare (e chi no)</h2>
+            <p>La cedolare secca non &egrave; per tutti. Ecco i requisiti e i casi particolari che generano pi&ugrave; dubbi:</p>
+
+            <div className="glossary">
+              <div className="gl-item"><strong>✅ Persona fisica che affitta</strong> &mdash; sei proprietario (o usufruttuario) di un appartamento e lo affitti a uso abitativo. Non importa se hai uno o pi&ugrave; immobili, purch&eacute; tu non agisca come impresa.</div>
+              <div className="gl-item"><strong>✅ Inquilino societ&agrave;</strong> &mdash; dal 2024 (Cassazione 12395/2024) puoi usare la cedolare anche se l&apos;inquilino &egrave; un&apos;azienda, purch&eacute; l&apos;immobile sia usato come abitazione (es. per un dipendente).</div>
+              <div className="gl-item"><strong>✅ Pi&ugrave; comproprietari</strong> &mdash; ogni comproprietario sceglie in modo indipendente. Se tu e tuo fratello possedete un appartamento 50/50, tu puoi optare per la cedolare e lui restare in IRPEF. Ognuno paga la propria quota.</div>
+              <div className="gl-item"><strong>✅ Immobile ereditato</strong> &mdash; se hai ereditato un appartamento e lo affitti, puoi usare la cedolare normalmente. L&apos;erede &egrave; il nuovo locatore e sceglie il regime che preferisce.</div>
+              <div className="gl-item"><strong>✅ Pertinenze affittate insieme</strong> &mdash; se affitti l&apos;appartamento con garage o cantina, la cedolare si applica anche alle pertinenze. Non serve un contratto separato.</div>
+              <div className="gl-item"><strong>❌ Societ&agrave; o imprese</strong> &mdash; se possiedi l&apos;immobile tramite una SRL, SAS o altra societ&agrave;, la cedolare non &egrave; disponibile. Vale solo per le persone fisiche.</div>
+              <div className="gl-item"><strong>❌ Immobili commerciali</strong> &mdash; negozi (C/1), uffici (A/10), capannoni: la cedolare non si applica. Eccezione storica: nel 2019 fu prevista per i negozi C/1, ma solo per quell&apos;anno.</div>
+              <div className="gl-item"><strong>❌ Sublocazione</strong> &mdash; se sei inquilino e subaffitti una stanza, non sei proprietario: non puoi usare la cedolare. Per&ograve; per gli <strong>affitti brevi</strong> il sublocatore pu&ograve; optare per la cedolare in dichiarazione dei redditi.</div>
+            </div>
+
+            <div className="ib tip r"><div className="ib-t">💡 Coniugi separati: caso particolare</div>
+              <p>Se il giudice assegna la casa coniugale a uno dei coniugi, l&apos;altro (proprietario) non pu&ograve; affittarla e quindi non pu&ograve; usare la cedolare. Se per&ograve; il proprietario ha <strong>un altro immobile</strong> che affitta, su quello pu&ograve; tranquillamente scegliere la cedolare secca.</p>
+            </div>
+          </div>
+
+          {/* ALIQUOTE */}
           <div className="sec r" id="aliquote">
             <div className="sec-tag">Le percentuali</div>
             <h2>Aliquote cedolare secca: 21%, 10% e 26%</h2>
@@ -246,10 +270,24 @@ export default function PaginaCedolareSecca() {
             </div>
           </div>
 
+          {/* ERRORI */}
+          <div className="sec r" id="errori">
+            <div className="sec-tag">Attenzione</div>
+            <h2>5 errori da evitare con la cedolare secca</h2>
+
+            <div className="glossary">
+              <div className="gl-item"><strong>1. Dimenticare la raccomandata all&apos;inquilino</strong> &mdash; prima di registrare il contratto con la cedolare, devi inviare una raccomandata all&apos;inquilino in cui comunichi la scelta e la rinuncia agli aggiornamenti ISTAT. Senza questa comunicazione, l&apos;opzione pu&ograve; essere contestata.</div>
+              <div className="gl-item"><strong>2. Non considerare le detrazioni che perdi</strong> &mdash; il reddito con cedolare non entra nel reddito complessivo IRPEF. Questo pu&ograve; farti perdere il <Tip t="Trattamento integrativo: bonus di 100€/mese per redditi da lavoro dipendente fino a 28.000€. Se il reddito da affitto non è nel complessivo, potresti non raggiungere la soglia minima per averne diritto.">trattamento integrativo</Tip> (ex bonus Renzi), le detrazioni per familiari a carico o le detrazioni per ristrutturazioni se non hai abbastanza &quot;capienza fiscale&quot;.</div>
+              <div className="gl-item"><strong>3. Confondere le aliquote degli affitti brevi</strong> &mdash; il 21% vale solo sul primo immobile (a tua scelta in dichiarazione). Dal secondo &egrave; 26%. E dal 2026, dal terzo immobile in poi serve la partita IVA. Errore frequente: pensare che il 21% valga su tutti gli appartamenti.</div>
+              <div className="gl-item"><strong>4. Dimenticare l&apos;acconto</strong> &mdash; la cedolare si paga con acconto (come l&apos;IRPEF). Se &egrave; il primo anno, l&apos;acconto non &egrave; dovuto. Ma dal secondo anno in poi: 100% dell&apos;importo dell&apos;anno prima, in una o due rate. Se non paghi, scattano sanzioni e interessi.</div>
+              <div className="gl-item"><strong>5. Non revocare in tempo</strong> &mdash; se vuoi tornare all&apos;IRPEF, hai 30 giorni dalla scadenza dell&apos;annualit&agrave; per revocare con il Modello RLI. Se dimentichi, resti in cedolare per un altro anno.</div>
+            </div>
+          </div>
+
           {/* ESEMPIO */}
           <div className="sec r" id="esempio">
             <div className="sec-tag">Esempio concreto</div>
-            <h2>Esempio: Marta affitta il suo appartamento</h2>
+            <h2>Esempio 1: Marta affitta &mdash; conviene</h2>
             <p>Marta, 38 anni, impiegata con <Tip t="RAL = Retribuzione Annua Lorda. È lo stipendio lordo annuo, prima di tasse e contributi.">RAL</Tip> di 32.000&euro;. Possiede un appartamento a Roma che affitta a canone libero (4+4) a 800&euro;/mese &mdash; canone annuo 9.600&euro;. Conviene la cedolare secca?</p>
 
             <div className="dark-block">
@@ -275,6 +313,35 @@ export default function PaginaCedolareSecca() {
 
             <div className="ib tip r" style={{ marginTop: '16px' }}><div className="ib-t">💡 E se Marta scegliesse il canone concordato?</div>
               <p>Con canone concordato (es. 650&euro;/mese = 7.800&euro;/anno) pagherebbe: 7.800 &times; 10% = <strong>780&euro;</strong>. Un risparmio ancora maggiore &mdash; anche se il canone &egrave; pi&ugrave; basso, il vantaggio fiscale pu&ograve; compensare.</p>
+            </div>
+          </div>
+
+          {/* ESEMPIO 2 */}
+          <div className="sec r">
+            <div className="sec-tag">Quando non conviene</div>
+            <h2>Esempio 2: Paolo, reddito basso &mdash; meglio l&apos;IRPEF</h2>
+            <p>Paolo, 26 anni, ha appena iniziato a lavorare. RAL 18.000&euro;, ha ereditato un monolocale che affitta a 400&euro;/mese (4.800&euro;/anno). Ha anche spese di ristrutturazione detraibili per 3.000&euro;.</p>
+
+            <div className="dark-block">
+              <div style={{ fontSize: '14px', color: 'rgba(251,248,241,.5)', fontWeight: '600', marginBottom: '16px' }}>CONFRONTO PER PAOLO</div>
+              <div className="db-row"><span>Canone annuo</span><span>4.800&euro;</span></div>
+              <div className="db-row" style={{ borderTop: '1px solid rgba(251,248,241,.08)', paddingTop: '12px' }}><span style={{ color: 'rgba(251,248,241,.5)' }}>CON IRPEF</span><span></span></div>
+              <div className="db-row"><span>Base imponibile (95%)</span><span>4.560&euro;</span></div>
+              <div className="db-row"><span>Aliquota marginale</span><span>23% (reddito sotto 28K)</span></div>
+              <div className="db-row"><span>IRPEF lorda sul canone</span><span>4.560 &times; 23% = 1.049&euro;</span></div>
+              <div className="db-row"><span>&minus; Detrazioni ristrutturazione usabili</span><span>&minus;300&euro;</span></div>
+              <div className="db-row"><span>IRPEF netta + registro (48&euro;)</span><span className="cfr"><strong>~797&euro;</strong></span></div>
+              <div className="db-row" style={{ borderTop: '1px solid rgba(251,248,241,.08)', paddingTop: '12px' }}><span style={{ color: 'rgba(251,248,241,.5)' }}>CON CEDOLARE SECCA</span><span></span></div>
+              <div className="db-row"><span>Base imponibile (100%)</span><span>4.800&euro;</span></div>
+              <div className="db-row"><span>Cedolare 21%</span><span>4.800 &times; 21% = <strong>1.008&euro;</strong></span></div>
+              <div className="db-row"><span>Detrazioni ristrutturazione</span><span>non utilizzabili (reddito basso)</span></div>
+              <div className="db-row db-total"><span>Risultato</span><span>Cedolare costa <strong>211&euro; in pi&ugrave;</strong></span></div>
+            </div>
+
+            <p style={{ marginTop: '16px' }}>Per Paolo la cedolare <strong>non conviene</strong>. Il suo reddito basso lo tiene nell&apos;aliquota IRPEF al 23% (molto vicina al 21%), e con la cedolare perderebbe la possibilit&agrave; di sfruttare le detrazioni per ristrutturazione. In pi&ugrave;, il reddito da affitto non entrerebbe nel complessivo, rischiando di fargli perdere il trattamento integrativo da 100&euro;/mese.</p>
+
+            <div className="ib warn r"><div className="ib-t">⚠️ Morale dei due esempi</div>
+              <p>Non esiste una risposta universale. La cedolare conviene nella maggioranza dei casi (soprattutto con redditi medi e alti), ma con <strong>redditi bassi + detrazioni da sfruttare</strong>, l&apos;IRPEF ordinaria pu&ograve; costare meno. In caso di dubbio, un commercialista pu&ograve; fare il confronto in 5 minuti con i tuoi numeri reali.</p>
             </div>
           </div>
 
