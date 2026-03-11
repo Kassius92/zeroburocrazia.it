@@ -149,6 +149,16 @@ export default function Page() {
             <QuizSpid />
           </div>
 
+
+          <div className="related r">
+            <h2>Link utili</h2>
+            <div className="rg">
+              <a href="https://www.spid.gov.it/cos-e-spid/come-attivare-spid/" target="_blank" rel="noopener noreferrer" className="rc"><span className="rc-e">🏛</span><div className="rc-t">SPID.gov.it</div><div className="rc-d">Come attivare lo SPID</div><span className="rc-ar">→</span></a>
+              <a href="https://www.agid.gov.it/it/piattaforme/spid/identity-provider" target="_blank" rel="noopener noreferrer" className="rc"><span className="rc-e">📋</span><div className="rc-t">AgID — Provider SPID</div><div className="rc-d">Elenco ufficiale provider</div><span className="rc-ar">→</span></a>
+              <a href="https://www.anagrafenazionale.interno.it/area-cittadino/" target="_blank" rel="noopener noreferrer" className="rc"><span className="rc-e">📄</span><div className="rc-t">ANPR — Servizi al cittadino</div><div className="rc-d">Certificati e anagrafe online</div><span className="rc-ar">→</span></a>
+            </div>
+          </div>
+
           {/* COS'È */}
           <div className="sec r" id="cose">
             <div className="sec-tag">Le basi</div>
@@ -326,14 +336,6 @@ export default function Page() {
           </div>
 
 
-          <div className="related r">
-            <h2>Link utili</h2>
-            <div className="rg">
-              <a href="https://www.spid.gov.it/cos-e-spid/come-attivare-spid/" target="_blank" rel="noopener noreferrer" className="rc"><span className="rc-e">🏛</span><div className="rc-t">SPID.gov.it</div><div className="rc-d">Come attivare lo SPID</div><span className="rc-ar">→</span></a>
-              <a href="https://www.agid.gov.it/it/piattaforme/spid/identity-provider" target="_blank" rel="noopener noreferrer" className="rc"><span className="rc-e">📋</span><div className="rc-t">AgID — Provider SPID</div><div className="rc-d">Elenco ufficiale provider</div><span className="rc-ar">→</span></a>
-              <a href="https://www.anagrafenazionale.interno.it/area-cittadino/" target="_blank" rel="noopener noreferrer" className="rc"><span className="rc-e">📄</span><div className="rc-t">ANPR — Servizi al cittadino</div><div className="rc-d">Certificati e anagrafe online</div><span className="rc-ar">→</span></a>
-            </div>
-          </div>
         </main>
 
         {/* SIDEBAR */}
