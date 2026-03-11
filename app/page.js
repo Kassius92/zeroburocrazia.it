@@ -153,7 +153,7 @@ export default function HomePage() {
                 <div className="sf-arrow">&darr;</div>
                 <div className="sf-item"><div className="sf-num">3</div><div className="sf-text">Verifica identit&agrave;</div></div>
                 <div className="sf-arrow">&darr;</div>
-                <div className="sf-done">Pronto! &check;</div>
+                <div className="sf-done">Pronto! {'\u2713'}</div>
               </div>
             </div>
           </div>
@@ -167,12 +167,12 @@ export default function HomePage() {
             </div>
             <div className="demo-visual">
               <div className="checklist">
-                <div className="cl-item done"><span className="cl-check">&check;</span> Carta d&apos;identit&agrave;</div>
-                <div className="cl-item done"><span className="cl-check">&check;</span> Codice fiscale</div>
-                <div className="cl-item done"><span className="cl-check">&check;</span> 2 fototessera ICAO</div>
-                <div className="cl-item done"><span className="cl-check">&check;</span> Marca da bollo 73,50&euro;</div>
-                <div className="cl-item done"><span className="cl-check">&check;</span> Ricevuta PagoPA</div>
-                <div className="cl-item cl-miss"><span className="cl-check">&cir;</span> Consenso genitore</div>
+                <div className="cl-item done"><span className="cl-check">{'\u2713'}</span> Carta d&apos;identit&agrave;</div>
+                <div className="cl-item done"><span className="cl-check">{'\u2713'}</span> Codice fiscale</div>
+                <div className="cl-item done"><span className="cl-check">{'\u2713'}</span> 2 fototessera ICAO</div>
+                <div className="cl-item done"><span className="cl-check">{'\u2713'}</span> Marca da bollo 73,50&euro;</div>
+                <div className="cl-item done"><span className="cl-check">{'\u2713'}</span> Ricevuta PagoPA</div>
+                <div className="cl-item cl-miss"><span className="cl-check">{'\u25CB'}</span> Consenso genitore</div>
               </div>
             </div>
           </div>

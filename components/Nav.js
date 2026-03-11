@@ -41,7 +41,6 @@ export default function Nav({ variant = 'scheda' }) {
                 <Link href="/novita" className="nav-novita">
                   Novità<span className="nav-dot" />
                 </Link>
-                <a href="#come-funziona">Come funziona</a>
                 <button className="nav-cta" onClick={() => setMenuOpen(!menuOpen)}>Tutte le guide</button>
               </div>
             </>
