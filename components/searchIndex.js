@@ -231,4 +231,14 @@ export const searchIndex = [
   { keywords: ['scadenza IMU', '16 giugno IMU', '16 dicembre IMU', 'F24 IMU'], guide: 'IMU', href: '/imu#scadenze', desc: 'Scadenze IMU: 16/6 e 16/12' },
   { keywords: ['comodato IMU', 'riduzione IMU figlio', 'canone concordato IMU'], guide: 'IMU', href: '/imu#agevolazioni', desc: 'Agevolazioni e riduzioni IMU' },
   { keywords: ['ravvedimento IMU', 'IMU non pagata', 'sanzioni IMU'], guide: 'IMU', href: '/imu#faq', desc: 'Cosa succede se non paghi l\u2019IMU' },
+
+  // ═══ CEDOLARE SECCA ═══
+  { keywords: ['cedolare secca', 'cedolare', 'tassa piatta affitto'], guide: 'Cedolare secca', href: '/cedolare-secca', desc: 'Guida completa alla cedolare secca' },
+  { keywords: ['cedolare secca aliquota', 'cedolare 21%', 'cedolare 10%', 'aliquota affitto'], guide: 'Cedolare secca', href: '/cedolare-secca#aliquote', desc: 'Aliquote cedolare secca: 21%, 10%, 26%' },
+  { keywords: ['cedolare secca canone concordato', 'affitto concordato', 'contratto 3+2'], guide: 'Cedolare secca', href: '/cedolare-secca#aliquote', desc: 'Cedolare secca al 10% con canone concordato' },
+  { keywords: ['cedolare secca conviene', 'cedolare secca vs IRPEF', 'confronto cedolare IRPEF'], guide: 'Cedolare secca', href: '/cedolare-secca#conviene', desc: 'Quando conviene la cedolare secca' },
+  { keywords: ['affitti brevi cedolare', 'airbnb cedolare', 'locazione breve tasse', 'cedolare 26%'], guide: 'Cedolare secca', href: '/cedolare-secca#affitti-brevi', desc: 'Affitti brevi e cedolare secca 2026' },
+  { keywords: ['modello RLI', 'registrazione contratto affitto', 'come scegliere cedolare'], guide: 'Cedolare secca', href: '/cedolare-secca#come-si-sceglie', desc: 'Come si sceglie la cedolare secca (Modello RLI)' },
+  { keywords: ['F24 cedolare secca', 'codice tributo cedolare', 'scadenza cedolare', 'pagamento cedolare'], guide: 'Cedolare secca', href: '/cedolare-secca#come-si-sceglie', desc: 'Come e quando si paga la cedolare secca' },
+  { keywords: ['cedolare secca calcolo', 'calcolo tasse affitto', 'esempio cedolare'], guide: 'Cedolare secca', href: '/cedolare-secca#esempio', desc: 'Esempio pratico di calcolo cedolare secca' },
 ];

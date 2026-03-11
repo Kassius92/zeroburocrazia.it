@@ -17,7 +17,7 @@ export const categories = [
         { name: 'Partita IVA', href: '/piva' },
         { name: 'Regime forfettario', href: '/regime-forfettario' },
         { name: 'Fattura elettronica', href: '/fattura-elettronica' },
-        { name: 'Cedolare secca', href: '#', soon: true },
+        { name: 'Cedolare secca', href: '/cedolare-secca' },
         { name: 'IMU', href: '/imu' },
       ]},
     ]
