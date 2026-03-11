@@ -405,6 +405,15 @@ export default function Pagina730() {
               <a href="/spid" className="rc"><span className="rc-e">🪪</span><div className="rc-t">Faccio lo SPID</div><div className="rc-d">Ti serve per accedere al precompilato.</div><span className="rc-ar">→</span></a>
             </div>
           </div>
+
+          <div className="related r">
+            <h2>Link utili</h2>
+            <div className="rg">
+              <a href="https://dichiarazioneprecompilata.agenziaentrate.gov.it" target="_blank" rel="noopener noreferrer" className="rc"><span className="rc-e">🏛</span><div className="rc-t">730 Precompilata</div><div className="rc-d">Accedi al sito dell&apos;Agenzia Entrate</div><span className="rc-ar">→</span></a>
+              <a href="https://www.agenziaentrate.gov.it/portale/web/guest/schede/dichiarazioni/modello-730" target="_blank" rel="noopener noreferrer" className="rc"><span className="rc-e">📋</span><div className="rc-t">Istruzioni 730</div><div className="rc-d">Modello e istruzioni ufficiali</div><span className="rc-ar">→</span></a>
+              <a href="https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.certificazione-unica-2025---cittadino-702.certificazione-unica-2025---cittadino.html" target="_blank" rel="noopener noreferrer" className="rc"><span className="rc-e">📄</span><div className="rc-t">Scarica la CU (INPS)</div><div className="rc-d">Certificazione Unica dal sito INPS</div><span className="rc-ar">→</span></a>
+            </div>
+          </div>
         </main>
 
         {/* SIDEBAR */}

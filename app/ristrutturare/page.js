@@ -333,6 +333,15 @@ export default function Page() {
             </div>
           </div>
 
+
+          <div className="related r">
+            <h2>Link utili</h2>
+            <div className="rg">
+              <a href="https://www.agenziaentrate.gov.it/portale/web/guest/schede/agevolazioni/detrazione-riqualificazione-energetica" target="_blank" rel="noopener noreferrer" className="rc"><span className="rc-e">🏛</span><div className="rc-t">Agenzia Entrate — Bonus</div><div className="rc-d">Detrazioni ristrutturazione</div><span className="rc-ar">→</span></a>
+              <a href="https://detrazionifiscali.enea.it/" target="_blank" rel="noopener noreferrer" className="rc"><span className="rc-e">🌿</span><div className="rc-t">ENEA — Detrazioni</div><div className="rc-d">Comunicazione lavori ecobonus</div><span className="rc-ar">→</span></a>
+              <a href="https://www.agenziaentrate.gov.it/portale/web/guest/schede/agevolazioni/detrazione-per-le-ristrutturazioni-edilizie" target="_blank" rel="noopener noreferrer" className="rc"><span className="rc-e">📋</span><div className="rc-t">Bonus ristrutturazione</div><div className="rc-d">Guida ufficiale Agenzia Entrate</div><span className="rc-ar">→</span></a>
+            </div>
+          </div>
         </main>
 
         {/* SIDEBAR */}

@@ -311,6 +311,15 @@ export default function PaginaCambioResidenza() {
               <a href="/isee" className="rc"><span className="rc-e">📋</span><div className="rc-t">Faccio l&apos;ISEE</div><div className="rc-d">La residenza influenza il nucleo familiare ISEE.</div><span className="rc-ar">→</span></a>
             </div>
           </div>
+
+          <div className="related r">
+            <h2>Link utili</h2>
+            <div className="rg">
+              <a href="https://www.anagrafenazionale.interno.it/area-cittadino/cambio-di-residenza/" target="_blank" rel="noopener noreferrer" className="rc"><span className="rc-e">🏛</span><div className="rc-t">Portale ANPR</div><div className="rc-d">Fai il cambio online</div><span className="rc-ar">→</span></a>
+              <a href="https://www.anagrafenazionale.interno.it/area-cittadino/" target="_blank" rel="noopener noreferrer" className="rc"><span className="rc-e">📄</span><div className="rc-t">Certificati anagrafici</div><div className="rc-d">Scarica gratis da ANPR</div><span className="rc-ar">→</span></a>
+              <a href="https://www.ilportaledellautomobilista.it" target="_blank" rel="noopener noreferrer" className="rc"><span className="rc-e">🚗</span><div className="rc-t">Portale Automobilista</div><div className="rc-d">Attestazione residenza veicolo</div><span className="rc-ar">→</span></a>
+            </div>
+          </div>
         </main>
 
         {/* SIDEBAR */}
