@@ -11,7 +11,6 @@ export const categories = [
       { title: 'ISEE e bonus', links: [
         { name: 'ISEE', href: '/isee' },
         { name: 'ISEE corrente', href: '#', soon: true },
-        { name: 'Assegno unico', href: '/assegno-unico' },
         { name: 'Bonus e detrazioni 2026', href: '#', soon: true },
       ]},
       { title: 'Tasse e imposte', links: [
