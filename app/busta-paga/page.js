@@ -264,6 +264,24 @@ export default function PaginaBustaPaga() {
             <div className="ib warn r"><div className="ib-t">✅ Controlla il livello e il CCNL</div><p>Se il livello in busta paga non corrisponde a quello del tuo contratto, lo stipendio base &egrave; sbagliato. &Egrave; l&apos;errore pi&ugrave; costoso e pi&ugrave; frequente.</p></div>
             <div className="ib warn r"><div className="ib-t">✅ Verifica ore e straordinari</div><p>Confronta le ore lavorate con le tue timbrature. Gli straordinari devono essere pagati con la maggiorazione prevista dal CCNL. Se non compaiono, segnalalo.</p></div>
             <div className="ib warn r"><div className="ib-t">✅ Tieni d&apos;occhio ferie e permessi</div><p>Le ferie maturano e si accumulano. Se a fine anno hai molte ferie non godute, il datore potrebbe obbligarti a farle. I ROL non goduti vengono pagati a fine anno o a fine rapporto.</p></div>
+            <div className="ib warn r"><div className="ib-t">✅ Destinazione del TFR</div><p>Il <Tip t="Trattamento di Fine Rapporto: circa 1 mensilità per ogni anno lavorato. Puoi lasciarlo in azienda o versarlo in un fondo pensione. La scelta è fatta nei primi 6 mesi di assunzione.">TFR</Tip> pu&ograve; restare in azienda o andare a un fondo pensione. Verifica che la destinazione sia quella che hai scelto. Se non hai mai fatto una scelta esplicita, per le aziende sopra i 50 dipendenti il TFR finisce automaticamente nel fondo pensione INPS (Fondo Cometa, Fonchim, ecc.).</p></div>
+            <div className="ib warn r"><div className="ib-t">✅ Detrazioni per familiari a carico</div><p>Se hai un coniuge o figli con reddito sotto 2.840,51&euro; (4.000&euro; per figli sotto 24 anni), hai diritto a detrazioni che riducono l&apos;IRPEF. Verifica che siano applicate correttamente. Per i figli sotto 21 anni, le detrazioni sono sostituite dall&apos;<a href="/assegno-unico">assegno unico</a>.</p></div>
+            <div className="ib warn r"><div className="ib-t">✅ Tredicesima e quattordicesima</div><p>La <strong>tredicesima</strong> (obbligatoria per tutti) viene maturata mensilit&agrave; per mensilit&agrave; e pagata a dicembre. La <strong>quattordicesima</strong> non &egrave; per tutti: dipende dal CCNL (prevista nel Commercio e Turismo, non nel Metalmeccanico). Controlla che le mensilit&agrave; aggiuntive compaiano nel cedolino annuale.</p></div>
+          </div>
+
+          {/* COSA FARE SE È SBAGLIATA */}
+          <div className="sec r">
+            <div className="sec-tag">I tuoi diritti</div>
+            <h2>La busta paga &egrave; sbagliata: cosa fare</h2>
+            <p>Se trovi un errore nella busta paga, hai diritto a farlo correggere. Ecco i passaggi:</p>
+            <div className="glossary">
+              <div className="gl-item"><strong>1. Segnala per iscritto</strong> &mdash; invia un&apos;email (o PEC) all&apos;ufficio paghe o all&apos;HR con il dettaglio dell&apos;errore. Conserva sempre una copia della comunicazione.</div>
+              <div className="gl-item"><strong>2. Chiedi il conguaglio</strong> &mdash; l&apos;azienda deve correggere nella busta paga successiva o emettere un cedolino di conguaglio. I tempi dipendono dalla complessit&agrave;: errori semplici si risolvono in 1 mese, differenze CCNL possono richiedere pi&ugrave; tempo.</div>
+              <div className="gl-item"><strong>3. Se l&apos;azienda non corregge</strong> &mdash; puoi rivolgerti a un sindacato o a un consulente del lavoro. In ultima istanza, puoi fare causa al Giudice del Lavoro. Il termine di prescrizione per le differenze retributive &egrave; di <strong>5 anni</strong>.</div>
+            </div>
+            <div className="ib tip r"><div className="ib-t">💡 Conserva tutte le buste paga</div>
+              <p>Tieni una copia digitale di ogni cedolino, almeno per 5 anni. Ti serviranno per verificare la correttezza del CU (Certificazione Unica) a febbraio, per il <a href="/730">730</a>, e in caso di contenzioso con il datore di lavoro. Molte aziende usano portali online dove puoi scaricare i cedolini: salvali regolarmente.</p>
+            </div>
           </div>
 
           {/* FAQ */}
