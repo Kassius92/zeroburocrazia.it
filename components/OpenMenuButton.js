@@ -7,8 +7,8 @@ export default function OpenMenuButton() {
   }
 
   return (
-    <button className="btn-secondary" onClick={openMenu} style={{ width: '100%', maxWidth: '340px', display: 'block', margin: '32px auto 0', textAlign: 'center' }}>
-      Vedi tutte le guide →
+    <button className="open-all-btn" onClick={openMenu}>
+      Tutte le guide &rarr;
     </button>
   );
 }

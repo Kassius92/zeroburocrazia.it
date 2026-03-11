@@ -7,8 +7,8 @@ import OpenMenuButton from '@/components/OpenMenuButton';
 import './home.css';
 
 export const metadata = {
-  title: 'ZeroBurocrazia — Burocrazia? Ci pensiamo noi.',
-  description: 'ZeroBurocrazia semplifica la burocrazia italiana: guide gratuite su 730, ISEE, SPID, NASpI, mutui, partita IVA e molto altro. Scritte come te le spiegherebbe un amico.',
+  title: 'ZeroBurocrazia \u2014 La burocrazia italiana, finalmente semplice.',
+  description: 'Guide gratuite su 730, ISEE, SPID, NASpI, mutui, partita IVA e molto altro. Scritte come te le spiegherebbe un amico. Aggiornate al 2026.',
   alternates: { canonical: 'https://zeroburocrazia.it' },
   openGraph: { url: 'https://zeroburocrazia.it', images: [{ url: '/oghome.png', width: 1200, height: 630 }] },
 };
@@ -18,7 +18,7 @@ const websiteSchema = {
   '@type': 'WebSite',
   name: 'ZeroBurocrazia',
   url: 'https://zeroburocrazia.it',
-  description: 'ZeroBurocrazia semplifica la burocrazia italiana: guide gratuite su 730, ISEE, SPID, NASpI, mutui, partita IVA e molto altro. Scritte come te le spiegherebbe un amico.',
+  description: 'Guide gratuite sulla burocrazia italiana: 730, ISEE, SPID, NASpI, mutui, P.IVA e molto altro.',
   inLanguage: 'it-IT',
   publisher: {
     '@type': 'Organization',
@@ -34,9 +34,15 @@ const websiteSchema = {
 };
 
 const guides = [
-  { emoji: '\u{1F9FE}', title: 'Faccio il 730', desc: 'Come funziona, quando farlo, quali detrazioni puoi avere, e come massimizzare il rimborso.', tag: 'Scadenza: settembre 2026', href: '/730' },
-  { emoji: '\u{1F4CB}', title: "Faccio l'ISEE", desc: 'A cosa serve, dove farlo, documenti necessari. Se devi chiedere un bonus, parti da qui.', tag: 'Guida base', href: '/isee' },
-  { emoji: '\u{1FAAA}', title: 'Faccio lo SPID', desc: 'Serve per tutto: INPS, Agenzia Entrate, bonus. Come farlo gratis in 15 minuti.', tag: 'Primo passo', href: '/spid' },
+  { emoji: '\u{1F9FE}', title: 'Faccio il 730', desc: 'Detrazioni, documenti, scadenze e come massimizzare il rimborso. Con calcolatore.', tag: '\u{1F4C5} Scadenza settembre', href: '/730' },
+  { emoji: '\u{1F4CB}', title: "Faccio l\u2019ISEE", desc: 'Dove farlo, documenti, nucleo familiare. Senza ISEE niente bonus.', tag: '\u2726 Guida base', href: '/isee' },
+  { emoji: '\u{1FAAA}', title: 'Faccio lo SPID', desc: 'Serve per tutto. Come farlo gratis in 15 minuti, quale provider scegliere.', tag: '\u{1F680} 15 minuti', href: '/spid' },
+];
+
+const marqueeItems = [
+  '730 PRECOMPILATO', 'CEDOLARE SECCA', 'NASPI', 'SPID IN 15 MINUTI',
+  'IMU SECONDA CASA', 'PASSAPORTO', 'BONUS MOBILI', 'MUTUO PRIMA CASA',
+  'BUSTA PAGA', 'ASSEGNO UNICO',
 ];
 
 export default function HomePage() {
@@ -46,113 +52,172 @@ export default function HomePage() {
       <ScrollReveal />
       <SchemaOrg schemas={[websiteSchema]} />
 
+      {/* HERO */}
       <section className="h-hero">
-        <div className="hero-badge">100% gratuito</div>
-        <h1>La burocrazia italiana, <em>finalmente</em> semplice.</h1>
-        <p>Guide gratuite e complete su 730, ISEE, SPID, bonus, mutui e molto altro. Scritte come te le spiegherebbe un amico.</p>
-        <div className="hero-cta-group">
-          <a href="#situazioni" className="btn-primary">Scegli la tua guida</a>
+        <div className="hero-eyebrow">Guide gratuite &middot; aggiornate al 2026</div>
+        <h1>La burocrazia italiana, <span className="hl">finalmente</span> semplice.</h1>
+        <p className="hero-sub">Guide gratuite su 730, ISEE, mutui, bonus e molto altro. Scritte come te le spiegherebbe un amico &mdash; non un avvocato.</p>
+        <div className="hero-ctas">
+          <a href="#guide" className="btn-primary">Scegli la tua guida &darr;</a>
+          <a href="#newsletter" className="btn-ghost">Newsletter gratis &rarr;</a>
         </div>
       </section>
 
-      <div className="social-proof">
-        <p>Guide verificate &middot; Aggiornate al 2026 &middot; Scritte in italiano vero</p>
+      {/* DIVIDER */}
+      <div className="home-divider"></div>
+
+      {/* FEATURES */}
+      <div className="features-strip">
+        <div className="feat">
+          <div className="feat-emoji">{'\u23F1\uFE0F'}</div>
+          <h3>Risparmi tempo</h3>
+          <p>Guide dritte al punto. Niente burocratese, niente giri di parole. 10 minuti e sai tutto.</p>
+        </div>
+        <div className="feat">
+          <div className="feat-emoji">{'\uD83C\uDFAF'}</div>
+          <h3>Non sbagli niente</h3>
+          <p>Errori comuni, scadenze, documenti esatti. Ti diciamo cosa fare e in che ordine.</p>
+        </div>
+        <div className="feat">
+          <div className="feat-emoji">{'\uD83D\uDCB6'}</div>
+          <h3>Recuperi soldi</h3>
+          <p>Detrazioni, bonus, agevolazioni che non sapevi di avere. Con calcolatori inclusi.</p>
+        </div>
       </div>
 
-      <section className="situations" id="situazioni">
-        <div className="container">
-          <div className="situations-header r">
-            <div className="section-label">Le guide</div>
-            <h2 className="section-title">Cosa sta succedendo nella tua vita?</h2>
-            <p className="section-subtitle">Tocca la tua situazione e leggi la guida completa. Gratuita, senza registrazione.</p>
-          </div>
-          <div className="situations-grid">
-            {guides.map((g, i) => (
-              <Link key={i} href={g.href} className="situation-card r">
-                <span className="card-emoji">{g.emoji}</span>
-                <div className="card-title">{g.title}</div>
-                <div className="card-desc">{g.desc}</div>
-                <span className="card-tag">{g.tag}</span>
-              </Link>
-            ))}
-          </div>
+      {/* MARQUEE */}
+      <div className="marquee-wrap">
+        <div className="marquee-track">
+          {[...marqueeItems, ...marqueeItems].map((item, i) => (
+            <span key={i}>{i > 0 && i % 1 === 0 ? <><span className="dot">{'\u25CF'}</span>{item}</> : item}</span>
+          ))}
+        </div>
+      </div>
+
+      {/* GUIDE CARDS */}
+      <section className="guides-section" id="guide">
+        <div className="sec-eyebrow">Le pi&ugrave; cercate</div>
+        <div className="sec-title">Cosa devi <em>fare?</em></div>
+        <div className="sec-sub">Scegli la tua situazione. Tutto il resto &mdash; documenti, scadenze, costi, errori &mdash; te lo spieghiamo noi.</div>
+        <div className="cards-grid">
+          {guides.map((g, i) => (
+            <Link key={i} href={g.href} className="guide-card">
+              <span className="gc-emoji">{g.emoji}</span>
+              <div className="gc-title">{g.title}</div>
+              <div className="gc-desc">{g.desc}</div>
+              <span className="gc-tag">{g.tag}</span>
+              <div className="gc-arrow">Leggi la guida &rarr;</div>
+            </Link>
+          ))}
+        </div>
+        <div className="open-all">
           <OpenMenuButton />
         </div>
       </section>
 
-      <section className="how-it-works" id="come-funziona">
-        <div className="container">
-          <div className="how-header r" style={{ textAlign: 'center' }}>
-            <div className="section-label">Come funziona</div>
-            <h2 className="section-title">Tre passi. Nessun giro di parole.</h2>
+      {/* DEMO CARDS — dentro le guide */}
+      <section className="demo-section">
+        <div className="sec-eyebrow">Dentro le guide</div>
+        <div className="sec-title">Non solo testo.<br/>Numeri veri, <em>passi concreti.</em></div>
+        <div className="sec-sub">Ogni guida ha calcolatori, confronti, checklist e procedure passo per passo.</div>
+        <div className="demo-grid">
+          {/* Card 1 — calcolo */}
+          <div className="demo-card demo-c1">
+            <div className="demo-text">
+              <span className="demo-label">IL CALCOLO</span>
+              <h3>Ti mostriamo quanto recuperi.</h3>
+              <p>Numeri reali: le tue spese, il tuo reddito, il rimborso che ti arriva in busta paga a luglio.</p>
+            </div>
+            <div className="demo-visual">
+              <div className="demo-flow">
+                <div className="demo-flow-row"><span>Spese mediche</span><strong>1.810&euro;</strong></div>
+                <div className="demo-flow-row"><span>&minus; Franchigia</span><strong>&minus;129&euro;</strong></div>
+                <div className="demo-flow-row"><span>Detrazione 19%</span><strong>319&euro;</strong></div>
+                <div className="demo-flow-total"><span>Rimborso &rarr;</span><span className="amount">+319&euro;</span></div>
+              </div>
+            </div>
           </div>
-          <div className="steps">
-            <div className="step r">
-              <div className="step-number">1</div>
-              <h3>Scegli la situazione</h3>
-              <p>Mi sposo, compro casa, faccio il 730... Tocca quello che ti riguarda.</p>
+
+          {/* Card 2 — procedura */}
+          <div className="demo-card demo-c2">
+            <div className="demo-text">
+              <span className="demo-label">LA PROCEDURA</span>
+              <h3>Passo per passo, senza sorprese.</h3>
+              <p>Cosa fare, in che ordine, e cosa portare. Come una checklist a occhi chiusi.</p>
             </div>
-            <div className="step r">
-              <div className="step-number">2</div>
-              <h3>Leggi la guida gratis</h3>
-              <p>Tutto quello che devi sapere: costi reali, documenti, bonus, errori da evitare, scadenze. 100% gratuito, nessuna registrazione.</p>
+            <div className="demo-visual">
+              <div className="step-flow">
+                <div className="sf-item"><div className="sf-num">1</div><div className="sf-text">Scegli il provider</div></div>
+                <div className="sf-arrow">&darr;</div>
+                <div className="sf-item"><div className="sf-num">2</div><div className="sf-text">Registrati online</div></div>
+                <div className="sf-arrow">&darr;</div>
+                <div className="sf-item"><div className="sf-num">3</div><div className="sf-text">Verifica identit&agrave;</div></div>
+                <div className="sf-arrow">&darr;</div>
+                <div className="sf-done">Pronto! &check;</div>
+              </div>
             </div>
-            <div className="step r">
-              <div className="step-number">3</div>
-              <h3>Resta aggiornato</h3>
-              <p>Scadenze, bonus, novità — ti avvisiamo noi quando cambia qualcosa che ti riguarda. Iscriviti alla newsletter, è gratis.</p>
+          </div>
+
+          {/* Card 3 — checklist */}
+          <div className="demo-card demo-c3">
+            <div className="demo-text">
+              <span className="demo-label">LA CHECKLIST</span>
+              <h3>Documenti pronti, zero sorprese.</h3>
+              <p>La lista esatta di cosa portare. Cos&igrave; non ti rimandano a casa.</p>
+            </div>
+            <div className="demo-visual">
+              <div className="checklist">
+                <div className="cl-item done"><span className="cl-check">&check;</span> Carta d&apos;identit&agrave;</div>
+                <div className="cl-item done"><span className="cl-check">&check;</span> Codice fiscale</div>
+                <div className="cl-item done"><span className="cl-check">&check;</span> 2 fototessera ICAO</div>
+                <div className="cl-item done"><span className="cl-check">&check;</span> Marca da bollo 73,50&euro;</div>
+                <div className="cl-item done"><span className="cl-check">&check;</span> Ricevuta PagoPA</div>
+                <div className="cl-item cl-miss"><span className="cl-check">&cir;</span> Consenso genitore</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="pricing" id="perche-gratis">
-        <div className="container">
-          <div className="pricing-header r">
-            <div className="section-label">Perché è gratis</div>
-            <h2 className="section-title">Nessun trucco. È gratis davvero.</h2>
-            <p className="section-subtitle">ZeroBurocrazia nasce per rendere la burocrazia accessibile a tutti. Le guide sono gratuite, complete e senza registrazione. Ci sosteniamo con link di affiliazione verso servizi utili — non costa nulla in più a te e ci permette di restare gratuiti.</p>
+      {/* COME FUNZIONA (DARK) */}
+      <section className="how-section">
+        <div className="how-inner">
+          <div className="sec-eyebrow">Come funziona</div>
+          <div className="sec-title">Tre passi.<br/>Nessun giro di <em>parole.</em></div>
+          <div className="sec-sub">Non serve registrarsi. Non serve pagare. Non serve un commercialista.</div>
+          <div className="how-steps">
+            <div className="how-step">
+              <div className="hs-num">1</div>
+              <div className="hs-title">Scegli la situazione</div>
+              <div className="hs-desc">Mi sposo, compro casa, faccio il 730&hellip; Tocca quello che ti riguarda.</div>
+            </div>
+            <div className="how-step">
+              <div className="hs-num">2</div>
+              <div className="hs-title">Leggi la guida</div>
+              <div className="hs-desc">Costi reali, documenti, errori da evitare, scadenze, calcolatori. Tutto incluso.</div>
+            </div>
+            <div className="how-step">
+              <div className="hs-num">3</div>
+              <div className="hs-title">Agisci</div>
+              <div className="hs-desc">Sai cosa fare, in che ordine, e quanto costa. La burocrazia diventa una checklist.</div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="tg-preview">
-        <div className="container">
-          <div className="tg-preview-header r">
-            <div className="section-label">Questa settimana</div>
-            <h2 className="section-title">Le notizie che ti riguardano</h2>
-            <p className="section-subtitle">Ogni settimana raccogliamo scadenze, bonus e circolari che ti riguardano. Spiegate come te le spiegherebbe un amico.</p>
-          </div>
-          <div className="tg-preview-grid">
-            <a href="/tg" className="tg-prev-card r">
-              <span className="tg-prev-cat tg-prev-fisco">Fisco</span>
-              <span className="tg-prev-tag tg-prev-tag-novita">{'\u2728'} Novit&agrave;</span>
-              <div className="tg-prev-title">ISEE 2026: l&apos;INPS aggiorna automaticamente tutte le attestazioni</div>
-              <div className="tg-prev-body">Non serve rifare la DSU: le attestazioni gi&agrave; presentate sono state aggiornate ai nuovi modelli.</div>
-            </a>
-            <a href="/tg" className="tg-prev-card r">
-              <span className="tg-prev-cat tg-prev-famiglia">Famiglia</span>
-              <span className="tg-prev-tag tg-prev-tag-scadenza">{'\u26A0\uFE0F'} Attenzione</span>
-              <div className="tg-prev-title">Assegno unico marzo: chi non ha l&apos;ISEE prende il minimo</div>
-              <div className="tg-prev-body">Da marzo si applica il nuovo ISEE. Senza DSU: solo 58,30&euro; per figlio invece di 203,80&euro;.</div>
-            </a>
-            <a href="/tg" className="tg-prev-card r">
-              <span className="tg-prev-cat tg-prev-fisco">Fisco</span>
-              <span className="tg-prev-tag tg-prev-tag-scadenza">{'\u23F0'} Scadenza</span>
-              <div className="tg-prev-title">730 precompilato 2026: approvati i modelli definitivi</div>
-              <div className="tg-prev-body">Disponibile dal 30 aprile. Novit&agrave;: detrazioni figli fino a 30 anni, tetto spese scolastiche a 1.000&euro;.</div>
-            </a>
-          </div>
-          <div className="tg-preview-cta">
-            <a href="/tg" className="btn-tg">Tutte le notizie {'\u2192'}</a>
-          </div>
+      {/* NEWSLETTER (DARK) */}
+      <section className="final-section" id="newsletter">
+        <div className="sec-title">Resta aggiornato.<br/>Senza <em>impazzire.</em></div>
+        <div className="final-sub">Scadenze, bonus e novit&agrave; che ti riguardano. Una email quando serve. Ti cancelli in un click.</div>
+        <div className="final-form">
+          <input type="email" placeholder="la-tua@email.com" />
+          <button>Iscriviti gratis &rarr;</button>
         </div>
-      </section>
-
-      <section className="final-cta">
-        <h2>La burocrazia non dovrebbe essere<br />un lavoro a tempo pieno.</h2>
-        <p>Inizia dalla guida che ti serve. Nessuna registrazione, nessun vincolo.</p>
-        <a href="#situazioni" className="btn-light">Scegli la tua guida</a>
+        <div className="final-trust">
+          <span>Gratis, per sempre</span>
+          <span>Solo cose utili</span>
+          <span>Via in 1 click</span>
+        </div>
       </section>
 
       <Footer variant="home" />

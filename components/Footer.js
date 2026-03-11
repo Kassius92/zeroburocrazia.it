@@ -3,20 +3,15 @@ import Link from 'next/link';
 export default function Footer({ variant = 'scheda' }) {
   if (variant === 'home') {
     return (
-      <footer>
-        <div className="footer-inner">
-          <div>
-            <div className="footer-brand">Zero<span>Burocrazia</span></div>
-            <div className="footer-text" style={{ marginTop: 4 }}>La burocrazia italiana, semplificata.</div>
-          </div>
-          <div className="footer-links">
-            <Link href="/tg">Notizie</Link>
-            <Link href="/chi-siamo">Chi siamo</Link>
-            <Link href="/privacy">Privacy</Link>
-            <Link href="/termini">Termini</Link>
-            <Link href="/contatti">Contatti</Link>
-          </div>
+      <footer style={{ background: '#13151a', borderTop: '1px solid rgba(255,255,255,.05)', padding: '28px 24px', textAlign: 'center' }}>
+        <div style={{ marginBottom: 10 }}>
+          <Link href="/novita" style={{ color: 'rgba(255,255,255,.35)', textDecoration: 'none', margin: '0 10px', fontSize: 13 }}>Notizie</Link>
+          <Link href="/chi-siamo" style={{ color: 'rgba(255,255,255,.35)', textDecoration: 'none', margin: '0 10px', fontSize: 13 }}>Chi siamo</Link>
+          <Link href="/privacy" style={{ color: 'rgba(255,255,255,.35)', textDecoration: 'none', margin: '0 10px', fontSize: 13 }}>Privacy</Link>
+          <Link href="/termini" style={{ color: 'rgba(255,255,255,.35)', textDecoration: 'none', margin: '0 10px', fontSize: 13 }}>Termini</Link>
+          <Link href="/contatti" style={{ color: 'rgba(255,255,255,.35)', textDecoration: 'none', margin: '0 10px', fontSize: 13 }}>Contatti</Link>
         </div>
+        <div style={{ fontSize: 13, color: 'rgba(255,255,255,.25)' }}>&copy; 2026 ZeroBurocrazia &mdash; La burocrazia italiana, finalmente semplice.</div>
       </footer>
     );
   }
