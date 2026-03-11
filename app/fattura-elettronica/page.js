@@ -33,8 +33,9 @@ const tocItems = [
   { id: 'come', label: 'Come si fa' },
   { id: 'strumenti', label: 'Strumenti' },
   { id: 'dati', label: 'Dati obbligatori' },
+  { id: 'scadenze', label: 'Scadenze e conservazione' },
   { id: 'esempio', label: 'Esempio pratico', bh: true },
-  { id: 'faq', label: 'FAQ', bh: true },
+  { id: 'faq', label: 'FAQ' },
 ];
 
 const faqItems = [
@@ -219,6 +220,34 @@ export default function Page() {
               <li className="cli r d1"><div className="ci">{'\uD83D\uDCB0'}</div><div className="clb"><strong>Importo, aliquota IVA, totale</strong><span className="note">Forfettari: indicare &quot;Operazione in franchigia da IVA art. 1 c. 54-89 L. 190/2014&quot;</span></div></li>
               <li className="cli r d2"><div className="ci">{'\uD83D\uDCB3'}</div><div className="clb"><strong>Modalit&agrave; di pagamento</strong><span className="note">Bonifico, contanti, carta, ecc.</span></div></li>
             </ul>
+          </div>
+
+          {/* SCADENZE E CONSERVAZIONE */}
+          <div className="sec r" id="scadenze">
+            <div className="sec-tag">Tempistiche</div>
+            <h2>Scadenze e conservazione</h2>
+            <div className="glossary">
+              <div className="gl-item"><strong>Fattura immediata</strong> &mdash; va emessa entro <strong>12 giorni</strong> dalla data dell&apos;operazione (cessione del bene o completamento del servizio). Se la emetti lo stesso giorno, data operazione e data emissione coincidono.</div>
+              <div className="gl-item"><strong>Fattura differita</strong> &mdash; per le cessioni di beni con DDT (documento di trasporto), puoi emettere la fattura entro il <strong>15 del mese successivo</strong> alla consegna. Per i servizi, entro 12 giorni.</div>
+              <div className="gl-item"><strong>Marca da bollo digitale</strong> &mdash; sulle fatture <strong>sopra i 77,47&euro;</strong> non soggette a IVA (es. forfettari), devi applicare una marca da bollo da 2&euro;. Con la fattura elettronica si indica nel file XML e si versa trimestralmente all&apos;Agenzia delle Entrate, entro il 20 del mese successivo al trimestre.</div>
+              <div className="gl-item"><strong>Conservazione digitale</strong> &mdash; le fatture elettroniche vanno conservate per <strong>10 anni</strong>. Il servizio gratuito dell&apos;Agenzia delle Entrate fa la conservazione a norma automatica (se attivato). Altrimenti, servono provider certificati.</div>
+            </div>
+
+            <div className="ib tip r"><div className="ib-t">💡 Attiva la conservazione gratuita dell&apos;Agenzia</div>
+              <p>Accedi a &quot;Fatture e Corrispettivi&quot; con SPID/CIE, vai su &quot;Fatturazione elettronica&quot; &rarr; &quot;Adesione al servizio di conservazione&quot;. &Egrave; gratis e automatico. Se non lo attivi, rischi di perdere le fatture dopo qualche anno.</p>
+            </div>
+          </div>
+
+          {/* ERRORI COMUNI */}
+          <div className="sec r">
+            <div className="sec-tag">Attenzione</div>
+            <h2>Errori comuni da evitare</h2>
+            <div className="glossary">
+              <div className="gl-item"><strong>Codice destinatario sbagliato</strong> &mdash; se sbagli il codice SDI del cliente, la fattura va a finire in un limbo. Il cliente non la riceve e potrebbe non pagarti. Verifica sempre il <Tip t="Codice destinatario: codice alfanumerico di 7 caratteri assegnato al sistema di interscambio del destinatario. Se il cliente è un privato o non lo conosce, usa '0000000' (7 zeri) e indica la PEC.">codice destinatario</Tip> o la PEC del cliente prima di inviare.</div>
+              <div className="gl-item"><strong>Numerazione non progressiva</strong> &mdash; le fatture devono avere una numerazione <strong>univoca e crescente</strong> nell&apos;anno. Se salti un numero, non &egrave; un dramma fiscale, ma pu&ograve; generare segnalazioni. Non duplicare mai un numero.</div>
+              <div className="gl-item"><strong>Dimenticare la marca da bollo</strong> &mdash; per i forfettari &egrave; l&apos;errore pi&ugrave; diffuso. Se emetti fatture sopra 77,47&euro; senza indicare la marca da bollo da 2&euro;, riceverai un avviso dall&apos;Agenzia con sanzione. Il software di fatturazione la inserisce automaticamente, ma controlla.</div>
+              <div className="gl-item"><strong>Scarto dal SDI</strong> &mdash; se il file XML ha errori (P.IVA cessata, formato sbagliato), il SDI &quot;scarta&quot; la fattura e hai <strong>5 giorni</strong> per correggerla e reinviarla con la stessa data e numero. Dopo 5 giorni, devi emettere una nuova fattura con nuovo numero.</div>
+            </div>
           </div>
 
           {/* ESEMPIO PRATICO */}

@@ -33,8 +33,9 @@ const tocItems = [
   { id: 'tasse', label: 'Quanto paghi' },
   { id: 'coefficienti', label: 'Coefficienti' },
   { id: 'limiti', label: 'Pro e contro' },
+  { id: 'obblighi', label: 'Obblighi e adempimenti' },
   { id: 'esempio', label: 'Esempio pratico', bh: true },
-  { id: 'faq', label: 'FAQ', bh: true },
+  { id: 'faq', label: 'FAQ' },
 ];
 
 const faqItems = [
@@ -225,6 +226,38 @@ export default function Page() {
                 </div>
                 <a href="FISCOZEN_LINK" target="_blank" rel="noopener sponsored" className="aff-btn">Prova Fiscozen gratis {'\u2192'}</a>
               </div>
+            </div>
+          </div>
+
+          {/* OBBLIGHI */}
+          <div className="sec r" id="obblighi">
+            <div className="sec-tag">Cosa devi fare</div>
+            <h2>Obblighi e adempimenti del forfettario</h2>
+            <p>Il forfettario &egrave; pi&ugrave; semplice dell&apos;ordinario, ma non significa &quot;zero adempimenti&quot;. Ecco cosa devi fare:</p>
+
+            <div className="glossary">
+              <div className="gl-item"><strong>Fatturazione elettronica</strong> &mdash; obbligatoria per tutti i forfettari dal 2024. Devi emettere fatture in formato XML tramite il Sistema di Interscambio (SdI). Con un servizio come Fiscozen o Fatture in Cloud &egrave; tutto automatico. In fattura scrivi: &quot;Operazione effettuata ai sensi dell&apos;art. 1, commi 54-89, L. 190/2014&quot;.</div>
+              <div className="gl-item"><strong>Dichiarazione dei redditi</strong> &mdash; una volta all&apos;anno con il <strong>Modello Redditi PF</strong> (non il 730, che &egrave; solo per dipendenti/pensionati). Scadenza: 30 giugno per il saldo + primo acconto, 30 novembre per il secondo acconto.</div>
+              <div className="gl-item"><strong>Contributi INPS</strong> &mdash; se sei in <Tip t="Gestione separata INPS: la cassa previdenziale per i lavoratori autonomi senza un proprio ordine professionale. L'aliquota contributiva 2026 è del 26,07% sul reddito imponibile.">gestione separata</Tip>, paghi il 26,07% del reddito imponibile (con gli stessi acconti dell&apos;imposta). Se sei artigiano o commerciante, paghi contributi fissi trimestrali (~4.200&euro;/anno) pi&ugrave; l&apos;eventuale eccedenza. Puoi chiedere la riduzione del 35% con apposita domanda INPS.</div>
+              <div className="gl-item"><strong>Niente IVA, niente ritenuta</strong> &mdash; non addebiti l&apos;IVA in fattura e non subisci la ritenuta d&apos;acconto. Questo semplifica la vita, ma significa che non puoi detrarre l&apos;IVA sugli acquisti.</div>
+              <div className="gl-item"><strong>Niente IRAP, niente ISA</strong> &mdash; non paghi l&apos;IRAP e non sei soggetto agli Indici Sintetici di Affidabilit&agrave; (le &quot;pagelle fiscali&quot;). La contabilit&agrave; si riduce a: emettere fatture + conservare le fatture ricevute.</div>
+            </div>
+          </div>
+
+          {/* USCITA DAL FORFETTARIO */}
+          <div className="sec r">
+            <div className="sec-tag">Attenzione</div>
+            <h2>Quando (e come) esci dal forfettario</h2>
+            <p>Esci dal regime forfettario automaticamente se superi i limiti. Ma le regole non sono ovvie:</p>
+
+            <div className="glossary">
+              <div className="gl-item"><strong>Superi 85.000&euro; ma stai sotto 100.000&euro;</strong> &mdash; resti nel forfettario per l&apos;anno in corso, ma dall&apos;anno successivo passi automaticamente al regime ordinario.</div>
+              <div className="gl-item"><strong>Superi 100.000&euro;</strong> &mdash; esci dal forfettario <strong>immediatamente</strong>, nello stesso anno. L&apos;IVA si applica sulle fatture emesse dal giorno del superamento. &Egrave; il caso pi&ugrave; critico: devi riorganizzarti in corsa.</div>
+              <div className="gl-item"><strong>Reddito da lavoro dipendente &gt; 30.000&euro;</strong> &mdash; se hai anche un lavoro dipendente e il reddito lordo supera 30.000&euro; l&apos;anno precedente, non puoi usare il forfettario.</div>
+            </div>
+
+            <div className="ib warn r"><div className="ib-t">⚠️ Uscito? Puoi rientrare</div>
+              <p>Se esci per superamento del limite ma l&apos;anno dopo torni sotto 85.000&euro;, puoi rientrare nel forfettario. Per&ograve; perdi l&apos;aliquota del 5%: si applica il 15%. Il quinquennio agevolato non si &quot;mette in pausa&quot;.</p>
             </div>
           </div>
 
