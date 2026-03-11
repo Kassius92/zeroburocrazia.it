@@ -9,7 +9,7 @@ import PrintButton from '@/components/PrintButton';
 import SidebarToggle from '@/components/SidebarToggle';
 import Tip from '@/components/Tip';
 import VersionToggle from '@/components/VersionToggle';
-import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { articleSchema, faqSchema, howToSchema } from '@/components/SchemaOrg';
 
 export const metadata = {
   title: 'Carta d\u2019Identit\u00e0 Elettronica (CIE) 2026: Come Richiederla, Costi e Tempi',
@@ -63,6 +63,18 @@ export default function PaginaCie() {
       image: 'ogcie.png',
     }),
     faqSchema(faqItems),
+    howToSchema({
+      name: 'Come richiedere la Carta d\'Identità Elettronica (CIE)',
+      description: 'Procedura per richiedere la CIE: prenotazione, documenti, costo e ritiro.',
+      totalTime: 'P10D',
+      image: 'ogcie.png',
+      steps: [
+        { name: 'Prenota l\'appuntamento', text: 'Vai su Agenda CIE (prenotazionicie.interno.gov.it) e prenota un appuntamento al tuo Comune. Puoi anche caricare la fototessera online.' },
+        { name: 'Presentati allo sportello', text: 'Porta documento di identità scaduto o in scadenza, codice fiscale e fototessera (se non caricata online). Paga 22,21\u20ac. Ti rilasciano metà PIN e metà PUK.' },
+        { name: 'Ricevi la CIE', text: 'La CIE arriva a casa per posta in circa 6 giorni lavorativi, con l\'altra metà del PIN e del PUK. Conserva entrambi i codici.' },
+        { name: 'Attiva CieID', text: 'Scarica l\'app CieID, avvicina la CIE al telefono NFC, inserisci il PIN completo. Ora puoi usare la CIE per accedere ai servizi della PA.' },
+      ],
+    }),
   ];
 
   return (

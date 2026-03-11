@@ -9,7 +9,7 @@ import PrintButton from '@/components/PrintButton';
 import SidebarToggle from '@/components/SidebarToggle';
 import Tip from '@/components/Tip';
 import VersionToggle from '@/components/VersionToggle';
-import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { articleSchema, faqSchema, howToSchema } from '@/components/SchemaOrg';
 
 export const metadata = {
   title: 'Passaporto 2026: Come Richiederlo, Costi, Documenti e Tempi di Rilascio',
@@ -60,6 +60,18 @@ export default function PaginaPassaporto() {
       image: 'ogpassaporto.png',
     }),
     faqSchema(faqItems),
+    howToSchema({
+      name: 'Come richiedere il passaporto italiano nel 2026',
+      description: 'Procedura completa per richiedere il passaporto: prenotazione online, documenti, pagamento e ritiro.',
+      totalTime: 'P30D',
+      image: 'ogpassaporto.png',
+      steps: [
+        { name: 'Prenota l\'appuntamento online', text: 'Vai su passaportonline.poliziadistato.it, accedi con SPID o CIE, scegli la Questura, seleziona giorno e ora. Stampa la ricevuta.' },
+        { name: 'Prepara documenti e pagamenti', text: 'Compra la marca da bollo da 73,50\u20ac in tabaccheria. Paga i 42,70\u20ac via PagoPA. Fai 2 fototessera formato ICAO. Compila il modulo di richiesta.' },
+        { name: 'Presentati in Questura', text: 'Il giorno dell\'appuntamento consegna i documenti, rilascio delle impronte digitali e firma. Ricevi una ricevuta con il numero della pratica.' },
+        { name: 'Ritira il passaporto', text: 'Dopo 10-15 giorni lavorativi ritiralo in Questura con la ricevuta, oppure ricevilo a casa con Passaporto a domicilio (9,53\u20ac extra).' },
+      ],
+    }),
   ];
 
   return (

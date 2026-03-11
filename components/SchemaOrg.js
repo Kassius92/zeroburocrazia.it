@@ -32,6 +32,23 @@ export function faqSchema(items) {
   };
 }
 
+export function howToSchema({ name, description, steps, totalTime, image }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name,
+    description,
+    ...(totalTime && { totalTime }),
+    ...(image && { image: `https://zeroburocrazia.it/${image}` }),
+    step: steps.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+    })),
+  };
+}
+
 export default function SchemaOrg({ schemas }) {
   return (
     <>

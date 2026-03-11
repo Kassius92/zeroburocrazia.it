@@ -9,7 +9,7 @@ import PrintButton from '@/components/PrintButton';
 import SidebarToggle from '@/components/SidebarToggle';
 import Tip from '@/components/Tip';
 import VersionToggle from '@/components/VersionToggle';
-import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { articleSchema, faqSchema, howToSchema } from '@/components/SchemaOrg';
 
 export const metadata = {
   title: 'PEC 2026: Cos\u2019\u00e8, Come Attivarla, Costi e Quando \u00e8 Obbligatoria',
@@ -59,6 +59,18 @@ export default function PaginaPec() {
       image: 'ogpec.png',
     }),
     faqSchema(faqItems),
+    howToSchema({
+      name: 'Come attivare una PEC (Posta Elettronica Certificata)',
+      description: 'Procedura per attivare una casella PEC: scelta provider, registrazione, verifica identità e primo utilizzo.',
+      totalTime: 'PT30M',
+      image: 'ogpec.png',
+      steps: [
+        { name: 'Scegli un provider accreditato AgID', text: 'Confronta i provider (Aruba, Legalmail, Poste, Register, Namirial). Valuta prezzo, spazio di archiviazione e app mobile.' },
+        { name: 'Registrati e paga', text: 'Vai sul sito del provider, scegli il piano, inserisci i tuoi dati e paga (da 5 a 40\u20ac/anno a seconda del provider e dello spazio).' },
+        { name: 'Verifica la tua identità', text: 'Il provider verifica la tua identità tramite SPID, CIE, firma digitale o documento. Alcuni richiedono una videochiamata.' },
+        { name: 'Registra il domicilio digitale su INAD', text: 'Vai su inad.gov.it con SPID o CIE e registra la tua PEC come domicilio digitale. Così la PA potrà inviarti comunicazioni ufficiali via PEC.' },
+      ],
+    }),
   ];
 
   return (

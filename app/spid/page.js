@@ -9,7 +9,7 @@ import SidebarToggle from '@/components/SidebarToggle';
 import QuizSpid from '@/components/QuizSpid';
 import Tip from '@/components/Tip';
 import VersionToggle from '@/components/VersionToggle';
-import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { articleSchema, faqSchema, howToSchema } from '@/components/SchemaOrg';
 
 export const metadata = {
   title: 'Come Fare lo SPID nel 2026: Costo, Tempi e Provider Migliore',
@@ -65,6 +65,18 @@ export default function Page() {
       dateModified: '2026-03-09',
     }),
     faqSchema(faqItems),
+    howToSchema({
+      name: 'Come fare lo SPID nel 2026',
+      description: 'Procedura completa per ottenere lo SPID: scelta provider, registrazione, riconoscimento e attivazione.',
+      totalTime: 'P1D',
+      image: 'ogspid.png',
+      steps: [
+        { name: 'Scegli il provider SPID', text: 'Confronta i provider accreditati AgID (Poste, Aruba, InfoCert, ecc.). Poste Italiane è il più usato e offre il riconoscimento gratuito in ufficio postale.' },
+        { name: 'Registrati sul sito del provider', text: 'Vai sul sito del provider scelto, inserisci i tuoi dati personali (nome, cognome, codice fiscale, email, telefono) e scegli le credenziali.' },
+        { name: 'Fai il riconoscimento dell\'identità', text: 'Puoi farlo di persona in ufficio postale (gratis), via CIE/CNS da casa, via webcam, o con firma digitale. Il metodo più semplice è con la CIE e l\'app del provider.' },
+        { name: 'Attiva lo SPID', text: 'Ricevi le credenziali (username e password) e configura il secondo fattore di autenticazione (SMS o app). Prova ad accedere su un sito della PA per verificare che funzioni.' },
+      ],
+    }),
   ];
 
   return (

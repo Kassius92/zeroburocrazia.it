@@ -9,7 +9,7 @@ import PrintButton from '@/components/PrintButton';
 import SidebarToggle from '@/components/SidebarToggle';
 import Tip from '@/components/Tip';
 import VersionToggle from '@/components/VersionToggle';
-import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { articleSchema, faqSchema, howToSchema } from '@/components/SchemaOrg';
 
 export const metadata = {
   title: 'Cambio di Residenza 2026: Come Farlo Online, Documenti e Tempi',
@@ -64,6 +64,18 @@ export default function PaginaCambioResidenza() {
       image: 'ogcambioresidenza.png',
     }),
     faqSchema(faqItems),
+    howToSchema({
+      name: 'Come fare il cambio di residenza online nel 2026',
+      description: 'Procedura completa per il cambio di residenza: dichiarazione su ANPR, documenti, tempistiche e cosa aggiornare dopo.',
+      totalTime: 'P45D',
+      image: 'ogcambioresidenza.png',
+      steps: [
+        { name: 'Accedi al portale ANPR', text: 'Vai su anagrafenazionale.interno.it con SPID o CIE. Seleziona "Richiesta di cambio di residenza".' },
+        { name: 'Compila la dichiarazione anagrafica', text: 'Inserisci il nuovo indirizzo, i dati dei componenti del nucleo familiare che si trasferiscono, e il titolo di occupazione dell\'immobile (proprietà, affitto, comodato).' },
+        { name: 'Invia e attendi la verifica', text: 'Il Comune riceve la dichiarazione e ha 45 giorni per verificare. Se non risponde entro 45 giorni, il cambio si considera accettato (silenzio-assenso).' },
+        { name: 'Aggiorna i documenti collegati', text: 'Dopo il cambio: aggiorna la carta di identità, la patente (portale dell\'automobilista), il medico di base, e comunica la nuova residenza a banca, assicurazione e utenze.' },
+      ],
+    }),
   ];
 
   return (
