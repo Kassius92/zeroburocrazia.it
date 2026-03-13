@@ -311,14 +311,14 @@ export default function Page() {
 
           <div className="aff-block r">
             <img src="/fiscozen-logo.png" alt="Fiscozen" className="aff-logo" width="120" height="24" />
-            <div className="aff-label">Ti dimetti per metterti in proprio?</div>
+            <div className="aff-label">Partner ufficiale ZeroBurocrazia</div>
             <div className="aff-body">
               <div className="aff-left">
                 <div className="aff-title">Fiscozen &mdash; Commercialista online per partite IVA</div>
                 <div className="aff-text">Se apri partita IVA, Fiscozen ti gestisce tutto: apertura gratuita, fatturazione elettronica, commercialista dedicato. Forfettario e ordinario semplificato.</div>
-                <div className="aff-note">* Link in partnership &mdash; se ti iscrivi, ZeroBurocrazia riceve una piccola commissione. A te non cambia nulla sul prezzo.</div>
+                <div className="aff-discount">Sconto esclusivo di 50&euro; per i lettori di ZeroBurocrazia</div><div className="aff-note">* Link in partnership &mdash; a te non cambia nulla sul prezzo, anzi risparmi.</div>
               </div>
-              <a href="https://fiscozen.it/invitoZEROBUROCRAZIA50A" target="_blank" rel="noopener sponsored" className="aff-btn">Prova Fiscozen gratis {'\u2192'}</a>
+              <a href="https://fiscozen.it/invitoZEROBUROCRAZIA50A" target="_blank" rel="noopener sponsored" className="aff-btn">Ottieni lo sconto di 50&euro; {'\u2192'}</a>
             </div>
           </div>
 
