@@ -290,9 +290,9 @@ export default function Page() {
             <div className="aff-label">Partner ufficiale ZeroBurocrazia</div>
             <div className="aff-body">
               <div className="aff-left">
-                <div className="aff-title">Fiscozen &mdash; Commercialista online per partite IVA</div>
-                <div className="aff-text">Apertura P.IVA gratuita, fatturazione elettronica inclusa, commercialista dedicato. Gestisce forfettario e ordinario semplificato.</div>
-                <div className="aff-discount">Sconto esclusivo di 50&euro; per i lettori di ZeroBurocrazia</div><div className="aff-note">* Link in partnership &mdash; a te non cambia nulla sul prezzo, anzi risparmi.</div>
+                <div className="aff-title">Fiscozen &mdash; Servizio online per la gestione della partita IVA</div>
+                <div className="aff-text">Apertura P.IVA inclusa nell&apos;abbonamento, commercialista dedicato, fatturazione elettronica inclusa, dichiarazione dei redditi. Gestisce forfettario e ordinario semplificato.</div>
+                <div className="aff-discount">Consulenza fiscale gratuita e 50&euro; di sconto per i lettori</div><div className="aff-note">* Link in partnership &mdash; a te non cambia nulla sul prezzo, anzi risparmi.</div>
               </div>
               <a href="https://fiscozen.it/invitoZEROBUROCRAZIA50A" target="_blank" rel="noopener sponsored" className="aff-btn">Ottieni lo sconto di 50&euro; {'\u2192'}</a>
             </div>

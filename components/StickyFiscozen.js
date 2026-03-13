@@ -18,7 +18,7 @@ export default function StickyFiscozen() {
     <div className="sticky-fz">
       <div className="sticky-fz-left">
         <strong>Fiscozen &mdash; Sconto 50&euro;</strong>
-        <span>Commercialista online per P.IVA</span>
+        <span>Consulenza fiscale gratuita</span>
       </div>
       <a href="https://fiscozen.it/invitoZEROBUROCRAZIA50A" target="_blank" rel="noopener sponsored" className="sticky-fz-btn">
         Ottieni {'\u2192'}
