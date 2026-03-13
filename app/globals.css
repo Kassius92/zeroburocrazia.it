@@ -467,6 +467,7 @@ footer,.footer-dark{background:var(--navy);border-top:1px solid rgba(255,255,255
   text-transform: uppercase; color: var(--sage);
   margin-bottom: 14px;
 }
+.aff-logo { display:block; height:28px; width:auto; margin-bottom:14px; border-radius:6px; }
 .aff-body { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
 .aff-left { flex: 1; min-width: 220px; }
 .aff-title { font-size: 17px; font-weight: 700; color: var(--warm-brown); margin-bottom: 8px; }

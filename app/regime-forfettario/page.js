@@ -217,7 +217,8 @@ export default function Page() {
             </div>
 
             <div className="aff-block r">
-              <div className="aff-label">Strumento consigliato</div>
+              <img src="/fiscozen-logo.png" alt="Fiscozen" className="aff-logo" width="160" height="32" />
+            <div className="aff-label">Strumento consigliato</div>
               <div className="aff-body">
                 <div className="aff-left">
                   <div className="aff-title">Fiscozen &mdash; Commercialista online per forfettari</div>
