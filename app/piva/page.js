@@ -9,6 +9,7 @@ import SidebarToggle from '@/components/SidebarToggle';
 import QuizPiva from '@/components/QuizPiva';
 import CalcPiva from '@/components/CalcPiva';
 import Tip from '@/components/Tip';
+import SidebarFiscozen from '@/components/SidebarFiscozen';
 import VersionToggle from '@/components/VersionToggle';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
 
@@ -387,6 +388,7 @@ export default function Page() {
         {/* SIDEBAR */}
         <aside className="aside">
           <SidebarToggle />
+          <SidebarFiscozen />
                     <div className="sbsec">
             <div className="sbsec-t">🔗 Link utili</div>
             <a href="https://www.agenziaentrate.gov.it" target="_blank" rel="noopener noreferrer" className="sbtool"><span className="sbtool-i">🏛</span><div><div className="sbtool-n">Aprire P.IVA</div><div className="sbtool-d">Apertura e gestione partita IVA</div></div></a>

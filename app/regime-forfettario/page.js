@@ -9,6 +9,7 @@ import SidebarToggle from '@/components/SidebarToggle';
 import VersionToggle from '@/components/VersionToggle';
 import QuizForfettario from '@/components/QuizForfettario';
 import Tip from '@/components/Tip';
+import SidebarFiscozen from '@/components/SidebarFiscozen';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
 
 export const metadata = {
@@ -304,6 +305,7 @@ export default function Page() {
 
         <aside className="aside">
           <SidebarToggle />
+          <SidebarFiscozen />
                     <div className="sbsec">
             <div className="sbsec-t">🔗 Link utili</div>
             <a href="https://www.agenziaentrate.gov.it" target="_blank" rel="noopener noreferrer" className="sbtool"><span className="sbtool-i">🏛</span><div><div className="sbtool-n">Regole forfettario</div><div className="sbtool-d">Requisiti e limiti ufficiali</div></div></a>

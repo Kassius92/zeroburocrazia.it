@@ -8,6 +8,7 @@ import PrintButton from '@/components/PrintButton';
 import SidebarToggle from '@/components/SidebarToggle';
 import QuizDimissioni from '@/components/QuizDimissioni';
 import Tip from '@/components/Tip';
+import SidebarFiscozen from '@/components/SidebarFiscozen';
 import VersionToggle from '@/components/VersionToggle';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
 
@@ -344,6 +345,7 @@ export default function Page() {
         {/* SIDEBAR */}
         <aside className="aside">
           <SidebarToggle />
+          <SidebarFiscozen />
                     <div className="sbsec">
             <div className="sbsec-t">🔗 Link utili</div>
             <a href="https://www.lavoro.gov.it" target="_blank" rel="noopener noreferrer" className="sbtool"><span className="sbtool-i">🏛</span><div><div className="sbtool-n">Invia dimissioni</div><div className="sbtool-d">Ministero del Lavoro — invia online</div></div></a>
