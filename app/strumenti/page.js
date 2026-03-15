@@ -13,7 +13,7 @@ export const metadata = {
 export default function StrumentiPage() {
   return (
     <>
-      <Nav variant="home" />
+      <div className="desktop-only"><Nav variant="home" /></div>
       <section className="str-page">
         <h1 className="str-title">Strumenti</h1>
         <p className="str-sub">Calcolatori e tool interattivi per le tue pratiche</p>
@@ -46,7 +46,7 @@ export default function StrumentiPage() {
           ))}
         </div>
       </section>
-      <Footer />
+      <div className="desktop-only"><Footer /></div>
     </>
   );
 }

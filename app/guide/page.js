@@ -4,7 +4,6 @@ import Footer from '@/components/Footer';
 import GuideFilter from '@/components/GuideFilter';
 import { totalGuides } from '@/components/categoriesData';
 import './guide.css';
-import './guide.css';
 
 export const metadata = {
   title: 'Tutte le guide \u2014 ZeroBurocrazia',
@@ -15,15 +14,15 @@ export const metadata = {
 export default function GuidePage() {
   return (
     <>
-      <Nav variant="home" />
+      <div className="desktop-only"><Nav variant="home" /></div>
       <section className="guide-page">
-        <h1 className="gp-title">Tutte le guide</h1>
+        <h1 className="gp-title">Cerca</h1>
         <p className="gp-sub">{totalGuides} guide gratuite sulla burocrazia italiana</p>
         <Suspense fallback={<div style={{ minHeight: 400 }} />}>
           <GuideFilter />
         </Suspense>
       </section>
-      <Footer />
+      <div className="desktop-only"><Footer /></div>
     </>
   );
 }

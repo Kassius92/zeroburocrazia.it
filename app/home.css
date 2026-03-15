@@ -412,15 +412,6 @@
    MOBILE APP HOME — visible <768px only
    ═══════════════════════════════════════════════ */
 
-/* Toggle desktop vs app */
-.app-only { display: none; }
-.desktop-only { display: contents; }
-
-@media (max-width: 768px) {
-  .app-only { display: block; }
-  .desktop-only { display: none !important; }
-}
-
 /* ---- App Header ---- */
 .app-home { padding: 16px 20px 24px; }
 .app-header {

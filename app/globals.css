@@ -1128,6 +1128,16 @@ body.mega-open .toc { display: none; }
 :is(.cat-casa,.cat-famiglia,.cat-lavoro,.cat-documenti) .sb-cb:hover{box-shadow:0 5px 0 var(--cat-h) !important;}
 
 /* ═══════════════════════════════════════════ */
+/* RESPONSIVE LAYOUT — desktop vs app          */
+/* ═══════════════════════════════════════════ */
+.app-only { display: none; }
+.desktop-only { display: contents; }
+@media (max-width: 768px) {
+  .app-only { display: block; }
+  .desktop-only { display: none !important; }
+}
+
+/* ═══════════════════════════════════════════ */
 /* BOTTOM NAV — PWA (mobile only)              */
 /* ═══════════════════════════════════════════ */
 .bottom-nav{display:none;}
