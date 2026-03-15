@@ -1,7 +1,5 @@
 import './globals.css';
 import { DM_Sans, Playfair_Display } from 'next/font/google';
-import BottomNav from '@/components/BottomNav';
-import PWARegister from '@/components/PWARegister';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -22,7 +20,6 @@ const playfair = Playfair_Display({
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  viewportFit: 'cover',
 };
 
 export const metadata = {
@@ -51,16 +48,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="it" className={`${dmSans.variable} ${playfair.variable}`}>
-      <head>
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0F4C5C" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      </head>
       <body>
         {children}
-        <BottomNav />
-        <PWARegister />
       </body>
     </html>
   );
