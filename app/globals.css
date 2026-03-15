@@ -1138,7 +1138,9 @@ body.mega-open .toc { display: none; }
 /* Mobile collapsible chapters */
 @media(max-width:768px){
   /* Remove section borders/padding/bg */
-  .ge-enhanced{border:none !important;padding:0 !important;margin:0 !important;border-radius:0 !important;background:transparent !important;}
+  .ge-enhanced{border:none !important;margin:0 !important;border-radius:0 !important;}
+  .ge-enhanced:not(.bh){background:transparent !important;padding:0 !important;}
+  .ge-enhanced.bh{padding:20px !important;border-radius:14px !important;margin:8px 0 !important;}
   .ge-enhanced .sec-tag,.ge-enhanced > .ge-ch-body > .sec-tag{display:none;}
   /* ── COMPACT CHAPTER HEADERS ── */
   .ge-ch-header{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--bd);cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none;}
@@ -1153,12 +1155,7 @@ body.mega-open .toc { display: none; }
   .ge-ch-body{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1);padding-left:0;}
   .ge-ch-body.open{max-height:12000px;overflow:visible;}
   .ge-enhanced + .ge-enhanced{margin-top:0 !important;}
-  /* ── TAKEAWAY (last tip box becomes teal) ── */
-  .ge-ch-body .ib.tip:last-of-type{background:var(--teal);color:#fff;border:none;border-radius:14px;border-left:none;padding:14px 16px;}
-  .ge-ch-body .ib.tip:last-of-type .ib-t{color:#fff;font-size:11px;letter-spacing:.5px;text-transform:uppercase;}
-  .ge-ch-body .ib.tip:last-of-type .ib-t::before{content:'\1F4CC  ';}
-  .ge-ch-body .ib.tip:last-of-type p{color:rgba(255,255,255,.92);}
-  .ge-ch-body .ib.tip:last-of-type a{color:#B5D4F4;text-decoration:underline;}
+  /* ── TAKEAWAY: removed auto-teal, too unpredictable ── */
   /* ── HIDE BOTTOM RELATED ON MOBILE ── */
   .related{display:none !important;}
   /* ── COMPACT HERO ON MOBILE ── */
@@ -1173,21 +1170,16 @@ body.mega-open .toc { display: none; }
   .hero-actions{display:none;}
   .hero-tag{margin-bottom:10px !important;}
   .hero-tag,.pill{font-size:11px !important;}
-  /* ── CONTRAST FIXES ── */
+  /* ── CONTRAST FIXES (pills and labels on light bg only) ── */
   .pill-g{color:var(--teal) !important;}
   .pill-b{color:var(--t1) !important;}
   .pill-o{color:#b34e0e !important;}
   .pill-s{color:var(--teal) !important;}
-  .perc-label{color:var(--t2) !important;}
-  .sec-tag{color:var(--t2) !important;}
-  .ge-ch-body .ib .ib-t{color:var(--t1) !important;font-size:13px;}
-  .ge-ch-body .ib.warn .ib-t{color:#b34e0e !important;}
-  .ge-ch-body .ib.tip .ib-t{color:#0a6b5a !important;}
-  .ge-ch-body .ib.mon .ib-t{color:var(--teal) !important;}
-  /* ── COMPACT INNER ELEMENTS ── */
+  /* ── COMPACT INNER ELEMENTS (only sizing, no color overrides) ── */
   .ge-ch-body .ib{margin:10px 0;padding:12px;border-radius:12px;}
-  .ge-ch-body .ib p{font-size:13px;color:var(--t1);}
-  .ge-ch-body p{color:var(--t1);}
+  .ge-ch-body .ib .ib-t{font-size:13px;}
+  .ge-ch-body .ib p{font-size:13px;}
+  .ge-ch-body p{font-size:13px;}
   .ge-ch-body .dblock{padding:18px;border-radius:14px;}
   .ge-ch-body .step{padding:10px 0;}
   .ge-ch-body .stepn{width:26px;height:26px;font-size:11px;}
