@@ -98,7 +98,7 @@ export default function ScadenzeTracker() {
       </div>
 
       <button className="sc-btn" disabled={selected.length === 0} onClick={generate}>
-        Vedi le mie scadenze \u2192
+        Vedi le mie scadenze {'\u2192'}
       </button>
 
       {results && (
@@ -123,7 +123,7 @@ export default function ScadenzeTracker() {
                       {it.warn && <span className="sc-pill">{it.warn}</span>}
                     </div>
                     <div className="sc-item-desc">{it.desc}</div>
-                    <a href={it.link} className="sc-item-link">{it.ln} \u2192</a>
+                    <a href={it.link} className="sc-item-link">{it.ln} {'\u2192'}</a>
                   </div>
                 </div>
               ))}
