@@ -1237,8 +1237,13 @@ body.mega-open .toc { display: none; }
   .ge-ch-body .dgrid{gap:8px;}
   .ge-ch-body .dcard{padding:12px 14px;}
   .ge-ch-body .dtotals{gap:8px;margin-top:10px;}
-  .ge-ch-body .step{padding:12px 0;}
-  .ge-ch-body .stepn{width:28px;height:28px;font-size:13px;}
+  /* ── STEPS: horizontal line design on mobile ── */
+  .ge-ch-body .steps{gap:0 !important;margin:16px 0 !important;overflow:hidden !important;}
+  .ge-ch-body .step{flex-wrap:wrap !important;background:none !important;border:none !important;border-radius:0 !important;padding:0 0 20px !important;gap:0 !important;overflow:visible !important;box-shadow:none !important;}
+  .ge-ch-body .step:hover{transform:none !important;box-shadow:none !important;}
+  .ge-ch-body .stepn{width:32px;height:32px;border-radius:50% !important;font-size:14px;position:relative;z-index:1;}
+  .ge-ch-body .stepn::after{content:'';position:absolute;left:calc(100% + 8px);top:50%;transform:translateY(-50%);width:80vw;height:2px;background:var(--cat,var(--tc));opacity:.25;border-radius:1px;}
+  .ge-ch-body .stepb{width:100% !important;padding:10px 0 0 44px !important;}
   .ge-ch-body .quiz{padding:18px;margin-bottom:16px;border-radius:16px;}
   /* ── TOC: horizontal pill scroll ── */
   .toc-list{display:flex !important;gap:6px;overflow-x:auto;flex-wrap:nowrap;padding:0 0 6px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
