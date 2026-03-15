@@ -173,7 +173,14 @@ body.breve .bh{display:none !important;}
 .sc.sg-bg{background:#F2F6F0;border-color:rgba(42,157,143,.18);}
 .sc.bl-bg{background:var(--blue-l);border-color:rgba(227,100,20,.18);}
 .si{font-size:22px;margin-bottom:8px;}.sn{font-family:var(--font-playfair),serif;font-size:26px;font-weight:700;color:var(--t1);line-height:1;margin-bottom:6px;transition:transform .3s;}.sl{font-size:11px;color:var(--t3);line-height:1.4;}
-@media(max-width:600px){.scards{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.scards{grid-template-columns:repeat(2,1fr);gap:8px;}
+  .sintesi{padding:16px;margin-bottom:16px;border-radius:16px;}
+  .sintesi-label{margin-bottom:12px;}
+  .sc{padding:12px 10px;border-radius:12px;}
+  .si{font-size:18px;margin-bottom:4px;}
+  .sn{font-size:18px;margin-bottom:3px;}
+  .sl{font-size:10px;line-height:1.3;}
+}
 
 /* QUIZ */
 .quiz{background:var(--wh);border:1.5px solid var(--bd);border-radius:24px;padding:24px 26px;margin-bottom:32px;box-shadow:none;}
@@ -1137,10 +1144,10 @@ body.mega-open .toc { display: none; }
 
 /* Mobile collapsible chapters */
 @media(max-width:768px){
-  /* Remove section borders/padding/bg */
-  .ge-enhanced{border:none !important;margin:0 !important;border-radius:0 !important;}
-  .ge-enhanced:not(.bh){background:transparent !important;padding:0 !important;}
-  .ge-enhanced.bh{padding:20px !important;border-radius:14px !important;margin:8px 0 !important;}
+  /* Kill all section margins and spacing */
+  .ge-enhanced{border:none !important;margin:0 !important;margin-bottom:0 !important;border-radius:0 !important;background:transparent !important;padding:0 !important;}
+  .ge-enhanced.bh{background:transparent !important;padding:0 !important;margin:0 !important;}
+  .sec{margin-bottom:0 !important;}
   .ge-enhanced .sec-tag,.ge-enhanced > .ge-ch-body > .sec-tag{display:none;}
   /* ── COMPACT CHAPTER HEADERS ── */
   .ge-ch-header{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--bd);cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none;}
@@ -1155,6 +1162,8 @@ body.mega-open .toc { display: none; }
   .ge-ch-body{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1);padding-left:0;}
   .ge-ch-body.open{max-height:12000px;overflow:visible;}
   .ge-enhanced + .ge-enhanced{margin-top:0 !important;}
+  /* ── Dark bg inside body only when open ── */
+  .ge-ch-body .bh,.ge-ch-body.open .sec.bh{padding:16px !important;border-radius:12px !important;margin:8px 0 !important;}
   /* ── TAKEAWAY: removed auto-teal, too unpredictable ── */
   /* ── HIDE BOTTOM RELATED ON MOBILE ── */
   .related{display:none !important;}
@@ -1175,14 +1184,6 @@ body.mega-open .toc { display: none; }
   .pill-b{color:var(--t1) !important;}
   .pill-o{color:#b34e0e !important;}
   .pill-s{color:var(--teal) !important;}
-  /* ── COMPACT INNER ELEMENTS (only sizing, no color overrides) ── */
-  .ge-ch-body .ib{margin:10px 0;padding:12px;border-radius:12px;}
-  .ge-ch-body .ib .ib-t{font-size:13px;}
-  .ge-ch-body .ib p{font-size:13px;}
-  .ge-ch-body p{font-size:13px;}
-  .ge-ch-body .dblock{padding:18px;border-radius:14px;}
-  .ge-ch-body .step{padding:10px 0;}
-  .ge-ch-body .stepn{width:26px;height:26px;font-size:11px;}
   /* ── DARK-BG SECTIONS (.bh) — force readable contrast ── */
   .ge-ch-body .bh .ib{border-left-color:rgba(255,255,255,.3) !important;}
   .ge-ch-body .bh .ib .ib-t{color:#fff !important;}
@@ -1206,6 +1207,26 @@ body.mega-open .toc { display: none; }
   .ge-ch-body .dgrid .dcard-v{color:#fff !important;}
   .ge-ch-body .dtotals .dt-l{color:rgba(255,255,255,.75) !important;}
   .ge-ch-body .dtotals .dt-n{color:#fff !important;}
+  /* ── COMPACT INNER ELEMENTS ── */
+  .ge-ch-body .ib{margin:10px 0;padding:12px;border-radius:12px;}
+  .ge-ch-body .ib .ib-t{font-size:13px;}
+  .ge-ch-body .ib p{font-size:13px;}
+  .ge-ch-body p{font-size:13px;}
+  .ge-ch-body .dblock{padding:16px;border-radius:12px;margin:8px 0 !important;}
+  .ge-ch-body .dblock h3{font-size:16px !important;margin-bottom:6px !important;}
+  .ge-ch-body .dblock > p{font-size:13px !important;margin-bottom:14px !important;}
+  .ge-ch-body .dblock-grid{gap:8px;}
+  .ge-ch-body .dblock-item{padding:10px 12px;}
+  .ge-ch-body .dblock-item span:last-child{font-size:16px !important;}
+  .ge-ch-body .dblock-total{padding:12px 14px;margin-top:10px;}
+  .ge-ch-body .dgrid{gap:8px;}
+  .ge-ch-body .dcard{padding:10px 12px;}
+  .ge-ch-body .dcard-v{font-size:13px !important;}
+  .ge-ch-body .dtotals{gap:8px;margin-top:10px;}
+  .ge-ch-body .dt-n{font-size:24px !important;}
+  .ge-ch-body .step{padding:10px 0;}
+  .ge-ch-body .stepn{width:26px;height:26px;font-size:11px;}
+  .ge-ch-body .quiz{padding:16px;margin-bottom:16px;border-radius:14px;}
   /* ── TOC: horizontal pill scroll ── */
   .toc-list{display:flex !important;gap:6px;overflow-x:auto;flex-wrap:nowrap;padding:0 0 6px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
   .toc-list::-webkit-scrollbar{display:none;}
