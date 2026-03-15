@@ -3,6 +3,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import BrevoForm from '@/components/BrevoForm';
 import ScrollReveal from '@/components/ScrollReveal';
+import GuideEnhancer from '@/components/GuideEnhancer';
 import TOC from '@/components/TOC';
 import VersionToggle from '@/components/VersionToggle';
 import FAQ from '@/components/FAQ';
@@ -83,6 +84,7 @@ export default function Pagina730() {
     <>
       <Nav variant="scheda" />
       <ScrollReveal />
+      <GuideEnhancer />
       <SchemaOrg schemas={schemas} />
 
       {/* HERO */}
