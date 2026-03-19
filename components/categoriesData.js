@@ -64,7 +64,9 @@ export const categoriesGuide = [
   {
     emoji: '\u{1F3E5}', title: 'Salute', slug: 'salute',
     color: '#DC2626', bg: '#FEE2E2',
-    guides: [],
+    guides: [
+      { emoji: '🩺', name: 'Esenzione ticket', href: '/esenzione-ticket', desc: 'Chi non paga e come', tag: '💊 Salute' },
+    ],
   },
   {
     emoji: '\u{1F697}', title: 'Auto', slug: 'auto',

@@ -252,4 +252,14 @@ export const searchIndex = [
   { keywords: ['arera', 'bonus sociale arera', 'sgate', 'verifica bonus bollette'], guide: 'Bonus bollette', href: '/bonus-bollette#come', desc: 'Verificare il bonus su SGAte/ARERA' },
   { keywords: ['bonus disagio fisico', 'apparecchiature salvavita', 'bonus elettrico malattia'], guide: 'Bonus bollette', href: '/bonus-bollette#casi', desc: 'Bonus disagio fisico (senza limiti ISEE)' },
   { keywords: ['gas condominiale bonus', 'riscaldamento centralizzato bonus', 'pdr gas'], guide: 'Bonus bollette', href: '/bonus-bollette#casi', desc: 'Bonus gas con riscaldamento condominiale' },
+
+  // ═══ ESENZIONE TICKET SANITARIO 2026 ═══
+  { keywords: ["esenzione ticket","ticket sanitario","non pagare ticket","esenzione ticket 2026"], guide: "Esenzione Ticket Sanitario 2026", href: '/esenzione-ticket', desc: "Esenzione ticket sanitario 2026" },
+  { keywords: ["esenzione reddito","E01","esenzione under 6","esenzione over 65","36151"], guide: "Esenzione Ticket Sanitario 2026", href: '/esenzione-ticket#reddito', desc: "Esenzione ticket per reddito (E01-E04)" },
+  { keywords: ["esenzione patologia","malattia cronica esenzione","codice esenzione","esenzione diabete","013"], guide: "Esenzione Ticket Sanitario 2026", href: '/esenzione-ticket#patologia', desc: "Esenzione ticket per patologia cronica" },
+  { keywords: ["esenzione invalidità","invalido civile ticket","C03","C04","C05"], guide: "Esenzione Ticket Sanitario 2026", href: '/esenzione-ticket#invalidita', desc: "Esenzione ticket per invalidità civile" },
+  { keywords: ["esenzione disoccupati","E02","disoccupato ticket","autocertificazione esenzione"], guide: "Esenzione Ticket Sanitario 2026", href: '/esenzione-ticket#reddito', desc: "Esenzione ticket disoccupati (E02)" },
+  { keywords: ["verifica esenzione","sistema tessera sanitaria esenzione","fascicolo sanitario esenzione"], guide: "Esenzione Ticket Sanitario 2026", href: '/esenzione-ticket#verifica', desc: "Verificare l’esenzione ticket online" },
+  { keywords: ["rinnovo esenzione","scadenza esenzione","31 marzo esenzione"], guide: "Esenzione Ticket Sanitario 2026", href: '/esenzione-ticket#come', desc: "Rinnovo esenzione ticket: scadenze e procedura" },
+  { keywords: ["superticket","superticket abolito","10 euro ticket"], guide: "Esenzione Ticket Sanitario 2026", href: '/esenzione-ticket#faq', desc: "Il superticket è stato abolito nel 2020" },
 ];
