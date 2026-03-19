@@ -44,7 +44,7 @@ export default function Nav({ variant = 'scheda' }) {
               </div>
               <div className="nav-links">
                 <NavSearch />
-                <a href="#newsletter" className="nav-cta-btn">Newsletter gratis</a>
+                <a href="/guide" className="nav-cta-btn">Tutte le guide</a>
               </div>
             </>
           )}

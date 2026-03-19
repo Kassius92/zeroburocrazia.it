@@ -6,7 +6,6 @@ export const metadata = {
   title: 'Privacy Policy — ZeroBurocrazia',
   description: 'Privacy Policy di ZeroBurocrazia: come trattiamo i tuoi dati, cookie, pubblicità, diritti GDPR e come contattarci.',
   alternates: { canonical: 'https://zeroburocrazia.it/privacy' },
-  robots: { index: false, follow: true },
   openGraph: {
     title: 'Privacy Policy — ZeroBurocrazia',
     description: 'Privacy Policy di ZeroBurocrazia.',

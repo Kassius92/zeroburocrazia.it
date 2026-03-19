@@ -55,7 +55,7 @@ export default function HomePage() {
           </div>
           <div className="hero-stats">
             <div className="hstat"><div className="hn">{totalGuides}</div><div className="hl">guide complete<br/>e ne arrivano altre</div></div>
-            <div className="hstat"><div className="hn">6</div><div className="hl">calcolatori<br/>con numeri reali</div></div>
+            <div className="hstat"><div className="hn">9</div><div className="hl">calcolatori<br/>con numeri reali</div></div>
             <div className="hstat"><div className="hn">0&euro;</div><div className="hl">costo<br/>sempre gratis</div></div>
           </div>
         </div>

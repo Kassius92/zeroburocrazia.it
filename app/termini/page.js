@@ -6,7 +6,6 @@ export const metadata = {
   title: 'Termini di Servizio — ZeroBurocrazia',
   description: 'Termini di Servizio di ZeroBurocrazia: natura delle informazioni, link di affiliazione, limitazioni di responsabilità e condizioni d\'uso.',
   alternates: { canonical: 'https://zeroburocrazia.it/termini' },
-  robots: { index: false, follow: true },
   openGraph: {
     title: 'Termini di Servizio — ZeroBurocrazia',
     description: 'Termini di Servizio di ZeroBurocrazia: natura delle informazioni, link di affiliazione, limitazioni di responsabilità e condizioni d\'uso.',
