@@ -10,6 +10,7 @@ export const categories = [
       ]},
       { title: 'ISEE e bonus', links: [
         { name: 'ISEE', href: '/isee' },
+        { name: 'Bonus bollette luce e gas', href: '/bonus-bollette' },
         { name: 'ISEE corrente', href: '#', soon: true },
         { name: 'Bonus e detrazioni 2026', href: '#', soon: true },
       ]},

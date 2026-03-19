@@ -241,4 +241,15 @@ export const searchIndex = [
   { keywords: ['modello RLI', 'registrazione contratto affitto', 'come scegliere cedolare'], guide: 'Cedolare secca', href: '/cedolare-secca#come-si-sceglie', desc: 'Come si sceglie la cedolare secca (Modello RLI)' },
   { keywords: ['F24 cedolare secca', 'codice tributo cedolare', 'scadenza cedolare', 'pagamento cedolare'], guide: 'Cedolare secca', href: '/cedolare-secca#come-si-sceglie', desc: 'Come e quando si paga la cedolare secca' },
   { keywords: ['cedolare secca calcolo', 'calcolo tasse affitto', 'esempio cedolare'], guide: 'Cedolare secca', href: '/cedolare-secca#esempio', desc: 'Esempio pratico di calcolo cedolare secca' },
+
+  // ═══ BONUS BOLLETTE ═══
+  { keywords: ['bonus bollette', 'bonus luce', 'bonus gas', 'bonus sociale', 'bonus energia'], guide: 'Bonus bollette', href: '/bonus-bollette', desc: 'Bonus bollette luce e gas 2026' },
+  { keywords: ['bonus bollette requisiti', 'isee bonus bollette', 'soglia isee bollette', 'chi ha diritto bonus bollette'], guide: 'Bonus bollette', href: '/bonus-bollette#chi', desc: 'Requisiti ISEE per il bonus bollette' },
+  { keywords: ['bonus bollette importi', 'quanto vale bonus bollette', 'sconto bolletta luce', 'sconto bolletta gas'], guide: 'Bonus bollette', href: '/bonus-bollette#quanto', desc: 'Importi del bonus bollette 2026' },
+  { keywords: ['bonus bollette come ottenerlo', 'come richiedere bonus bollette', 'bonus bollette automatico'], guide: 'Bonus bollette', href: '/bonus-bollette#come', desc: 'Come si ottiene il bonus bollette' },
+  { keywords: ['decreto bollette 2026', 'bonus 115 euro', 'sconto volontario fornitori'], guide: 'Bonus bollette', href: '/bonus-bollette#decreto', desc: 'Decreto bollette 2026: contributo extra 115\u20AC' },
+  { keywords: ['bonus acqua', 'bonus idrico', 'bonus tari', 'bonus rifiuti'], guide: 'Bonus bollette', href: '/bonus-bollette#quanto', desc: 'Bonus acqua, TARI e altri sconti inclusi' },
+  { keywords: ['arera', 'bonus sociale arera', 'sgate', 'verifica bonus bollette'], guide: 'Bonus bollette', href: '/bonus-bollette#come', desc: 'Verificare il bonus su SGAte/ARERA' },
+  { keywords: ['bonus disagio fisico', 'apparecchiature salvavita', 'bonus elettrico malattia'], guide: 'Bonus bollette', href: '/bonus-bollette#casi', desc: 'Bonus disagio fisico (senza limiti ISEE)' },
+  { keywords: ['gas condominiale bonus', 'riscaldamento centralizzato bonus', 'pdr gas'], guide: 'Bonus bollette', href: '/bonus-bollette#casi', desc: 'Bonus gas con riscaldamento condominiale' },
 ];

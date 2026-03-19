@@ -16,6 +16,7 @@ export const categoriesGuide = [
       { emoji: '\u{1F3E1}', name: 'Cedolare secca', href: '/cedolare-secca', desc: 'Tassazione affitti', tag: '\u{1F527} Calcolatore' },
       { emoji: '\u{1F3DB}\uFE0F', name: 'IMU', href: '/imu', desc: 'Calcolo e scadenze', tag: '\u{1F527} Calcolatore' },
       { emoji: '\u{1FA7A}', name: 'Spese mediche', href: '/spese-mediche', desc: 'Detrazioni sanitarie', tag: '\u{1F4B0} Detrazione' },
+      { emoji: '\u{1F4A1}', name: 'Bonus bollette', href: '/bonus-bollette', desc: 'Sconto luce e gas', tag: '\u{1F4B0} Bonus' },
     ],
   },
   {
