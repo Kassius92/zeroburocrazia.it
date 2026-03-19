@@ -156,8 +156,8 @@ export default function GuidePage() {
               <div className="sintesi-label">{'\u26A1'} In sintesi</div>
               <div className="scards">
                 <div className="sc bl r d1"><div className="si">{'\uD83D\uDC8A'}</div><div className="sn">0&euro;</div><div className="sl">ticket per chi ha diritto<br/>visite, esami, farmaci</div></div>
-                <div className="sc sg r d2"><div className="si">{'\uD83D\uDC76'}</div><div className="sn"><6 anni</div><div className="sl">esenzione automatica<br/>con reddito &lt;36.152&euro;</div></div>
-                <div className="sc tc r d3"><div className="si">{'\uD83E\uDDD3'}</div><div className="sn">>65 anni</div><div className="sl">esenzione automatica<br/>con reddito &lt;36.152&euro;</div></div>
+                <div className="sc sg r d2"><div className="si">{'\uD83D\uDC76'}</div><div className="sn">&lt;6 anni</div><div className="sl">esenzione automatica<br/>con reddito &lt;36.152&euro;</div></div>
+                <div className="sc tc r d3"><div className="si">{'\uD83E\uDDD3'}</div><div className="sn">&gt;65 anni</div><div className="sl">esenzione automatica<br/>con reddito &lt;36.152&euro;</div></div>
                 <div className="sc r d4"><div className="si">{'\uD83D\uDCCB'}</div><div className="sn">E01-E04</div><div className="sl">codici per reddito<br/>4 categorie principali</div></div>
                 <div className="sc r d1"><div className="si">{'\uD83E\uDE7A'}</div><div className="sn">64</div><div className="sl">patologie croniche<br/>esenti senza limiti reddito</div></div>
                 <div className="sc r d2"><div className="si">{'\uD83C\uDFE5'}</div><div className="sn">ASL</div><div className="sl">dove si richiede<br/>o online con SPID</div></div>
