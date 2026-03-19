@@ -262,4 +262,12 @@ export const searchIndex = [
   { keywords: ["verifica esenzione","sistema tessera sanitaria esenzione","fascicolo sanitario esenzione"], guide: "Esenzione Ticket Sanitario 2026", href: '/esenzione-ticket#verifica', desc: "Verificare l’esenzione ticket online" },
   { keywords: ["rinnovo esenzione","scadenza esenzione","31 marzo esenzione"], guide: "Esenzione Ticket Sanitario 2026", href: '/esenzione-ticket#come', desc: "Rinnovo esenzione ticket: scadenze e procedura" },
   { keywords: ["superticket","superticket abolito","10 euro ticket"], guide: "Esenzione Ticket Sanitario 2026", href: '/esenzione-ticket#faq', desc: "Il superticket è stato abolito nel 2020" },
+
+  // ═══ BONUS PSICOLOGO 2026 ═══
+  { keywords: ["bonus psicologo","bonus psicologo 2026","contributo psicoterapia","psicologo gratis"], guide: "Bonus Psicologo 2026", href: '/bonus-psicologo', desc: "Bonus psicologo 2026: guida completa" },
+  { keywords: ["bonus psicologo importi","bonus psicologo quanto","1500 euro psicologo","50 euro seduta"], guide: "Bonus Psicologo 2026", href: '/bonus-psicologo#importi', desc: "Importi bonus psicologo per fascia ISEE" },
+  { keywords: ["bonus psicologo domanda","bonus psicologo INPS","come richiedere bonus psicologo"], guide: "Bonus Psicologo 2026", href: '/bonus-psicologo#domanda', desc: "Come fare domanda per il bonus psicologo" },
+  { keywords: ["bonus psicologo requisiti","ISEE bonus psicologo","bonus psicologo chi può"], guide: "Bonus Psicologo 2026", href: '/bonus-psicologo#requisiti', desc: "Requisiti per il bonus psicologo" },
+  { keywords: ["graduatoria bonus psicologo","click day psicologo","bonus psicologo scorrimento"], guide: "Bonus Psicologo 2026", href: '/bonus-psicologo#graduatoria', desc: "Come funzionano le graduatorie INPS" },
+  { keywords: ["codice univoco psicologo","come usare bonus psicologo","psicoterapeuta aderente"], guide: "Bonus Psicologo 2026", href: '/bonus-psicologo#uso', desc: "Come usare il bonus psicologo dopo l'ammissione" },
 ];

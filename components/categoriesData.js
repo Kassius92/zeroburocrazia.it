@@ -66,12 +66,15 @@ export const categoriesGuide = [
     color: '#DC2626', bg: '#FEE2E2',
     guides: [
       { emoji: '🩺', name: 'Esenzione ticket', href: '/esenzione-ticket', desc: 'Chi non paga e come', tag: '💊 Salute' },
+      { emoji: '🧑‍⚕️', name: 'Bonus psicologo', href: '/bonus-psicologo', desc: 'Fino a 1.500€ per sedute', tag: '💰 Bonus' },
     ],
   },
   {
     emoji: '\u{1F697}', title: 'Auto', slug: 'auto',
     color: '#4F46E5', bg: '#EEF2FF',
-    guides: [],
+    guides: [
+      { emoji: '🧑‍⚕️', name: 'Bonus psicologo', href: '/bonus-psicologo', desc: 'Fino a 1.500€ per sedute', tag: '💰 Bonus' },
+    ],
   },
   {
     emoji: '\u{1F9D3}', title: 'Pensione', slug: 'pensione',

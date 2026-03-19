@@ -99,6 +99,7 @@ export const categories = [
         { name: 'Esenzione ticket', href: '#', soon: true },
         { name: 'Fascicolo sanitario', href: '#', soon: true },
         { name: 'Esenzione ticket', href: '/esenzione-ticket' },
+        { name: 'Bonus psicologo', href: '/bonus-psicologo' },
       ]},
       { title: 'Disabilità e assistenza', links: [
         { name: 'Invalidità civile', href: '#', soon: true },
