@@ -41,7 +41,6 @@ export const categoriesGuide = [
       { emoji: '\u{1F3EB}', name: 'Bonus nido', href: '/bonus-nido', desc: 'Fino a 3.600\u20AC/anno', tag: '\u{1F4B0} Bonus' },
       { emoji: '\u{1F48D}', name: 'Mi sposo', href: '/mi-sposo', desc: 'Documenti e procedura', tag: '\u{1F4D6} Completa' },
       { emoji: '📜', name: 'Successione', href: '/successione', desc: 'Eredità e dichiarazione', tag: '📖 Completa' },
-      { emoji: '♿', name: 'Legge 104', href: '/legge-104', desc: 'Permessi e agevolazioni disabilità', tag: '📖 Completa' },
     ],
   },
   {
@@ -71,14 +70,13 @@ export const categoriesGuide = [
     guides: [
       { emoji: '🩺', name: 'Esenzione ticket', href: '/esenzione-ticket', desc: 'Chi non paga e come', tag: '💊 Salute' },
       { emoji: '🧑‍⚕️', name: 'Bonus psicologo', href: '/bonus-psicologo', desc: 'Fino a 1.500€ per sedute', tag: '💰 Bonus' },
+      { emoji: '♿', name: 'Legge 104', href: '/legge-104', desc: 'Permessi e agevolazioni disabilità', tag: '📖 Completa' },
     ],
   },
   {
     emoji: '\u{1F697}', title: 'Auto', slug: 'auto',
     color: '#4F46E5', bg: '#EEF2FF',
-    guides: [
-      { emoji: '🧑‍⚕️', name: 'Bonus psicologo', href: '/bonus-psicologo', desc: 'Fino a 1.500€ per sedute', tag: '💰 Bonus' },
-    ],
+    guides: [],
   },
   {
     emoji: '\u{1F9D3}', title: 'Pensione', slug: 'pensione',

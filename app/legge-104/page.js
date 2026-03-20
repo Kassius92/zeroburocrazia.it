@@ -64,7 +64,7 @@ export default function GuidePage() {
   ];
 
   return (
-    <div className="cat-famiglia">
+    <div className="cat-salute">
     <>
       <Nav variant="scheda" />
       <ScrollReveal />
