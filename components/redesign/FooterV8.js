@@ -13,7 +13,7 @@ export default function FooterV8() {
           <p className="v8-ft-desc">La burocrazia italiana spiegata in italiano. Gratis, aggiornato, senza paroloni.</p>
         </div>
         <div className="v8-ft-col">
-          <h5>Guide pi\u00f9 cercate</h5>
+          <h5>Guide pi&ugrave; cercate</h5>
           <Link href="/730">Modello 730</Link>
           <Link href="/isee">ISEE</Link>
           <Link href="/spid">SPID</Link>
