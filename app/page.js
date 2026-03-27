@@ -3,7 +3,7 @@ import NavV8 from '@/components/redesign/NavV8';
 import FooterV8 from '@/components/redesign/FooterV8';
 import HeroSearch from '@/components/redesign/HeroSearch';
 import SchemaOrg from '@/components/SchemaOrg';
-import { categoriesGuide, totalGuides } from '@/components/categoriesData';
+import { categoriesGuide } from '@/components/categoriesData';
 import icons from '@/components/redesign/guideIcons';
 import HomeAnimations from './HomeAnimations';
 
@@ -87,7 +87,7 @@ export default function HomePage() {
       <section className="v8-hero">
         <div className="v8-hero-badge rv">
           <span className="v8-hero-badge-dot" />
-          {totalGuides} guide gratuite &mdash; aggiornate 2026
+          Guide gratuite &mdash; aggiornate 2026
         </div>
         <h1 className="rv rv-d1">
           La burocrazia italiana,<br />finalmente <em>comprensibile</em>
@@ -192,7 +192,7 @@ export default function HomePage() {
       <section className="v8-cats" id="categorie">
         <div className="v8-cats-head">
           <h2 className="rv">Tutte le guide per <em>categoria</em></h2>
-          <p className="rv rv-d1">{totalGuides} guide gratuite, organizzate per situazione di vita.</p>
+          <p className="rv rv-d1">Guide gratuite, organizzate per situazione di vita.</p>
         </div>
 
         {categoriesGuide.filter(cat => cat.guides.length > 0).map(cat => {
@@ -227,7 +227,7 @@ export default function HomePage() {
       {/* CTA */}
       <section className="v8-cta">
         <div className="v8-cta-box rv-scale">
-          <h2>{totalGuides} guide. Zero costi.<br /><em>Zero paroloni.</em></h2>
+          <h2>Tante guide. Zero costi.<br /><em>Zero paroloni.</em></h2>
           <p>La burocrazia non deve essere un incubo. Trova la guida e risolvi il problema.</p>
           <a href="#guide" className="v8-cta-btn">Esplora tutte le guide</a>
         </div>
