@@ -2,7 +2,7 @@
 import { useState, useCallback } from 'react';
 
 /**
- * Quiz — quiz interattivo s\u00ec/no
+ * Quiz — quiz interattivo sì/no
  * @param {Object} props
  * @param {Array<{text: string}>} props.questions - Le domande
  * @param {Function} props.evaluate - (answers: Record<number, 'y'|'n'>) => {type: 'pos'|'neg', text: string} | null
@@ -33,7 +33,7 @@ export default function Quiz({ questions = [], evaluate }) {
                 className={`v8-qq-btn${answers[i] === 'y' ? ' y' : ''}`}
                 onClick={() => handleClick(i, 'y')}
               >
-                S\u00ec
+                Sì
               </button>
               <button
                 className={`v8-qq-btn${answers[i] === 'n' ? ' n' : ''}`}

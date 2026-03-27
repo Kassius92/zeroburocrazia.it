@@ -41,7 +41,7 @@ export default function Guide730Client() {
             r.style.display = 'block';
           } else if (qs[2] === 'y' || qs[3] === 'y') {
             r.className = 'v8-quiz-res pos';
-            r.textContent = 'S\u00ec, ti conviene! Potresti recuperare un bel rimborso.';
+            r.textContent = 'Sì, ti conviene! Potresti recuperare un bel rimborso.';
             r.style.display = 'block';
           } else {
             r.className = 'v8-quiz-res pos';

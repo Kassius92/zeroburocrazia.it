@@ -5,7 +5,7 @@ import { useScrollRevealAll } from './useScrollReveal';
  * GuideHero — hero per le guide interne
  * @param {Object} props
  * @param {string} props.category - 'fisco'|'casa'|'famiglia'|'salute'|'documenti'|'lavoro'
- * @param {string} props.categoryLabel - es. 'Fisco \u00b7 Aggiornato marzo 2026'
+ * @param {string} props.categoryLabel - es. 'Fisco · Aggiornato marzo 2026'
  * @param {string} props.title - Titolo principale (parte non italic)
  * @param {string} [props.titleEm] - Parte in italic
  * @param {string} props.subtitle - Sottotitolo descrittivo

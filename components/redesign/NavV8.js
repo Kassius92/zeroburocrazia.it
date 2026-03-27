@@ -4,7 +4,7 @@ import Link from 'next/link';
 import MegaMenu from '@/components/MegaMenu';
 
 /**
- * NavV8 \u2014 navigazione V8 per homepage e pagine redesign
+ * NavV8 — navigazione V8 per homepage e pagine redesign
  * Logo ZB + link centrali + CTA + hamburger MegaMenu
  */
 export default function NavV8() {
@@ -44,7 +44,7 @@ export default function NavV8() {
         {/* Center links (desktop) */}
         <div className="v8-nav-links">
           <Link href="/guide">Guide</Link>
-          <Link href="/novita">Novit\u00e0</Link>
+          <Link href="/novita">Novità</Link>
           <Link href="/chi-siamo">Chi siamo</Link>
         </div>
 

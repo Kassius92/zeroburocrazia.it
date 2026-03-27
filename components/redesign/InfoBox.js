@@ -1,5 +1,5 @@
 /**
- * InfoBox \u2014 box informativo tip (verde) o warning (ambra)
+ * InfoBox — box informativo tip (verde) o warning (ambra)
  * @param {Object} props
  * @param {'tip'|'warn'} [props.type='tip']
  * @param {string|React.ReactNode} props.children

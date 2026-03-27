@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Timeline \u2014 timeline verticale per scadenze
+ * Timeline — timeline verticale per scadenze
  * @param {Object} props
  * @param {Array<{date: string, text: string, highlight?: boolean}>} props.items
  */

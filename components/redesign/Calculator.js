@@ -20,7 +20,7 @@ export default function Calculator({ sliders = [], toggles = [], compute }) {
     return t;
   });
 
-  const result = compute ? compute(values, togState) : { total: '\u20AC 0', breakdown: '' };
+  const result = compute ? compute(values, togState) : { total: '€ 0', breakdown: '' };
 
   const handleSlider = useCallback((id, val) => {
     setValues(prev => ({ ...prev, [id]: Number(val) }));
@@ -37,7 +37,7 @@ export default function Calculator({ sliders = [], toggles = [], compute }) {
           <div className="v8-calc-field" key={s.id}>
             <div className="v8-calc-label">
               {s.label}
-              <span className="v8-calc-val">{s.prefix || '\u20AC'} {values[s.id]}</span>
+              <span className="v8-calc-val">{s.prefix || '€'} {values[s.id]}</span>
             </div>
             <input
               type="range"

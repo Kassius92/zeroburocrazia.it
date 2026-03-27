@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 /**
- * CrossLink \u2014 link ad altra guida inline (pill verde)
+ * CrossLink — link ad altra guida inline (pill verde)
  * @param {Object} props
  * @param {string} props.href - URL della guida (es. '/isee')
  * @param {string} props.children - Testo del link

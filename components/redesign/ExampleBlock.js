@@ -1,10 +1,10 @@
 'use client';
 
 /**
- * ExampleBlock \u2014 sezione dark immersiva con esempio pratico
+ * ExampleBlock — sezione dark immersiva con esempio pratico
  * @param {Object} props
  * @param {string} props.name - Nome del personaggio (es. 'Laura')
- * @param {string|React.ReactNode} props.story - Testo della storia (pu\u00f2 contenere <strong>)
+ * @param {string|React.ReactNode} props.story - Testo della storia (può contenere <strong>)
  * @param {Array<{label: string, value: string}>} props.lines - Righe del calcolo
  * @param {{label: string, value: string}} props.total - Riga totale evidenziata
  */

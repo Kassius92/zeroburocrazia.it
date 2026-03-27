@@ -2,9 +2,9 @@
 import { useState } from 'react';
 
 /**
- * FAQAccordion \u2014 accordion domande/risposte
+ * FAQAccordion — accordion domande/risposte
  * @param {Object} props
- * @param {Array<{q: string, a: string}>} props.items - Domande e risposte (a pu\u00f2 contenere HTML)
+ * @param {Array<{q: string, a: string}>} props.items - Domande e risposte (a può contenere HTML)
  * @param {boolean} [props.schema] - Se true, inietta FAQPage schema.org
  */
 export default function FAQAccordion({ items = [], schema = false }) {

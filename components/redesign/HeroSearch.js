@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { allGuides } from '@/components/categoriesData';
 
 /**
- * HeroSearch \u2014 search box + tag pills nella hero V8
+ * HeroSearch — search box + tag pills nella hero V8
  * @param {Array<{label: string, href: string}>} [props.tags] - Tag rapidi
  */
 export default function HeroSearch({ tags = [] }) {
@@ -36,7 +36,7 @@ export default function HeroSearch({ tags = [] }) {
         </svg>
         <input
           type="text"
-          placeholder="Cosa devi fare? (es. SPID, 730, bonus bollette\u2026)"
+          placeholder="Cosa devi fare? (es. SPID, 730, bonus bollette…)"
           value={q}
           onChange={e => { setQ(e.target.value); setOpen(true); }}
           onFocus={() => setOpen(true)}

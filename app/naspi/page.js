@@ -11,13 +11,13 @@ export const metadata = {
 };
 
 const faqItems = [
-  { q: "Ho dato le dimissioni: ho diritto alla NASpI?", a: "<strong>Dipende.</strong> Dimissioni volontarie normali: no. Per <strong>giusta causa</strong> (stipendio non pagato, mobbing): s\u00ec. Durante maternit\u00e0/paternit\u00e0: s\u00ec." },
-  { q: "Quanto tempo ho per fare domanda?", a: "<strong>68 giorni</strong> dalla cessazione. Dopo, perdi tutto. Entro 8 giorni la NASpI parte dall\u20198\u00b0 giorno." },
-  { q: "Quanto ci mette l\u2019INPS a pagare?", a: "Primo pagamento in <strong>30-45 giorni</strong>. I successivi sono mensili." },
-  { q: "Posso lavorare mentre prendo la NASpI?", a: "<strong>S\u00ec, con limiti.</strong> Dipendente: max 8.500\u20ac/anno. Autonomo: max 5.500\u20ac. Devi comunicarlo con il NASpI-COM entro 30 giorni." },
-  { q: "La NASpI conta per la pensione?", a: "<strong>S\u00ec.</strong> Contribuzione figurativa gratuita e automatica." },
-  { q: "Quanto dura?", a: "Met\u00e0 delle settimane lavorate negli ultimi 4 anni. Massimo 24 mesi." },
-  { q: "Cos\u2019\u00e8 la NASpI anticipata?", a: "Tutta la NASpI residua in anticipo per aprire un\u2019attivit\u00e0. Dal 2026: 70% subito, 30% dopo." },
+  { q: "Ho dato le dimissioni: ho diritto alla NASpI?", a: "<strong>Dipende.</strong> Dimissioni volontarie normali: no. Per <strong>giusta causa</strong> (stipendio non pagato, mobbing): sì. Durante maternità/paternità: sì." },
+  { q: "Quanto tempo ho per fare domanda?", a: "<strong>68 giorni</strong> dalla cessazione. Dopo, perdi tutto. Entro 8 giorni la NASpI parte dall’8° giorno." },
+  { q: "Quanto ci mette l’INPS a pagare?", a: "Primo pagamento in <strong>30-45 giorni</strong>. I successivi sono mensili." },
+  { q: "Posso lavorare mentre prendo la NASpI?", a: "<strong>Sì, con limiti.</strong> Dipendente: max 8.500€/anno. Autonomo: max 5.500€. Devi comunicarlo con il NASpI-COM entro 30 giorni." },
+  { q: "La NASpI conta per la pensione?", a: "<strong>Sì.</strong> Contribuzione figurativa gratuita e automatica." },
+  { q: "Quanto dura?", a: "Metà delle settimane lavorate negli ultimi 4 anni. Massimo 24 mesi." },
+  { q: "Cos’è la NASpI anticipata?", a: "Tutta la NASpI residua in anticipo per aprire un’attività. Dal 2026: 70% subito, 30% dopo." },
 ];
 
 const schemas = [
