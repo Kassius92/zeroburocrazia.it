@@ -13,7 +13,7 @@ export default function Guide730Client() {
       },
       { threshold: 0.06, rootMargin: '0px 0px -60px 0px' }
     );
-    document.querySelectorAll('.rv,.rv-scale,.rv-left,.rv-right').forEach(el => obs.observe(el));
+    document.querySelectorAll('.rv,.rv-scale,.rv-left,.rv-right,.r').forEach(el => obs.observe(el));
 
     // ── Progress bar ──
     const prog = document.createElement('div');

@@ -437,7 +437,7 @@
 /* ═══════════════════════════════════
    FOOTER V8
    ═══════════════════════════════════ */
-.v8-footer{border-top:1px solid rgba(0,0,0,.04);padding:48px 40px 28px}
+.v8-footer{background:var(--v8-bg);border-top:1px solid rgba(0,0,0,.06);padding:48px 40px 28px;color:var(--v8-ink);text-align:left}
 .v8-ft-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px}
 .v8-ft-brand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:15px;margin-bottom:8px;color:var(--v8-ink)}
 .v8-ft-brand-icon{width:24px;height:24px;border-radius:7px;background:var(--v8-green);color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center}
