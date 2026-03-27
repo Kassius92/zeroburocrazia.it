@@ -8,7 +8,7 @@ export default function MegaMenu({ isOpen, onClose, variant = 'scheda' }) {
   const [search, setSearch] = useState('');
   const [openSubs, setOpenSubs] = useState({});
   const menuRef = useRef(null);
-  const navHeight = variant === 'home' ? 68 : 62;
+  const navHeight = 64;
 
   useEffect(() => {
     if (!isOpen) { setSearch(''); setOpenSubs({}); }
@@ -23,12 +23,10 @@ export default function MegaMenu({ isOpen, onClose, variant = 'scheda' }) {
 
   const q = search.toLowerCase().trim();
 
-  // Search keyword index
   const keywordResults = q.length >= 2 ? searchIndex.filter(entry =>
     entry.keywords.some(kw => kw.includes(q) || q.includes(kw))
   ) : [];
 
-  // Deduplicate by href (keep first match)
   const seen = new Set();
   const uniqueResults = keywordResults.filter(r => {
     if (seen.has(r.href)) return false;
@@ -36,7 +34,6 @@ export default function MegaMenu({ isOpen, onClose, variant = 'scheda' }) {
     return true;
   });
 
-  // Also filter categories grid as before
   const filtered = categories.map(cat => ({
     ...cat,
     subs: cat.subs.map(sub => ({
@@ -58,13 +55,12 @@ export default function MegaMenu({ isOpen, onClose, variant = 'scheda' }) {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
             <input
               type="text"
-              placeholder="Cerca argomento… (es. franchigia, congedo, mutuo)"
+              placeholder="Cerca argomento\u2026 (es. franchigia, congedo, mutuo)"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
 
-          {/* KEYWORD RESULTS */}
           {isSearching && hasKeywordResults && (
             <div className="mega-results">
               <div className="mega-results-label">
@@ -72,38 +68,31 @@ export default function MegaMenu({ isOpen, onClose, variant = 'scheda' }) {
               </div>
               <div className="mega-results-list">
                 {uniqueResults.slice(0, 8).map((r, i) => (
-                  <Link
-                    key={i}
-                    href={r.href}
-                    className="mega-result"
-                    onClick={onClose}
-                  >
+                  <Link key={i} href={r.href} className="mega-result" onClick={onClose}>
                     <div className="mega-result-guide">{r.guide}</div>
                     <div className="mega-result-desc">{r.desc}</div>
-                    <span className="mega-result-ar">{'\u2192'}</span>
+                    <svg className="mega-result-ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
                   </Link>
                 ))}
               </div>
             </div>
           )}
 
-          {/* NO RESULTS */}
           {isSearching && !hasKeywordResults && !hasGridResults && (
             <div className="mega-results">
               <div className="mega-results-label">Nessun risultato per &ldquo;{search}&rdquo;</div>
-              <p style={{ color: 'var(--t3)', fontSize: 14, padding: '0 0 12px' }}>
-                Prova con un&apos;altra parola, oppure <Link href="/contatti" onClick={onClose} style={{ color: 'var(--tc)', textDecoration: 'underline' }}>suggerisci una guida</Link>.
+              <p style={{ color: 'var(--v8-soft)', fontSize: 14, padding: '0 0 12px' }}>
+                Prova con un&apos;altra parola, oppure <Link href="/contatti" onClick={onClose} style={{ color: 'var(--v8-green)', textDecoration: 'underline' }}>suggerisci una guida</Link>.
               </p>
             </div>
           )}
 
-          {/* GRID — show when not searching, or when searching without keyword hits */}
           {(!isSearching || (!hasKeywordResults && hasGridResults)) && (
             <div className="mega-grid">
               {filtered.map((cat, ci) => (
                 <div key={ci}>
-                  <div className="mega-cat">
-                    <span className="mega-cat-emoji">{cat.emoji}</span>
+                  <div className="mega-cat" style={{ borderColor: cat.color, color: cat.color }}>
+                    <span className="mega-cat-icon" style={{ color: cat.color }} dangerouslySetInnerHTML={{ __html: cat.icon }} />
                     {cat.title}
                   </div>
                   {cat.subs.map((sub, si) => {
@@ -116,15 +105,9 @@ export default function MegaMenu({ isOpen, onClose, variant = 'scheda' }) {
                         </div>
                         <div className="mega-sub-links">
                           {sub.links.map((link, li) => (
-                            link.soon ? (
-                              <span key={li} className="mega-link soon">
-                                {link.name} <span className="mtag">Presto</span>
-                              </span>
-                            ) : (
-                              <Link key={li} href={link.href} className="mega-link" onClick={onClose}>
-                                {link.name}
-                              </Link>
-                            )
+                            <Link key={li} href={link.href} className="mega-link" onClick={onClose}>
+                              {link.name}
+                            </Link>
                           ))}
                         </div>
                       </div>
@@ -137,11 +120,10 @@ export default function MegaMenu({ isOpen, onClose, variant = 'scheda' }) {
 
           <div className="mega-foot">
             <div className="mega-foot-left">
-              <strong>26</strong> guide pronte &middot; 40+ in arrivo
+              <Link href="/contatti" className="mega-btn mega-btn-primary" onClick={onClose}>Suggerisci una guida</Link>
             </div>
             <div className="mega-foot-right">
-              <Link href="/novita" className="mega-btn mega-btn-ghost" onClick={onClose}>{'\uD83D\uDCF0'} Novit&agrave; 2026</Link>
-              <Link href="/contatti" className="mega-btn mega-btn-primary" onClick={onClose}>Suggerisci una guida</Link>
+              <Link href="/novita" className="mega-btn mega-btn-ghost" onClick={onClose}>Novit&agrave; 2026</Link>
             </div>
           </div>
         </div>
