@@ -451,6 +451,52 @@
 
 
 /* ═══════════════════════════════════
+   GUIDE — Prose / text content
+   ═══════════════════════════════════ */
+.v8-prose{max-width:700px;margin:0 auto}
+.v8-prose p{font-size:17px;line-height:1.8;color:var(--v8-ink2);margin-bottom:16px}
+.v8-prose p:last-child{margin-bottom:0}
+.v8-prose strong{color:var(--v8-ink)}
+
+
+/* ═══════════════════════════════════
+   GUIDE — Cost comparison cards
+   ═══════════════════════════════════ */
+.v8-cost-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.v8-cost-card{background:var(--v8-card);border:1px solid rgba(0,0,0,.05);border-radius:16px;padding:24px;text-align:center;transition:all .3s var(--v8-smooth)}
+.v8-cost-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,.06)}
+.v8-cost-card.hl{border-color:var(--v8-green);background:var(--v8-green-bg)}
+.v8-cost-method{font-size:15px;font-weight:700;margin-bottom:8px}
+.v8-cost-price{font-family:var(--font-sf),Georgia,serif;font-size:28px;letter-spacing:-1px;margin-bottom:4px;color:var(--v8-green)}
+.v8-cost-card.hl .v8-cost-price{color:var(--v8-green-dark)}
+.v8-cost-time{font-size:13px;color:var(--v8-soft)}
+@media(max-width:768px){.v8-cost-grid{grid-template-columns:1fr}}
+
+
+/* ═══════════════════════════════════
+   GUIDE — Document checklist
+   ═══════════════════════════════════ */
+.v8-docs-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:900px;margin:0 auto}
+.v8-doc-group h3{font-size:16px;font-weight:700;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--v8-sand)}
+.v8-doc{padding:10px 0;font-size:14px;color:var(--v8-ink2);border-bottom:1px solid rgba(0,0,0,.04);line-height:1.5;position:relative;padding-left:20px}
+.v8-doc::before{content:'';position:absolute;left:0;top:14px;width:8px;height:8px;border-radius:50%;background:var(--v8-green-bg);border:2px solid var(--v8-green)}
+@media(max-width:768px){.v8-docs-grid{grid-template-columns:1fr}}
+
+
+/* ═══════════════════════════════════
+   GUIDE — Related guides grid
+   ═══════════════════════════════════ */
+.v8-related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:900px;margin:0 auto}
+.v8-related-card{display:block;padding:24px;background:var(--v8-card);border:1px solid rgba(0,0,0,.04);border-radius:16px;text-decoration:none;color:var(--v8-ink);transition:all .3s var(--v8-smooth);position:relative}
+.v8-related-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,.06);border-color:var(--v8-green)}
+.v8-related-card h4{font-size:16px;font-weight:700;margin-bottom:4px}
+.v8-related-card p{font-size:13px;color:var(--v8-soft);line-height:1.5;margin:0}
+.v8-related-card svg{position:absolute;top:24px;right:24px;color:var(--v8-faded);transition:color .2s}
+.v8-related-card:hover svg{color:var(--v8-green)}
+@media(max-width:768px){.v8-related-grid{grid-template-columns:1fr}}
+
+
+/* ═══════════════════════════════════
    PRINT
    ═══════════════════════════════════ */
 @media print{
