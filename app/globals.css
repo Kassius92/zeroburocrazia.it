@@ -1,3 +1,4 @@
+html,body{overflow-x:hidden}
 :root {
   --cream:#FAF8F3; --cream-dark:#F0EDE6;
   --warm-brown:#0F4C5C; --teal:#0F4C5C; --navy:#13151a;
