@@ -128,15 +128,15 @@
 /* ═══════════════════════════════════
    6. DETRACTION CARDS (expandable)
    ═══════════════════════════════════ */
-.v8-detr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.v8-detr{background:var(--v8-card);border-radius:16px;padding:24px;border:1px solid rgba(0,0,0,.04);cursor:pointer;transition:all .4s var(--v8-smooth);position:relative;overflow:hidden}
+.v8-detr-grid{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.v8-detr{flex:1 1 280px;max-width:380px;background:var(--v8-card);border-radius:16px;padding:24px;border:1px solid rgba(0,0,0,.04);cursor:pointer;transition:all .4s var(--v8-smooth);position:relative;overflow:hidden}
 .v8-detr:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.06);border-color:transparent}
 .v8-detr-pct{font-family:var(--font-sf),Georgia,serif;font-size:36px;color:var(--v8-green);margin-bottom:8px;letter-spacing:-1px}
 .v8-detr h4{font-size:15px;font-weight:700;margin-bottom:4px}
 .v8-detr p{font-size:13px;color:var(--v8-soft);line-height:1.45}
 .v8-detr-detail{max-height:0;overflow:hidden;transition:max-height .4s var(--v8-smooth);font-size:13px;color:var(--v8-ink2);line-height:1.5}
 .v8-detr.open .v8-detr-detail{max-height:120px;margin-top:12px;padding-top:12px;border-top:1px solid rgba(0,0,0,.06)}
-@media(max-width:768px){.v8-detr-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.v8-detr{flex:1 1 100%;max-width:none}}
 
 
 /* ═══════════════════════════════════
