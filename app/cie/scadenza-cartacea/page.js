@@ -1,38 +1,55 @@
-import Nav from '@/components/Nav';import Footer from '@/components/Footer';import ScrollReveal from '@/components/ScrollReveal';import FAQ from '@/components/FAQ';import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
-export const metadata = { title: 'Carta d\u2019Identit\u00e0 Cartacea: Scadenza 3 Agosto 2026 e Cosa Fare', description: 'La carta d\u2019identit\u00e0 cartacea scade il 3 agosto 2026 per l\u2019espatrio. Come rinnovarla, quanto costa la CIE e cosa fare se scade.', keywords: ['carta identit\u00e0 cartacea scadenza','scadenza carta identit\u00e0 2026','carta identit\u00e0 agosto 2026','CIE rinnovo','carta identit\u00e0 cartacea valida'], alternates: { canonical: 'https://zeroburocrazia.it/cie/scadenza-cartacea' }, openGraph: { title: 'Carta Identit\u00e0 Cartacea: Scadenza 3 Agosto 2026', description: 'La carta cartacea scade per l\u2019espatrio il 3 agosto 2026.', url: 'https://zeroburocrazia.it/cie/scadenza-cartacea', type: 'article', siteName: 'ZeroBurocrazia', locale: 'it_IT', images: [{ url: 'https://zeroburocrazia.it/ogcie.png', width: 1200, height: 630 }] } };
-const faqItems = [
-  { q: "La carta d\u2019identit\u00e0 cartacea scade nel 2026?", a: "Per l\u2019<strong>espatrio s\u00ec</strong>: dal 3 agosto 2026 le carte cartacee non sono pi\u00f9 valide per viaggiare in UE (Regolamento UE 2019/1157). Per l\u2019<strong>identificazione in Italia</strong> restano valide fino alla scadenza naturale stampata sulla carta." },
-  { q: "Se ho la carta cartacea ancora in corso, devo cambiarla?", a: "Per <strong>viaggiare all\u2019estero dopo il 3 agosto 2026</strong>: s\u00ec, devi passare alla CIE o usare il passaporto. Per uso in Italia: no, resta valida fino alla scadenza stampata." },
-  { q: "Quanto costa passare alla CIE?", a: "<strong>22,21\u20ac</strong> (16,79\u20ac diritti statali + 5,42\u20ac comunali). Si paga allo sportello. La CIE dura 10 anni." },
-  { q: "Quanto tempo ci vuole per avere la CIE?", a: "La CIE viene spedita a casa in <strong>6 giorni lavorativi</strong>. Nel frattempo ricevi un foglio sostitutivo valido in Italia. Prenota su Agenda CIE per evitare code." },
-  { q: "Posso usare il passaporto al posto della CIE in UE?", a: "<strong>S\u00ec.</strong> Il passaporto \u00e8 sempre valido per viaggiare in UE e ovunque. Se hai gi\u00e0 un passaporto valido, non sei obbligato a fare la CIE per l\u2019espatrio." },
+import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
+import MiniGuide, { MgSection, MgPull, MgFaq } from '@/components/redesign/MiniGuide';
+
+export const metadata = {
+  title: "Scadenza Carta d'Identità Cartacea: Dal 3 Agosto 2026 Non Vale per l'Espatrio",
+  description: "Dal 3 agosto 2026 la carta d'identità cartacea non è più valida per viaggiare in UE. Cosa fare, quando richiedere la CIE e quanto costa.",
+  alternates: { canonical: 'https://zeroburocrazia.it/cie/scadenza-cartacea' },
+};
+
+const faq = [
+  { q: "La carta d'identità cartacea scade nel 2026?", a: "Per l'<strong>espatrio sì</strong>: dal 3 agosto 2026 le carte cartacee non sono più valide per viaggiare in UE. Per l'<strong>identificazione in Italia</strong> restano valide fino alla scadenza naturale." },
+  { q: "Se ho la carta cartacea ancora in corso, devo cambiarla?", a: "Per <strong>viaggiare all'estero dopo il 3 agosto 2026</strong>: sì, devi passare alla CIE o usare il passaporto. Per uso in Italia: no, resta valida fino alla scadenza stampata." },
+  { q: "Quanto costa passare alla CIE?", a: "<strong>22,21€</strong> (16,79€ diritti statali + 5,42€ comunali). Si paga allo sportello. La CIE dura 10 anni." },
+  { q: "Quanto tempo ci vuole per avere la CIE?", a: "La CIE viene spedita a casa in <strong>6 giorni lavorativi</strong>. Nel frattempo ricevi un foglio sostitutivo." },
+  { q: "Posso usare il passaporto al posto della CIE in UE?", a: "<strong>Sì.</strong> Il passaporto è sempre valido per viaggiare in UE e ovunque. Se hai già un passaporto valido, non sei obbligato a fare la CIE." },
 ];
+
 export default function Page() {
-  const schemas = [ articleSchema({ title: 'Carta d\u2019Identit\u00e0 Cartacea: Scadenza Agosto 2026', description: 'La carta cartacea scade per l\u2019espatrio il 3 agosto 2026.', url: '/cie/scadenza-cartacea', image: 'ogcie.png', datePublished: '2026-03-20', dateModified: '2026-03-20' }), faqSchema(faqItems) ];
   return (
-    <div className="cat-documenti"><><Nav variant="scheda" /><ScrollReveal /><SchemaOrg schemas={schemas} />
-      <div className="layout" style={{paddingTop: '120px'}}><main className="main">
-        <div className="perc r"><span className="perc-label">Guida principale</span><div className="perc-steps"><a href="/cie" className="ps active">{'\uD83D\uDCB3'} CIE</a><span className="pa">{'\u203A'}</span><a href="/cie/scadenza-cartacea" className="ps">{'\u23F0'} Scadenza cartacea</a></div></div>
-        <div className="sec r" id="intro"><div className="sec-tag">Urgenza 2026</div>
-          <h1 style={{fontFamily: 'var(--font-playfair), serif', fontSize: 'clamp(28px,4vw,40px)', fontWeight: 700, lineHeight: 1.2, letterSpacing: '-0.3px', marginBottom: '18px'}}>Carta d&apos;identit&agrave; cartacea: scade il <em>3 agosto 2026</em></h1>
-          <p>Se hai ancora la <strong>carta d&apos;identit&agrave; cartacea</strong> (quella di carta, non la tessera plastificata con chip), dal <strong>3 agosto 2026</strong> non sar&agrave; pi&ugrave; valida per viaggiare all&apos;estero nei Paesi UE. Lo stabilisce il Regolamento europeo 2019/1157.</p>
-          <p>Per l&apos;uso in Italia (identificazione, banca, uffici) resta valida fino alla scadenza stampata. Ma se viaggi in Europa, devi passare alla <strong>CIE</strong> o usare il <strong>passaporto</strong>.</p>
-        </div>
-        <div className="sec r" id="cosa-fare"><div className="sec-tag">Cosa devi fare</div><h2>Le tue opzioni</h2>
-          <div className="tw r"><table><thead><tr><th>Situazione</th><th>Cosa fare</th><th>Urgenza</th></tr></thead><tbody>
-            <tr className="hl"><td className="cv">Carta cartacea + viaggi in UE previsti</td><td className="cv cfr"><strong>Prenota subito la CIE</strong></td><td style={{color:'#DC2626', fontWeight:700}}>Alta</td></tr>
-            <tr><td>Carta cartacea + nessun viaggio</td><td className="cv">Puoi aspettare la scadenza naturale</td><td>Bassa</td></tr>
-            <tr><td>Carta cartacea + passaporto valido</td><td className="cv">Viaggia col passaporto, fai la CIE con calma</td><td>Media</td></tr>
-            <tr><td>Hai gi&agrave; la CIE</td><td className="cv">Nessuna azione necessaria</td><td>Nessuna</td></tr>
-          </tbody></table></div>
-          <div className="ib warn r"><div className="ib-t">{'\u26A0\uFE0F'} Non aspettare luglio</div><p>D&apos;estate gli uffici anagrafe sono pieni. Se aspetti luglio per prenotare la CIE, rischi di non averla in tempo per le vacanze. <strong>Prenota adesso su Agenda CIE</strong> (prenotazionecie.interno.gov.it).</p></div>
-          <a href="/cie" className="xlink r"><span className="xlink-em">{'\uD83D\uDCB3'}</span><div className="xlink-t"><strong>Come fare la CIE</strong> &mdash; 22,21&euro;, 6 giorni, vale 10 anni. Guida completa.</div><span className="xlink-ar">{'\u2192'}</span></a>
-        </div>
-        <div className="sec r" id="faq"><div className="sec-tag">Risposte rapide</div><h2>Domande frequenti</h2><FAQ items={faqItems} /></div>
-        <div className="related r"><h2>Guide correlate</h2><div className="rg">
-          <a href="/cie" className="rc"><span className="rc-e">{'\uD83D\uDCB3'}</span><div className="rc-t">CIE</div><div className="rc-d">Come richiedere la CIE: costi, tempi e documenti.</div><span className="rc-ar">&rarr;</span></a>
-          <a href="/passaporto" className="rc"><span className="rc-e">{'\uD83D\uDDC2\uFE0F'}</span><div className="rc-t">Passaporto</div><div className="rc-d">Alternativa alla CIE per viaggiare.</div><span className="rc-ar">&rarr;</span></a>
-          <a href="/spid" className="rc"><span className="rc-e">{'\uD83D\uDD10'}</span><div className="rc-t">SPID</div><div className="rc-d">La CIE funziona anche come identit&agrave; digitale.</div><span className="rc-ar">&rarr;</span></a>
-        </div></div>
-      </main></div><Footer variant="scheda" /></></div>);
+    <>
+      <SchemaOrg schemas={[articleSchema({ title: "Scadenza carta cartacea agosto 2026: cosa fare", description: "Dal 3 agosto 2026 la carta cartacea non vale per l'espatrio. Come richiedere la CIE.", url: '/cie/scadenza-cartacea', image: 'ogcie.png', datePublished: '2026-01-01', dateModified: '2026-03-28' }), faqSchema(faq)]} />
+      <MiniGuide
+        category="documenti"
+        categoryLabel="Documenti"
+        parentHref="/cie"
+        parentLabel="CIE"
+        title="Scadenza carta"
+        titleEm="cartacea"
+        subtitle="Dal 3 agosto 2026 la carta d'identità cartacea non è più valida per viaggiare in Europa. Hai ancora tempo per richiedere la CIE, ma non aspettare estate."
+        readTime="3 min"
+        updated="gennaio 2026"
+      >
+        <MgSection label="La deadline" title="3 agosto 2026:" titleEm="cosa cambia" side="left">
+          <p>Il <strong>Regolamento UE 2019/1157</strong> stabilisce che dal 3 agosto 2026 tutte le carte d&apos;identità cartacee cessano la loro validità per l&apos;espatrio nei Paesi dell&apos;Unione Europea e nei Paesi convenzionati (Svizzera, UK, Turchia, Egitto e altri).</p>
+          <p>Per viaggiare in Europa dopo quella data servirà la <strong>CIE (Carta d&apos;Identità Elettronica)</strong> o il passaporto. La carta cartacea rimane valida come documento di riconoscimento in Italia fino alla sua scadenza naturale.</p>
+          <MgPull warn>
+            <strong>Non aspettare giugno-luglio.</strong> Milioni di italiani hanno ancora la cartacea. Quando si avvicinerà la scadenza i Comuni saranno sommersi di richieste e i tempi di attesa si allungheranno. Prenota adesso.
+          </MgPull>
+        </MgSection>
+
+        <MgSection label="Le tue opzioni" title="Cosa fare" titleEm="adesso" side="right">
+          <p><strong>Opzione 1 — Richiedi la CIE:</strong> prenota su prenotazionicie.interno.gov.it (Agenda CIE), presentati in Comune con documento e fototessera, paga 22,21€. La CIE arriva a casa in 6 giorni lavorativi. Dura 10 anni e funziona anche come identità digitale (app CieID).</p>
+          <p><strong>Opzione 2 — Usa il passaporto:</strong> se hai già un passaporto valido, non devi fare nulla. Il passaporto è valido per tutti i Paesi del mondo, non solo l&apos;UE.</p>
+          <MgPull>
+            <strong>Consiglio:</strong> se non hai né CIE né passaporto, richiedi la CIE — dura 10 anni, costa meno del passaporto (22€ vs 116€) e ha molti usi aggiuntivi come identità digitale.
+          </MgPull>
+        </MgSection>
+
+        <MgSection label="Domande frequenti" title="FAQ" side="left">
+          <MgFaq items={faq} />
+        </MgSection>
+      </MiniGuide>
+    </>
+  );
 }

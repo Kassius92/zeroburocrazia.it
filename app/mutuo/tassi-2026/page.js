@@ -1,44 +1,67 @@
-import Nav from '@/components/Nav';import Footer from '@/components/Footer';import ScrollReveal from '@/components/ScrollReveal';import FAQ from '@/components/FAQ';import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
-export const metadata = { title: 'Tassi Mutuo 2026: Fisso vs Variabile, Euribor e Previsioni', description: 'Tassi mutuo 2026: quanto costa un mutuo oggi, fisso vs variabile, Euribor, previsioni BCE e come scegliere. Guida aggiornata.', keywords: ['tassi mutuo 2026','mutuo tasso fisso 2026','mutuo tasso variabile 2026','Euribor 2026','IRS 2026','mutuo prima casa tassi'], alternates: { canonical: 'https://zeroburocrazia.it/mutuo/tassi-2026' }, openGraph: { title: 'Tassi Mutuo 2026: Fisso vs Variabile e Previsioni', description: 'Tassi mutuo 2026: fisso, variabile, previsioni e come scegliere.', url: 'https://zeroburocrazia.it/mutuo/tassi-2026', type: 'article', siteName: 'ZeroBurocrazia', locale: 'it_IT', images: [{ url: 'https://zeroburocrazia.it/ogmutuo.png', width: 1200, height: 630 }] } };
-const faqItems = [
-  { q: "Conviene il tasso fisso o variabile nel 2026?", a: "Dipende dalla tua tolleranza al rischio. Il <strong>fisso</strong> ti protegge da aumenti futuri (rata costante per tutta la durata). Il <strong>variabile</strong> parte pi\u00f9 basso ma pu\u00f2 salire. Con l\u2019Euribor in calo, il variabile \u00e8 tornato competitivo, ma il fisso resta la scelta pi\u00f9 sicura per chi vuole dormire tranquillo." },
-  { q: "Quanto costa un mutuo di 150.000\u20ac a 25 anni?", a: "Con un tasso fisso intorno al 2,8-3,2%: rata mensile circa <strong>690-720\u20ac</strong>. Con variabile al 2,5%: rata iniziale circa <strong>670\u20ac</strong>, ma pu\u00f2 cambiare." },
-  { q: "L\u2019Euribor sta scendendo?", a: "S\u00ec. La BCE ha tagliato i tassi nel 2025 e l\u2019Euribor 3 mesi \u00e8 sceso rispetto ai picchi del 2023-2024. Questo rende i mutui variabili pi\u00f9 convenienti rispetto a un anno fa." },
-  { q: "Posso rinegoziare il mutuo per avere un tasso migliore?", a: "<strong>S\u00ec.</strong> Puoi chiedere alla tua banca di rinegoziare le condizioni, oppure fare una <strong>surroga</strong> (trasferimento a un\u2019altra banca a costo zero). La surroga \u00e8 un diritto e la banca non pu\u00f2 rifiutarla." },
-  { q: "Il Fondo Consap \u00e8 ancora attivo nel 2026?", a: "<strong>S\u00ec.</strong> Il Fondo di Garanzia Consap copre fino all\u201980% del mutuo per under 36, famiglie numerose e giovani coppie. Permette di ottenere il mutuo anche senza un grande anticipo." },
+import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
+import MiniGuide, { MgSection, MgPull, MgFaq, MgTable } from '@/components/redesign/MiniGuide';
+
+export const metadata = {
+  title: 'Tassi Mutuo 2026: Fisso vs Variabile, Euribor e Rate Aggiornate',
+  description: 'Tassi mutuo 2026: tasso fisso al 2,8-3,1%, Euribor in calo, confronto fisso vs variabile e rate aggiornate per importi comuni.',
+  alternates: { canonical: 'https://zeroburocrazia.it/mutuo/tassi-2026' },
+};
+
+const faq = [
+  { q: "Conviene il tasso fisso o variabile nel 2026?", a: "Con tassi fissi intorno al <strong>2,8-3,1%</strong>, il fisso è competitivo e protegge da futuri rialzi. Il variabile parte più basso grazie all'Euribor in calo, ma può risalire. Per chi vuole sicurezza: fisso. Per chi prevede di estinguere in 10 anni: valuta il variabile." },
+  { q: "Quanto costa un mutuo di 150.000€ a 25 anni?", a: "Con tasso fisso 3%: rata mensile circa <strong>710€</strong>. Con variabile al 2,5%: rata iniziale circa <strong>672€</strong>, ma può cambiare." },
+  { q: "L'Euribor sta scendendo?", a: "Sì. La BCE ha tagliato i tassi nel 2025 e l'Euribor 3 mesi è sceso rispetto ai picchi del 2023-2024. Questo rende i mutui variabili più convenienti rispetto a un anno fa." },
+  { q: "Posso rinegoziare il mutuo per avere un tasso migliore?", a: "<strong>Sì.</strong> Puoi chiedere alla tua banca di rinegoziare, oppure fare una <strong>surroga</strong> (trasferimento a un'altra banca a costo zero). La surroga è un diritto e la banca non può rifiutarla." },
+  { q: "Il Fondo Consap è ancora attivo nel 2026?", a: "<strong>Sì.</strong> Il Fondo Consap copre fino all'80% del mutuo per under 36 con ISEE sotto 40.000€. Permette di ottenere il mutuo anche senza anticipo." },
 ];
+
 export default function Page() {
-  const schemas = [ articleSchema({ title: 'Tassi Mutuo 2026: Fisso, Variabile e Previsioni', description: 'Tassi mutuo 2026: guida ai tassi, fisso vs variabile e come scegliere.', url: '/mutuo/tassi-2026', image: 'ogmutuo.png', datePublished: '2026-03-20', dateModified: '2026-03-20' }), faqSchema(faqItems) ];
   return (
-    <div className="cat-casa"><><Nav variant="scheda" /><ScrollReveal /><SchemaOrg schemas={schemas} />
-      <div className="layout" style={{paddingTop: '120px'}}><main className="main">
-        <div className="perc r"><span className="perc-label">Guida principale</span><div className="perc-steps"><a href="/mutuo" className="ps active">{'\uD83C\uDFE6'} Mutuo</a><span className="pa">{'\u203A'}</span><a href="/mutuo/tassi-2026" className="ps">{'\uD83D\uDCC8'} Tassi 2026</a></div></div>
-        <div className="sec r" id="intro"><div className="sec-tag">Guida specifica</div>
-          <h1 style={{fontFamily: 'var(--font-playfair), serif', fontSize: 'clamp(28px,4vw,40px)', fontWeight: 700, lineHeight: 1.2, letterSpacing: '-0.3px', marginBottom: '18px'}}>Tassi mutuo <em>2026</em>: fisso vs variabile</h1>
-          <p>I tassi dei mutui nel 2026 sono <strong>in discesa rispetto ai picchi del 2023-2024</strong>. La BCE ha tagliato i tassi e l&apos;Euribor &egrave; sceso. Ma quanto conviene davvero? E meglio fisso o variabile? Ecco i numeri aggiornati.</p>
-        </div>
-        <div className="sec r" id="confronto"><div className="sec-tag">I numeri</div><h2>Fisso vs variabile: confronto</h2>
-          <div className="tw r"><table><thead><tr><th>Tipo</th><th>Tasso indicativo</th><th>Rata per 150.000&euro;/25 anni</th><th>Pro</th><th>Contro</th></tr></thead><tbody>
-            <tr className="hl"><td className="cv cfr">Fisso</td><td className="cv">2,8-3,2%</td><td className="cv">690-720&euro;</td><td>Rata stabile per sempre</td><td>Pi&ugrave; alto del variabile oggi</td></tr>
-            <tr><td className="cv">Variabile</td><td className="cv">2,3-2,8%</td><td className="cv">650-690&euro;</td><td>Parte pi&ugrave; basso</td><td>Pu&ograve; salire se i tassi risalgono</td></tr>
-            <tr><td className="cv">Variabile con cap</td><td className="cv">2,5-3,0%</td><td className="cv">670-700&euro;</td><td>Tetto massimo garantito</td><td>Spread pi&ugrave; alto del variabile puro</td></tr>
-          </tbody></table></div>
-          <div className="ib tip r"><div className="ib-t">{'\uD83D\uDCA1'} Il consiglio di ZeroBurocrazia</div><p>Se vuoi <strong>certezza sulla rata</strong> per 20-30 anni: scegli il fisso. La differenza di 30-50&euro;/mese rispetto al variabile &egrave; il prezzo della tranquillit&agrave;. Se sei disposto a correre qualche rischio e hai un reddito flessibile: il variabile con cap &egrave; un buon compromesso.</p></div>
-        </div>
-        <div className="sec r" id="surroga"><div className="sec-tag">Hai gi&agrave; un mutuo?</div><h2>Surroga: cambia banca gratis</h2>
-          <p>Se hai un mutuo a tasso fisso stipulato nel 2023-2024 (quando i tassi erano al 4-5%), oggi puoi fare la <strong>surroga</strong>: trasferisci il mutuo a un&apos;altra banca con condizioni migliori. <strong>&Egrave; gratis, &egrave; un tuo diritto, la banca non pu&ograve; rifiutare.</strong></p>
-          <div className="dark-block r">
-            <h3>{'\uD83D\uDCA1'} Esempio: Marco surroga il mutuo</h3>
-            <p>Marco ha un mutuo da <strong>120.000&euro;</strong> residui a tasso fisso <strong>4,2%</strong> (stipulato nel 2023). Rata: <strong>730&euro;/mese</strong>.</p>
-            <p>Con la surroga a una banca che offre il <strong>2,9%</strong>, la rata scende a <strong>630&euro;/mese</strong>.</p>
-            <div className="db-row db-total"><span className="db-label">Risparmio</span><span className="db-val">100&euro;/mese = 1.200&euro;/anno</span></div>
-          </div>
-        </div>
-        <div className="sec r" id="faq"><div className="sec-tag">Risposte rapide</div><h2>Domande frequenti</h2><FAQ items={faqItems} /></div>
-        <div className="related r"><h2>Guide correlate</h2><div className="rg">
-          <a href="/mutuo" className="rc"><span className="rc-e">{'\uD83C\uDFE6'}</span><div className="rc-t">Mutuo Prima Casa</div><div className="rc-d">Guida completa: requisiti, Consap e documenti.</div><span className="rc-ar">&rarr;</span></a>
-          <a href="/compro-casa" className="rc"><span className="rc-e">{'\uD83C\uDFE1'}</span><div className="rc-t">Compro Casa</div><div className="rc-d">Tutto il percorso: dalla ricerca al rogito.</div><span className="rc-ar">&rarr;</span></a>
-          <a href="/cedolare-secca" className="rc"><span className="rc-e">{'\uD83E\uDDFE'}</span><div className="rc-t">Cedolare Secca</div><div className="rc-d">Se invece vuoi affittare un immobile.</div><span className="rc-ar">&rarr;</span></a>
-        </div></div>
-      </main></div><Footer variant="scheda" /></></div>);
+    <>
+      <SchemaOrg schemas={[articleSchema({ title: 'Tassi mutuo 2026: fisso vs variabile e rate aggiornate', description: 'Tassi mutuo 2026: confronto fisso e variabile, Euribor, rate per importi comuni.', url: '/mutuo/tassi-2026', image: 'ogmutuo.png', datePublished: '2026-01-15', dateModified: '2026-03-28' }), faqSchema(faq)]} />
+      <MiniGuide
+        category="casa"
+        categoryLabel="Casa"
+        parentHref="/mutuo"
+        parentLabel="Mutuo prima casa"
+        title="Tassi mutuo"
+        titleEm="2026"
+        subtitle="Fisso al 2,8-3,1%, variabile in calo grazie alla BCE. Il confronto aggiornato e le rate reali per capire quanto pagheresti ogni mese."
+        readTime="4 min"
+        updated="gennaio 2026"
+      >
+        <MgSection label="Il quadro" title="Tassi 2026:" titleEm="fisso vs variabile" side="left">
+          <p>Nel 2026 il mercato dei mutui si trova in una situazione più favorevole rispetto al 2023-2024. La BCE ha tagliato i tassi di riferimento nel corso del 2025, portando l&apos;Euribor (l&apos;indice su cui si basano i mutui variabili) in netto calo rispetto ai picchi del 4%+ del 2023.</p>
+          <p>I <strong>tassi fissi</strong> si aggirano attorno al <strong>2,8-3,1%</strong> (TAEG, incluse le spese). I <strong>tassi variabili</strong> partono da circa il <strong>2,3-2,7%</strong> ma possono variare nel tempo.</p>
+          <MgPull>
+            <strong>Regola 2026:</strong> con tassi fissi sotto il 3%, bloccare il tasso adesso è una scelta difensiva sensata. Il variabile è tornato competitivo ma introduce incertezza sulla rata futura.
+          </MgPull>
+        </MgSection>
+
+        <MgSection label="Le rate" title="Quanto paghi" titleEm="ogni mese" side="right">
+          <MgTable
+            headers={['Importo mutuo', '20 anni (fisso 3%)', '25 anni (fisso 3%)', '30 anni (fisso 3%)']}
+            rows={[
+              ['100.000€', '555€/mese', '474€/mese', '421€/mese'],
+              ['150.000€', '832€/mese', '711€/mese', '632€/mese'],
+              ['200.000€', '1.109€/mese', '948€/mese', '843€/mese'],
+              ['250.000€', '1.387€/mese', '1.185€/mese', '1.054€/mese'],
+            ]}
+          />
+          <MgPull warn>
+            <strong>La rata non dovrebbe superare il 30-35% del reddito netto mensile.</strong> Con 2.000€/mese netti, la rata sostenibile è massimo 600-700€. Supera questa soglia e la banca potrebbe richiedere garanzie aggiuntive.
+          </MgPull>
+        </MgSection>
+
+        <MgSection label="Hai già un mutuo?" title="La surroga:" titleEm="cambia banca gratis" side="left">
+          <p>Se hai un mutuo con tasso fisso sopra il 3,5% o un variabile che sta pesando troppo, puoi fare la <strong>surroga</strong>: trasferire il mutuo a un&apos;altra banca con condizioni migliori. È completamente gratuita (zero spese di notaio, perizia, istruttoria) e la banca non può rifiutarla.</p>
+          <p>Una differenza di 0,5% su un mutuo da 200.000€ a 20 anni vale circa <strong>10.000€ di interessi in meno</strong>. Vale la pena confrontare le offerte almeno ogni 2-3 anni.</p>
+        </MgSection>
+
+        <MgSection label="Domande frequenti" title="FAQ" side="right">
+          <MgFaq items={faq} />
+        </MgSection>
+      </MiniGuide>
+    </>
+  );
 }
