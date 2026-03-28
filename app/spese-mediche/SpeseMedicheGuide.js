@@ -4,7 +4,7 @@ import NavV8 from '@/components/redesign/NavV8';
 import FooterV8 from '@/components/redesign/FooterV8';
 import {
   GuideHero, Section, StepCards, FAQAccordion,
-  ExampleBlock, InfoBox, CTABanner, CrossLink
+  ExampleBlock, InfoBox, CTABanner
 } from '@/components/redesign';
 
 export default function SpeseMedicheGuide({ faqItems }) {
@@ -48,7 +48,7 @@ export default function SpeseMedicheGuide({ faqItems }) {
           <p><strong>Farmaci con ricetta medica</strong> &mdash; Scontrino parlante con codice fiscale. Pagamento anche in contanti consentito.</p>
           <p><strong>Farmaci da banco (senza ricetta)</strong> &mdash; Scontrino parlante. Dal 2025: pagamento tracciabile obbligatorio.</p>
           <p><strong>Farmaci omeopatici classificati come medicinali</strong> &mdash; Con dicitura &ldquo;omeopatico&rdquo; sullo scontrino.</p>
-          <p><strong>Integratori, parafarmaci, fitoterapici</strong> &mdash; NON detraibili. Non sono farmaci. Lo scontrino riporta &ldquo;parafarmaco&rdquo; non &ldquo;farmaco&rdquo;.</p>
+          <p><strong>Integratori, parafarmaci, fitoterapici</strong> &mdash; NON detraibili. Non sono farmaci.</p>
           <h3 style={{fontFamily:'var(--font-sf),Georgia,serif',fontSize:'22px',marginTop:'32px',marginBottom:'12px'}}>Visite e prestazioni sanitarie</h3>
           <p><strong>Visite mediche generiche e specialistiche</strong> &mdash; Anche omeopatiche. Fattura + pagamento tracciabile.</p>
           <p><strong>Esami diagnostici e analisi</strong> &mdash; Sangue, urine, ecografie, TAC, risonanze, radiografie.</p>
@@ -64,22 +64,12 @@ export default function SpeseMedicheGuide({ faqItems }) {
       </Section>
 
       <Section id="pagamento" title="La regola del" titleEm="pagamento tracciabile" subtitle="Dal 2020 quasi tutte le spese mediche private devono essere pagate con carta o bonifico.">
-        <div className="v8-table-wrap rv" style={{maxWidth:'750px',margin:'0 auto 24px'}}>
-          <table className="v8-table">
-            <thead><tr><th>Tipo di spesa</th><th>Contanti</th><th>Carta/Bonifico</th></tr></thead>
-            <tbody>
-              <tr><td>Farmaci con ricetta (farmacia)</td><td style={{color:'var(--v8-green)',fontWeight:'600'}}>&#10003; S&igrave;</td><td>&#10003; S&igrave;</td></tr>
-              <tr><td>Farmaci da banco senza ricetta</td><td style={{color:'var(--v8-coral)'}}>&#10005; No (dal 2025)</td><td style={{color:'var(--v8-green)',fontWeight:'600'}}>&#10003; Obbligatorio</td></tr>
-              <tr><td>Visite in struttura pubblica/SSN</td><td style={{color:'var(--v8-green)',fontWeight:'600'}}>&#10003; S&igrave;</td><td>&#10003; S&igrave;</td></tr>
-              <tr><td>Visite in studio privato</td><td style={{color:'var(--v8-coral)'}}>&#10005; Perdi detrazione</td><td style={{color:'var(--v8-green)',fontWeight:'600'}}>&#10003; Obbligatorio</td></tr>
-              <tr><td>Dentista privato</td><td style={{color:'var(--v8-coral)'}}>&#10005; Perdi detrazione</td><td style={{color:'var(--v8-green)',fontWeight:'600'}}>&#10003; Obbligatorio</td></tr>
-              <tr><td>Fisioterapista / psicologo privato</td><td style={{color:'var(--v8-coral)'}}>&#10005; Perdi detrazione</td><td style={{color:'var(--v8-green)',fontWeight:'600'}}>&#10003; Obbligatorio</td></tr>
-              <tr><td>Occhiali e dispositivi medici</td><td style={{color:'var(--v8-coral)'}}>&#10005; Perdi detrazione</td><td style={{color:'var(--v8-green)',fontWeight:'600'}}>&#10003; Obbligatorio</td></tr>
-            </tbody>
-          </table>
+        <div className="v8-prose rv">
+          <p>La regola &egrave; semplice: <strong>in farmacia</strong> puoi pagare in contanti i farmaci con ricetta e le prestazioni nelle strutture pubbliche o private accreditate SSN. <strong>Tutto il resto</strong> &mdash; visite private, dentista, fisioterapista, psicologo, occhiali &mdash; deve essere pagato con carta, bancomat o bonifico. Se paghi in contanti una visita privata, <strong>perdi tutta la detrazione</strong>, anche se hai la fattura perfetta.</p>
+          <p>Dal 2025 anche i farmaci da banco senza ricetta richiedono pagamento tracciabile. Se hai dubbi su cosa pagare in che modo, la risposta sicura &egrave; sempre: paga con la carta.</p>
         </div>
-        <InfoBox type="tip">
-          <p><strong>La regola semplice:</strong> in farmacia puoi pagare in contanti i farmaci con ricetta. <strong>Tutto il resto</strong> &mdash; visite private, dentista, fisio, psicologo, occhiali &mdash; pagalo con la carta. Se hai dubbi, paga con carta: non sbagli mai.</p>
+        <InfoBox type="warn">
+          <p><strong>Attenzione al dentista.</strong> Il dentista privato non &egrave; una struttura SSN. Se lo paghi in contanti, perdi tutta la detrazione. Questo errore costa centinaia di euro a migliaia di italiani ogni anno.</p>
         </InfoBox>
       </Section>
 
@@ -97,10 +87,10 @@ export default function SpeseMedicheGuide({ faqItems }) {
 
       <Section id="errori" title="Gli errori" titleEm="che fanno tutti">
         <InfoBox type="warn">
-          <p><strong>Pagare in contanti il dentista.</strong> Il dentista privato non &egrave; una struttura SSN. Se lo paghi in contanti, <strong>perdi tutta la detrazione</strong>. Anche con la fattura perfetta. Questo errore costa centinaia di euro a migliaia di italiani ogni anno.</p>
+          <p><strong>Pagare in contanti il dentista.</strong> Il dentista privato non &egrave; una struttura SSN. Se lo paghi in contanti, <strong>perdi tutta la detrazione</strong>. Anche con la fattura perfetta.</p>
         </InfoBox>
         <InfoBox type="warn">
-          <p><strong>Detrarre gli integratori.</strong> Gli integratori alimentari <strong>non sono farmaci</strong> e non sono detraibili. Nemmeno se li ha prescritti il medico. Lo scontrino deve riportare &ldquo;farmaco&rdquo;, non &ldquo;parafarmaco&rdquo;.</p>
+          <p><strong>Detrarre gli integratori.</strong> Gli integratori alimentari <strong>non sono farmaci</strong> e non sono detraibili. Lo scontrino deve riportare &ldquo;farmaco&rdquo;, non &ldquo;parafarmaco&rdquo; o &ldquo;integratore&rdquo;.</p>
         </InfoBox>
         <InfoBox type="warn">
           <p><strong>Non controllare il precompilato.</strong> Il 730 precompilato contiene gi&agrave; molte spese mediche, ma non tutte. Se non aggiungi quelle mancanti, perdi la detrazione.</p>

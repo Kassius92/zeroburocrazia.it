@@ -4,7 +4,7 @@ import NavV8 from '@/components/redesign/NavV8';
 import FooterV8 from '@/components/redesign/FooterV8';
 import {
   GuideHero, Section, StepCards, FAQAccordion,
-  ExampleBlock, InfoBox, CTABanner, CrossLink
+  ExampleBlock, InfoBox, CTABanner
 } from '@/components/redesign';
 import CalcBustaPaga from '@/components/CalcBustaPaga';
 
@@ -46,24 +46,14 @@ export default function BustaPagaGuide({ faqItems }) {
         <StepCards steps={[
           { title: 'Intestazione', text: "In alto: dati dell'azienda (nome, P.IVA, posizione INPS/INAIL) e i tuoi dati (nome, codice fiscale, data assunzione, qualifica, livello, CCNL). Controlla che siano corretti: un livello sbagliato significa uno stipendio sbagliato." },
           { title: 'Competenze (il lordo)', text: "Tutte le voci che formano il lordo: paga base, contingenza, scatti di anzianit\u00e0, superminimo, straordinari, indennit\u00e0, premi, ferie godute, malattia, permessi. La somma di tutto \u00e8 il totale lordo del mese." },
-          { title: 'Trattenute e netto', text: "Qui si passa dal lordo al netto: contributi INPS (~9,19%), IRPEF (calcolata sull'imponibile fiscale), addizionali regionali e comunali, eventuali detrazioni e il trattamento integrativo. In fondo: il netto in busta e i dati riepilogativi (TFR, ferie residue)." },
+          { title: 'Trattenute e netto', text: "Qui si passa dal lordo al netto: contributi INPS (~9,19%), IRPEF, addizionali regionali e comunali, eventuali detrazioni e il trattamento integrativo. In fondo: il netto in busta e i dati riepilogativi (TFR, ferie residue)." },
         ]} />
       </Section>
 
-      <Section id="lordo-netto" title="Dal lordo" titleEm="al netto" subtitle="La formula semplificata per capire quanto &ldquo;perdi&rdquo; ogni mese.">
-        <div className="v8-table-wrap rv" style={{maxWidth:'600px',margin:'0 auto 24px'}}>
-          <table className="v8-table">
-            <thead><tr><th>Passaggio</th><th>Importo (lordo 2.000&euro;)</th></tr></thead>
-            <tbody>
-              <tr><td>Stipendio lordo mensile</td><td>2.000&euro;</td></tr>
-              <tr><td>&minus; Contributi INPS (~9,19%)</td><td>&minus;184&euro;</td></tr>
-              <tr><td>= Imponibile fiscale</td><td>1.816&euro;</td></tr>
-              <tr><td>&minus; IRPEF lorda (per scaglioni)</td><td>&minus;~365&euro;</td></tr>
-              <tr><td>+ Detrazioni lavoro dipendente</td><td>+~130&euro;</td></tr>
-              <tr><td>&minus; Addizionali reg./com.</td><td>&minus;~30&euro;</td></tr>
-              <tr><td style={{fontWeight:'600'}}>Netto in busta</td><td style={{fontWeight:'700',color:'var(--v8-green)'}}>~1.551&euro;</td></tr>
-            </tbody>
-          </table>
+      <Section id="lordo-netto" title="Dal lordo" titleEm="al netto" subtitle="Come si arriva dal lordo al netto: la formula passo per passo.">
+        <div className="v8-prose rv">
+          <p>Partiamo da un esempio concreto con uno stipendio lordo di 2.000&euro;. Prima si sottraggono i <strong>contributi INPS</strong> (~9,19%), circa 184&euro;: si ottiene l&apos;imponibile fiscale di 1.816&euro;. Su questo si calcola l&apos;<strong>IRPEF lorda</strong> per scaglioni, circa 365&euro;. Poi si aggiungono le <strong>detrazioni</strong> per lavoro dipendente (~130&euro;) e si tolgono le <strong>addizionali</strong> regionali e comunali (~30&euro;). Il risultato finale &egrave; un <strong>netto in busta di circa 1.551&euro;</strong>.</p>
+          <p>Questo significa che su 2.000&euro; lordi, le trattenute totali sono circa 449&euro;, pari al 22% del lordo. Chi guadagna di pi&ugrave; paga una percentuale maggiore, perch&eacute; l&apos;IRPEF &egrave; progressiva.</p>
         </div>
         <InfoBox type="tip">
           <p><strong>Aliquote IRPEF 2026 (3 scaglioni):</strong> 23% fino a 28.000&euro; &mdash; <strong>33%</strong> da 28.001&euro; a 50.000&euro; (era 35% nel 2024) &mdash; 43% oltre 50.000&euro;. La riduzione dal 35% al 33% del secondo scaglione &egrave; la novit&agrave; 2026: qualche euro in pi&ugrave; in busta per chi guadagna tra 28.000 e 50.000&euro;.</p>
@@ -90,7 +80,7 @@ export default function BustaPagaGuide({ faqItems }) {
         <div className="v8-prose rv">
           <p><strong>Paga base + contingenza</strong> &mdash; Il minimo previsto dal tuo CCNL per il tuo livello. Se il tuo stipendio &egrave; sotto questo importo, c&apos;&egrave; un problema.</p>
           <p><strong>Superminimo</strong> &mdash; La parte in pi&ugrave; rispetto al minimo contrattuale, concordata individualmente. Pu&ograve; essere &ldquo;assorbibile&rdquo; (sparisce con gli aumenti CCNL) o &ldquo;non assorbibile&rdquo; (resta fisso).</p>
-          <p><strong>Straordinari</strong> &mdash; Le ore lavorate oltre l&apos;orario contrattuale. Sono maggiorate: +15% a +50% a seconda del CCNL, dell&apos;ora e del giorno.</p>
+          <p><strong>Straordinari</strong> &mdash; Le ore lavorate oltre l&apos;orario contrattuale. Sono maggiorate: dal +15% al +50% a seconda del CCNL e del tipo di ora (feriale, notturna, festiva).</p>
           <p><strong>Ferie e ROL</strong> &mdash; Ferie maturate, godute e residue. I ROL (Riduzione Orario di Lavoro) sono i permessi retribuiti. Controlla che siano corretti ogni mese.</p>
           <p><strong>Trattamento integrativo</strong> &mdash; L&apos;ex &ldquo;bonus Renzi&rdquo;. Fino a 100&euro;/mese per redditi sotto 15.000&euro;, in misura ridotta fino a 28.000&euro;.</p>
           <p><strong>TFR maturato</strong> &mdash; La quota accantonata nel mese (circa 1/13,5 del lordo). Si accumula e lo ricevi quando lasci il lavoro.</p>
@@ -106,11 +96,11 @@ export default function BustaPagaGuide({ faqItems }) {
           story="<strong>Laura lavora come impiegata</strong> con CCNL Commercio, livello 4. RAL 28.000&euro;, 14 mensilit&agrave;. Single, nessun figlio a carico."
           lines={[
             { label: 'Paga base + contingenza + superminimo', value: '2.000\u20ac lordi' },
-            { label: 'Contributi INPS (9,19%) + IRPEF \u2212 detrazioni + addizionali', value: '\u2212449\u20ac' },
+            { label: 'Contributi INPS (9,19%)', value: '\u2212184\u20ac' },
+            { label: 'IRPEF lorda \u2212 detrazioni + addizionali', value: '\u2212265\u20ac' },
             { label: 'TFR maturato nel mese', value: '~148\u20ac' },
-            { label: 'Ferie residue', value: '12 giorni' },
           ]}
-          total={{ label: 'Netto in busta (stipendio annuo netto: ~21.700\u20ac)', value: '~1.551\u20ac' }}
+          total={{ label: 'Netto in busta (annuo netto: ~21.700\u20ac)', value: '~1.551\u20ac' }}
         />
       </Section>
 
