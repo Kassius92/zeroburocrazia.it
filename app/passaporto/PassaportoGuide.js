@@ -36,7 +36,7 @@ export default function PassaportoGuide({ faqItems }) {
 
       <Section id="cose" title="Cos'&egrave; il passaporto" titleEm="e quando serve">
         <div className="v8-prose rv">
-          <p>Il passaporto &egrave; il documento di identit&agrave; per viaggiare fuori dall&apos;Unione Europea. Per i Paesi UE basta la carta d&apos;identit&agrave; elettronica (CIE) valida per l&apos;espatrio. Il passaporto serve per: USA, UK, Giappone, Australia, Canada, e tutti gli altri Paesi extra-Schengen.</p>
+          <p>Il passaporto &egrave; il documento di identit&agrave; per viaggiare fuori dall&apos;Unione Europea. Per i Paesi UE basta la <Link href="/cie">carta d&apos;identit&agrave; elettronica (CIE)</Link> valida per l&apos;espatrio. Il passaporto serve per: USA, UK, Giappone, Australia, Canada, e tutti gli altri Paesi extra-Schengen.</p>
           <p>Ha una validit&agrave; di <strong>10 anni</strong> per i maggiorenni (5 anni per i minorenni). <strong>Non esiste il rinnovo</strong>: quando scade si fa uno nuovo da zero con la stessa procedura. L&apos;unica differenza rispetto al primo rilascio &egrave; che consegni il vecchio passaporto.</p>
           <h3 style={{fontFamily:'var(--font-sf),Georgia,serif',fontSize:'24px',marginTop:'40px',marginBottom:'16px'}}>Le parole che devi conoscere</h3>
           <p><strong>Agenda prioritaria</strong> &mdash; Se hai un viaggio imminente documentato (biglietto aereo entro 7 giorni), puoi accedere a slot riservati alle urgenze. Si gestisce direttamente in Questura.</p>
@@ -55,6 +55,9 @@ export default function PassaportoGuide({ faqItems }) {
           <p><strong>Per smarrimento o furto:</strong> denuncia di smarrimento/furto ai Carabinieri o Polizia + eventuali fotocopie del vecchio passaporto se disponibili.</p>
           <p><strong>Le foto tessera</strong> devono rispettare requisiti precisi: fondo bianco uniforme, viso ben visibile, niente occhiali, niente cappelli, espressione neutra, bocca chiusa. Le foto scattate in autonomia col telefono di solito vengono rifiutate: meglio una foto professionale (5-10&euro;).</p>
         </div>
+        <InfoBox type="warn">
+          <p><strong>Le foto fai-da-te spesso vengono rifiutate.</strong> Sfondo non uniforme o dimensioni errate: il funzionario di Questura pu&ograve; respingerle. Una foto professionale (5-8&euro;) evita ritardi inutili.</p>
+        </InfoBox>
       </Section>
 
       <Section id="costi" title="Quanto" titleEm="costa">
@@ -65,11 +68,14 @@ export default function PassaportoGuide({ faqItems }) {
           <p>A questi si aggiungono: ~5-10&euro; per le foto tessera, e opzionalmente <strong>9,53&euro;</strong> se vuoi la consegna del passaporto a domicilio invece del ritiro in Questura.</p>
           <p>Totale realistico con foto e spedizione: <strong>130-135&euro;</strong>.</p>
         </div>
+        <InfoBox type="warn">
+          <p><strong>Le foto fai-da-te spesso vengono rifiutate.</strong> Sfondo non uniforme o dimensioni errate: il funzionario di Questura pu&ograve; respingerle. Una foto professionale (5-8&euro;) evita ritardi inutili.</p>
+        </InfoBox>
       </Section>
 
       <Section bg="warm" id="come" title="Come si fa:" titleEm="procedura passo per passo">
         <StepCards steps={[
-          { title: 'Prenota online sul portale della Polizia di Stato', text: 'Vai su agenda.poliziadistato.it, accedi con SPID o CIE, seleziona la Questura o il Commissariato pi\u00f9 vicino. Scegli data e ora. Al momento della prenotazione paghi i 42,70\u20ac tramite PagoPA. Ricevi una email di conferma con il numero di pratica.' },
+          { title: 'Prenota online sul portale della Polizia di Stato', text: 'Vai su agenda.poliziadistato.it, accedi con <Link href="/spid">SPID</Link> o <Link href="/cie">CIE</Link>, seleziona la Questura o il Commissariato pi\u00f9 vicino. Scegli data e ora. Al momento della prenotazione paghi i 42,70\u20ac tramite PagoPA. Ricevi una email di conferma con il numero di pratica.' },
           { title: 'Compra il contrassegno telematico', text: 'Vai in tabaccheria e compra un contrassegno telematico da 73,50\u20ac. Conservalo intatto: lo consegni all\'appuntamento.' },
           { title: 'Preparati i documenti e le foto', text: 'Fai 2 foto tessera professionali (fondo bianco, 35\u00d745mm). Raccogli tutti i documenti: CIE o patente, tessera sanitaria, contrassegno telematico, ricevuta PagoPA.' },
           { title: 'Presentati all\'appuntamento', text: 'In Questura ti prendono le impronte digitali, ti scattano una foto digitale, verificano i documenti e ritirano il contrassegno. La pratica richiede 10-15 minuti.' },
@@ -87,6 +93,9 @@ export default function PassaportoGuide({ faqItems }) {
           <p>Il <strong>tempo di lavorazione</strong> dopo l&apos;appuntamento &egrave; invece abbastanza stabile: 10-15 giorni lavorativi per il passaporto standard, fino a 3-4 settimane nei periodi di picco.</p>
           <p>Regola pratica: se devi viaggiare tra 2 mesi, prenota <em>oggi</em>. Se devi viaggiare tra 6 mesi, prenota comunque il prima possibile e controlla periodicamente se si liberano slot migliori.</p>
         </div>
+        <InfoBox type="tip">
+          <p><strong>Puoi prenotare anche per un familiare senza SPID.</strong> Sul portale seleziona &ldquo;altro richiedente&rdquo; e inserisci i dati di chi deve fare il passaporto. Utile per genitori anziani o figli minorenni.</p>
+        </InfoBox>
       </Section>
 
       <Section bg="warm" id="minori" title="Passaporto" titleEm="per i minori">
@@ -96,6 +105,9 @@ export default function PassaportoGuide({ faqItems }) {
           <p>La <strong>validit&agrave;</strong> &egrave; ridotta: 3 anni per i bambini sotto i 3 anni, 5 anni per i minori tra 3 e 18 anni. I costi sono gli stessi degli adulti.</p>
           <p>I minori <strong>sotto i 14 anni</strong> devono viaggiare accompagnati da un genitore o da un adulto che ha l&apos;autorizzazione scritta di entrambi i genitori. Sopra i 14 anni possono viaggiare da soli con il passaporto.</p>
         </div>
+        <InfoBox type="tip">
+          <p><strong>Puoi prenotare anche per un familiare senza SPID.</strong> Sul portale seleziona &ldquo;altro richiedente&rdquo; e inserisci i dati di chi deve fare il passaporto. Utile per genitori anziani o figli minorenni.</p>
+        </InfoBox>
       </Section>
 
       <Section bg="dark" id="esempio">
@@ -110,6 +122,9 @@ export default function PassaportoGuide({ faqItems }) {
           ]}
           total={{ label: 'Passaporto pronto in tempo per il volo (tot. ~125\u20ac)', value: '\u2713' }}
         />
+        <InfoBox type="tip">
+          <p><strong>Puoi prenotare anche per un familiare senza SPID.</strong> Sul portale seleziona &ldquo;altro richiedente&rdquo; e inserisci i dati di chi deve fare il passaporto. Utile per genitori anziani o figli minorenni.</p>
+        </InfoBox>
       </Section>
 
       <Section bg="warm" id="faq" title="Domande" titleEm="frequenti">

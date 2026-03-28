@@ -79,6 +79,12 @@ export default function SuccessioneGuide({ faqItems }) {
           <p><strong>Documenti degli eredi:</strong> documenti di identit&agrave; e codice fiscale di tutti gli eredi, atto di notoriet&agrave; (rilasciato dal Comune o dal notaio: attesta chi sono gli eredi), eventuale rinuncia all&apos;eredit&agrave; di chi non vuole accettare.</p>
           <p><strong>Documenti sui beni:</strong> per ogni immobile: visura catastale e planimetria (gratis su AGENZIAENTRATE con SPID), visura ipotecaria (gratis online), eventuale atto di acquisto. Per i conti correnti: estratto conto alla data del decesso (chiesto alla banca). Per i titoli: estratto del dossier titoli alla data del decesso. Per i veicoli: estratto PRA. Per i debiti: bollette arretrate, mutui residui, rate di prestiti.</p>
         </div>
+        <InfoBox type="tip">
+          <p><strong>Il conto corrente si sblocca solo con la successione presentata.</strong> La banca blocca i conti del defunto. Per sbloccarli serve la ricevuta di presentazione della dichiarazione. Non aspettare i 12 mesi: inizia subito.</p>
+        </InfoBox>
+        <InfoBox type="warn">
+          <p><strong>Accettare con beneficio d&apos;inventario.</strong> Se temi debiti nascosti, puoi accettare l&apos;eredit&agrave; &ldquo;con beneficio d&apos;inventario&rdquo;: rispondi dei debiti solo fino al valore dei beni ricevuti. Va dichiarato dal notaio o in Tribunale entro 3 mesi.</p>
+        </InfoBox>
       </Section>
 
       <Section id="procedura" title="Come si fa:" titleEm="passo per passo">
@@ -89,6 +95,9 @@ export default function SuccessioneGuide({ faqItems }) {
           { title: 'Trasmetti la dichiarazione', text: 'Il CAF trasmette telematicamente la dichiarazione all\'Agenzia delle Entrate. Ricevi la ricevuta di presentazione. Con questa puoi sbloccare i conti bancari del defunto e trasferire gli immobili a tuo nome.' },
           { title: 'Trascrivi gli immobili', text: 'Per passare formalmente gli immobili a nome degli eredi, la dichiarazione accettata dall\'Agenzia delle Entrate deve essere trascritta nei registri immobiliari. Lo fa il notaio o, per le successioni semplici, il CAF stesso.' },
         ]} />
+        <InfoBox type="warn">
+          <p><strong>Accettare con beneficio d&apos;inventario.</strong> Se temi debiti nascosti, puoi accettare l&apos;eredit&agrave; &ldquo;con beneficio d&apos;inventario&rdquo;: rispondi dei debiti solo fino al valore dei beni ricevuti. Va dichiarato dal notaio o in Tribunale entro 3 mesi.</p>
+        </InfoBox>
       </Section>
 
       <Section bg="dark" id="esempio">

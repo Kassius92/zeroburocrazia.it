@@ -51,6 +51,9 @@ export default function MiSposoGuide({ faqItems }) {
           <p>I certificati di stato libero e di nascita li chiede direttamente l&apos;Ufficio di Stato Civile tramite il sistema ANPR: in molti Comuni non devi raccoglierli tu. Chiedi prima se lo fanno d&apos;ufficio.</p>
           <p><strong>Se uno degli sposi &egrave; straniero:</strong> serve il <strong>nulla osta</strong> rilasciato dall&apos;Ambasciata o dal Consolato del suo Paese in Italia. I tempi per il nulla osta variano molto da Paese a Paese (da pochi giorni a mesi): informati subito.</p>
           <p><strong>Se uno degli sposi &egrave; vedovo/a o divorziato/a:</strong> serve il certificato di morte del coniuge precedente, oppure la sentenza di divorzio passata in giudicato.</p>
+        <InfoBox type="warn">
+          <p><strong>Se uno degli sposi &egrave; straniero, inizia subito a richiedere il nulla osta.</strong> I tempi variano da pochi giorni (Paesi UE) a diversi mesi (alcuni Paesi extracomunitari). Senza nulla osta non si pu&ograve; procedere con le pubblicazioni.</p>
+        </InfoBox>
         </div>
       </Section>
 
@@ -73,6 +76,9 @@ export default function MiSposoGuide({ faqItems }) {
           <p>Se scegliete la <strong>separazione dei beni</strong> davanti al notaio invece che dichiarandola al momento del matrimonio: costo 500-1.000&euro;.</p>
           <p>Il <strong>congedo matrimoniale</strong> ti spetta per legge: 15 giorni di calendario retribuiti al 100%, da usare entro 30 giorni dal matrimonio. Vale anche per le unioni civili.</p>
           <p>Nel 2026 <strong>non esiste un bonus matrimonio statale</strong>. L&apos;unica agevolazione diretta &egrave; il congedo. Sposarsi apre per&ograve; la porta ad altri vantaggi: 730 congiunto, ISEE familiare, detrazioni per coniuge a carico, mutuo prima casa insieme.</p>
+        <InfoBox type="tip">
+          <p><strong>Congedo matrimoniale: comunicalo con anticipo al datore.</strong> Hai 30 giorni dal matrimonio per usarlo, ma il datore di lavoro deve esserne informato prima. Fallo per iscritto (email o PEC).</p>
+        </InfoBox>
         </div>
       </Section>
 

@@ -114,15 +114,15 @@
 /* ═══════════════════════════════════
    5. STEP CARDS (percorso)
    ═══════════════════════════════════ */
-.v8-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.v8-steps{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}.v8-step{flex:1 1 220px;max-width:320px}
 .v8-step{background:var(--v8-card);border:1px solid rgba(0,0,0,.05);border-radius:20px;padding:32px 24px;text-align:center;position:relative;transition:all .4s var(--v8-smooth)}
 .v8-step:hover{transform:translateY(-6px);box-shadow:0 12px 36px rgba(0,0,0,.06);border-color:transparent}
 .v8-step-num{width:48px;height:48px;border-radius:50%;background:var(--v8-green-bg);color:var(--v8-green);font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;transition:all .35s var(--v8-smooth)}
 .v8-step:hover .v8-step-num{background:var(--v8-green);color:#fff}
 .v8-step h3{font-size:16px;font-weight:700;margin-bottom:8px}
 .v8-step p{font-size:13px;color:var(--v8-soft);line-height:1.5}
-@media(max-width:768px){.v8-steps{grid-template-columns:1fr 1fr;gap:12px}}
-@media(max-width:480px){.v8-steps{grid-template-columns:1fr}}
+@media(max-width:768px){.v8-step{flex:1 1 calc(50% - 8px);max-width:none}}
+@media(max-width:480px){.v8-step{flex:1 1 100%;max-width:none}}
 
 
 /* ═══════════════════════════════════
@@ -500,6 +500,8 @@
 .v8-prose p{font-size:17px;line-height:1.8;color:var(--v8-ink2);margin-bottom:16px}
 .v8-prose p:last-child{margin-bottom:0}
 .v8-prose strong{color:var(--v8-ink)}
+.v8-prose a{color:var(--v8-green);font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--v8-green-bg);transition:border-color .2s}
+.v8-prose a:hover{border-bottom-color:var(--v8-green)}
 
 
 /* ═══════════════════════════════════

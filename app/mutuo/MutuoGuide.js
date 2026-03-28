@@ -63,7 +63,7 @@ export default function MutuoGuide({ faqItems }) {
           <p>Il Fondo di Garanzia Consap permette di ottenere il mutuo fino al <strong>100% del valore dell&apos;immobile</strong> senza anticipo. Lo Stato garantisce fino all&apos;80% del mutuo alla banca, riducendo il rischio per l&apos;istituto di credito.</p>
           <p><strong>Requisiti principali nel 2026:</strong> et&agrave; under 36; ISEE non superiore a 40.000&euro;; acquisto di prima casa; immobile non di lusso (non categorie A/1, A/8, A/9).</p>
           <p>La garanzia Consap <strong>non &egrave; automatica</strong>: la richiedi attraverso la banca al momento della domanda di mutuo. La banca istruisce la pratica e la trasmette al Consap, che ha 20 giorni per rispondere. I tempi totali si allungano di 3-4 settimane rispetto a un mutuo ordinario.</p>
-          <p>Con la garanzia Consap puoi comprare casa anche senza avere il 20% di anticipo. Devi per&ograve; avere comunque i soldi per le spese accessorie (notaio, imposta, perizia, agenzia: circa 5-10% del prezzo).</p>
+          <p>Con la garanzia Consap puoi comprare casa anche senza avere il 20% di anticipo. Devi per&ograve; avere comunque i soldi per le spese accessorie (notaio, imposta, perizia, agenzia: <Link href="/compro-casa">circa 5-10% del prezzo</Link>).</p>
         </div>
         <InfoBox type="warn">
           <p><strong>Attenzione: zero anticipo non significa zero soldi.</strong> Anche con il 100% finanziato dalla banca, ti servono 10.000-20.000&euro; per le spese di rogito, perizia, agenzia e imposte. Non trascurarle nel calcolo.</p>

@@ -71,6 +71,9 @@ export default function ImuGuide({ faqItems }) {
           <p>Il <strong>moltiplicatore</strong> dipende dalla categoria catastale: per le abitazioni (A, escluso A/10) &egrave; 160; per i garage (C/6) &egrave; 140; per i negozi (C/1) &egrave; 55; per gli uffici (A/10, B) &egrave; 80; per i capannoni (D) &egrave; 65.</p>
           <p>L&apos;<strong>aliquota</strong> &egrave; quella deliberata dal tuo Comune per l&apos;anno in corso. L&apos;aliquota base per la seconda casa &egrave; 8,6&permil;, ma il Comune pu&ograve; portarla fino a 10,6&permil; (o 11,4&permil; con la maggiorazione). Trova le aliquote sul Portale del Federalismo Fiscale (portaletelematico.mef.gov.it).</p>
           <p><strong>Esempio:</strong> Rendita catastale 800&euro; &rarr; 800 &times; 1,05 = 840 &rarr; 840 &times; 160 = 134.400&euro; (base imponibile) &rarr; 134.400 &times; 0,0086 (8,6&permil;) = <strong>1.155,84&euro;/anno</strong>.</p>
+        <InfoBox type="tip">
+          <p><strong>Trova le aliquote del tuo Comune.</strong> Vai sul Portale del Federalismo Fiscale (portaletelematico.mef.gov.it), cerca il tuo Comune e scarica la delibera IMU dell&apos;anno in corso. Le aliquote cambiano ogni anno.</p>
+        </InfoBox>
         </div>
       </Section>
 
