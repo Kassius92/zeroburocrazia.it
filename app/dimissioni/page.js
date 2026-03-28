@@ -1,379 +1,195 @@
-import Nav from '@/components/Nav';
-import Footer from '@/components/Footer';
-import ScrollReveal from '@/components/ScrollReveal';
-import GuideEnhancer from '@/components/GuideEnhancer';
-import TOC from '@/components/TOC';
-import FAQ from '@/components/FAQ';
-import PrintButton from '@/components/PrintButton';
-import SidebarToggle from '@/components/SidebarToggle';
-import QuizDimissioni from '@/components/QuizDimissioni';
-import Tip from '@/components/Tip';
-import SidebarFiscozen from '@/components/SidebarFiscozen';
-import StickyFiscozen from '@/components/StickyFiscozen';
-import VersionToggle from '@/components/VersionToggle';
+import Link from 'next/link';
+import NavV8 from '@/components/redesign/NavV8';
+import FooterV8 from '@/components/redesign/FooterV8';
 import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
+import Tip from '@/components/Tip';
+import GuideClient from './Guide730Client';
+import { FiscozenBanner, FiscozenSticky } from '@/components/redesign/FiscozenBanner';
 
 export const metadata = {
   title: 'Come Dare le Dimissioni nel 2026: Procedura Online, Preavviso e TFR',
-  description: 'Come dare le dimissioni volontarie online nel 2026: procedura telematica INPS, giorni di preavviso per CCNL, revoca entro 7 giorni, TFR e ultima busta paga. Guida gratuita.',
-  keywords: ["dimissioni", "dimissioni volontarie", "dimissioni online", "preavviso dimissioni", "come dare dimissioni", "TFR dimissioni", "giusta causa", "ClicLavoro", "ultima busta paga", "ferie non godute"],
+  description: 'Come dare le dimissioni volontarie online nel 2026: procedura telematica, giorni di preavviso per CCNL, revoca entro 7 giorni, TFR e ultima busta paga.',
+  keywords: ['dimissioni','dimissioni volontarie','dimissioni online','preavviso dimissioni','TFR dimissioni','giusta causa','ClicLavoro'],
   alternates: { canonical: 'https://zeroburocrazia.it/dimissioni' },
-  openGraph: {
-    title: 'Come Dare le Dimissioni nel 2026: Procedura Online, Preavviso e TFR',
-    description: 'Come dare le dimissioni volontarie online nel 2026: procedura telematica INPS, giorni di preavviso per CCNL, revoca entro 7 giorni, TFR e ultima busta paga. Guida gratuita.',
-    url: 'https://zeroburocrazia.it/dimissioni',
-    type: 'article',
-    siteName: 'ZeroBurocrazia',
-    locale: 'it_IT',
-    images: [{ url: 'https://zeroburocrazia.it/ogdimissioni.png', width: 1200, height: 630 }],
-  },
-  twitter: { card: 'summary_large_image', title: 'Come Dare le Dimissioni nel 2026: Procedura Online, Preavviso e TFR', description: 'Come dare le dimissioni volontarie online nel 2026: procedura telematica INPS, giorni di preavviso per CCNL, revoca entro 7 giorni, TFR e ultima busta paga. Guida gratuita.', images: ['https://zeroburocrazia.it/ogdimissioni.png'] },
+  openGraph: { title: 'Come Dare le Dimissioni nel 2026', url: 'https://zeroburocrazia.it/dimissioni', type: 'article', siteName: 'ZeroBurocrazia', locale: 'it_IT', images: [{ url: 'https://zeroburocrazia.it/ogdimissioni.png', width: 1200, height: 630 }] },
+  twitter: { card: 'summary_large_image', images: ['https://zeroburocrazia.it/ogdimissioni.png'] },
 };
 
-const tocItems = [
-  { id: 'sintesi', label: 'In sintesi' },
-  { id: 'cose', label: 'Come funziona' },
-  { id: 'procedura', label: 'Procedura online' },
-  { id: 'preavviso', label: 'Preavviso' },
-  { id: 'soldi', label: 'TFR e soldi' },
-  { id: 'errori', label: 'Errori', bh: true },
-  { id: 'esempio', label: 'Esempio pratico', bh: true },
-  { id: 'faq', label: 'FAQ', bh: true },
-];
-
 const faqItems = [
-  { q: "Posso revocare le dimissioni?", a: "<strong>S\u00EC, entro 7 giorni</strong> dall\u2019invio del modulo telematico. Accedi di nuovo al portale e revoca. Dopo i 7 giorni non \u00E8 pi\u00F9 possibile \u2014 a meno che il datore non accetti di riprenderti." },
-  { q: "Cosa succede se non rispetto il preavviso?", a: "Il datore pu\u00F2 <strong>trattenerti dall\u2019ultima busta paga</strong> l\u2019indennit\u00E0 sostitutiva del preavviso \u2014 ti scala lo stipendio dei giorni non lavorati. Per\u00F2 puoi accordarti per rinunciare al preavviso: se lui accetta, nessuna trattenuta." },
-  { q: "Le ferie non godute vengono pagate?", a: "<strong>S\u00EC.</strong> Nell\u2019ultima busta paga ricevi: stipendio dei giorni lavorati, ferie e permessi non goduti, ratei di tredicesima (e quattordicesima se prevista), e il TFR. Il TFR pu\u00F2 arrivare anche qualche settimana dopo." },
-  { q: "Le dimissioni durante il periodo di prova?", a: "Durante il <strong>periodo di prova</strong> non serve la procedura telematica. Puoi dimetterti liberamente, senza preavviso e senza motivazione. Basta una comunicazione scritta \u2014 anche un\u2019email." },
-  { q: "Posso dimettermi se sono in malattia?", a: "<strong>S\u00EC</strong>, puoi inviare le dimissioni durante la malattia. Per\u00F2 la malattia <strong>sospende il preavviso</strong>: la data di fine rapporto slitta di tanti giorni quanti sono quelli di malattia." },
-  { q: "Ho diritto alla NASpI se mi dimetto?", a: "<strong>No</strong>, le dimissioni volontarie non danno diritto alla NASpI. Fanno eccezione le dimissioni per <strong>giusta causa</strong> e quelle durante il <strong>periodo di maternit\u00E0/paternit\u00E0</strong> (primo anno di vita del figlio)." },
-  { q: "Devo avvisare il datore prima di fare la procedura online?", a: "Non sei obbligato per legge, ma \u00E8 <strong>fortemente consigliato</strong>. Avvisare il responsabile prima di inviare il modulo \u00E8 una questione di rispetto professionale e ti aiuta a gestire meglio preavviso e passaggio di consegne." },
-  { q: "Chi \u00E8 escluso dalla procedura telematica?", a: "Dipendenti pubblici, lavoratori domestici (colf, badanti), chi \u00E8 in periodo di prova, e chi si dimette nelle sedi conciliative. Anche i <strong>genitori con figli sotto i 3 anni</strong> devono convalidare le dimissioni all\u2019Ispettorato Territoriale del Lavoro." },
+  { q: "Posso revocare le dimissioni?", a: "<strong>S\u00ec, entro 7 giorni</strong> dall\u2019invio del modulo telematico. Accedi di nuovo al portale e revoca. Dopo i 7 giorni non \u00e8 pi\u00f9 possibile, a meno che il datore non accetti di riprenderti." },
+  { q: "Cosa succede se non rispetto il preavviso?", a: "Il datore pu\u00f2 <strong>trattenerti dall\u2019ultima busta paga</strong> l\u2019indennit\u00e0 sostitutiva del preavviso: ti scala lo stipendio dei giorni non lavorati. Per\u00f2 puoi accordarti per rinunciare al preavviso: se lui accetta, nessuna trattenuta." },
+  { q: "Le ferie non godute vengono pagate?", a: "<strong>S\u00ec.</strong> Nell\u2019ultima busta paga ricevi: stipendio dei giorni lavorati, ferie e permessi non goduti, ratei di tredicesima (e quattordicesima se prevista), e il TFR. Il TFR pu\u00f2 arrivare anche qualche settimana dopo." },
+  { q: "Le dimissioni durante il periodo di prova?", a: "Durante il <strong>periodo di prova</strong> non serve la procedura telematica. Puoi dimetterti liberamente, senza preavviso e senza motivazione. Basta una comunicazione scritta, anche un\u2019email." },
+  { q: "Posso dimettermi se sono in malattia?", a: "<strong>S\u00ec</strong>, puoi inviare le dimissioni durante la malattia. Per\u00f2 la malattia <strong>sospende il preavviso</strong>: la data di fine rapporto slitta di tanti giorni quanti sono quelli di malattia." },
+  { q: "Ho diritto alla NASpI se mi dimetto?", a: "<strong>No</strong>, le dimissioni volontarie non danno diritto alla NASpI. Fanno eccezione le dimissioni per <strong>giusta causa</strong> (stipendio non pagato, mobbing) e quelle durante il <strong>primo anno di vita del figlio</strong>." },
+  { q: "Chi \u00e8 escluso dalla procedura telematica?", a: "Dipendenti pubblici, lavoratori domestici (colf, badanti), chi \u00e8 in periodo di prova, chi si dimette nelle sedi conciliative. I genitori con figli sotto i 3 anni devono convalidare le dimissioni all\u2019Ispettorato del Lavoro." },
 ];
 
 export default function Page() {
   const schemas = [
-    articleSchema({ title: 'Dimissioni volontarie online 2026: procedura, preavviso e TFR', description: 'Come dare le dimissioni volontarie online nel 2026: procedura telematica, preavviso CCNL, revoca e TFR.', url: '/dimissioni', image: 'ogdimissioni.png', datePublished: '2026-03-07', dateModified: '2026-03-09' }),
+    articleSchema({ title: 'Come dare le dimissioni nel 2026', description: 'Procedura online, preavviso, TFR e ultima busta paga.', url: '/dimissioni', image: 'ogdimissioni.png', datePublished: '2026-03-07', dateModified: '2026-03-28' }),
     faqSchema(faqItems),
   ];
 
   return (
-    <div className="cat-lavoro">
-    <>
-      <Nav variant="scheda" />
-      <ScrollReveal />
-      <GuideEnhancer />
+    <div className="v8">
       <SchemaOrg schemas={schemas} />
+      <GuideClient />
+      <NavV8 />
+      <FiscozenSticky />
 
-      {/* HERO */}
-      <section className="hero">
-        <div className="hero-mesh"></div><div className="blob b1"></div><div className="blob b2"></div><div className="blob b3"></div>
-        <svg className="ring" viewBox="0 0 360 360" fill="none">
-          <circle cx="180" cy="180" r="170" stroke="#0F4C5C" strokeWidth="1"/><circle cx="180" cy="180" r="130" stroke="#0F4C5C" strokeWidth=".8"/><circle cx="180" cy="180" r="90" stroke="#E36414" strokeWidth=".8"/>
-          <line x1="10" y1="180" x2="350" y2="180" stroke="#0F4C5C" strokeWidth=".6"/><line x1="180" y1="10" x2="180" y2="350" stroke="#0F4C5C" strokeWidth=".6"/>
-          <line x1="60" y1="60" x2="300" y2="300" stroke="#0F4C5C" strokeWidth=".5"/><line x1="300" y1="60" x2="60" y2="300" stroke="#0F4C5C" strokeWidth=".5"/>
-          <circle cx="180" cy="10" r="4" fill="#E36414" opacity=".6"/><circle cx="180" cy="350" r="4" fill="#E36414" opacity=".6"/>
-          <circle cx="10" cy="180" r="4" fill="#2A9D8F" opacity=".6"/><circle cx="350" cy="180" r="4" fill="#2A9D8F" opacity=".6"/>
-        </svg>
-        <div className="shimmer-line"></div>
-        <div className="hero-c">
-          <div className="hero-left">
-            <div className="cat-badge">{'\uD83D\uDCBC'} Lavoro</div>
-            <div className="hero-tag"><span className="tag-dot"></span> Guida gratuita completa</div>
-            <h1>Mi <em>dimetto</em></h1>
-            <p className="hero-sub">Come dare le dimissioni nel modo giusto. Procedura online, preavviso, TFR e gli errori che ti costano soldi.</p>
-            <div className="hero-pills">
-              <span className="pill pill-g">{'\u2726'} 100% gratuita</span>
-              <span className="pill pill-b">{'\uD83D\uDD50'} 8 min di lettura</span>
-              <span className="pill pill-s">{'\u2713'} Aggiornato marzo 2026</span>
-            </div>
-            <div className="hero-source"><strong>Fonti:</strong> Ministero del Lavoro · INPS · D.Lgs. 151/2015 · CCNL Commercio e Metalmeccanici</div>
-            <div className="hero-actions"><PrintButton /><VersionToggle /></div>
-          </div>
-          <div className="hero-right">
-            <div className="hstat"><div className="hn">Online</div><div className="hl">procedura solo<br/>telematica</div></div>
-            <div className="hstat"><div className="hn">7gg</div><div className="hl">tempo per<br/>revocare</div></div>
-            <div className="hstat"><div className="hn">SPID</div><div className="hl">serve per<br/>accedere</div></div>
+      <section className="v8-ghero" id="hero" style={{'--glow1':'rgba(196,154,42,.06)'}}>
+        <div className="v8-ghero-inner">
+          <div className="v8-ghero-cat lavoro rv">Lavoro &middot; Aggiornato marzo 2026</div>
+          <h1 className="rv rv-d1">Come dare le <em>dimissioni</em></h1>
+          <p className="v8-ghero-sub rv rv-d2">Procedura telematica, preavviso, TFR e ultima busta paga. Tutto quello che devi sapere per uscire pulito.</p>
+          <div className="v8-ghero-nums">
+            <div className="v8-ghero-num rv-scale rv-d1"><strong>5 min</strong><span>Procedura online</span></div>
+            <div className="v8-ghero-num rv-scale rv-d2"><strong>7 gg</strong><span>Per revocare</span></div>
+            <div className="v8-ghero-num rv-scale rv-d3"><strong>TFR</strong><span>Ti spetta sempre</span></div>
           </div>
         </div>
       </section>
 
-      <TOC items={tocItems} />
-
-      <div className="layout">
-        <main className="main">
-
-          {/* PERCORSO */}
-          <div className="perc r">
-            <span className="perc-label">Guide correlate</span>
-            <div className="perc-steps">
-              <a href="/tfr" className="ps">💰 TFR</a>
-              <a href="/naspi" className="ps">💼 NASpI</a>
-              <span className="ps ps-soon">📄 Busta paga: come leggerla <span className="ps-tag">Presto</span></span>
-            </div>
+      <section className="v8-section" id="cose">
+        <div className="v8-section-inner">
+          <div className="v8-section-head"><h2 className="rv">Come funzionano le <em>dimissioni</em></h2></div>
+          <div className="v8-prose rv">
+            <p>Dal 2016 le dimissioni volontarie si danno solo in un modo: <strong>online</strong>, attraverso il portale del Ministero del Lavoro (servizi.lavoro.gov.it). La lettera di dimissioni cartacea non ha pi&ugrave; valore legale per i dipendenti privati. Questa regola serve a proteggere i lavoratori dalle &ldquo;dimissioni in bianco&rdquo; &mdash; fogli firmati in anticipo che il datore poteva usare per licenziarti senza procedura.</p>
+            <p>Il processo &egrave; semplice: accedi con SPID, compili un modulo con i tuoi dati e la data di decorrenza (il giorno dopo il tuo ultimo giorno di lavoro), e invii. Ricevi una ricevuta con protocollo. Il datore riceve la comunicazione automaticamente. Hai 7 giorni per revocare se cambi idea.</p>
+            <h3 style={{fontFamily:'var(--font-sf),Georgia,serif',fontSize:'24px',marginTop:'40px',marginBottom:'20px'}}>Le parole che devi conoscere</h3>
+            <p><strong>Dimissioni volontarie</strong> &mdash; ti dimetti di tua volont&agrave;. Non hai diritto alla NASpI. Devi rispettare il preavviso del tuo CCNL.</p>
+            <p><strong>Dimissioni per giusta causa</strong> &mdash; ti dimetti perch&eacute; il datore ha violato gravemente i suoi obblighi (non ti paga, mobbing, molestie). Non devi dare il preavviso e hai diritto alla NASpI.</p>
+            <p><strong>Preavviso</strong> &mdash; il periodo minimo tra la comunicazione delle dimissioni e l&apos;ultimo giorno di lavoro. Dipende dal CCNL, dal livello e dall&apos;anzianit&agrave;. Se non lo rispetti, il datore pu&ograve; trattenerti i giorni mancanti dalla busta paga.</p>
+            <p><strong>Data di decorrenza</strong> &mdash; il giorno in cui il rapporto di lavoro cessa. &Egrave; il giorno <strong>dopo</strong> il tuo ultimo giorno di lavoro. Esempio: ultimo giorno 31 marzo = decorrenza 1&deg; aprile.</p>
+            <p><strong>TFR</strong> &mdash; Trattamento di Fine Rapporto, la &ldquo;liquidazione&rdquo;. Ti spetta sempre, anche se ti dimetti. Circa una mensilit&agrave; per ogni anno di lavoro.</p>
+            <p><strong>Revoca</strong> &mdash; puoi annullare le dimissioni entro 7 giorni dall&apos;invio del modulo telematico. Dopo i 7 giorni sono definitive.</p>
           </div>
+        </div>
+      </section>
 
-<div className="perc r">
-            <span className="perc-label">Link utili</span>
-            <div className="perc-steps">
-              <a href="https://www.lavoro.gov.it" target="_blank" rel="noopener noreferrer" className="ps">🏛 Invia dimissioni</a>
-              <a href="https://www.inps.it" target="_blank" rel="noopener noreferrer" className="ps">📋 Domanda NASpI</a>
-              <a href="https://www.cliclavoro.gov.it" target="_blank" rel="noopener noreferrer" className="ps">💼 ClicLavoro</a>
-            </div>
+      <section className="v8-section warm" id="procedura">
+        <div className="v8-section-inner">
+          <div className="v8-section-head"><h2 className="rv">Procedura <em>online</em></h2><p className="rv rv-d1">5 minuti su servizi.lavoro.gov.it con SPID.</p></div>
+          <div className="v8-steps">
+            <div className="v8-step rv rv-d1"><div className="v8-step-num">1</div><h3>Accedi con SPID</h3><p>Vai su servizi.lavoro.gov.it, accedi con SPID. Cerca &ldquo;Dimissioni volontarie&rdquo;.</p></div>
+            <div className="v8-step rv rv-d2"><div className="v8-step-num">2</div><h3>Compila il modulo</h3><p>Inserisci i dati del datore (codice fiscale azienda, email PEC), il tipo di dimissioni (volontarie o giusta causa) e la data di decorrenza.</p></div>
+            <div className="v8-step rv rv-d3"><div className="v8-step-num">3</div><h3>Invia e scarica la ricevuta</h3><p>Il sistema genera un modulo con numero di protocollo. Il datore riceve la comunicazione in automatico. Conserva la ricevuta.</p></div>
+            <div className="v8-step rv rv-d4"><div className="v8-step-num">4</div><h3>Lavora fino all&apos;ultimo giorno</h3><p>Rispetta il preavviso, fai il passaggio di consegne. Nell&apos;ultimo giorno il datore ti d&agrave; la busta paga finale + TFR.</p></div>
           </div>
+          <div className="v8-info warn rv" style={{maxWidth:'700px',margin:'32px auto 0'}}>
+            <svg className="v8-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <div><p><strong>Attenzione alla data di decorrenza.</strong> &Egrave; il giorno DOPO il tuo ultimo giorno di lavoro, non il giorno in cui invii il modulo. Sbagliare crea trattenute o contestazioni.</p></div>
+          </div>
+        </div>
+      </section>
 
-          {/* SINTESI */}
-          <div className="sec r" id="sintesi">
-            <div className="sintesi">
-              <div className="sintesi-label">{'\u26A1'} In sintesi</div>
-              <div className="scards">
-                <div className="sc tc r d1"><div className="si">{'\uD83D\uDCBB'}</div><div className="sn">Solo online</div><div className="sl">procedura telematica obbligatoria</div></div>
-                <div className="sc sg r d2"><div className="si">{'\uD83D\uDD10'}</div><div className="sn">SPID / CIE</div><div className="sl">per accedere al portale</div></div>
-                <div className="sc    r d3"><div className="si">{'\u23F1'}</div><div className="sn">5 minuti</div><div className="sl">per completare la procedura</div></div>
-                <div className="sc    r d1"><div className="si">{'\u21A9\uFE0F'}</div><div className="sn">7 giorni</div><div className="sl">per revocare le dimissioni</div></div>
-                <div className="sc    r d2"><div className="si">{'\uD83D\uDCCB'}</div><div className="sn">Preavviso</div><div className="sl">dipende da CCNL e anzianit&agrave;</div></div>
-                <div className="sc bl r d3"><div className="si">{'\uD83D\uDCB0'}</div><div className="sn">TFR</div><div className="sl">ti spetta sempre, in ogni caso</div></div>
+      <section className="v8-section" id="preavviso">
+        <div className="v8-section-inner">
+          <div className="v8-section-head"><h2 className="rv">Quanti giorni di <em>preavviso</em></h2><p className="rv rv-d1">Dipende dal tuo CCNL, dal livello e dall&apos;anzianit&agrave;.</p></div>
+          <div className="v8-prose rv">
+            <h3 style={{fontFamily:'var(--font-sf),Georgia,serif',fontSize:'22px',marginBottom:'12px'}}>CCNL Commercio e Terziario</h3>
+            <p>Quadri e I livello: 45 giorni (sotto 5 anni) o 60 giorni (oltre 5 anni). II e III livello: 20 giorni (sotto 5 anni) o 30 giorni (oltre 5 anni). IV e V livello: 15 giorni (sotto 5 anni) o 20 giorni (oltre 5 anni). VI e VII livello: 10 giorni (sotto 5 anni) o 15 giorni (oltre 5 anni). Nel Commercio il preavviso decorre dal 1&deg; o dal 16 del mese.</p>
+            <h3 style={{fontFamily:'var(--font-sf),Georgia,serif',fontSize:'22px',marginTop:'32px',marginBottom:'12px'}}>CCNL Metalmeccanici</h3>
+            <p>Categorie 6-7 (operai): 5-10 giorni lavorativi. Categorie 5 (impiegati base): 7-15 giorni. Categorie 3-4: 15-30 giorni. Categorie 1-2 (quadri): 1-2 mesi. Nel Metalmeccanico il preavviso si conta in giorni lavorativi (non di calendario).</p>
+          </div>
+          <div className="v8-info tip rv" style={{maxWidth:'700px',margin:'24px auto 0'}}>
+            <svg className="v8-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            <div><p><strong>Non sai il tuo CCNL o livello?</strong> Guarda la tua busta paga: in alto trovi il CCNL applicato e il tuo livello di inquadramento. Nel dubbio, chiedi al patronato &mdash; &egrave; gratis.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="v8-section warm" id="soldi">
+        <div className="v8-section-inner">
+          <div className="v8-section-head"><h2 className="rv">TFR, ultima busta paga <em>e soldi</em></h2></div>
+          <div className="v8-prose rv">
+            <p>Quando ti dimetti ti spettano: lo <strong>stipendio dei giorni lavorati</strong> nell&apos;ultimo mese, le <strong>ferie non godute</strong> (pagate), i <strong>permessi non goduti</strong>, i <strong>ratei di tredicesima</strong> (e quattordicesima se prevista dal tuo CCNL), e il <strong>TFR</strong> (circa una mensilit&agrave; per ogni anno di lavoro). Il TFR pu&ograve; arrivare anche qualche settimana dopo l&apos;ultima busta paga, su un bonifico separato.</p>
+            <p>Se non rispetti il preavviso, il datore pu&ograve; trattenerti l&apos;indennit&agrave; sostitutiva (lo stipendio dei giorni di preavviso non lavorati). Per evitarlo, puoi proporre un accordo scritto di rinuncia reciproca al preavviso.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="v8-section" id="giusta-causa">
+        <div className="v8-section-inner">
+          <div className="v8-section-head"><h2 className="rv">Dimissioni per <em>giusta causa</em></h2><p className="rv rv-d1">Non devi dare preavviso e hai diritto alla NASpI.</p></div>
+          <div className="v8-prose rv">
+            <p>Le dimissioni per giusta causa si danno quando il datore ha violato gravemente i suoi obblighi contrattuali. I casi pi&ugrave; comuni sono: <strong>stipendio non pagato</strong> da almeno 2-3 mesi, <strong>mobbing</strong> documentato, <strong>molestie sessuali</strong>, <strong>trasferimento immotivato</strong> oltre 50 km, <strong>demansionamento</strong> grave, mancato versamento dei contributi INPS.</p>
+            <p>Con la giusta causa non devi dare il preavviso, hai diritto alla NASpI (disoccupazione), e puoi chiedere il risarcimento del danno. &Egrave; fondamentale avere <strong>prove documentali</strong>: PEC, email, SMS, testimoni, referti medici. Senza prove, l&apos;INPS pu&ograve; rifiutare la NASpI.</p>
+          </div>
+          <div className="v8-info tip rv" style={{maxWidth:'700px',margin:'24px auto 0'}}>
+            <svg className="v8-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            <div><p><strong>Vuoi dimetterti per giusta causa?</strong> Vai prima al sindacato o da un avvocato del lavoro. Ti aiutano a raccogliere le prove e a presentare correttamente le dimissioni. Non comunicare nulla al datore finch&eacute; non hai le prove documentate.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="v8-section dark" id="esempio">
+        <div className="v8-esempio-inner">
+          <h2 className="rv">L&apos;esempio di <em>Elena</em></h2>
+          <div className="v8-esempio-story">
+            <p className="rv rv-d1"><strong style={{color:'var(--v8-bg)'}}>Elena ha 29 anni</strong>, impiegata a Firenze (CCNL Commercio, IV livello, 3 anni). Stipendio 1.500&euro; netti. Ha trovato un lavoro migliore. IV livello Commercio, meno di 5 anni: <strong style={{color:'var(--v8-bg)'}}>15 giorni di preavviso</strong>. Avvisa il capo, calcola le date, invia il modulo online in 5 minuti.</p>
+          </div>
+          <div className="v8-esempio-math">
+            <div className="v8-esempio-line rv rv-d1"><span>Ultima busta paga (marzo)</span><span>~1.500&euro;</span></div>
+            <div className="v8-esempio-line rv rv-d2"><span>Ferie non godute (8 giorni)</span><span>~550&euro;</span></div>
+            <div className="v8-esempio-line rv rv-d3"><span>Ratei tredicesima (3/12)</span><span>~375&euro;</span></div>
+            <div className="v8-esempio-line rv rv-d4"><span>TFR (3 anni di lavoro)</span><span>~4.500&euro;</span></div>
+            <div className="v8-esempio-line v8-esempio-total rv"><span>Totale ricevuto</span><span>~7.200&euro;</span></div>
+          </div>
+          <p className="rv" style={{fontSize:'15px',color:'rgba(250,250,247,.4)',marginTop:'24px',lineHeight:'1.7'}}>Elena ha fatto le cose nell&apos;ordine giusto e ha ricevuto <strong style={{color:'#E4F3ED'}}>tutto quello che le spettava</strong>, senza intoppi.</p>
+        </div>
+      </section>
+
+      <section className="v8-section warm" id="errori">
+        <div className="v8-section-inner">
+          <div className="v8-section-head"><h2 className="rv">I 5 errori <em>pi&ugrave; comuni</em></h2></div>
+          <div style={{maxWidth:'700px',margin:'0 auto'}}>
+            <div className="v8-info warn rv" style={{marginBottom:'16px'}}><svg className="v8-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><div><p><strong>Sbagliare la data di decorrenza.</strong> &Egrave; il giorno DOPO il tuo ultimo giorno di lavoro. Sbagliare crea trattenute o contestazioni.</p></div></div>
+            <div className="v8-info warn rv rv-d1" style={{marginBottom:'16px'}}><svg className="v8-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><div><p><strong>Non calcolare il preavviso prima di inviare.</strong> Prima di compilare il modulo, calcola esattamente quanti giorni devi dare. CCNL, livello, anzianit&agrave;. Nel dubbio, patronato.</p></div></div>
+            <div className="v8-info warn rv rv-d2" style={{marginBottom:'16px'}}><svg className="v8-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><div><p><strong>Non controllare l&apos;ultima busta paga.</strong> Ferie non pagate, ratei mancanti, TFR errato: controlla tutto voce per voce. Se non torna, sindacato.</p></div></div>
+            <div className="v8-info warn rv rv-d3"><svg className="v8-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><div><p><strong>Pensare di avere diritto alla NASpI.</strong> Le dimissioni volontarie NON danno diritto alla NASpI. Solo giusta causa o maternit&agrave;/paternit&agrave;.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="v8-section" id="fiscozen">
+        <div className="v8-section-inner">
+          <div className="v8-prose rv" style={{marginBottom:'24px'}}>
+            <p>Dopo le dimissioni vuoi aprire partita IVA? Un commercialista online ti accompagna dall&apos;apertura alla prima dichiarazione.</p>
+          </div>
+          <FiscozenBanner />
+        </div>
+      </section>
+
+      <section className="v8-section warm" id="faq">
+        <div className="v8-section-inner">
+          <div className="v8-section-head"><h2 className="rv">Domande <em>frequenti</em></h2></div>
+          <div className="v8-faq-list" id="faqList">
+            {faqItems.map((item, i) => (
+              <div key={i} className="v8-faq-item" data-faq>
+                <button className="v8-faq-q">{item.q}<span className="v8-faq-icon">+</span></button>
+                <div className="v8-faq-a"><p dangerouslySetInnerHTML={{ __html: item.a }} /></div>
               </div>
-            </div>
-            <QuizDimissioni />
+            ))}
           </div>
+        </div>
+      </section>
 
-
-          {/* COME FUNZIONA */}
-          <div className="sec r" id="cose">
-            <div className="sec-tag">Le basi</div>
-            <h2>Come funzionano le dimissioni nel 2026</h2>
-            <p>Dal 2016, le dimissioni nel settore privato si fanno <strong>solo online</strong>. Niente lettere cartacee — devi usare il portale del Ministero del Lavoro. Il modulo viene inviato automaticamente al datore e all&apos;Ispettorato del Lavoro.</p>
-
-            <h3>Le parole che devi conoscere</h3>
-            <div className="glossary r">
-              <div className="gl-item r d1"><strong>Procedura telematica</strong> — L&apos;unico modo legale per dimettersi dal settore privato. Si fa online su servizi.lavoro.gov.it con <Tip t="L'identità digitale per accedere ai servizi della PA. Se non ce l'hai, fallo prima — ci vogliono 15 minuti.">SPID</Tip> o CIE. Ci vogliono 5 minuti.</div>
-              <div className="gl-item r d2"><strong>Data di decorrenza</strong> — Il giorno <strong>dopo</strong> il tuo ultimo giorno di lavoro. Se il tuo ultimo giorno &egrave; il 31 marzo, la data di decorrenza &egrave; il 1° aprile. &Egrave; l&apos;errore pi&ugrave; comune nel modulo.</div>
-              <div className="gl-item r d3"><strong>Preavviso</strong> — Il periodo tra quando comunichi le dimissioni e il tuo ultimo giorno effettivo. La durata dipende dal tuo <Tip t="Contratto Collettivo Nazionale di Lavoro: l'accordo che regola stipendi, ferie, preavviso e diritti per il tuo settore. Lo trovi scritto nella busta paga.">CCNL</Tip>, il tuo livello e la tua anzianit&agrave;. Se non lo rispetti, il datore ti trattiene i soldi.</div>
-              <div className="gl-item r d4"><strong>TFR (liquidazione)</strong> — I soldi che il datore ha accantonato per te durante gli anni di lavoro. Ti spettano <strong>sempre</strong>, anche se ti dimetti. Circa una mensilit&agrave; per ogni anno di lavoro.</div>
-              <div className="gl-item r d1"><strong>Revoca</strong> — Hai cambiato idea? Hai <strong>7 giorni</strong> dal momento in cui invii il modulo per revocare le dimissioni. Dopo, sono definitive.</div>
-              <div className="gl-item r d2"><strong>Giusta causa</strong> — Se il datore viola gravemente i suoi obblighi (non ti paga, mobbing, molestie), puoi dimetterti senza preavviso e hai diritto alla <a href="/naspi">NASpI</a>. Serve dimostrare la violazione.</div>
-            </div>
-
-            <div className="ib tip r">
-              <div className="ib-t">{'\uD83D\uDCA1'} Chi &egrave; escluso dalla procedura online</div>
-              <p><strong>Dipendenti pubblici</strong>, <strong>lavoratori domestici</strong> (colf, badanti), chi &egrave; in <strong>periodo di prova</strong>, e chi si dimette in <strong>sede conciliativa</strong> (sindacato, Ispettorato). In questi casi basta una comunicazione scritta. I <strong>genitori con figli sotto i 3 anni</strong> devono convalidare le dimissioni all&apos;Ispettorato.</p>
-            </div>
+      <section className="v8-section" id="correlate">
+        <div className="v8-section-inner">
+          <div className="v8-section-head"><h2 className="rv">Guide <em>correlate</em></h2></div>
+          <div className="v8-related-grid rv">
+            <Link href="/dimissioni/preavviso" className="v8-related-card"><h4>Giorni di preavviso</h4><p>Tabella completa per CCNL, livello e anzianit&agrave;.</p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></Link>
+            <Link href="/naspi" className="v8-related-card"><h4>NASpI</h4><p>La disoccupazione: chi ne ha diritto e come chiederla.</p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></Link>
+            <Link href="/tfr" className="v8-related-card"><h4>TFR</h4><p>Quanto ti spetta di liquidazione e quando arriva.</p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></Link>
+            <Link href="/piva" className="v8-related-card"><h4>Aprire P.IVA</h4><p>Dopo le dimissioni vuoi metterti in proprio?</p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></Link>
           </div>
+        </div>
+      </section>
 
-          {/* PROCEDURA ONLINE */}
-          <div className="sec r" id="procedura">
-            <div className="sec-tag">Passo per passo</div>
-            <h2>Come dare le dimissioni online</h2>
-            <p>Puoi farlo da solo in 5 minuti o farti aiutare gratis.</p>
-
-            <div className="steps r">
-              <div className="step r d1"><div className="stepn">1</div><div className="stepb"><strong>Opzione A: Fai da te (5 minuti)</strong><p>Vai su <strong>servizi.lavoro.gov.it</strong> e accedi con SPID o CIE. Seleziona &quot;Dimissioni volontarie&quot;, verifica i dati del rapporto di lavoro (precompilati), indica la <Tip t="Il giorno DOPO il tuo ultimo giorno di lavoro. Se il tuo ultimo giorno è il 31 marzo, scrivi 1° aprile. È l'errore più comune.">data di decorrenza</Tip> e invia. Conserva la ricevuta.</p></div></div>
-              <div className="step r d2"><div className="stepn">2</div><div className="stepb"><strong>Opzione B: <Tip t="CGIL, CISL, UIL, ACLI. Fanno tutto gratis per legge: verificano i dati, calcolano il preavviso e inviano il modulo.">Patronato</Tip> o sindacato (gratis)</strong><p>Vai a un patronato con i documenti. Fanno tutto loro: verificano dati, calcolano il preavviso corretto, inviano il modulo. <strong>Consigliato</strong> se non sei sicuro della data o del preavviso.</p></div></div>
-            </div>
-
-            <h3>Cosa ti serve</h3>
-            <ul className="cl">
-              <li className="cli r d1"><div className="ci">{'\uD83D\uDD10'}</div><div className="clb"><strong>SPID o CIE</strong><span className="note">Per accedere al portale. Se non ce l&apos;hai, <a href="/spid">fallo in 15 minuti</a>.</span></div></li>
-              <li className="cli r d2"><div className="ci">{'\uD83D\uDCC4'}</div><div className="clb"><strong>Dati del rapporto di lavoro</strong><span className="note">Codice fiscale del datore, data di assunzione, tipo di contratto. Li trovi nella busta paga.</span></div></li>
-              <li className="cli r d3"><div className="ci">{'\uD83D\uDCC5'}</div><div className="clb"><strong>La data giusta di decorrenza</strong><span className="note">Calcola il preavviso PRIMA di compilare il modulo (vedi sezione sotto)</span></div></li>
-            </ul>
-
-            <div className="ib warn r">
-              <div className="ib-t">{'\u26A0\uFE0F'} La data di decorrenza NON &egrave; il giorno in cui invii il modulo</div>
-              <p>&Egrave; il <strong>giorno dopo il tuo ultimo giorno di lavoro</strong>. Se il tuo ultimo giorno &egrave; il 31 marzo, scrivi 1° aprile. Sbagliare questa data &egrave; l&apos;errore pi&ugrave; comune e crea problemi con preavviso e competenze di fine rapporto.</p>
-            </div>
-          </div>
-
-          {/* PREAVVISO */}
-          <div className="sec r" id="preavviso">
-            <div className="sec-tag">Le tempistiche</div>
-            <h2>Il preavviso: quanti giorni devi dare</h2>
-            <p>La durata dipende dal tuo <Tip t="Contratto Collettivo Nazionale di Lavoro: il contratto che regola il tuo settore. Trovi il nome del CCNL sulla busta paga.">CCNL</Tip>, il tuo <Tip t="Il numero (es. IV livello, V livello) che indica il tuo inquadramento. Lo trovi sulla busta paga, di solito vicino alla voce 'livello' o 'qualifica'.">livello</Tip> e la tua anzianit&agrave;.</p>
-
-            <h3>CCNL Commercio e Terziario</h3>
-            <p>Nel Commercio il preavviso <strong>non parte dal giorno dopo le dimissioni</strong> ma dal 1° o dal 16° del mese.</p>
-            <div className="tbl-w r">
-              <table className="tbl">
-                <thead><tr><th>Livello</th><th>Fino a 5 anni</th><th>5-10 anni</th><th>Oltre 10 anni</th></tr></thead>
-                <tbody>
-                  <tr><td>Quadri / I livello</td><td>45 giorni</td><td>60 giorni</td><td>90 giorni</td></tr>
-                  <tr><td>II e III livello</td><td>20 giorni</td><td>30 giorni</td><td>45 giorni</td></tr>
-                  <tr><td>IV e V livello</td><td>15 giorni</td><td>20 giorni</td><td>30 giorni</td></tr>
-                  <tr><td>VI e VII livello</td><td>10 giorni</td><td>15 giorni</td><td>20 giorni</td></tr>
-                </tbody>
-              </table>
-            </div>
-
-            <h3>CCNL Metalmeccanici (Industria)</h3>
-            <p>Nei Metalmeccanici il preavviso parte dal <strong>giorno successivo</strong>. Giorni di calendario (inclusi weekend).</p>
-            <div className="tbl-w r">
-              <table className="tbl">
-                <thead><tr><th>Area</th><th>Fino a 5 anni</th><th>5-10 anni</th><th>Oltre 10 anni</th></tr></thead>
-                <tbody>
-                  <tr><td>A1 (ex dirigenti tecnici)</td><td>2 mesi</td><td>3 mesi</td><td>4 mesi</td></tr>
-                  <tr><td>B / C (ex 5°-7°)</td><td>1 mese</td><td>1,5 mesi</td><td>2 mesi</td></tr>
-                  <tr><td>D (ex 1°-3°)</td><td>10 giorni</td><td>15 giorni</td><td>20 giorni</td></tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div className="ib tip r">
-              <div className="ib-t">{'\uD83D\uDCA1'} Dove trovo il mio livello?</div>
-              <p>Guarda la <strong>busta paga</strong>: c&apos;&egrave; scritto il livello di inquadramento e il CCNL applicato. Conoscere il livello &egrave; fondamentale per calcolare i giorni corretti.</p>
-            </div>
-            <div className="ib warn r"><div className="ib-t">{'\u26A0\uFE0F'} Ferie e malattia sospendono il preavviso</div><p>Se vai in malattia durante il preavviso, il conteggio si ferma e la data di uscita slitta in avanti. Stesso discorso per le ferie (salvo accordo scritto col datore).</p></div>
-          </div>
-
-          {/* TFR E SOLDI */}
-          <div className="sec r" id="soldi">
-            <div className="sec-tag">I soldi</div>
-            <h2>TFR, ultima busta paga e competenze</h2>
-            <p>Quando ti dimetti, il datore deve pagarti tutto quello che ti spetta. Non &egrave; un favore — &egrave; un obbligo di legge.</p>
-
-            <div className="ib tip r d1">
-              <div className="ib-t">{'\uD83D\uDCB0'} Cosa ricevi nell&apos;ultima busta paga</div>
-              <p><strong>Stipendio</strong> dei giorni lavorati, <strong>ferie e permessi non goduti</strong> (monetizzati), <strong>ratei di tredicesima</strong> (e quattordicesima se prevista). Tutto arriva con l&apos;ultima busta paga.</p>
-            </div>
-            <div className="ib tip r d2">
-              <div className="ib-t">{'\uD83D\uDCB0'} <Tip t="Trattamento di Fine Rapporto: i soldi che il datore ha accantonato per te ogni mese. Circa una mensilità per ogni anno di lavoro. Ti spettano sempre, anche se ti dimetti.">TFR</Tip> (liquidazione)</div>
-              <p>Il TFR ti spetta <strong>sempre</strong>, anche con dimissioni volontarie. Circa <strong>una mensilit&agrave; per ogni anno di lavoro</strong>. Tempi: alcuni datori lo pagano con l&apos;ultima busta, altri entro 30-45 giorni. Se &egrave; in un fondo pensione, segui le regole del fondo.</p>
-            </div>
-            <div className="ib warn r">
-              <div className="ib-t">{'\u26A0\uFE0F'} Controlla l&apos;ultima busta paga</div>
-              <p>Verifica che ci siano tutte le voci: ferie residue, permessi, ratei, eventuale <Tip t="Se non lavori tutti i giorni di preavviso, il datore può trattenerti lo stipendio dei giorni mancanti. Si chiama 'indennità sostitutiva del preavviso'.">indennit&agrave; sostitutiva</Tip>. Se manca qualcosa, fatti controllare la busta da un patronato o sindacato.</p>
-            </div>
-            <a href="/tfr" className="xlink r"><span className="xlink-em">{'\uD83D\uDCB0'}</span><div className="xlink-t"><strong>TFR: cos&apos;&egrave; e quando spetta</strong> — Come si calcola, quando arriva, e come si tassa.</div><span className="xlink-ar">{'\u2192'}</span></a>
-          </div>
-
-          {/* GIUSTA CAUSA */}
-          <div className="sec breve-hide r" id="giusta-causa">
-            <div className="sec-tag">Caso speciale</div>
-            <h2>Dimissioni per <Tip t="Il datore ha violato gravemente i suoi obblighi: non ti paga, mobbing, molestie, trasferimento immotivato. Puoi dimetterti senza preavviso e hai diritto alla NASpI.">giusta causa</Tip></h2>
-            <p>Se il datore ha commesso violazioni gravi, puoi dimetterti <strong>senza preavviso</strong> e hai diritto alla <strong>NASpI</strong>.</p>
-
-            <h3>Quando si parla di giusta causa</h3>
-            <div className="icgrid r">
-              <div className="ic r d1"><div className="ic-n">Mancato pagamento dello stipendio</div><div className="ic-d">Se il datore non ti paga (o lo paga sistematicamente in ritardo).</div></div>
-              <div className="ic r d2"><div className="ic-n">Mobbing o molestie</div><div className="ic-d">Comportamenti persecutori, molestie sessuali o psicologiche.</div></div>
-              <div className="ic r d3"><div className="ic-n">Mancato versamento dei contributi</div><div className="ic-d">Se il datore non versa i contributi INPS.</div></div>
-              <div className="ic r d4"><div className="ic-n">Variazioni peggiorative</div><div className="ic-d">Demansionamento, trasferimento immotivato, modifica sostanziale senza consenso.</div></div>
-            </div>
-
-            <div className="ib tip r">
-              <div className="ib-t">{'\uD83D\uDCA1'} Conserva le prove</div>
-              <p>Per la giusta causa, devi poter <strong>dimostrare</strong> la violazione (email, buste paga incomplete, testimonianze, diffide). Senza prove, l&apos;INPS potrebbe non riconoscerti la NASpI. Rivolgiti a un sindacato o avvocato prima di procedere.</p>
-            </div>
-            <a href="/naspi" className="xlink r"><span className="xlink-em">{'\uD83D\uDCBC'}</span><div className="xlink-t"><strong>NASpI — Disoccupazione</strong> — Se ti dimetti per giusta causa, hai diritto alla disoccupazione. Scopri quanto e come.</div><span className="xlink-ar">{'\u2192'}</span></a>
-          </div>
-
-          {/* ERRORI */}
-          <div className="sec breve-hide r" id="errori">
-            <div className="sec-tag">Attenzione</div>
-            <h2>I 5 errori pi&ugrave; comuni</h2>
-            <div className="ib warn r d1"><div className="ib-t">{'\u26A0\uFE0F'} Sbagliare la data di decorrenza</div><p>&Egrave; il giorno <strong>dopo</strong> il tuo ultimo giorno di lavoro, non il giorno in cui invii il modulo. Sbagliare crea trattenute in busta paga o contestazioni.</p></div>
-            <div className="ib warn r d2"><div className="ib-t">{'\u26A0\uFE0F'} Non calcolare il preavviso prima di inviare</div><p>Prima di compilare il modulo, calcola esattamente quanti giorni devi dare. Conta il <Tip t="Contratto Collettivo Nazionale di Lavoro. Regola preavviso, ferie, stipendi per il tuo settore.">CCNL</Tip>, il livello e l&apos;anzianit&agrave;. Nel dubbio, patronato.</p></div>
-            <div className="ib warn r d1"><div className="ib-t">{'\u26A0\uFE0F'} Dimenticare la revoca entro 7 giorni</div><p>Se cambi idea, hai <strong>solo 7 giorni</strong>. Dopo, le dimissioni sono definitive. Se hai dubbi, meglio aspettare prima di inviare.</p></div>
-            <div className="ib warn r d2"><div className="ib-t">{'\u26A0\uFE0F'} Non controllare l&apos;ultima busta paga</div><p>Ferie non pagate, ratei mancanti, TFR errato. Controlla tutto e, se qualcosa non torna, fatti aiutare da un sindacato.</p></div>
-            <div className="ib warn r d1"><div className="ib-t">{'\u26A0\uFE0F'} Pensare di avere diritto alla NASpI</div><p>Le dimissioni volontarie <strong>non</strong> danno diritto alla NASpI. Solo quelle per giusta causa o durante maternit&agrave;/paternit&agrave;.</p></div>
-          </div>
-
-          {/* ESEMPIO PRATICO */}
-          <div className="sec breve-hide r" id="esempio">
-            <div className="sec-tag">Caso reale</div>
-            <h2>Esempio pratico: Elena si dimette e riceve 8.200€</h2>
-
-            <p><strong>Elena ha 29 anni</strong>, vive a Firenze e lavora come impiegata amministrativa (CCNL Commercio, IV livello) da 3 anni. Stipendio: 1.500€ netti. Ha trovato un lavoro migliore e vuole dimettersi.</p>
-
-            <h3>Cosa fa Elena</h3>
-            <div className="steps r">
-              <div className="step r d1"><div className="stepn">{'\uD83D\uDCC5'}</div><div className="stepb"><strong>Luned&igrave; 3 marzo: avvisa il capo</strong><p>Parla col responsabile, spiega la situazione. Non &egrave; obbligatorio ma &egrave; la cosa giusta da fare.</p></div></div>
-              <div className="step r d2"><div className="stepn">{'\uD83D\uDCC5'}</div><div className="stepb"><strong>Marted&igrave; 4 marzo: calcola il preavviso</strong><p>IV livello Commercio, meno di 5 anni: <strong>15 giorni di calendario</strong>. Nel CCNL Commercio il preavviso parte dal 16 del mese. Quindi: preavviso dal 16 marzo, ultimo giorno di lavoro il 31 marzo. Data di decorrenza: <strong>1° aprile</strong>.</p></div></div>
-              <div className="step r d3"><div className="stepn">{'\uD83D\uDCC5'}</div><div className="stepb"><strong>Marted&igrave; 4 marzo: invia il modulo online</strong><p>Va su servizi.lavoro.gov.it con lo SPID, compila il modulo, inserisce data di decorrenza 1° aprile, invia. Riceve la ricevuta con protocollo. Tempo: 5 minuti.</p></div></div>
-            </div>
-
-            <h3>Cosa riceve Elena</h3>
-            <div className="dark-block r">
-              <div className="db-row"><span className="db-label">Ultima busta paga (marzo)</span><span className="db-new">~1.500€</span></div>
-              <div className="db-row"><span className="db-label">Ferie non godute (8 giorni)</span><span className="db-new">~550€</span></div>
-              <div className="db-row"><span className="db-label">Ratei tredicesima (3/12)</span><span className="db-new">~375€</span></div>
-              <div className="db-row"><span className="db-label">TFR (3 anni di lavoro)</span><span className="db-new">~4.500€</span></div>
-              <div className="db-row"><span className="db-label">Permessi non goduti</span><span className="db-new">~280€</span></div>
-              <div className="db-row db-total"><span className="db-label">Totale ricevuto</span><span className="db-val">~7.200€</span></div>
-            </div>
-
-            <p>Elena controlla la busta paga e verifica che tutte le voci siano corrette. Il TFR arriva 30 giorni dopo, su un bonifico separato. In totale ha ricevuto <strong>tutto quello che le spettava</strong>, senza intoppi — perch&eacute; ha fatto le cose nell&apos;ordine giusto.</p>
-
-            <div className="ib tip r">
-              <div className="ib-t">{'\uD83D\uDCA1'} La morale</div>
-              <p>Dimettersi nel modo giusto &egrave; semplice se segui 3 regole: <strong>1) calcola il preavviso prima di compilare il modulo</strong>, <strong>2) la data di decorrenza &egrave; il giorno DOPO l&apos;ultimo giorno di lavoro</strong>, <strong>3) controlla l&apos;ultima busta paga</strong> voce per voce. Chi lo fa bene, esce pulito e con tutti i soldi in tasca.</p>
-            </div>
-          </div>
-
-          <div className="aff-block r">
-            <img src="/fiscozen-logo.png" alt="Fiscozen" className="aff-logo" width="120" height="24" />
-            <div className="aff-label">Partner ufficiale ZeroBurocrazia</div>
-            <div className="aff-body">
-              <div className="aff-left">
-                <div className="aff-title">Fiscozen &mdash; Servizio online per la gestione della partita IVA</div>
-                <div className="aff-text">Apertura P.IVA inclusa nell&apos;abbonamento, commercialista dedicato, fatturazione elettronica inclusa, dichiarazione dei redditi. Gestisce forfettario e ordinario semplificato.</div>
-                <div className="aff-discount">Consulenza fiscale gratuita e 50&euro; di sconto per i lettori</div><div className="aff-note">* Link in partnership &mdash; a te non cambia nulla sul prezzo, anzi risparmi.</div>
-              </div>
-              <a href="https://fiscozen.it/invitoZEROBUROCRAZIA50A" target="_blank" rel="noopener sponsored" className="aff-btn">Ottieni lo sconto di 50&euro; {'\u2192'}</a>
-            </div>
-          </div>
-
-          {/* FAQ */}
-          <div className="sec breve-hide r" id="faq">
-            <div className="sec-tag">Risposte rapide</div>
-            <h2>Domande frequenti</h2>
-            <FAQ items={faqItems} />
-          </div>
-
-          {/* GUIDE CORRELATE */}
-          
-          <div className="related r" style={{marginBottom: '32px'}}>
-            <h2>{'\uD83D\uDCDA'} Approfondimenti</h2>
-            <div className="rg">
-              <a href="/dimissioni/preavviso" className="rc"><span className="rc-e">{'📅'}</span><div className="rc-t">Giorni di preavviso</div><div className="rc-d">Tabella per CCNL, livello e anzianità.</div><span className="rc-ar">&rarr;</span></a>
-            </div>
-          </div>
-
-<div className="related r">
-            <h2>Guide correlate</h2>
-            <div className="rg">
-              <a href="/tfr" className="rc"><span className="rc-e">💰</span><div className="rc-t">TFR</div><div className="rc-d">Dopo le dimissioni ti spetta la liquidazione.</div><span className="rc-ar">→</span></a>
-              <a href="/naspi" className="rc"><span className="rc-e">💼</span><div className="rc-t">NASpI</div><div className="rc-d">Se sei stato licenziato, hai diritto alla NASpI.</div><span className="rc-ar">→</span></a>
-              <a href="/730" className="rc"><span className="rc-e">🧾</span><div className="rc-t">Faccio il 730</div><div className="rc-d">Controlla la CU del vecchio datore per il 730.</div><span className="rc-ar">→</span></a>
-            </div>
-          </div>
-
-
-        </main>
-
-        {/* SIDEBAR */}
-        <aside className="aside">
-          <SidebarToggle />
-          <SidebarFiscozen />
-                    <div className="sbsec">
-            <div className="sbsec-t">🔗 Link utili</div>
-            <a href="https://www.lavoro.gov.it" target="_blank" rel="noopener noreferrer" className="sbtool"><span className="sbtool-i">🏛</span><div><div className="sbtool-n">Invia dimissioni</div><div className="sbtool-d">Ministero del Lavoro — invia online</div></div></a>
-            <a href="https://www.inps.it" target="_blank" rel="noopener noreferrer" className="sbtool"><span className="sbtool-i">📋</span><div><div className="sbtool-n">Domanda NASpI</div><div className="sbtool-d">Dopo le dimissioni per giusta causa</div></div></a>
-            <a href="https://www.cliclavoro.gov.it" target="_blank" rel="noopener noreferrer" className="sbtool"><span className="sbtool-i">💼</span><div><div className="sbtool-n">ClicLavoro</div><div className="sbtool-d">Portale pubblico del lavoro</div></div></a>
-          </div>
-          <div className="sbsec">
-            <div className="sbsec-t">{'\uD83D\uDCDA'} Guide correlate</div>
-            <a href="/tfr" className="sbguide">💰 TFR<span className="sbg-ar">→</span></a>
-            <a href="/naspi" className="sbguide">💼 NASpI<span className="sbg-ar">→</span></a>
-            <span className="sbguide sbguide-soon">📄 Busta paga: come leggerla<span className="sbg-soon">Presto</span></span>
-          </div>
-        </aside>
-      </div>
-
-      <StickyFiscozen />
-      <Footer variant="scheda" />
-    </>
+      <section className="v8-cta"><div className="v8-cta-box rv-scale"><h2>Ti &egrave; stata <em>utile?</em></h2><p>Ne abbiamo molte altre. Trova quella che ti serve.</p><Link href="/guide" className="v8-cta-btn">Esplora tutte le guide</Link></div></section>
+      <FooterV8 />
     </div>
   );
 }
