@@ -1,9 +1,9 @@
-import { DM_Serif_Display, Plus_Jakarta_Sans, Oswald } from 'next/font/google';
+import { DM_Serif_Display, Plus_Jakarta_Sans, Russo_One } from 'next/font/google';
 import './globals.css';
 
 const display = DM_Serif_Display({ subsets: ['latin'], weight: ['400'], variable: '--font-display', display: 'swap' });
 const body = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['300','400','500','600','700','800'], variable: '--font-body', display: 'swap' });
-const logo = Oswald({ subsets: ['latin'], weight: ['400','500','600','700'], variable: '--font-logo', display: 'swap' });
+const logo = Russo_One({ subsets: ['latin'], weight: ['400'], variable: '--font-logo', display: 'swap' });
 
 export const metadata = {
   metadataBase: new URL('https://zeroburocrazia.it'),
