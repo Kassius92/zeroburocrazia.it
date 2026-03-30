@@ -702,7 +702,7 @@ img { max-width: 100%; display: block }
 
 /* Hero image placeholder */
 .guide-hero-img {
-  border-radius:20px;
+  background:#ECE6DC; border-radius:20px;
   display:flex; align-items:center; justify-content:center;
   overflow:hidden; position:relative; min-height:360px;
 }
