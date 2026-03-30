@@ -771,18 +771,19 @@ img { max-width: 100%; display: block }
    ═══════════════════════════════════ */
 .fz-banner {
   margin:40px 0; border-radius:var(--radius-lg);
-  background:var(--green-deep); padding:32px; color:#fff;
+  background:var(--green-deep); padding:36px; color:#fff;
 }
-.fz-banner-inner {
-  display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+.fz-banner-inner { max-width:480px }
+.fz-banner-top { margin-bottom:20px }
+.fz-logo {
+  height:32px; width:auto; display:block;
+  background:#fff; border-radius:8px; padding:6px 14px;
 }
-.fz-logo { border-radius:8px; flex-shrink:0; background:#fff; padding:8px 12px; object-fit:contain; height:auto }
-.fz-banner-text { flex:1; min-width:200px }
-.fz-banner-text strong { font-size:16px; display:block; margin-bottom:4px }
-.fz-banner-text p { font-size:13px; opacity:.7; margin:0; line-height:1.5 }
+.fz-banner-title { font-size:20px; font-weight:700; margin-bottom:8px }
+.fz-banner-desc { font-size:14px; opacity:.7; margin:0 0 24px; line-height:1.6 }
 .fz-btn {
   display:inline-flex; align-items:center; gap:8px;
-  padding:12px 24px; background:#fff; color:var(--green-deep);
+  padding:14px 28px; background:#fff; color:var(--green-deep);
   border-radius:var(--radius-full); font-size:14px; font-weight:700;
   transition: all .3s var(--bounce); flex-shrink:0;
 }
@@ -790,29 +791,30 @@ img { max-width: 100%; display: block }
 
 .fz-sticky {
   position:fixed; bottom:0; left:0; right:0; z-index:90;
-  background:var(--green-deep); padding:12px 0;
+  background:var(--green-deep); padding:14px 0;
   box-shadow:0 -4px 20px rgba(0,0,0,.15);
   animation: slideUp .3s ease;
 }
 @keyframes slideUp { from { transform:translateY(100%) } to { transform:translateY(0) } }
 .fz-sticky-inner {
   max-width:760px; margin:0 auto; padding:0 32px;
-  display:flex; align-items:center; gap:12px; color:#fff; font-size:13px;
+  display:flex; align-items:center; gap:16px; color:#fff; font-size:14px;
 }
-.fz-sticky-inner img { border-radius:4px; background:#fff; padding:3px 6px; height:auto }
-.fz-sticky-inner span { flex:1; opacity:.8 }
+.fz-sticky-text { flex:1 }
+.fz-sticky-text strong { font-weight:700 }
 .fz-sticky-inner a {
-  color:#fff; font-weight:700; font-size:13px;
-  padding:8px 18px; background:rgba(255,255,255,.15);
+  color:#fff; font-weight:700; font-size:13px; white-space:nowrap;
+  padding:10px 20px; background:rgba(255,255,255,.15);
   border-radius:var(--radius-full); transition: background .2s;
 }
 .fz-sticky-inner a:hover { background:rgba(255,255,255,.25) }
 
 @media (max-width:768px) {
+  .fz-banner { padding:28px 24px }
+  .fz-sticky-inner { padding:0 16px; font-size:13px; gap:12px }
+  .fz-sticky-inner a { padding:8px 16px; font-size:12px }
   .guide-hero, .guide-body { padding-left:20px; padding-right:20px }
   .guide-compare { grid-template-columns:1fr }
-  .fz-banner { padding:24px }
-  .fz-sticky-inner { padding:0 16px }
 }
 /* ═══════════════════════════════════════════════════
    ZEROBUROCRAZIA V8 — Design System CSS

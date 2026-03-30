@@ -7,11 +7,11 @@ export function FiscozenBanner() {
   return (
     <div className="fz-banner">
       <div className="fz-banner-inner">
-        <img src="/fiscozen-logo.png" alt="Fiscozen" width="120" height="17" className="fz-logo" />
-        <div className="fz-banner-text">
-          <strong>Cerchi un commercialista online?</strong>
-          <p>Con Fiscozen gestisci partita IVA, fatture e tasse da un&apos;unica piattaforma. Consulenza inclusa.</p>
+        <div className="fz-banner-top">
+          <img src="/fiscozen-logo.png" alt="Fiscozen" className="fz-logo" />
         </div>
+        <h3 className="fz-banner-title">Cerchi un commercialista online?</h3>
+        <p className="fz-banner-desc">Con Fiscozen gestisci partita IVA, fatture e tasse da un&apos;unica piattaforma. Consulenza illimitata inclusa, a partire da 299&euro;/anno.</p>
         <a href={LINK} target="_blank" rel="noopener noreferrer" className="fz-btn">
           Prova Fiscozen &mdash; 50&euro; di sconto
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
@@ -33,9 +33,8 @@ export function FiscozenSticky() {
   return (
     <div className="fz-sticky">
       <div className="fz-sticky-inner">
-        <img src="/fiscozen-logo.png" alt="Fiscozen" width="80" height="12" />
-        <span>Commercialista online da 299&euro;/anno</span>
-        <a href={LINK} target="_blank" rel="noopener noreferrer">Scopri Fiscozen &rarr;</a>
+        <span className="fz-sticky-text"><strong>Fiscozen</strong> &mdash; Commercialista online da 299&euro;/anno</span>
+        <a href={LINK} target="_blank" rel="noopener noreferrer">Scopri di pi&ugrave; &rarr;</a>
       </div>
     </div>
   );
