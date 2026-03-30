@@ -14,16 +14,18 @@ function Counter({ target, symbol = '' }) {
         if (entry.isIntersecting && !started.current) {
           started.current = true;
           if (target === 0) { setVal(0); return; }
-          let cur = 0;
-          const step = Math.max(1, Math.floor(target / 40));
-          const timer = setInterval(() => {
-            cur += step;
-            if (cur >= target) { cur = target; clearInterval(timer); }
-            setVal(cur);
-          }, 30);
+          setTimeout(() => {
+            let cur = 0;
+            const step = Math.max(1, Math.floor(target / 40));
+            const timer = setInterval(() => {
+              cur += step;
+              if (cur >= target) { cur = target; clearInterval(timer); }
+              setVal(cur);
+            }, 35);
+          }, 400);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.8 }
     );
     obs.observe(el);
     return () => obs.disconnect();

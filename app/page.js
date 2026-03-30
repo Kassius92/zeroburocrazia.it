@@ -3,11 +3,10 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import HeroSearch from '@/components/HeroSearch';
 import StatsCounter from '@/components/StatsCounter';
-import HomeTabs from '@/components/HomeTabs';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata = {
-  title: 'ZeroBurocrazia \u2014 La burocrazia italiana, finalmente zero.',
+  title: 'ZeroBurocrazia \u2014 La burocrazia italiana, finalmente semplice.',
   description: 'Guide gratuite su 730, ISEE, SPID, NASpI, mutui, partita IVA e molto altro. Scritte come te le spiegherebbe un amico. Aggiornate al 2026.',
   alternates: { canonical: 'https://zeroburocrazia.it' },
   openGraph: { url: 'https://zeroburocrazia.it', images: [{ url: '/oghome.png', width: 1200, height: 630 }] },
@@ -27,22 +26,6 @@ const Arrow = () => (
     <path d="M5 12h14M12 5l7 7-7 7" />
   </svg>
 );
-const ArrowDiag = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-    <path d="M7 17L17 7M17 7H8M17 7v9" />
-  </svg>
-);
-
-const moreGuides = [
-  { href: '/naspi',              name: 'NASpI',                 desc: 'Quanto spetta, calcolo, domanda INPS entro 68 giorni.',  ic: 'ic-gold',   pill: 'pill-gold',   cat: 'Lavoro' },
-  { href: '/legge-104',          name: 'Legge 104',             desc: 'Permessi, congedo 2 anni, agevolazioni auto e fiscali.', ic: 'ic-green',  pill: 'pill-green',  cat: 'Famiglia' },
-  { href: '/bonus-bollette',     name: 'Bonus Bollette',        desc: 'Luce, gas, acqua. Automatico con ISEE sotto soglia.',    ic: 'ic-coral',  pill: 'pill-coral',  cat: 'Fisco' },
-  { href: '/piva',               name: 'Partita IVA',           desc: 'Regime forfettario, costi, tasse, contributi INPS.',     ic: 'ic-coral',  pill: 'pill-coral',  cat: 'Fisco' },
-  { href: '/dimissioni',         name: 'Dimissioni',            desc: 'Procedura online, preavviso, TFR, NASpI dopo.',          ic: 'ic-gold',   pill: 'pill-gold',   cat: 'Lavoro' },
-  { href: '/bonus-nido',         name: 'Bonus Nido',            desc: 'Fino a 3.600\u20AC/anno. Domanda INPS, requisiti ISEE.', ic: 'ic-violet', pill: 'pill-violet', cat: 'Famiglia' },
-  { href: '/cie',                name: 'CIE',                   desc: "Carta d\u2019identit\u00e0 elettronica: prenotazione, costi, tempi.", ic: 'ic-blue', pill: 'pill-blue', cat: 'Documenti' },
-  { href: '/assegno-inclusione', name: 'Assegno di Inclusione', desc: 'Ha sostituito il RdC. Fino a 500\u20AC/mese + affitto.', ic: 'ic-gold',   pill: 'pill-gold',   cat: 'Lavoro' },
-];
 
 export default function HomePage() {
   return (
@@ -57,7 +40,7 @@ export default function HomePage() {
           Aggiornato 2026
         </div>
         <h1 className="rv rv-d1">
-          La burocrazia italiana,<br />finalmente <em>zero.</em>
+          La burocrazia italiana,<br />finalmente <em>semplice.</em>
         </h1>
         <p className="hero-sub rv rv-d2">
           Guide gratuite scritte in italiano vero. Passo per passo, con calcolatori ed esempi concreti.
@@ -96,12 +79,10 @@ export default function HomePage() {
                 <div className="fcard-sub">Fisco &middot; 15 min di lettura</div>
               </div>
             </div>
-            <div className="calc-mock">
-              <div className="calc-row"><span className="calc-label">Reddito lordo</span><span className="calc-val">32.000&euro;</span></div>
-              <div className="calc-row"><span className="calc-label">Spese mediche</span><span className="calc-val">1.200&euro;</span></div>
-              <div className="calc-row"><span className="calc-label">Interessi mutuo</span><span className="calc-val">2.400&euro;</span></div>
-              <div className="calc-result"><span>Rimborso stimato</span><strong>~943&euro;</strong></div>
-            </div>
+            <div className="fstep"><div className="fstep-num">1</div><div><h4>Controlla la precompilata</h4><p>Online dal 30 aprile. L&apos;AE la prepara con i tuoi dati.</p></div></div>
+            <div className="fstep"><div className="fstep-num">2</div><div><h4>Aggiungi le detrazioni</h4><p>Spese mediche, mutuo, affitto, figli, trasporti.</p></div></div>
+            <div className="fstep"><div className="fstep-num">3</div><div><h4>Invia entro il 30 settembre</h4><p>Online, al CAF o tramite commercialista.</p></div></div>
+            <div className="fstep"><div className="fstep-num">4</div><div><h4>Ricevi il rimborso</h4><p>In busta paga (luglio) o sul conto (dicembre).</p></div></div>
           </div>
         </div>
 
@@ -149,40 +130,17 @@ export default function HomePage() {
             <div className="fstep"><div className="fstep-num">1</div><div><h4>Scegli il provider</h4><p>PosteID, Aruba, Infocert, Sielte, TIM&hellip; tutti gratuiti.</p></div></div>
             <div className="fstep"><div className="fstep-num">2</div><div><h4>Registrati online</h4><p>Email, telefono, codice fiscale, documento d&apos;identit&agrave;.</p></div></div>
             <div className="fstep"><div className="fstep-num">3</div><div><h4>Fatti riconoscere</h4><p>Con CIE + NFC &egrave; gratis e immediato. Altrimenti webcam o ufficio postale.</p></div></div>
-            <div className="fstep"><div className="fstep-num">&checkmark;</div><div><h4>Pronto!</h4><p>Accedi a INPS, Agenzia Entrate, ANPR, fascicolo sanitario e 16.000+ servizi.</p></div></div>
+            <div className="fstep"><div className="fstep-num">&#10003;</div><div><h4>Pronto!</h4><p>Accedi a INPS, Agenzia Entrate, ANPR, fascicolo sanitario e 16.000+ servizi.</p></div></div>
           </div>
         </div>
       </section>
 
-      {/* ── MORE GUIDES ── */}
-      <section className="more" id="tutte">
-        <div className="more-head rv">
-          <h2>&hellip;e tante <em>altre</em> guide!</h2>
-        </div>
-        <div className="more-grid">
-          {moreGuides.map((g, i) => (
-            <Link key={g.href} href={g.href} className={`mcard rv rv-d${(i % 4) + 1}`}>
-              <div className="mcard-arrow"><ArrowDiag /></div>
-              <div className={`mcard-icon ${g.ic}`}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><polyline points="14 2 14 8 20 8" /></svg>
-              </div>
-              <h3>{g.name}</h3>
-              <p>{g.desc}</p>
-              <span className={`mcard-pill ${g.pill}`}>{g.cat}</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* ── AUDIENCE TABS ── */}
-      <section className="audience" id="categorie">
-        <div className="audience-inner">
-          <div className="audience-head rv">
-            <h2>Qualunque sia la tua <em>situazione</em></h2>
-            <p>Guide pensate per la vita reale, non per gli addetti ai lavori.</p>
-          </div>
-          <HomeTabs />
-        </div>
+      {/* ── ALL GUIDES LINK ── */}
+      <section className="more" style={{textAlign:'center',paddingBottom:'40px'}}>
+        <Link href="/guide" className="cta-btn rv">
+          Scopri tutte le 33 guide
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+        </Link>
       </section>
 
       {/* ── HOW IT WORKS ── */}
