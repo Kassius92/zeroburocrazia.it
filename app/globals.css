@@ -1697,3 +1697,31 @@ img { max-width: 100%; display: block }
   .gl-hz { grid-template-columns:1fr }
   .gl-sm-grid { grid-template-columns:1fr }
 }
+
+/* Guide TOC */
+.guide-toc { display:flex; flex-direction:column; gap:8px }
+.guide-toc a {
+  font-size:14px; font-weight:500; color:var(--green);
+  padding:8px 0; border-bottom:1px solid rgba(0,0,0,.04);
+  transition: color .2s;
+}
+.guide-toc a:hover { color:var(--green-dark) }
+.guide-toc a:last-child { border-bottom:none }
+
+/* Guide related cards */
+.guide-related { display:grid; grid-template-columns:repeat(2,1fr); gap:16px }
+.guide-related-card {
+  display:block; padding:24px; background:var(--card);
+  border:1px solid rgba(0,0,0,.04); border-radius:14px;
+  transition: all .3s var(--ease);
+}
+.guide-related-card:hover {
+  transform:translateY(-4px); box-shadow:0 8px 28px rgba(0,0,0,.06);
+  border-color:var(--green);
+}
+.guide-related-card h4 { font-size:16px; font-weight:700; margin-bottom:4px }
+.guide-related-card p { font-size:13px; color:var(--soft); line-height:1.5; margin:0 }
+
+@media (max-width:768px) {
+  .guide-related { grid-template-columns:1fr }
+}

@@ -13,7 +13,7 @@ export const metadata = {
 };
 
 const heroTags = [
-  { label: 'Dichiarazione 730', href: '/guide' },
+  { label: 'Dichiarazione 730', href: '/730' },
   { label: 'ISEE 2026', href: '/guide' },
   { label: 'SPID', href: '/guide' },
   { label: 'NASpI', href: '/guide' },
@@ -67,7 +67,7 @@ export default function HomePage() {
           <div className="ftext rv-left">
             <h3>Dichiarazione <em>730</em></h3>
             <p>Precompilata, detrazioni, scadenze, errori da evitare. Tutto quello che devi sapere per fare il 730 nel 2026 senza ansia e senza commercialista.</p>
-            <Link href="/guide" className="flink">Leggi la guida completa <Arrow /></Link>
+            <Link href="/730" className="flink">Leggi la guida completa <Arrow /></Link>
           </div>
           <div className="fcard rv-right rv-d1">
             <div className="fcard-header">
