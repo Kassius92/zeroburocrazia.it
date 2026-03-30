@@ -1,8 +1,9 @@
-import { DM_Serif_Display, Plus_Jakarta_Sans } from 'next/font/google';
+import { DM_Serif_Display, Plus_Jakarta_Sans, Oswald } from 'next/font/google';
 import './globals.css';
 
 const display = DM_Serif_Display({ subsets: ['latin'], weight: ['400'], variable: '--font-display', display: 'swap' });
 const body = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['300','400','500','600','700','800'], variable: '--font-body', display: 'swap' });
+const logo = Oswald({ subsets: ['latin'], weight: ['400','500','600','700'], variable: '--font-logo', display: 'swap' });
 
 export const metadata = {
   metadataBase: new URL('https://zeroburocrazia.it'),
@@ -14,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="it" className={`${display.variable} ${body.variable}`}>
+    <html lang="it" className={`${display.variable} ${body.variable} ${logo.variable}`}>
       <body>{children}</body>
     </html>
   );
