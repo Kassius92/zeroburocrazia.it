@@ -145,7 +145,7 @@ img { max-width: 100%; display: block }
   display:flex; flex-direction:column; line-height:1.1;
 }
 .nav-logo-zero {
-  font-weight:800; font-size:18px; letter-spacing:1px; color:var(--ink);
+  font-weight:800; font-size:16px; letter-spacing:5px; color:var(--ink);
 }
 .nav-logo-buro {
   font-weight:500; font-size:10px; letter-spacing:1.5px; color:var(--soft);
