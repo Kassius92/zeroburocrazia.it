@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20);
@@ -16,9 +17,6 @@ export default function Nav() {
       <nav className={`nav${scrolled ? ' scrolled' : ''}`}>
         <div className="nav-inner">
           <div className="nav-left">
-            <button className="hamburger" aria-label="Menu">
-              <div className="hamburger-lines"><span /><span /><span /></div>
-            </button>
             <Link href="/" className="nav-logo">
               <img src="/logo-z.webp" alt="ZeroBurocrazia" width="32" height="32" />
               ZeroBurocrazia
@@ -35,8 +33,22 @@ export default function Nav() {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" /></svg>
             </button>
             <Link href="/guide" className="nav-cta">Esplora le guide</Link>
+            <button
+              className="hamburger"
+              aria-label="Menu"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <div className="hamburger-lines"><span /><span /><span /></div>
+            </button>
           </div>
         </div>
+
+        {menuOpen && (
+          <div className="nav-mobile-menu">
+            <Link href="/guide" onClick={() => setMenuOpen(false)}>Guide</Link>
+            <Link href="/novita" onClick={() => setMenuOpen(false)}>Novit&agrave;</Link>
+          </div>
+        )}
       </nav>
 
       {scrolled && (
