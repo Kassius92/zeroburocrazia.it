@@ -297,14 +297,11 @@
 .v8-nav-search:hover{border-color:var(--v8-green);color:var(--v8-green)}
 .v8-nav-cta{padding:8px 22px;background:var(--v8-green);color:#fff;border-radius:99px;font-size:13px;font-weight:700;transition:all .3s var(--v8-bounce);text-decoration:none}
 .v8-nav-cta:hover{transform:scale(1.05);background:var(--v8-green-dark);box-shadow:0 4px 16px rgba(45,138,110,.25)}
-/* Hide hamburger on desktop */
-.v8-nav .hamburger{display:none}
+/* Hamburger always visible */
 @media(max-width:900px){
   .v8-nav-inner{padding:0 16px}
   .v8-nav-center{display:none}
   .v8-nav-right{display:none}
-  .v8-nav .hamburger{display:flex;border-color:var(--v8-sand)}
-  .v8-nav .hamburger-lines span{background:var(--v8-ink)}
 }
 
 
