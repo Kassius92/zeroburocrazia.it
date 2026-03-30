@@ -54,9 +54,32 @@ export default function Guide730Content({ faqItems }) {
             </div>
           </div>
 
-          {/* Hero image placeholder */}
+          {/* Hero image */}
           <div className="guide-hero-img" style={{background:'linear-gradient(135deg,#FDF0EB,#fce4da)'}}>
-            <span>Il 730<br /><em>nel 2026</em></span>
+            <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',maxWidth:'360px',padding:'24px'}}>
+              {/* Document icon */}
+              <rect x="120" y="30" width="160" height="200" rx="12" fill="white" stroke="#E8724A" strokeWidth="2" opacity=".9" />
+              <rect x="145" y="60" width="80" height="8" rx="4" fill="#E8724A" opacity=".3" />
+              <rect x="145" y="78" width="110" height="6" rx="3" fill="#E8E0D4" />
+              <rect x="145" y="94" width="100" height="6" rx="3" fill="#E8E0D4" />
+              <rect x="145" y="110" width="90" height="6" rx="3" fill="#E8E0D4" />
+              {/* Checkmarks */}
+              <circle cx="155" cy="142" r="10" fill="#E4F3ED" />
+              <path d="M150 142l4 4 8-8" stroke="#2D8A6E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <rect x="175" y="138" width="70" height="6" rx="3" fill="#E8E0D4" />
+              <circle cx="155" cy="168" r="10" fill="#E4F3ED" />
+              <path d="M150 168l4 4 8-8" stroke="#2D8A6E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <rect x="175" y="164" width="60" height="6" rx="3" fill="#E8E0D4" />
+              <circle cx="155" cy="194" r="10" fill="#E4F3ED" />
+              <path d="M150 194l4 4 8-8" stroke="#2D8A6E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <rect x="175" y="190" width="80" height="6" rx="3" fill="#E8E0D4" />
+              {/* Euro badge */}
+              <circle cx="280" cy="60" r="28" fill="#2D8A6E" />
+              <text x="280" y="68" textAnchor="middle" fill="white" fontFamily="Georgia,serif" fontSize="24" fontWeight="bold">&euro;</text>
+              {/* Arrow */}
+              <path d="M260 220 L300 250 L340 220" stroke="#E8724A" strokeWidth="3" strokeLinecap="round" fill="none" opacity=".5" />
+              <text x="300" y="280" textAnchor="middle" fill="#E8724A" fontFamily="sans-serif" fontSize="12" fontWeight="600">Rimborso</text>
+            </svg>
           </div>
         </div>
 
@@ -167,8 +190,30 @@ export default function Guide730Content({ faqItems }) {
               <strong>Le detrazioni dimenticate pi&ugrave; spesso:</strong> abbonamento ai trasporti pubblici, spese veterinarie, sport dei figli, spese funebri, donazioni a ONLUS. Se non le inserisci nel 730, quei soldi li perdi per sempre.
             </div>
 
-            <div className="guide-img" style={{background:'linear-gradient(135deg,#E4F3ED,#d0ebdf)'}}>
-              <span>Tabella detrazioni 730</span>
+            <div className="guide-img" style={{background:'linear-gradient(135deg,#E4F3ED,#d0ebdf)',padding:'24px'}}>
+              <svg viewBox="0 0 600 220" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%'}}>
+                <text x="24" y="24" fill="#2D8A6E" fontFamily="sans-serif" fontSize="12" fontWeight="700" letterSpacing="1">DETRAZIONI PRINCIPALI</text>
+                {/* Bars */}
+                <rect x="24" y="48" width="340" height="24" rx="6" fill="#2D8A6E" opacity=".15" />
+                <rect x="24" y="48" width="340" height="24" rx="6" fill="#2D8A6E" opacity=".8" />
+                <text x="34" y="64" fill="white" fontFamily="sans-serif" fontSize="11" fontWeight="600">Affitto under 31 &mdash; fino a 991&euro;</text>
+
+                <rect x="24" y="80" width="280" height="24" rx="6" fill="#E8724A" opacity=".15" />
+                <rect x="24" y="80" width="280" height="24" rx="6" fill="#E8724A" opacity=".7" />
+                <text x="34" y="96" fill="white" fontFamily="sans-serif" fontSize="11" fontWeight="600">Interessi mutuo 19% &mdash; max 760&euro;</text>
+
+                <rect x="24" y="112" width="200" height="24" rx="6" fill="#5B7EC5" opacity=".15" />
+                <rect x="24" y="112" width="200" height="24" rx="6" fill="#5B7EC5" opacity=".7" />
+                <text x="34" y="128" fill="white" fontFamily="sans-serif" fontSize="11" fontWeight="600">Ristrutturazione 50%</text>
+
+                <rect x="24" y="144" width="160" height="24" rx="6" fill="#8B6CC1" opacity=".15" />
+                <rect x="24" y="144" width="160" height="24" rx="6" fill="#8B6CC1" opacity=".7" />
+                <text x="34" y="160" fill="white" fontFamily="sans-serif" fontSize="11" fontWeight="600">Spese mediche 19%</text>
+
+                <rect x="24" y="176" width="120" height="24" rx="6" fill="#C49A2A" opacity=".15" />
+                <rect x="24" y="176" width="120" height="24" rx="6" fill="#C49A2A" opacity=".7" />
+                <text x="34" y="192" fill="white" fontFamily="sans-serif" fontSize="11" fontWeight="600">Trasporti 19%</text>
+              </svg>
             </div>
           </div>
 
@@ -200,8 +245,39 @@ export default function Guide730Content({ faqItems }) {
               <strong>Un lavoro + poche spese</strong> &rarr; fallo da solo. <strong>Mutuo, cambio lavoro, figli</strong> &rarr; vai al CAF. <strong>Cripto, redditi esteri, affitti</strong> &rarr; commercialista.
             </div>
 
-            <div className="guide-img" style={{background:'linear-gradient(135deg,#FBF5E6,#f5edd4)'}}>
-              <span>Screenshot precompilata online</span>
+            <div className="guide-img" style={{background:'linear-gradient(135deg,#FBF5E6,#f5edd4)',padding:'24px'}}>
+              <svg viewBox="0 0 600 240" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%'}}>
+                {/* Browser window mockup */}
+                <rect x="40" y="10" width="520" height="220" rx="12" fill="white" stroke="#E8E0D4" strokeWidth="1.5" />
+                {/* Browser bar */}
+                <rect x="40" y="10" width="520" height="32" rx="12" fill="#F0EBE3" />
+                <rect x="40" y="30" width="520" height="12" fill="#F0EBE3" />
+                <circle cx="62" cy="26" r="5" fill="#E8724A" opacity=".5" />
+                <circle cx="80" cy="26" r="5" fill="#C49A2A" opacity=".5" />
+                <circle cx="98" cy="26" r="5" fill="#2D8A6E" opacity=".5" />
+                <rect x="180" y="20" width="240" height="12" rx="6" fill="white" opacity=".6" />
+                {/* Content */}
+                <text x="70" y="68" fill="#1A1A2E" fontFamily="Georgia,serif" fontSize="14" fontWeight="bold">730 Precompilato 2026</text>
+                <rect x="70" y="80" width="200" height="5" rx="2.5" fill="#E8E0D4" />
+                {/* Form rows */}
+                <rect x="70" y="100" width="130" height="28" rx="6" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1" />
+                <text x="82" y="118" fill="#8A857C" fontFamily="sans-serif" fontSize="10">Reddito lordo</text>
+                <rect x="220" y="100" width="100" height="28" rx="6" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1" />
+                <text x="232" y="118" fill="#1A1A2E" fontFamily="sans-serif" fontSize="10" fontWeight="600">32.000 &euro;</text>
+
+                <rect x="70" y="138" width="130" height="28" rx="6" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1" />
+                <text x="82" y="156" fill="#8A857C" fontFamily="sans-serif" fontSize="10">Spese mediche</text>
+                <rect x="220" y="138" width="100" height="28" rx="6" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1" />
+                <text x="232" y="156" fill="#1A1A2E" fontFamily="sans-serif" fontSize="10" fontWeight="600">1.200 &euro;</text>
+
+                {/* Result */}
+                <rect x="70" y="182" width="250" height="32" rx="8" fill="#2D8A6E" />
+                <text x="86" y="202" fill="white" fontFamily="sans-serif" fontSize="11" fontWeight="600">Rimborso stimato: ~943&euro;</text>
+                
+                {/* Checkmark */}
+                <circle cx="480" cy="130" r="32" fill="#E4F3ED" />
+                <path d="M466 130l10 10 20-20" stroke="#2D8A6E" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </div>
           </div>
 
@@ -231,8 +307,47 @@ export default function Guide730Content({ faqItems }) {
               <strong>Il metodo della cartellina:</strong> crea una cartellina &quot;730 2026&quot;. Ogni volta che ricevi una ricevuta detraibile, mettila dentro. A maggio avrai tutto pronto in 5 minuti.
             </div>
 
-            <div className="guide-img" style={{background:'linear-gradient(135deg,#ECF0FA,#dce4f5)'}}>
-              <span>Checklist documenti 730</span>
+            <div className="guide-img" style={{background:'linear-gradient(135deg,#ECF0FA,#dce4f5)',padding:'24px'}}>
+              <svg viewBox="0 0 600 220" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%'}}>
+                <text x="24" y="24" fill="#5B7EC5" fontFamily="sans-serif" fontSize="12" fontWeight="700" letterSpacing="1">CHECKLIST DOCUMENTI</text>
+                {/* Column 1 */}
+                <rect x="24" y="44" width="260" height="36" rx="8" fill="white" opacity=".8" />
+                <circle cx="48" cy="62" r="10" fill="#E4F3ED" />
+                <path d="M43 62l4 4 7-7" stroke="#2D8A6E" strokeWidth="2" strokeLinecap="round" />
+                <text x="66" y="66" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">CU 2026</text>
+
+                <rect x="24" y="88" width="260" height="36" rx="8" fill="white" opacity=".8" />
+                <circle cx="48" cy="106" r="10" fill="#E4F3ED" />
+                <path d="M43 106l4 4 7-7" stroke="#2D8A6E" strokeWidth="2" strokeLinecap="round" />
+                <text x="66" y="110" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">Documento d&apos;identit&agrave;</text>
+
+                <rect x="24" y="132" width="260" height="36" rx="8" fill="white" opacity=".8" />
+                <circle cx="48" cy="150" r="10" fill="#E4F3ED" />
+                <path d="M43 150l4 4 7-7" stroke="#2D8A6E" strokeWidth="2" strokeLinecap="round" />
+                <text x="66" y="154" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">IBAN conto corrente</text>
+
+                <rect x="24" y="176" width="260" height="36" rx="8" fill="white" opacity=".8" />
+                <circle cx="48" cy="194" r="10" fill="#FBF5E6" />
+                <rect x="42" y="191" width="12" height="6" rx="2" fill="#C49A2A" opacity=".4" />
+                <text x="66" y="198" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12">730 anno precedente</text>
+
+                {/* Column 2 */}
+                <rect x="310" y="44" width="260" height="36" rx="8" fill="white" opacity=".8" />
+                <circle cx="334" cy="62" r="10" fill="#FDF0EB" />
+                <text x="352" y="66" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">Ricevute mediche</text>
+
+                <rect x="310" y="88" width="260" height="36" rx="8" fill="white" opacity=".8" />
+                <circle cx="334" cy="106" r="10" fill="#FDF0EB" />
+                <text x="352" y="110" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">Contratto affitto</text>
+
+                <rect x="310" y="132" width="260" height="36" rx="8" fill="white" opacity=".8" />
+                <circle cx="334" cy="150" r="10" fill="#FDF0EB" />
+                <text x="352" y="154" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">Interessi mutuo</text>
+
+                <rect x="310" y="176" width="260" height="36" rx="8" fill="white" opacity=".8" />
+                <circle cx="334" cy="194" r="10" fill="#FDF0EB" />
+                <text x="352" y="198" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">Spese scolastiche</text>
+              </svg>
             </div>
           </div>
 
@@ -311,19 +426,25 @@ export default function Guide730Content({ faqItems }) {
             <h2>Guide <em>correlate</em></h2>
             <div className="guide-related">
               <Link href="/guide" className="guide-related-card">
-                <h4>ISEE 2026</h4>
-                <p>Per bonus e agevolazioni ti serve l&apos;ISEE. Ecco come ottenerlo gratis.</p>
+                <div className="guide-related-img" style={{background:'linear-gradient(135deg,#FDF0EB,#fce4da)'}}>
+                  <span>ISEE<br /><em>2026</em></span>
+                </div>
+                <h4>Come Fare l&apos;ISEE 2026</h4>
+                <p>Per bonus e agevolazioni ti serve l&apos;ISEE. Documenti, procedura al CAF, simulazione online.</p>
               </Link>
               <Link href="/guide" className="guide-related-card">
-                <h4>Come fare lo SPID</h4>
-                <p>Per la precompilata online ti serve lo SPID. Come farlo gratis in 15 minuti.</p>
+                <div className="guide-related-img" style={{background:'linear-gradient(135deg,#ECF0FA,#dce4f5)'}}>
+                  <span>Come fare<br /><em>lo SPID</em></span>
+                </div>
+                <h4>Come Fare lo SPID in 15 Minuti</h4>
+                <p>Per la precompilata online ti serve lo SPID. Gratis con CIE, immediato.</p>
               </Link>
             </div>
           </div>
 
           {/* CTA */}
-          <div className="guide-section" style={{textAlign:'center',borderBottom:'none'}}>
-            <Link href="/guide" className="cta-btn">
+          <div className="guide-section" style={{textAlign:'center',borderBottom:'none',paddingBottom:'0'}}>
+            <Link href="/guide" className="cta-btn" style={{color:'#fff'}}>
               Esplora tutte le guide
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </Link>
