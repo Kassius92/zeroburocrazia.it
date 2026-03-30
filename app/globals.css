@@ -776,8 +776,7 @@ img { max-width: 100%; display: block }
 .fz-banner-inner { max-width:480px }
 .fz-banner-top { margin-bottom:20px }
 .fz-logo {
-  height:32px; width:auto; display:block;
-  background:#fff; border-radius:8px; padding:6px 14px;
+  height:28px; width:auto; display:block;
 }
 .fz-banner-title { font-size:20px; font-weight:700; margin-bottom:8px }
 .fz-banner-desc { font-size:14px; opacity:.7; margin:0 0 24px; line-height:1.6 }
