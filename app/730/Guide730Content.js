@@ -191,7 +191,7 @@ export default function Guide730Content({ faqItems }) {
             <div className="guide-section-label">Procedura</div>
             <h2>Come si fa, <em>passo per passo</em></h2>
 
-            <p>Hai tre strade. Una &egrave; completamente gratuita. Per accedere alla precompilata online ti serve lo SPID. Se non ce l&apos;hai, <Link href="/guide" style={{color:'var(--green)',fontWeight:600}}>fallo prima</Link> &mdash; ci vogliono 15 minuti e non costa niente.</p>
+            <p>Hai tre strade. Una &egrave; completamente gratuita. Per accedere alla precompilata online ti serve lo SPID. Se non ce l&apos;hai, <Link href="/spid" style={{color:'var(--green)',fontWeight:600}}>fallo prima</Link> &mdash; ci vogliono 15 minuti e non costa niente.</p>
 
             <h3>Passo 1: Fai lo SPID</h3>
             <p>15 minuti, gratuito. Servono un documento d&apos;identit&agrave;, la tessera sanitaria e uno smartphone.</p>
@@ -391,7 +391,7 @@ export default function Guide730Content({ faqItems }) {
             <div className="guide-section-label">Approfondimenti</div>
             <h2>Guide <em>correlate</em></h2>
             <div className="guide-related">
-              <Link href="/guide" className="guide-related-card">
+              <Link href="/isee" className="guide-related-card">
                 <div className="guide-related-img" style={{background:'linear-gradient(135deg,#FDF0EB,#fce4da)'}}>
                   <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'80%',maxWidth:'260px'}}>
                     {/* ISEE card mockup */}
@@ -418,7 +418,7 @@ export default function Guide730Content({ faqItems }) {
                 <h4>Come Fare l&apos;ISEE 2026</h4>
                 <p>Per bonus e agevolazioni ti serve l&apos;ISEE. Documenti, procedura al CAF, simulazione online.</p>
               </Link>
-              <Link href="/guide" className="guide-related-card">
+              <Link href="/spid" className="guide-related-card">
                 <div className="guide-related-img" style={{background:'linear-gradient(135deg,#ECF0FA,#dce4f5)'}}>
                   <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'80%',maxWidth:'260px'}}>
                     {/* SPID card mockup */}
