@@ -776,7 +776,7 @@ img { max-width: 100%; display: block }
 .fz-banner-inner {
   display:flex; align-items:center; gap:20px; flex-wrap:wrap;
 }
-.fz-logo { border-radius:10px; flex-shrink:0 }
+.fz-logo { border-radius:10px; flex-shrink:0; background:#fff; padding:4px; object-fit:contain }
 .fz-banner-text { flex:1; min-width:200px }
 .fz-banner-text strong { font-size:16px; display:block; margin-bottom:4px }
 .fz-banner-text p { font-size:13px; opacity:.7; margin:0; line-height:1.5 }
@@ -799,7 +799,7 @@ img { max-width: 100%; display: block }
   max-width:760px; margin:0 auto; padding:0 32px;
   display:flex; align-items:center; gap:12px; color:#fff; font-size:13px;
 }
-.fz-sticky-inner img { border-radius:6px }
+.fz-sticky-inner img { border-radius:6px; background:#fff; padding:2px }
 .fz-sticky-inner span { flex:1; opacity:.8 }
 .fz-sticky-inner a {
   color:#fff; font-weight:700; font-size:13px;
