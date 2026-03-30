@@ -698,9 +698,9 @@ img { max-width: 100%; display: block }
 
 /* Hero image placeholder */
 .guide-hero-img {
-  background:var(--warm); border-radius:20px; aspect-ratio:4/3;
+  background:var(--sand); border-radius:20px;
   display:flex; align-items:center; justify-content:center;
-  overflow:hidden; position:relative;
+  overflow:hidden; position:relative; min-height:360px;
 }
 .guide-hero-img span {
   font-family:var(--font-display), Georgia, serif;
