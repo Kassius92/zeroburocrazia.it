@@ -56,30 +56,7 @@ export default function Guide730Content({ faqItems }) {
 
           {/* Hero image */}
           <div className="guide-hero-img" style={{background:'linear-gradient(135deg,#FDF0EB,#fce4da)'}}>
-            <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',maxWidth:'360px',padding:'24px'}}>
-              {/* Document icon */}
-              <rect x="120" y="30" width="160" height="200" rx="12" fill="white" stroke="#E8724A" strokeWidth="2" opacity=".9" />
-              <rect x="145" y="60" width="80" height="8" rx="4" fill="#E8724A" opacity=".3" />
-              <rect x="145" y="78" width="110" height="6" rx="3" fill="#E8E0D4" />
-              <rect x="145" y="94" width="100" height="6" rx="3" fill="#E8E0D4" />
-              <rect x="145" y="110" width="90" height="6" rx="3" fill="#E8E0D4" />
-              {/* Checkmarks */}
-              <circle cx="155" cy="142" r="10" fill="#E4F3ED" />
-              <path d="M150 142l4 4 8-8" stroke="#2D8A6E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <rect x="175" y="138" width="70" height="6" rx="3" fill="#E8E0D4" />
-              <circle cx="155" cy="168" r="10" fill="#E4F3ED" />
-              <path d="M150 168l4 4 8-8" stroke="#2D8A6E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <rect x="175" y="164" width="60" height="6" rx="3" fill="#E8E0D4" />
-              <circle cx="155" cy="194" r="10" fill="#E4F3ED" />
-              <path d="M150 194l4 4 8-8" stroke="#2D8A6E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <rect x="175" y="190" width="80" height="6" rx="3" fill="#E8E0D4" />
-              {/* Euro badge */}
-              <circle cx="280" cy="60" r="28" fill="#2D8A6E" />
-              <text x="280" y="68" textAnchor="middle" fill="white" fontFamily="Georgia,serif" fontSize="24" fontWeight="bold">&euro;</text>
-              {/* Arrow */}
-              <path d="M260 220 L300 250 L340 220" stroke="#E8724A" strokeWidth="3" strokeLinecap="round" fill="none" opacity=".5" />
-              <text x="300" y="280" textAnchor="middle" fill="#E8724A" fontFamily="sans-serif" fontSize="12" fontWeight="600">Rimborso</text>
-            </svg>
+            <img src="/hero-730.webp" alt="Guida al 730 2026: documento, calcolatrice, scadenza 30 settembre" style={{width:'100%',height:'100%',objectFit:'contain',padding:'16px'}} />
           </div>
         </div>
 
