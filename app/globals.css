@@ -166,6 +166,9 @@ img { max-width: 100%; display: block }
   transform:scale(1.05); background:var(--green-dark);
   box-shadow: 0 4px 16px rgba(45,138,110,.25);
 }
+.nav-cta, .nav-search, .hamburger, .hero-tag, .nav-logo {
+  -webkit-tap-highlight-color: transparent;
+}
 
 /* Hamburger — hidden on desktop, visible on mobile */
 .hamburger {
