@@ -146,7 +146,7 @@ img { max-width: 100%; display: block }
   font-family: var(--font-logo), sans-serif;
 }
 .nav-logo-zero {
-  font-weight:700; font-size:30px; letter-spacing:0.5px; color:var(--ink); text-transform:uppercase;
+  font-weight:700; font-size:30px; letter-spacing:2.5px; color:var(--ink); text-transform:uppercase;
 }
 .nav-logo-buro {
   font-weight:400; font-size:14px; letter-spacing:0.5px; color:var(--soft); text-transform:uppercase;
