@@ -53,7 +53,7 @@ export default function GuideSpidContent({ faqItems }) {
           </div>
 
           <div className="guide-hero-img">
-            <img src="/hero-spid.png" alt="Guida SPID 2026" style={{width:'100%',height:'100%',objectFit:'cover'}} />
+            <img src="/hero-spid.png" alt="Guida SPID 2026" style={{width:'100%',height:'100%',objectFit:'contain'}} />
           </div>
           </div>
         </div>
