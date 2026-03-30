@@ -649,9 +649,13 @@ img { max-width: 100%; display: block }
 .guide { padding-top:64px; min-height:100vh }
 
 .guide-hero {
-  max-width:1200px; margin:0 auto; padding:48px 40px 40px;
-  display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;
+  max-width:100%; padding:48px 0 40px;
+  background:var(--warm);
   border-bottom:1px solid rgba(0,0,0,.06);
+}
+.guide-hero-inner {
+  max-width:1200px; margin:0 auto; padding:0 40px;
+  display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;
 }
 .guide-hero-text {}
 .guide-crumb {
@@ -698,7 +702,7 @@ img { max-width: 100%; display: block }
 
 /* Hero image placeholder */
 .guide-hero-img {
-  background:var(--sand); border-radius:20px;
+  border-radius:20px;
   display:flex; align-items:center; justify-content:center;
   overflow:hidden; position:relative; min-height:360px;
 }
@@ -849,7 +853,8 @@ img { max-width: 100%; display: block }
   .fz-banner { padding:28px 24px }
   .fz-sticky-inner { padding:0 16px; font-size:13px; gap:12px }
   .fz-sticky-inner a { padding:8px 16px; font-size:12px }
-  .guide-hero { grid-template-columns:1fr; padding:32px 20px }
+  .guide-hero { padding:32px 0 }
+  .guide-hero-inner { grid-template-columns:1fr; padding:0 20px }
   .guide-body { padding-left:20px; padding-right:20px }
   .guide-compare { grid-template-columns:1fr }
 }
