@@ -32,21 +32,21 @@ function Counter({ target, symbol = '' }) {
   return <span ref={ref}>{val}{symbol}</span>;
 }
 
-export default function HomeStatsCounter() {
+export default function StatsCounter() {
   return (
-    <section className="hp-stats rv-scale">
-      <div className="hp-stats-inner">
-        <div className="hp-stat">
-          <div className="hp-stat-num"><Counter target={33} /></div>
-          <div className="hp-stat-label">Guide complete e gratuite</div>
+    <section className="stats rv-scale">
+      <div className="stats-inner">
+        <div className="stat">
+          <div className="stat-num"><Counter target={33} /></div>
+          <div className="stat-label">Guide complete e gratuite</div>
         </div>
-        <div className="hp-stat">
-          <div className="hp-stat-num"><Counter target={54} /></div>
-          <div className="hp-stat-label">Pagine aggiornate al 2026</div>
+        <div className="stat">
+          <div className="stat-num"><Counter target={54} /></div>
+          <div className="stat-label">Pagine aggiornate al 2026</div>
         </div>
-        <div className="hp-stat">
-          <div className="hp-stat-num"><Counter target={0} symbol={'\u20AC'} /></div>
-          <div className="hp-stat-label">Per sempre. Nessun abbonamento.</div>
+        <div className="stat">
+          <div className="stat-num"><Counter target={0} symbol={'\u20AC'} /></div>
+          <div className="stat-label">Per sempre. Nessun abbonamento.</div>
         </div>
       </div>
     </section>

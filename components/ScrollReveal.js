@@ -3,20 +3,17 @@ import { useEffect } from 'react';
 
 export default function ScrollReveal() {
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const obs = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('v');
-            observer.unobserve(entry.target);
-          }
+        entries.forEach(e => {
+          if (e.isIntersecting) e.target.classList.add('v');
+          else e.target.classList.remove('v');
         });
       },
-      { threshold: 0.08 }
+      { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
     );
-    document.querySelectorAll('.r').forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    document.querySelectorAll('.rv,.rv-scale,.rv-left,.rv-right,.rv-tilt').forEach(el => obs.observe(el));
+    return () => obs.disconnect();
   }, []);
-
   return null;
 }

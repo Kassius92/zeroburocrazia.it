@@ -1,11 +1,8 @@
 node_modules/
 .next/
 .cache/
-.npm/
-.npm-global/
+.npm*/
 .local/
 .config/
-.wget-hsts
-.npmrc
-*.log
 DEVLOG*
+*.tar.gz
