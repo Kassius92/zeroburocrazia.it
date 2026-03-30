@@ -170,28 +170,18 @@ export default function Guide730Content({ faqItems }) {
             </div>
 
             <div className="guide-img" style={{background:'linear-gradient(135deg,#E4F3ED,#d0ebdf)'}}>
-              <svg viewBox="0 0 600 220" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%'}}>
-                <text x="24" y="24" fill="#2D8A6E" fontFamily="sans-serif" fontSize="12" fontWeight="700" letterSpacing="1">DETRAZIONI PRINCIPALI</text>
-                {/* Bars */}
-                <rect x="24" y="48" width="340" height="24" rx="6" fill="#2D8A6E" opacity=".15" />
-                <rect x="24" y="48" width="340" height="24" rx="6" fill="#2D8A6E" opacity=".8" />
-                <text x="34" y="64" fill="white" fontFamily="sans-serif" fontSize="11" fontWeight="600">Affitto under 31 &mdash; fino a 991&euro;</text>
-
-                <rect x="24" y="80" width="280" height="24" rx="6" fill="#E8724A" opacity=".15" />
-                <rect x="24" y="80" width="280" height="24" rx="6" fill="#E8724A" opacity=".7" />
-                <text x="34" y="96" fill="white" fontFamily="sans-serif" fontSize="11" fontWeight="600">Interessi mutuo 19% &mdash; max 760&euro;</text>
-
-                <rect x="24" y="112" width="200" height="24" rx="6" fill="#5B7EC5" opacity=".15" />
-                <rect x="24" y="112" width="200" height="24" rx="6" fill="#5B7EC5" opacity=".7" />
-                <text x="34" y="128" fill="white" fontFamily="sans-serif" fontSize="11" fontWeight="600">Ristrutturazione 50%</text>
-
-                <rect x="24" y="144" width="160" height="24" rx="6" fill="#8B6CC1" opacity=".15" />
-                <rect x="24" y="144" width="160" height="24" rx="6" fill="#8B6CC1" opacity=".7" />
-                <text x="34" y="160" fill="white" fontFamily="sans-serif" fontSize="11" fontWeight="600">Spese mediche 19%</text>
-
-                <rect x="24" y="176" width="120" height="24" rx="6" fill="#C49A2A" opacity=".15" />
-                <rect x="24" y="176" width="120" height="24" rx="6" fill="#C49A2A" opacity=".7" />
-                <text x="34" y="192" fill="white" fontFamily="sans-serif" fontSize="11" fontWeight="600">Trasporti 19%</text>
+              <svg viewBox="0 0 340 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <text x="16" y="28" fill="#2D8A6E" fontFamily="sans-serif" fontSize="13" fontWeight="700" letterSpacing="1">DETRAZIONI PRINCIPALI</text>
+                <rect x="16" y="50" width="308" height="36" rx="10" fill="#2D8A6E"/>
+                <text x="28" y="74" fill="white" fontFamily="sans-serif" fontSize="13" fontWeight="600">Affitto under 31 &mdash; fino a 991&euro;</text>
+                <rect x="16" y="94" width="252" height="36" rx="10" fill="#E8724A"/>
+                <text x="28" y="118" fill="white" fontFamily="sans-serif" fontSize="13" fontWeight="600">Interessi mutuo &mdash; max 760&euro;</text>
+                <rect x="16" y="138" width="196" height="36" rx="10" fill="#5B7EC5"/>
+                <text x="28" y="162" fill="white" fontFamily="sans-serif" fontSize="13" fontWeight="600">Ristrutturazione 50%</text>
+                <rect x="16" y="182" width="156" height="36" rx="10" fill="#8B6CC1"/>
+                <text x="28" y="206" fill="white" fontFamily="sans-serif" fontSize="13" fontWeight="600">Spese mediche 19%</text>
+                <rect x="16" y="226" width="116" height="36" rx="10" fill="#C49A2A"/>
+                <text x="28" y="250" fill="white" fontFamily="sans-serif" fontSize="13" fontWeight="600">Trasporti 19%</text>
               </svg>
             </div>
           </div>
@@ -225,37 +215,28 @@ export default function Guide730Content({ faqItems }) {
             </div>
 
             <div className="guide-img" style={{background:'linear-gradient(135deg,#FBF5E6,#f5edd4)'}}>
-              <svg viewBox="0 0 600 240" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%'}}>
-                {/* Browser window mockup */}
-                <rect x="40" y="10" width="520" height="220" rx="12" fill="white" stroke="#E8E0D4" strokeWidth="1.5" />
-                {/* Browser bar */}
-                <rect x="40" y="10" width="520" height="32" rx="12" fill="#F0EBE3" />
-                <rect x="40" y="30" width="520" height="12" fill="#F0EBE3" />
-                <circle cx="62" cy="26" r="5" fill="#E8724A" opacity=".5" />
-                <circle cx="80" cy="26" r="5" fill="#C49A2A" opacity=".5" />
-                <circle cx="98" cy="26" r="5" fill="#2D8A6E" opacity=".5" />
-                <rect x="180" y="20" width="240" height="12" rx="6" fill="white" opacity=".6" />
-                {/* Content */}
-                <text x="70" y="68" fill="#1A1A2E" fontFamily="Georgia,serif" fontSize="14" fontWeight="bold">730 Precompilato 2026</text>
-                <rect x="70" y="80" width="200" height="5" rx="2.5" fill="#E8E0D4" />
-                {/* Form rows */}
-                <rect x="70" y="100" width="130" height="28" rx="6" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1" />
-                <text x="82" y="118" fill="#8A857C" fontFamily="sans-serif" fontSize="10">Reddito lordo</text>
-                <rect x="220" y="100" width="100" height="28" rx="6" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1" />
-                <text x="232" y="118" fill="#1A1A2E" fontFamily="sans-serif" fontSize="10" fontWeight="600">32.000 &euro;</text>
-
-                <rect x="70" y="138" width="130" height="28" rx="6" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1" />
-                <text x="82" y="156" fill="#8A857C" fontFamily="sans-serif" fontSize="10">Spese mediche</text>
-                <rect x="220" y="138" width="100" height="28" rx="6" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1" />
-                <text x="232" y="156" fill="#1A1A2E" fontFamily="sans-serif" fontSize="10" fontWeight="600">1.200 &euro;</text>
-
-                {/* Result */}
-                <rect x="70" y="182" width="250" height="32" rx="8" fill="#2D8A6E" />
-                <text x="86" y="202" fill="white" fontFamily="sans-serif" fontSize="11" fontWeight="600">Rimborso stimato: ~943&euro;</text>
-                
-                {/* Checkmark */}
-                <circle cx="480" cy="130" r="32" fill="#E4F3ED" />
-                <path d="M466 130l10 10 20-20" stroke="#2D8A6E" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+              <svg viewBox="0 0 340 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="8" width="324" height="284" rx="16" fill="white" stroke="#E8E0D4" strokeWidth="2"/>
+                <rect x="8" y="8" width="324" height="44" rx="16" fill="#F0EBE3"/>
+                <rect x="8" y="36" width="324" height="16" fill="#F0EBE3"/>
+                <circle cx="32" cy="30" r="7" fill="#E8724A" opacity=".6"/>
+                <circle cx="52" cy="30" r="7" fill="#C49A2A" opacity=".6"/>
+                <circle cx="72" cy="30" r="7" fill="#2D8A6E" opacity=".6"/>
+                <rect x="120" y="22" width="140" height="16" rx="8" fill="white" opacity=".7"/>
+                <text x="28" y="80" fill="#1A1A2E" fontFamily="Georgia,serif" fontSize="18" fontWeight="bold">730 Precompilato 2026</text>
+                <rect x="28" y="92" width="180" height="6" rx="3" fill="#E8E0D4"/>
+                <rect x="28" y="116" width="140" height="44" rx="10" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1.5"/>
+                <text x="40" y="144" fill="#8A857C" fontFamily="sans-serif" fontSize="13">Reddito lordo</text>
+                <rect x="180" y="116" width="120" height="44" rx="10" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1.5"/>
+                <text x="192" y="144" fill="#1A1A2E" fontFamily="sans-serif" fontSize="14" fontWeight="700">32.000 &euro;</text>
+                <rect x="28" y="172" width="140" height="44" rx="10" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1.5"/>
+                <text x="40" y="200" fill="#8A857C" fontFamily="sans-serif" fontSize="13">Spese mediche</text>
+                <rect x="180" y="172" width="120" height="44" rx="10" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1.5"/>
+                <text x="192" y="200" fill="#1A1A2E" fontFamily="sans-serif" fontSize="14" fontWeight="700">1.200 &euro;</text>
+                <rect x="28" y="236" width="200" height="44" rx="12" fill="#2D8A6E"/>
+                <text x="46" y="264" fill="white" fontFamily="sans-serif" fontSize="14" fontWeight="700">Rimborso: ~943&euro;</text>
+                <circle cx="280" cy="190" r="28" fill="#E4F3ED"/>
+                <path d="M266 190l10 10 18-18" stroke="#2D8A6E" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
           </div>
@@ -287,46 +268,53 @@ export default function Guide730Content({ faqItems }) {
             </div>
 
             <div className="guide-img" style={{background:'linear-gradient(135deg,#ECF0FA,#dce4f5)'}}>
-              <svg viewBox="0 0 600 220" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%'}}>
-                <text x="24" y="24" fill="#5B7EC5" fontFamily="sans-serif" fontSize="12" fontWeight="700" letterSpacing="1">CHECKLIST DOCUMENTI</text>
-                {/* Column 1 */}
-                <rect x="24" y="44" width="260" height="36" rx="8" fill="white" opacity=".8" />
-                <circle cx="48" cy="62" r="10" fill="#E4F3ED" />
-                <path d="M43 62l4 4 7-7" stroke="#2D8A6E" strokeWidth="2" strokeLinecap="round" />
-                <text x="66" y="66" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">CU 2026</text>
-
-                <rect x="24" y="88" width="260" height="36" rx="8" fill="white" opacity=".8" />
-                <circle cx="48" cy="106" r="10" fill="#E4F3ED" />
-                <path d="M43 106l4 4 7-7" stroke="#2D8A6E" strokeWidth="2" strokeLinecap="round" />
-                <text x="66" y="110" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">Documento d&apos;identit&agrave;</text>
-
-                <rect x="24" y="132" width="260" height="36" rx="8" fill="white" opacity=".8" />
-                <circle cx="48" cy="150" r="10" fill="#E4F3ED" />
-                <path d="M43 150l4 4 7-7" stroke="#2D8A6E" strokeWidth="2" strokeLinecap="round" />
-                <text x="66" y="154" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">IBAN conto corrente</text>
-
-                <rect x="24" y="176" width="260" height="36" rx="8" fill="white" opacity=".8" />
-                <circle cx="48" cy="194" r="10" fill="#FBF5E6" />
-                <rect x="42" y="191" width="12" height="6" rx="2" fill="#C49A2A" opacity=".4" />
-                <text x="66" y="198" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12">730 anno precedente</text>
-
-                {/* Column 2 */}
-                <rect x="310" y="44" width="260" height="36" rx="8" fill="white" opacity=".8" />
-                <circle cx="334" cy="62" r="10" fill="#FDF0EB" />
-                <text x="352" y="66" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">Ricevute mediche</text>
-
-                <rect x="310" y="88" width="260" height="36" rx="8" fill="white" opacity=".8" />
-                <circle cx="334" cy="106" r="10" fill="#FDF0EB" />
-                <text x="352" y="110" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">Contratto affitto</text>
-
-                <rect x="310" y="132" width="260" height="36" rx="8" fill="white" opacity=".8" />
-                <circle cx="334" cy="150" r="10" fill="#FDF0EB" />
-                <text x="352" y="154" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">Interessi mutuo</text>
-
-                <rect x="310" y="176" width="260" height="36" rx="8" fill="white" opacity=".8" />
-                <circle cx="334" cy="194" r="10" fill="#FDF0EB" />
-                <text x="352" y="198" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">Spese scolastiche</text>
+              <svg viewBox="0 0 340 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <text x="16" y="28" fill="#5B7EC5" fontFamily="sans-serif" fontSize="13" fontWeight="700" letterSpacing="1">CHECKLIST DOCUMENTI</text>
+                
+                <rect x="16" y="50" width="150" height="50" rx="12" fill="white"/>
+                <circle cx="44" cy="75" r="14" fill="#E4F3ED"/>
+                <path d="M37 75l5 5 10-10" stroke="#2D8A6E" strokeWidth="2.5" strokeLinecap="round"/>
+                <text x="66" y="80" fill="#1A1A2E" fontFamily="sans-serif" fontSize="13" fontWeight="600">CU 2026</text>
+                
+                <rect x="16" y="108" width="150" height="50" rx="12" fill="white"/>
+                <circle cx="44" cy="133" r="14" fill="#E4F3ED"/>
+                <path d="M37 133l5 5 10-10" stroke="#2D8A6E" strokeWidth="2.5" strokeLinecap="round"/>
+                <text x="66" y="129" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">Documento</text>
+                <text x="66" y="144" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">d&apos;identit&agrave;</text>
+                
+                <rect x="16" y="166" width="150" height="50" rx="12" fill="white"/>
+                <circle cx="44" cy="191" r="14" fill="#E4F3ED"/>
+                <path d="M37 191l5 5 10-10" stroke="#2D8A6E" strokeWidth="2.5" strokeLinecap="round"/>
+                <text x="66" y="187" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">IBAN conto</text>
+                <text x="66" y="202" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">corrente</text>
+                
+                <rect x="16" y="224" width="150" height="50" rx="12" fill="white"/>
+                <circle cx="44" cy="249" r="14" fill="#FBF5E6"/>
+                <rect x="36" y="245" width="16" height="8" rx="2" fill="#C49A2A" opacity=".5"/>
+                <text x="66" y="245" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12">730 anno</text>
+                <text x="66" y="260" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12">precedente</text>
+                
+                <rect x="174" y="50" width="150" height="50" rx="12" fill="white"/>
+                <circle cx="202" cy="75" r="14" fill="#FDF0EB"/>
+                <text x="224" y="72" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">Ricevute</text>
+                <text x="224" y="87" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">mediche</text>
+                
+                <rect x="174" y="108" width="150" height="50" rx="12" fill="white"/>
+                <circle cx="202" cy="133" r="14" fill="#FDF0EB"/>
+                <text x="224" y="129" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">Contratto</text>
+                <text x="224" y="144" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">affitto</text>
+                
+                <rect x="174" y="166" width="150" height="50" rx="12" fill="white"/>
+                <circle cx="202" cy="191" r="14" fill="#FDF0EB"/>
+                <text x="224" y="187" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">Interessi</text>
+                <text x="224" y="202" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">mutuo</text>
+                
+                <rect x="174" y="224" width="150" height="50" rx="12" fill="white"/>
+                <circle cx="202" cy="249" r="14" fill="#FDF0EB"/>
+                <text x="224" y="245" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">Spese</text>
+                <text x="224" y="260" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">scolastiche</text>
               </svg>
+            </div>
             </div>
           </div>
 

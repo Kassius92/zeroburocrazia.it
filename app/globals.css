@@ -751,15 +751,18 @@ img { max-width: 100%; display: block }
 
 /* Content image placeholders */
 .guide-img {
-  margin:32px 0; border-radius:16px; min-height:280px;
+  margin:32px 0; border-radius:20px; min-height:380px;
   background:var(--warm); display:flex; align-items:center; justify-content:center;
-  overflow:hidden; padding:32px;
+  overflow:hidden; padding:40px 32px;
 }
 .guide-img svg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   transition: transform .4s var(--ease);
 }
 .guide-img:hover svg {
-  transform: scale(1.06);
+  transform: scale(1.04);
 }
 .guide-img span {
   font-size:14px; color:var(--faded); font-weight:500;
@@ -899,10 +902,9 @@ img { max-width: 100%; display: block }
   .guide-hero-img img { padding:8px !important }
   .guide-body { padding-left:20px; padding-right:20px }
   .guide-compare { grid-template-columns:1fr }
-  /* Infografiche SVG più grandi su mobile */
-  .guide-img { padding:20px 12px; min-height:320px }
-  .guide-img svg { transform:scale(1.4); transform-origin:center center }
-  .guide-img:hover svg { transform:scale(1.46) }
+  /* Infografiche SVG su mobile */
+  .guide-img { padding:24px 16px; min-height:340px }
+  .guide-img svg { max-width:100% }
 }
 /* ═══════════════════════════════════════════════════
    ZEROBUROCRAZIA V8 — Design System CSS
