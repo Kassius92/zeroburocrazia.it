@@ -2,13 +2,14 @@ import Link from 'next/link';
 import NavV8 from '@/components/redesign/NavV8';
 import FooterV8 from '@/components/redesign/FooterV8';
 import HeroSearch from '@/components/redesign/HeroSearch';
+import HomeStatsCounter from '@/components/redesign/HomeStatsCounter';
+import HomeTabs from '@/components/redesign/HomeTabs';
 import SchemaOrg from '@/components/SchemaOrg';
-import { categoriesGuide } from '@/components/categoriesData';
 import icons from '@/components/redesign/guideIcons';
 import HomeAnimations from './HomeAnimations';
 
 export const metadata = {
-  title: 'ZeroBurocrazia \u2014 La burocrazia italiana, finalmente comprensibile.',
+  title: 'ZeroBurocrazia \u2014 La burocrazia italiana, finalmente zero.',
   description: 'Guide gratuite su 730, ISEE, SPID, NASpI, mutui, partita IVA e molto altro. Scritte come te le spiegherebbe un amico. Aggiornate al 2026.',
   alternates: { canonical: 'https://zeroburocrazia.it' },
   openGraph: { url: 'https://zeroburocrazia.it', images: [{ url: '/oghome.png', width: 1200, height: 630 }] },
@@ -34,46 +35,39 @@ const websiteSchema = {
   },
 };
 
-/* V8 Category color mapping */
-const catV8 = {
-  fisco:     { pill: 'v8-pill-coral', ic: 'v8-ic-coral', stroke: '#E8724A' },
-  casa:      { pill: 'v8-pill-green', ic: 'v8-ic-green', stroke: '#2D8A6E' },
-  famiglia:  { pill: 'v8-pill-violet', ic: 'v8-ic-violet', stroke: '#8B6CC1' },
-  documenti: { pill: 'v8-pill-blue', ic: 'v8-ic-blue', stroke: '#5B7EC5' },
-  lavoro:    { pill: 'v8-pill-gold', ic: 'v8-ic-gold', stroke: '#C49A2A' },
-  salute:    { pill: 'v8-pill-green', ic: 'v8-ic-green', stroke: '#2D8A6E' },
-  auto:      { pill: 'v8-pill-blue', ic: 'v8-ic-blue', stroke: '#5B7EC5' },
-  pensione:  { pill: 'v8-pill-violet', ic: 'v8-ic-violet', stroke: '#8B6CC1' },
-};
-
-/* Top guides by search volume */
-const topGuides = [
-  { href: '/730',            name: 'Come fare il 730',         desc: 'Detrazioni, precompilato, scadenze e rimborso in busta paga.',   cat: 'fisco',     catLabel: 'Fisco',     time: '12 min' },
-  { href: '/spid',           name: 'Come fare lo SPID',        desc: 'Provider, costi 2026, riconoscimento gratis con CIE.',           cat: 'documenti', catLabel: 'Documenti', time: '8 min'  },
-  { href: '/isee',           name: "Come fare l\u2019ISEE",    desc: 'Documenti, procedura al CAF, simulazione online.',                cat: 'fisco',     catLabel: 'Fisco',     time: '10 min' },
-  { href: '/legge-104',      name: 'Legge 104',                desc: 'Permessi 3 giorni, congedo 2 anni, agevolazioni auto e fiscali.', cat: 'salute',    catLabel: 'Salute',    time: '15 min' },
-  { href: '/naspi',          name: 'NASpI: la disoccupazione', desc: 'Quanto spetta, calcolo, domanda INPS entro 68 giorni.',           cat: 'lavoro',    catLabel: 'Lavoro',    time: '10 min' },
-  { href: '/bonus-bollette', name: 'Bonus bollette',           desc: "Luce, gas, TARI. Decreto 115\u20AC extra. Automatico con ISEE.",  cat: 'fisco',     catLabel: 'Fisco',     time: '8 min'  },
-];
-
 /* Hero quick tags */
 const heroTags = [
-  { label: '730', href: '/730' },
+  { label: 'Dichiarazione 730', href: '/730' },
+  { label: 'ISEE 2026', href: '/isee' },
   { label: 'SPID', href: '/spid' },
-  { label: 'ISEE', href: '/isee' },
   { label: 'NASpI', href: '/naspi' },
-  { label: 'Legge 104', href: '/legge-104' },
-  { label: 'Bollette', href: '/bonus-bollette' },
-  { label: 'Mutuo', href: '/mutuo' },
-  { label: 'Dimissioni', href: '/dimissioni' },
+  { label: 'Partita IVA', href: '/piva' },
+  { label: 'Bonus Nido', href: '/bonus-nido' },
 ];
 
-/* Arrow SVG reused in cards */
+/* Arrow SVGs */
 const ArrowSvg = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
     <path d="M7 17L17 7M17 7H8M17 7v9" />
   </svg>
 );
+const ArrowRight = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+    <path d="M5 12h14M12 5l7 7-7 7" />
+  </svg>
+);
+
+/* "More guides" data */
+const moreGuides = [
+  { href: '/naspi',              name: 'NASpI',                 desc: 'Quanto spetta, calcolo, domanda INPS entro 68 giorni.',  ic: 'v8-ic-gold',   pill: 'v8-pill-gold',   catLabel: 'Lavoro',    stroke: '#C49A2A' },
+  { href: '/legge-104',          name: 'Legge 104',             desc: 'Permessi, congedo 2 anni, agevolazioni auto e fiscali.', ic: 'v8-ic-green',  pill: 'v8-pill-green',  catLabel: 'Famiglia',  stroke: '#2D8A6E' },
+  { href: '/bonus-bollette',     name: 'Bonus Bollette',        desc: 'Luce, gas, acqua. Automatico con ISEE sotto soglia.',    ic: 'v8-ic-coral',  pill: 'v8-pill-coral',  catLabel: 'Fisco',     stroke: '#E8724A' },
+  { href: '/piva',               name: 'Partita IVA',           desc: 'Regime forfettario, costi, tasse, contributi INPS.',     ic: 'v8-ic-coral',  pill: 'v8-pill-coral',  catLabel: 'Fisco',     stroke: '#E8724A' },
+  { href: '/dimissioni',         name: 'Dimissioni',            desc: 'Procedura online, preavviso, TFR, NASpI dopo.',          ic: 'v8-ic-gold',   pill: 'v8-pill-gold',   catLabel: 'Lavoro',    stroke: '#C49A2A' },
+  { href: '/bonus-nido',         name: 'Bonus Nido',            desc: 'Fino a 3.600\u20AC/anno. Domanda INPS, requisiti ISEE.', ic: 'v8-ic-violet', pill: 'v8-pill-violet', catLabel: 'Famiglia',  stroke: '#8B6CC1' },
+  { href: '/cie',                name: 'CIE',                   desc: "Carta d\u2019identit\u00e0 elettronica: prenotazione, costi, tempi.", ic: 'v8-ic-blue', pill: 'v8-pill-blue', catLabel: 'Documenti', stroke: '#5B7EC5' },
+  { href: '/assegno-inclusione', name: 'Assegno di Inclusione', desc: 'Ha sostituito il RdC. Fino a 500\u20AC/mese + affitto.', ic: 'v8-ic-gold',   pill: 'v8-pill-gold',   catLabel: 'Lavoro',    stroke: '#C49A2A' },
+];
 
 export default function HomePage() {
   return (
@@ -86,52 +80,188 @@ export default function HomePage() {
       {/* HERO */}
       <section className="v8-hero">
         <div className="v8-hero-badge rv">
-          <span className="v8-hero-badge-dot" />
-          Guide gratuite &mdash; aggiornate 2026
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+          Aggiornato 2026
         </div>
         <h1 className="rv rv-d1">
-          La burocrazia italiana,<br />finalmente <em>comprensibile</em>
+          La burocrazia italiana,<br />finalmente <em>zero.</em>
         </h1>
         <p className="v8-hero-sub rv rv-d2">
-          Traduciamo decreti e circolari in guide semplici. Gratis, aggiornate, senza paroloni. Come un amico che ci &egrave; gi&agrave; passato.
+          Guide gratuite scritte in italiano vero. Passo per passo, con calcolatori ed esempi concreti.
         </p>
         <HeroSearch tags={heroTags} />
       </section>
 
-      {/* TOP GUIDES GRID */}
-      <section className="v8-guides" id="guide">
-        <div className="v8-guides-head">
-          <h2 className="rv-left">Le guide pi&ugrave; <em>cercate</em></h2>
-          <p className="v8-guides-sub rv-left rv-d1">Ogni guida &egrave; scritta per essere capita da chiunque. Zero gergo, solo risposte.</p>
+      {/* STATS BAR */}
+      <HomeStatsCounter />
+
+      {/* FEATURED GUIDES — large alternating rows */}
+      <section className="hp-features" id="guide">
+        <div className="hp-features-head rv">
+          <div className="hp-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            Le pi&ugrave; lette
+          </div>
+          <h2>Le guide che servono <em>davvero</em></h2>
+          <p>Le pratiche pi&ugrave; cercate, spiegate come se avessi un amico all&apos;Agenzia delle Entrate.</p>
         </div>
-        <div className="v8-g-grid">
-          {topGuides.map((g, i) => {
-            const colors = catV8[g.cat] || catV8.fisco;
+
+        {/* 730 */}
+        <div className="hp-frow">
+          <div className="hp-ftext rv-left">
+            <h3>Dichiarazione <em>730</em></h3>
+            <p>Precompilata, detrazioni, scadenze, errori da evitare. Tutto quello che devi sapere per fare il 730 nel 2026 senza ansia e senza commercialista.</p>
+            <Link href="/730" className="hp-flink">
+              Leggi la guida completa
+              <ArrowRight />
+            </Link>
+          </div>
+          <div className="hp-fcard rv-right rv-d1">
+            <div className="hp-fcard-header">
+              <div className="hp-fcard-icon v8-ic-coral" style={{ color: '#E8724A' }}>
+                {icons['/730'] || null}
+              </div>
+              <div>
+                <div className="hp-fcard-title">Guida al 730 / 2026</div>
+                <div className="hp-fcard-sub">Fisco &middot; 15 min di lettura</div>
+              </div>
+            </div>
+            <div className="hp-calc">
+              <div className="hp-calc-row">
+                <span className="hp-calc-label">Reddito lordo</span>
+                <span className="hp-calc-val">32.000&euro;</span>
+              </div>
+              <div className="hp-calc-row">
+                <span className="hp-calc-label">Spese mediche</span>
+                <span className="hp-calc-val">1.200&euro;</span>
+              </div>
+              <div className="hp-calc-row">
+                <span className="hp-calc-label">Interessi mutuo</span>
+                <span className="hp-calc-val">2.400&euro;</span>
+              </div>
+              <div className="hp-calc-result">
+                <span>Rimborso stimato</span>
+                <strong>~943&euro;</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ISEE */}
+        <div className="hp-frow reverse">
+          <div className="hp-ftext rv-right">
+            <h3>Come fare <em>l&apos;ISEE</em></h3>
+            <p>Documenti, procedura al CAF, simulazione online. L&apos;ISEE &egrave; la chiave per accedere a bonus, agevolazioni e servizi a costo ridotto.</p>
+            <Link href="/isee" className="hp-flink">
+              Leggi la guida completa
+              <ArrowRight />
+            </Link>
+          </div>
+          <div className="hp-fcard rv-left rv-d1">
+            <div className="hp-fcard-header">
+              <div className="hp-fcard-icon v8-ic-coral" style={{ color: '#E8724A' }}>
+                {icons['/isee'] || null}
+              </div>
+              <div>
+                <div className="hp-fcard-title">Guida ISEE 2026</div>
+                <div className="hp-fcard-sub">Fisco &middot; 10 min di lettura</div>
+              </div>
+            </div>
+            <div className="hp-fstep">
+              <div className="hp-fstep-n">1</div>
+              <div><h4>Raccogli i documenti</h4><p>CU, saldi conti, giacenza media, visure catastali.</p></div>
+            </div>
+            <div className="hp-fstep">
+              <div className="hp-fstep-n">2</div>
+              <div><h4>Vai al CAF o fai da te</h4><p>DSU online su sito INPS con SPID, oppure al CAF gratis.</p></div>
+            </div>
+            <div className="hp-fstep">
+              <div className="hp-fstep-n">3</div>
+              <div><h4>Ricevi l&apos;attestazione</h4><p>In ~10 giorni lavorativi, via e-mail o su MyINPS.</p></div>
+            </div>
+            <div className="hp-fstep">
+              <div className="hp-fstep-n">4</div>
+              <div><h4>Accedi ai bonus</h4><p>Assegno unico, bonus nido, sconti mensa e molto altro.</p></div>
+            </div>
+          </div>
+        </div>
+
+        {/* SPID */}
+        <div className="hp-frow">
+          <div className="hp-ftext rv-left">
+            <h3>Come fare <em>lo SPID</em></h3>
+            <p>Provider, costi 2026, riconoscimento gratis con CIE. L&apos;identit&agrave; digitale che serve per fare qualsiasi cosa con la PA.</p>
+            <Link href="/spid" className="hp-flink">
+              Leggi la guida completa
+              <ArrowRight />
+            </Link>
+          </div>
+          <div className="hp-fcard rv-right rv-d1">
+            <div className="hp-fcard-header">
+              <div className="hp-fcard-icon v8-ic-blue" style={{ color: '#5B7EC5' }}>
+                {icons['/spid'] || null}
+              </div>
+              <div>
+                <div className="hp-fcard-title">Guida SPID 2026</div>
+                <div className="hp-fcard-sub">Documenti &middot; 8 min di lettura</div>
+              </div>
+            </div>
+            <div className="hp-fstep">
+              <div className="hp-fstep-n">1</div>
+              <div><h4>Scegli il provider</h4><p>PosteID, Aruba, Infocert, Sielte, TIM&hellip; tutti gratuiti.</p></div>
+            </div>
+            <div className="hp-fstep">
+              <div className="hp-fstep-n">2</div>
+              <div><h4>Registrati online</h4><p>Email, telefono, codice fiscale, documento d&apos;identit&agrave;.</p></div>
+            </div>
+            <div className="hp-fstep">
+              <div className="hp-fstep-n">3</div>
+              <div><h4>Fatti riconoscere</h4><p>Con CIE + NFC &egrave; gratis e immediato. Altrimenti webcam o ufficio postale.</p></div>
+            </div>
+            <div className="hp-fstep">
+              <div className="hp-fstep-n">&checkmark;</div>
+              <div><h4>Pronto!</h4><p>Accedi a INPS, Agenzia Entrate, ANPR, fascicolo sanitario e 16.000+ servizi.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MORE GUIDES 4-COL */}
+      <section className="hp-more" id="tutte">
+        <div className="hp-more-head rv">
+          <h2>&hellip;e tante <em>altre</em> guide!</h2>
+        </div>
+        <div className="hp-more-grid">
+          {moreGuides.map((g, i) => {
             const icon = icons[g.href];
             return (
-              <Link key={g.href} href={g.href} className={`v8-g-card rv-scale rv-d${i + 1}`}>
-                <div className="v8-g-card-top">
-                  <div className={`v8-g-card-icon ${colors.ic}`} style={{ color: colors.stroke }}>
-                    {icon || null}
-                  </div>
-                  <div className="v8-g-card-arrow"><ArrowSvg /></div>
+              <Link key={g.href} href={g.href} className={`hp-mcard rv rv-d${(i % 4) + 1}`}>
+                <div className="hp-mcard-arrow"><ArrowSvg /></div>
+                <div className={`hp-mcard-icon ${g.ic}`} style={{ color: g.stroke }}>
+                  {icon || null}
                 </div>
-                <div className="v8-g-card-body">
-                  <h3>{g.name}</h3>
-                  <p>{g.desc}</p>
-                </div>
-                <div className="v8-g-card-foot">
-                  <span className={`v8-g-pill ${colors.pill}`}>{g.catLabel}</span>
-                  <span className="v8-g-pill v8-pill-muted">{g.time}</span>
-                </div>
+                <h3>{g.name}</h3>
+                <p>{g.desc}</p>
+                <span className={`hp-mcard-pill ${g.pill}`}>{g.catLabel}</span>
               </Link>
             );
           })}
         </div>
       </section>
 
+      {/* AUDIENCE TABS */}
+      <section className="hp-audience">
+        <div className="hp-audience-inner">
+          <div className="hp-audience-head rv">
+            <h2>Qualunque sia la tua <em>situazione</em></h2>
+            <p>Guide pensate per la vita reale, non per gli addetti ai lavori.</p>
+          </div>
+          <HomeTabs />
+        </div>
+      </section>
+
       {/* COME FUNZIONA */}
-      <div className="v8-how" id="come">
+      <section className="v8-how" id="come">
         <div className="v8-how-inner">
           <div className="v8-how-head">
             <h2 className="rv-left">Come <em>funziona</em></h2>
@@ -155,82 +285,17 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* ARTICLE PREVIEW */}
-      <section className="v8-preview">
-        <div className="v8-pv-left rv-left">
-          <h2>L&apos;Assegno di <em>Inclusione,</em> in 2 minuti</h2>
-          <p>Ha sostituito il Reddito di Cittadinanza. Sostegno mensile per famiglie con un componente disabile, minorenne o over 60. Fino a 500&euro;/mese pi&ugrave; 303&euro; di affitto.</p>
-          <Link href="/assegno-inclusione">Leggi la guida completa &rarr;</Link>
-        </div>
-        <div className="v8-pv-right rv-right rv-d2">
-          <div className="v8-pv-step">
-            <div className="v8-pv-step-n">1</div>
-            <div><h4>Fai l&apos;ISEE</h4><p>Sotto 10.140&euro;. Al CAF &egrave; gratis.</p></div>
-          </div>
-          <div className="v8-pv-step">
-            <div className="v8-pv-step-n">2</div>
-            <div><h4>Domanda all&apos;INPS</h4><p>Online con SPID o al CAF. Risposta in 30gg.</p></div>
-          </div>
-          <div className="v8-pv-step">
-            <div className="v8-pv-step-n">3</div>
-            <div><h4>Firma il PAD</h4><p>Su SIISL. Obbligatorio per il pagamento.</p></div>
-          </div>
-          <div className="v8-pv-step">
-            <div className="v8-pv-step-n">4</div>
-            <div><h4>Ricevi la Carta ADI</h4><p>Poste la spedisce. Importo entro il 27.</p></div>
-          </div>
-          <div className="v8-pv-result">
-            <span>Ahmed, Napoli &mdash; moglie + figlio</span>
-            <span>~803&euro;</span>
-          </div>
-        </div>
-      </section>
-
-      {/* TUTTE LE GUIDE PER CATEGORIA */}
-      <section className="v8-cats" id="categorie">
-        <div className="v8-cats-head">
-          <h2 className="rv">Tutte le guide per <em>categoria</em></h2>
-          <p className="rv rv-d1">Guide gratuite, organizzate per situazione di vita.</p>
-        </div>
-
-        {categoriesGuide.filter(cat => cat.guides.length > 0).map(cat => {
-          const colors = catV8[cat.slug] || catV8.fisco;
-          return (
-            <div key={cat.slug} className="v8-cat-group rv">
-              <div className="v8-cat-group-title" style={{ color: colors.stroke }}>
-                {cat.title}
-                <span className={`v8-g-pill ${colors.pill}`}>{cat.guides.length}</span>
-              </div>
-              <div className="v8-cat-guide-list">
-                {cat.guides.map(g => (
-                  <Link key={g.href} href={g.href} className="v8-cat-guide">
-                    <div className={`v8-cat-guide-icon ${colors.ic}`} style={{ color: colors.stroke }}>
-                      {icons[g.href] || null}
-                    </div>
-                    <div className="v8-cat-guide-info">
-                      <div className="v8-cat-guide-name">{g.name}</div>
-                      <div className="v8-cat-guide-desc">{g.desc}</div>
-                    </div>
-                    <svg className="v8-cat-guide-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                      <path d="M9 18l6-6-6-6" />
-                    </svg>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          );
-        })}
       </section>
 
       {/* CTA */}
-      <section className="v8-cta">
-        <div className="v8-cta-box rv-scale">
-          <h2>Tante guide. Zero costi.<br /><em>Zero paroloni.</em></h2>
-          <p>La burocrazia non deve essere un incubo. Trova la guida e risolvi il problema.</p>
-          <a href="#guide" className="v8-cta-btn">Esplora tutte le guide</a>
-        </div>
+      <section className="hp-cta">
+        <h2 className="rv">33 guide. Zero costi.<br /><em>Zero paroloni.</em></h2>
+        <p className="rv rv-d1">La burocrazia non deve essere un incubo. Trova la guida e risolvi il problema.</p>
+        <a href="#guide" className="hp-cta-btn rv rv-d2">
+          Esplora tutte le guide
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+        </a>
+        <div className="hp-cta-note rv rv-d3">Gratis per sempre. Nessuna registrazione.</div>
       </section>
 
       <FooterV8 />
