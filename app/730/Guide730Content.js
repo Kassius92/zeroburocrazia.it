@@ -190,7 +190,7 @@ export default function Guide730Content({ faqItems }) {
               <strong>Le detrazioni dimenticate pi&ugrave; spesso:</strong> abbonamento ai trasporti pubblici, spese veterinarie, sport dei figli, spese funebri, donazioni a ONLUS. Se non le inserisci nel 730, quei soldi li perdi per sempre.
             </div>
 
-            <div className="guide-img" style={{background:'linear-gradient(135deg,#E4F3ED,#d0ebdf)',padding:'24px'}}>
+            <div className="guide-img" style={{background:'linear-gradient(135deg,#E4F3ED,#d0ebdf)'}}>
               <svg viewBox="0 0 600 220" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%'}}>
                 <text x="24" y="24" fill="#2D8A6E" fontFamily="sans-serif" fontSize="12" fontWeight="700" letterSpacing="1">DETRAZIONI PRINCIPALI</text>
                 {/* Bars */}
@@ -245,7 +245,7 @@ export default function Guide730Content({ faqItems }) {
               <strong>Un lavoro + poche spese</strong> &rarr; fallo da solo. <strong>Mutuo, cambio lavoro, figli</strong> &rarr; vai al CAF. <strong>Cripto, redditi esteri, affitti</strong> &rarr; commercialista.
             </div>
 
-            <div className="guide-img" style={{background:'linear-gradient(135deg,#FBF5E6,#f5edd4)',padding:'24px'}}>
+            <div className="guide-img" style={{background:'linear-gradient(135deg,#FBF5E6,#f5edd4)'}}>
               <svg viewBox="0 0 600 240" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%'}}>
                 {/* Browser window mockup */}
                 <rect x="40" y="10" width="520" height="220" rx="12" fill="white" stroke="#E8E0D4" strokeWidth="1.5" />
@@ -307,7 +307,7 @@ export default function Guide730Content({ faqItems }) {
               <strong>Il metodo della cartellina:</strong> crea una cartellina &quot;730 2026&quot;. Ogni volta che ricevi una ricevuta detraibile, mettila dentro. A maggio avrai tutto pronto in 5 minuti.
             </div>
 
-            <div className="guide-img" style={{background:'linear-gradient(135deg,#ECF0FA,#dce4f5)',padding:'24px'}}>
+            <div className="guide-img" style={{background:'linear-gradient(135deg,#ECF0FA,#dce4f5)'}}>
               <svg viewBox="0 0 600 220" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%'}}>
                 <text x="24" y="24" fill="#5B7EC5" fontFamily="sans-serif" fontSize="12" fontWeight="700" letterSpacing="1">CHECKLIST DOCUMENTI</text>
                 {/* Column 1 */}
@@ -427,14 +427,51 @@ export default function Guide730Content({ faqItems }) {
             <div className="guide-related">
               <Link href="/guide" className="guide-related-card">
                 <div className="guide-related-img" style={{background:'linear-gradient(135deg,#FDF0EB,#fce4da)'}}>
-                  <span>ISEE<br /><em>2026</em></span>
+                  <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'80%',maxWidth:'260px'}}>
+                    {/* ISEE card mockup */}
+                    <rect x="40" y="20" width="240" height="160" rx="12" fill="white" style={{filter:'drop-shadow(0 4px 12px rgba(0,0,0,.08))'}} />
+                    <rect x="56" y="36" width="60" height="8" rx="4" fill="#E8724A" opacity=".3" />
+                    <text x="56" y="62" fill="#1A1A2E" fontFamily="Georgia,serif" fontSize="14" fontWeight="bold">ISEE 2026</text>
+                    <rect x="56" y="74" width="180" height="5" rx="2.5" fill="#E8E0D4" />
+                    <rect x="56" y="86" width="140" height="5" rx="2.5" fill="#E8E0D4" />
+                    {/* Steps */}
+                    <circle cx="68" cy="110" r="8" fill="#E4F3ED" />
+                    <text x="68" y="113" textAnchor="middle" fill="#2D8A6E" fontSize="9" fontWeight="bold">1</text>
+                    <rect x="84" y="106" width="100" height="5" rx="2.5" fill="#E8E0D4" />
+                    <circle cx="68" cy="132" r="8" fill="#E4F3ED" />
+                    <text x="68" y="135" textAnchor="middle" fill="#2D8A6E" fontSize="9" fontWeight="bold">2</text>
+                    <rect x="84" y="128" width="80" height="5" rx="2.5" fill="#E8E0D4" />
+                    <circle cx="68" cy="154" r="8" fill="#E4F3ED" />
+                    <text x="68" y="157" textAnchor="middle" fill="#2D8A6E" fontSize="9" fontWeight="bold">3</text>
+                    <rect x="84" y="150" width="120" height="5" rx="2.5" fill="#E8E0D4" />
+                    {/* Badge */}
+                    <circle cx="240" cy="44" r="16" fill="#2D8A6E" opacity=".9" />
+                    <path d="M234 44l4 4 8-8" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                  </svg>
                 </div>
                 <h4>Come Fare l&apos;ISEE 2026</h4>
                 <p>Per bonus e agevolazioni ti serve l&apos;ISEE. Documenti, procedura al CAF, simulazione online.</p>
               </Link>
               <Link href="/guide" className="guide-related-card">
                 <div className="guide-related-img" style={{background:'linear-gradient(135deg,#ECF0FA,#dce4f5)'}}>
-                  <span>Come fare<br /><em>lo SPID</em></span>
+                  <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'80%',maxWidth:'260px'}}>
+                    {/* SPID card mockup */}
+                    <rect x="40" y="20" width="240" height="160" rx="12" fill="white" style={{filter:'drop-shadow(0 4px 12px rgba(0,0,0,.08))'}} />
+                    {/* Login form */}
+                    <rect x="56" y="36" width="60" height="8" rx="4" fill="#5B7EC5" opacity=".3" />
+                    <text x="56" y="62" fill="#1A1A2E" fontFamily="Georgia,serif" fontSize="14" fontWeight="bold">Accedi con SPID</text>
+                    {/* Input fields */}
+                    <rect x="56" y="78" width="208" height="28" rx="6" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1" />
+                    <text x="68" y="96" fill="#B5B0A8" fontFamily="sans-serif" fontSize="10">Email o username</text>
+                    <rect x="56" y="114" width="208" height="28" rx="6" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1" />
+                    <text x="68" y="132" fill="#B5B0A8" fontFamily="sans-serif" fontSize="10">Password</text>
+                    {/* Button */}
+                    <rect x="56" y="150" width="208" height="24" rx="6" fill="#5B7EC5" />
+                    <text x="160" y="166" textAnchor="middle" fill="white" fontFamily="sans-serif" fontSize="10" fontWeight="bold">Entra con SPID</text>
+                    {/* Shield icon */}
+                    <circle cx="240" cy="44" r="16" fill="#5B7EC5" opacity=".9" />
+                    <path d="M240 35v10l-5 4 5 4 5-4v-10z" fill="none" stroke="white" strokeWidth="1.5" />
+                  </svg>
                 </div>
                 <h4>Come Fare lo SPID in 15 Minuti</h4>
                 <p>Per la precompilata online ti serve lo SPID. Gratis con CIE, immediato.</p>

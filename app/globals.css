@@ -711,9 +711,15 @@ img { max-width: 100%; display: block }
 
 /* Content image placeholders */
 .guide-img {
-  margin:32px 0; border-radius:16px; aspect-ratio:16/9;
+  margin:32px 0; border-radius:16px; min-height:280px;
   background:var(--warm); display:flex; align-items:center; justify-content:center;
-  overflow:hidden;
+  overflow:hidden; padding:32px;
+}
+.guide-img svg {
+  transition: transform .4s var(--ease);
+}
+.guide-img:hover svg {
+  transform: scale(1.06);
 }
 .guide-img span {
   font-size:14px; color:var(--faded); font-weight:500;
@@ -1745,14 +1751,21 @@ img { max-width: 100%; display: block }
 .guide-related-card {
   display:block; background:var(--card);
   border:1px solid rgba(0,0,0,.04); border-radius:16px;
-  overflow:hidden; transition: all .3s var(--ease);
+  overflow:hidden; transition: transform .5s var(--ease), box-shadow .5s var(--ease), border-color .5s;
 }
 .guide-related-card:hover {
-  transform:translateY(-4px); box-shadow:0 12px 36px rgba(0,0,0,.07);
+  transform:translateY(-6px); box-shadow:0 16px 48px rgba(0,0,0,.10);
   border-color:transparent;
 }
 .guide-related-img {
   aspect-ratio:16/9; display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+}
+.guide-related-img svg {
+  transition: transform .5s var(--ease);
+}
+.guide-related-card:hover .guide-related-img svg {
+  transform: scale(1.05);
 }
 .guide-related-img span {
   font-family:var(--font-display),Georgia,serif;
