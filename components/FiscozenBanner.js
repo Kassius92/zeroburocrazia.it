@@ -7,7 +7,7 @@ export function FiscozenBanner() {
   return (
     <div className="fz-banner">
       <div className="fz-banner-inner">
-        <img src="/fiscozen-logo.png" alt="Fiscozen" width="40" height="40" className="fz-logo" />
+        <img src="/fiscozen-logo.png" alt="Fiscozen" width="120" height="17" className="fz-logo" />
         <div className="fz-banner-text">
           <strong>Cerchi un commercialista online?</strong>
           <p>Con Fiscozen gestisci partita IVA, fatture e tasse da un&apos;unica piattaforma. Consulenza inclusa.</p>
@@ -33,7 +33,7 @@ export function FiscozenSticky() {
   return (
     <div className="fz-sticky">
       <div className="fz-sticky-inner">
-        <img src="/fiscozen-logo.png" alt="Fiscozen" width="24" height="24" />
+        <img src="/fiscozen-logo.png" alt="Fiscozen" width="80" height="12" />
         <span>Commercialista online da 299&euro;/anno</span>
         <a href={LINK} target="_blank" rel="noopener noreferrer">Scopri Fiscozen &rarr;</a>
       </div>
