@@ -18,8 +18,11 @@ export default function Nav() {
         <div className="nav-inner">
           <div className="nav-left">
             <Link href="/" className="nav-logo">
-              <img src="/logo-z.webp" alt="ZeroBurocrazia" width="32" height="32" />
-              ZeroBurocrazia
+              <img src="/logo-z.webp" alt="ZeroBurocrazia" width="40" height="40" />
+              <span className="nav-logo-text">
+                <span className="nav-logo-zero">ZERO</span>
+                <span className="nav-logo-buro">BUROCRAZIA</span>
+              </span>
             </Link>
           </div>
 
