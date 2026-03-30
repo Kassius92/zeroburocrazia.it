@@ -642,10 +642,11 @@ img { max-width: 100%; display: block }
   .how { padding:60px 20px }
   .how-grid { grid-template-columns:1fr }
 
-  .stats { padding:0 20px }
-  .stats-inner { grid-template-columns:repeat(3,1fr) }
-  .stat-num { font-size:clamp(24px,6vw,36px) }
+  .stats { padding:0 16px }
+  .stat { padding:20px 8px }
+  .stat-num { font-size:24px }
   .stat-label { font-size:11px }
+  .stat:not(:last-child)::after { display:none }
   .stat:not(:last-child)::after { display:none }
 
   .cta { padding:60px 20px }
