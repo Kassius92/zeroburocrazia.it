@@ -18,8 +18,8 @@ export const metadata = {
 
 const faqItems = [
   { q: "Posso avere partita IVA e lavoro dipendente?", a: "S\u00ec. Il tuo reddito da dipendente non deve superare 35.000\u20ac annui per restare nel forfettario. Non serve il permesso del datore (salvo clausole nel contratto), ma non puoi fatturare pi\u00f9 del 50% allo stesso datore di lavoro da cui sei dipendente." },
-  { q: "Quanto costa aprire la partita IVA?", a: "<strong>Zero.</strong> L\u2019apertura \u00e8 gratuita se fai tutto dal sito dell\u2019Agenzia delle Entrate con SPID. Con un commercialista online il costo \u00e8 spesso incluso nell\u2019abbonamento annuale (200-500\u20ac). Se sei artigiano o commerciante, c\u2019\u00e8 il diritto annuale Camera di Commercio di circa 50-100\u20ac." },
-  { q: "Devo per forza avere un commercialista?", a: "No, non \u00e8 obbligatorio per legge. In regime forfettario la contabilit\u00e0 \u00e8 semplice. Per\u00f2 un commercialista (anche online, 200-500\u20ac/anno) ti evita errori che costano molto di pi\u00f9: codice ATECO sbagliato, scadenze mancate, contributi calcolati male. <strong>Per chi inizia, \u00e8 un investimento che si ripaga.</strong>" },
+  { q: "Quanto costa aprire la partita IVA?", a: "<strong>Zero.</strong> L\u2019apertura \u00e8 gratuita se fai tutto dal sito dell\u2019Agenzia delle Entrate con SPID. Se usi un servizio di gestione P.IVA, il costo dell\u2019apertura \u00e8 spesso incluso nell\u2019abbonamento. Se sei artigiano o commerciante, c\u2019\u00e8 il diritto annuale Camera di Commercio di circa 50-100\u20ac." },
+  { q: "Devo per forza avere un commercialista?", a: "No, non \u00e8 obbligatorio per legge. In regime forfettario la contabilit\u00e0 \u00e8 semplice. Per\u00f2 un servizio di gestione della partita IVA ti evita errori che costano molto di pi\u00f9: codice ATECO sbagliato, scadenze mancate, contributi calcolati male. <strong>Per chi inizia, \u00e8 un investimento che si ripaga.</strong>" },
   { q: "Cosa succede se supero gli 85.000\u20ac?", a: "Tra 85.000 e 100.000\u20ac esci dal forfettario <strong>dall\u2019anno successivo</strong>. Sopra i 100.000\u20ac esci <strong>immediatamente</strong> e devi applicare l\u2019IVA sulle fatture da quel momento. Per rientrare nel forfettario devi stare sotto soglia per due anni consecutivi." },
   { q: "Posso scaricare le spese in forfettario?", a: "No. Nel forfettario non scarichi spese reali. Il reddito si calcola in modo forfettario: ricavi \u00d7 coefficiente di redditivit\u00e0. <strong>L\u2019unica deduzione possibile</strong> sono i contributi INPS versati. Se hai molte spese reali, valuta l\u2019ordinario." },
   { q: "Forfettario o ordinario?", a: "Per la grande maggioranza di chi inizia, il <strong>forfettario \u00e8 meglio</strong>: tasse pi\u00f9 basse (5-15% vs 23-43%), niente IVA da gestire, contabilit\u00e0 semplice. L\u2019ordinario conviene solo se hai molti costi deducibili (ufficio, dipendenti, attrezzature) o fatturo oltre 85.000\u20ac." },
@@ -91,7 +91,7 @@ export default function Page() {
               <div className="v8-esempio-line rv rv-d1"><span>Reddito imponibile (78%)</span><span>23.400&euro;</span></div>
               <div className="v8-esempio-line rv rv-d2"><span>Contributi INPS (26,23%)</span><span>&minus;6.138&euro;</span></div>
               <div className="v8-esempio-line rv rv-d3"><span>Imposta sostitutiva (5%)</span><span>&minus;863&euro;</span></div>
-              <div className="v8-esempio-line rv rv-d4"><span>Commercialista online</span><span>&minus;400&euro;</span></div>
+              <div className="v8-esempio-line rv rv-d4"><span>Servizio gestione P.IVA</span><span>&minus;400&euro;</span></div>
               <div className="v8-esempio-line v8-esempio-total rv"><span>Netto in tasca</span><span>~22.600&euro;</span></div>
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function Page() {
           </div>
           <div className="v8-info tip rv" style={{maxWidth:'700px',margin:'32px auto 0'}}>
             <svg className="v8-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-            <div><p><strong>Quanto tempo ci vuole?</strong> Con un commercialista online, in 24-48 ore sei operativo. Il numero di partita IVA viene rilasciato in poche ore dalla presentazione del modello AA9/12.</p></div>
+            <div><p><strong>Quanto tempo ci vuole?</strong> Con un servizio di gestione P.IVA, in 24-48 ore sei operativo. Il numero di partita IVA viene rilasciato in poche ore dalla presentazione del modello AA9/12.</p></div>
           </div>
         </div>
       </section>
@@ -142,13 +142,12 @@ export default function Page() {
         <div className="v8-section-inner">
           <div className="v8-section-head"><h2 className="rv">Costi di <em>gestione</em></h2><p className="rv rv-d1">Aprire la P.IVA &egrave; gratis. Gestirla costa qualcosa. Ecco le opzioni.</p></div>
           <div className="v8-cost-grid">
-            <div className="v8-cost-card"><div className="v8-cost-method">Da solo (servizi AE)</div><div className="v8-cost-price">0&euro;</div><div className="v8-cost-time">Fatturazione gratuita AE, dichiarazione fai-da-te.</div></div>
-            <div className="v8-cost-card hl"><div className="v8-cost-method">Commercialista online</div><div className="v8-cost-price">200&ndash;500&euro;</div><div className="v8-cost-time">Apertura, dichiarazione, F24, fatturazione, assistenza.</div></div>
-            <div className="v8-cost-card"><div className="v8-cost-method">Commercialista tradizionale</div><div className="v8-cost-price">800&ndash;2.000&euro;</div><div className="v8-cost-time">Tutto + consulenza in studio, rapporto personale.</div></div>
+            <div className="v8-cost-card"><div className="v8-cost-method">Da solo (servizi AE)</div><div className="v8-cost-price">0&euro;</div><div className="v8-cost-time">Fatturazione gratuita AE, dichiarazione fai-da-te. Richiede tempo e conoscenze fiscali.</div></div>
+            <div className="v8-cost-card hl"><div className="v8-cost-method">Servizio di gestione P.IVA</div><div className="v8-cost-price">Abbonamento annuale</div><div className="v8-cost-time">Apertura, dichiarazione, F24, fatturazione, consulenza illimitata. Tutto gestito, zero pensieri.</div></div>
           </div>
           <div className="v8-info tip rv" style={{maxWidth:'700px',margin:'24px auto 0'}}>
             <svg className="v8-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-            <div><p><strong>Consiglio onesto:</strong> se sei in forfettario con un&apos;attivit&agrave; semplice (freelance, consulente, artigiano), un commercialista online basta e avanza. Paghi 200-500&euro;/anno, hai tutto gestito e non devi pensare a scadenze e moduli.</p></div>
+            <div><p><strong>Consiglio onesto:</strong> se sei in forfettario con un&apos;attivit&agrave; semplice (freelance, consulente, artigiano), un servizio di gestione della partita IVA ti fa risparmiare tempo e ti evita errori costosi. Hai tutto gestito e non devi pensare a scadenze e moduli.</p></div>
           </div>
           <div style={{marginTop:'32px'}}>
             <FiscozenBanner />
@@ -183,7 +182,7 @@ export default function Page() {
             <div className="v8-doc-group">
               <h3>Per la gestione</h3>
               <div className="v8-doc"><strong>IBAN</strong> per rimborsi &mdash; consigliato un conto business separato</div>
-              <div className="v8-doc"><strong>Software fatturazione</strong> &mdash; gratuito AE o incluso nel commercialista online</div>
+              <div className="v8-doc"><strong>Software fatturazione</strong> &mdash; gratuito AE o incluso nel servizio di gestione</div>
               <div className="v8-doc"><strong>PEC</strong> (Posta Elettronica Certificata) &mdash; obbligatoria per le P.IVA</div>
             </div>
           </div>
@@ -196,13 +195,13 @@ export default function Page() {
           <h2 className="rv">L&apos;esempio di <em>Giulia</em></h2>
           <div className="v8-esempio-story">
             <p className="rv rv-d1"><strong style={{color:'var(--v8-bg)'}}>Giulia ha 27 anni</strong>, vive a Bologna, lavorava come social media manager da dipendente a 1.400&euro; netti al mese. Un&apos;azienda le offre un progetto freelance da 2.500&euro;/mese, poi un&apos;altra 1.500&euro;/mese. Totale potenziale: <strong style={{color:'var(--v8-bg)'}}>4.000&euro;/mese di ricavi</strong>.</p>
-            <p className="rv rv-d2" style={{fontSize:'15px'}}>Ha usato un commercialista online (350&euro;/anno tutto incluso). In 48 ore aveva il numero di partita IVA e poteva fatturare. Codice ATECO: 73.11.02 (consulenza pubblicitaria).</p>
+            <p className="rv rv-d2" style={{fontSize:'15px'}}>Ha usato un servizio di gestione P.IVA online. In 48 ore aveva il numero di partita IVA e poteva fatturare. Codice ATECO: 73.11.02 (consulenza pubblicitaria).</p>
           </div>
           <div className="v8-esempio-math">
             <div className="v8-esempio-line rv rv-d1"><span>Ricavi annui</span><span>48.000&euro;</span></div>
             <div className="v8-esempio-line rv rv-d2"><span>Reddito imponibile (78%)</span><span>37.440&euro;</span></div>
             <div className="v8-esempio-line rv rv-d3"><span>Contributi INPS + tasse</span><span>&minus;11.203&euro;</span></div>
-            <div className="v8-esempio-line rv rv-d4"><span>Commercialista online</span><span>&minus;400&euro;</span></div>
+            <div className="v8-esempio-line rv rv-d4"><span>Servizio gestione P.IVA</span><span>&minus;400&euro;</span></div>
             <div className="v8-esempio-line v8-esempio-total rv"><span>Netto in tasca</span><span>~36.400&euro;</span></div>
           </div>
           <p className="rv" style={{fontSize:'15px',color:'rgba(250,250,247,.4)',marginTop:'24px',lineHeight:'1.7'}}>Da dipendente: <strong style={{color:'#E4F3ED'}}>16.800&euro;/anno</strong>. Con la P.IVA forfettaria: <strong style={{color:'#E4F3ED'}}>36.400&euro;/anno</strong> &mdash; pi&ugrave; del doppio. E lavora da casa, sceglie i suoi orari.</p>

@@ -123,7 +123,7 @@ export default function Page() {
       <section className="v8-section warm" id="fiscozen">
         <div className="v8-section-inner">
           <div className="v8-prose rv" style={{marginBottom:'24px'}}>
-            <p>Il forfettario &egrave; semplice ma non banale. Un commercialista online ti aiuta con codice ATECO, scadenze, contributi e dichiarazione &mdash; e costa meno di un commercialista tradizionale.</p>
+            <p>Il forfettario &egrave; semplice ma non banale. Un servizio di gestione P.IVA ti aiuta con codice ATECO, scadenze, contributi e dichiarazione.</p>
           </div>
           <FiscozenBanner />
         </div>

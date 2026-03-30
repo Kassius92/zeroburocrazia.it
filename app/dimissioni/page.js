@@ -158,7 +158,7 @@ export default function Page() {
       <section className="v8-section" id="fiscozen">
         <div className="v8-section-inner">
           <div className="v8-prose rv" style={{marginBottom:'24px'}}>
-            <p>Dopo le dimissioni vuoi aprire partita IVA? Un commercialista online ti accompagna dall&apos;apertura alla prima dichiarazione.</p>
+            <p>Dopo le dimissioni vuoi aprire partita IVA? Un servizio di gestione P.IVA ti accompagna dall&apos;apertura alla prima dichiarazione.</p>
           </div>
           <FiscozenBanner />
         </div>

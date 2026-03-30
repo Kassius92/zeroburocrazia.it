@@ -74,7 +74,7 @@ export default function Page() {
         <div className="v8-section-inner">
           <div className="v8-section-head"><h2 className="rv">Come si fa <em>una fattura</em></h2><p className="rv rv-d1">4 passaggi, da zero alla fattura inviata.</p></div>
           <div className="v8-steps">
-            <div className="v8-step rv rv-d1"><div className="v8-step-num">1</div><h3>Scegli lo strumento</h3><p>Portale gratuito dell&apos;Agenzia delle Entrate (Fatture e Corrispettivi) oppure un software/commercialista online. Il portale va bene per poche fatture al mese.</p></div>
+            <div className="v8-step rv rv-d1"><div className="v8-step-num">1</div><h3>Scegli lo strumento</h3><p>Portale gratuito dell&apos;Agenzia delle Entrate (Fatture e Corrispettivi) oppure un servizio di gestione P.IVA con fatturazione integrata. Il portale va bene per poche fatture al mese.</p></div>
             <div className="v8-step rv rv-d2"><div className="v8-step-num">2</div><h3>Inserisci i dati</h3><p>I tuoi dati (P.IVA, regime fiscale), i dati del cliente (P.IVA o codice fiscale, codice destinatario o PEC), la descrizione del servizio e l&apos;importo.</p></div>
             <div className="v8-step rv rv-d3"><div className="v8-step-num">3</div><h3>Il software genera l&apos;XML e lo invia al SdI</h3><p>Il SdI controlla il file (formato, coerenza dati) e lo recapita al destinatario. Se c&apos;&egrave; un errore, ti manda una notifica di scarto.</p></div>
             <div className="v8-step rv rv-d4"><div className="v8-step-num">4</div><h3>Conserva la fattura</h3><p>La fattura va conservata 10 anni in formato digitale. Con il portale dell&apos;AE la conservazione &egrave; automatica e gratuita.</p></div>
@@ -87,7 +87,7 @@ export default function Page() {
           <div className="v8-section-head"><h2 className="rv">Quale software <em>usare</em></h2></div>
           <div className="v8-cost-grid">
             <div className="v8-cost-card"><div className="v8-cost-method">Portale AE (gratuito)</div><div className="v8-cost-price">0&euro;</div><div className="v8-cost-time">Poche fatture al mese, interfaccia basica.</div></div>
-            <div className="v8-cost-card hl"><div className="v8-cost-method">Commercialista online</div><div className="v8-cost-price">Da 19&euro;/mese</div><div className="v8-cost-time">Fatturazione + commercialista + dichiarazione. Tutto incluso.</div></div>
+            <div className="v8-cost-card hl"><div className="v8-cost-method">Servizio gestione P.IVA</div><div className="v8-cost-price">Abbonamento annuale</div><div className="v8-cost-time">Fatturazione + consulenza + dichiarazione. Tutto incluso.</div></div>
             <div className="v8-cost-card"><div className="v8-cost-method">Software autonomo</div><div className="v8-cost-price">5&ndash;25&euro;/mese</div><div className="v8-cost-time">Solo fatturazione, senza commercialista.</div></div>
           </div>
           <div className="v8-info tip rv" style={{maxWidth:'700px',margin:'24px auto 0'}}>
@@ -130,7 +130,7 @@ export default function Page() {
         <div className="v8-esempio-inner">
           <h2 className="rv">L&apos;esempio di <em>Luca</em></h2>
           <div className="v8-esempio-story">
-            <p className="rv rv-d1"><strong style={{color:'var(--v8-bg)'}}>Luca &egrave; un web designer forfettario.</strong> All&apos;inizio usava il portale gratuito dell&apos;Agenzia delle Entrate. Funzionava, ma ogni fattura gli costava 15 minuti: doveva cercare i codici fiscali, riscrivere le descrizioni, calcolare la marca da bollo a mano. Dopo 6 mesi, passa a un commercialista online: ora la fattura la crea in <strong style={{color:'var(--v8-bg)'}}>30 secondi</strong>. Il software ha gi&agrave; i dati dei clienti abituali, calcola il bollo automaticamente e invia al SdI con un click.</p>
+            <p className="rv rv-d1"><strong style={{color:'var(--v8-bg)'}}>Luca &egrave; un web designer forfettario.</strong> All&apos;inizio usava il portale gratuito dell&apos;Agenzia delle Entrate. Funzionava, ma ogni fattura gli costava 15 minuti: doveva cercare i codici fiscali, riscrivere le descrizioni, calcolare la marca da bollo a mano. Dopo 6 mesi, passa a un servizio di gestione P.IVA: ora la fattura la crea in <strong style={{color:'var(--v8-bg)'}}>30 secondi</strong>. Il software ha gi&agrave; i dati dei clienti abituali, calcola il bollo automaticamente e invia al SdI con un click.</p>
           </div>
         </div>
       </section>
