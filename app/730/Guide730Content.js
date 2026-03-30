@@ -25,26 +25,38 @@ export default function Guide730Content({ faqItems }) {
       {/* HERO — Buffer article style */}
       <div className="guide">
         <div className="guide-hero">
-          {/* Breadcrumb */}
-          <div className="guide-crumb">
-            <Link href="/guide">Guide</Link>
-            <span className="guide-crumb-sep">/</span>
-            <span>Fisco</span>
+          <div className="guide-hero-text">
+            {/* Breadcrumb */}
+            <div className="guide-crumb">
+              <Link href="/guide">Guide</Link>
+              <span className="guide-crumb-sep">&rsaquo;</span>
+              <span>Fisco</span>
+            </div>
+
+            {/* Tag + Date */}
+            <div className="guide-hero-top">
+              <span className="guide-tag fisco">Fisco</span>
+              <span className="guide-hero-date">Mar 2026</span>
+            </div>
+
+            {/* Title */}
+            <h1>Come Fare il 730 nel 2026: Detrazioni, Scadenze e Rimborso</h1>
+
+            <p className="guide-hero-sub">
+              La dichiarazione dei redditi come non te l&apos;ha mai spiegata nessuno. Detrazioni, precompilato, scadenze e rimborso. Tutto gratis.
+            </p>
+
+            <div className="guide-hero-meta">
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                15 min di lettura
+              </span>
+            </div>
           </div>
 
-          {/* Title */}
-          <h1>Come Fare il 730 nel 2026: Detrazioni, Scadenze e Rimborso</h1>
-
-          <p className="guide-hero-sub">
-            La dichiarazione dei redditi come non te l&apos;ha mai spiegata nessuno. Detrazioni, precompilato, scadenze e rimborso. Tutto gratis.
-          </p>
-
-          <div className="guide-hero-meta">
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
-              15 min di lettura
-            </span>
-            <span>Aggiornato marzo 2026</span>
+          {/* Hero image placeholder */}
+          <div className="guide-hero-img" style={{background:'linear-gradient(135deg,#FDF0EB,#fce4da)'}}>
+            <span>Il 730<br /><em>nel 2026</em></span>
           </div>
         </div>
 
@@ -154,6 +166,10 @@ export default function Guide730Content({ faqItems }) {
             <div className="guide-callout warn">
               <strong>Le detrazioni dimenticate pi&ugrave; spesso:</strong> abbonamento ai trasporti pubblici, spese veterinarie, sport dei figli, spese funebri, donazioni a ONLUS. Se non le inserisci nel 730, quei soldi li perdi per sempre.
             </div>
+
+            <div className="guide-img" style={{background:'linear-gradient(135deg,#E4F3ED,#d0ebdf)'}}>
+              <span>Tabella detrazioni 730</span>
+            </div>
           </div>
 
           {/* ═══ COME SI FA ═══ */}
@@ -183,6 +199,10 @@ export default function Guide730Content({ faqItems }) {
             <div className="guide-callout">
               <strong>Un lavoro + poche spese</strong> &rarr; fallo da solo. <strong>Mutuo, cambio lavoro, figli</strong> &rarr; vai al CAF. <strong>Cripto, redditi esteri, affitti</strong> &rarr; commercialista.
             </div>
+
+            <div className="guide-img" style={{background:'linear-gradient(135deg,#FBF5E6,#f5edd4)'}}>
+              <span>Screenshot precompilata online</span>
+            </div>
           </div>
 
           {/* ═══ DOCUMENTI ═══ */}
@@ -209,6 +229,10 @@ export default function Guide730Content({ faqItems }) {
 
             <div className="guide-callout">
               <strong>Il metodo della cartellina:</strong> crea una cartellina &quot;730 2026&quot;. Ogni volta che ricevi una ricevuta detraibile, mettila dentro. A maggio avrai tutto pronto in 5 minuti.
+            </div>
+
+            <div className="guide-img" style={{background:'linear-gradient(135deg,#ECF0FA,#dce4f5)'}}>
+              <span>Checklist documenti 730</span>
             </div>
           </div>
 
