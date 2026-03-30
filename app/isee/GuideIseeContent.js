@@ -331,31 +331,47 @@ export default function GuideIseeContent({ faqItems }) {
             <h2>Guide <em>correlate</em></h2>
             <div className="guide-related">
               <Link href="/730" className="guide-related-card">
-                <div className="guide-related-icon" style={{background:'var(--coral-bg)'}}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--coral)" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <div className="guide-related-img" style={{background:'linear-gradient(135deg,#FDF0EB,#fce4da)'}}>
+                  <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'80%',maxWidth:'260px'}}>
+                    <rect x="40" y="20" width="240" height="160" rx="12" fill="white" style={{filter:'drop-shadow(0 4px 12px rgba(0,0,0,.08))'}} />
+                    <rect x="56" y="36" width="60" height="8" rx="4" fill="#E8724A" opacity=".3" />
+                    <text x="56" y="62" fill="#1A1A2E" fontFamily="Georgia,serif" fontSize="14" fontWeight="bold">730 / 2026</text>
+                    <rect x="56" y="74" width="180" height="5" rx="2.5" fill="#E8E0D4" />
+                    <rect x="56" y="86" width="140" height="5" rx="2.5" fill="#E8E0D4" />
+                    <circle cx="68" cy="110" r="8" fill="#E4F3ED" />
+                    <text x="68" y="113" textAnchor="middle" fill="#2D8A6E" fontSize="9" fontWeight="bold">1</text>
+                    <rect x="84" y="106" width="100" height="5" rx="2.5" fill="#E8E0D4" />
+                    <circle cx="68" cy="132" r="8" fill="#E4F3ED" />
+                    <text x="68" y="135" textAnchor="middle" fill="#2D8A6E" fontSize="9" fontWeight="bold">2</text>
+                    <rect x="84" y="128" width="80" height="5" rx="2.5" fill="#E8E0D4" />
+                    <circle cx="68" cy="154" r="8" fill="#E4F3ED" />
+                    <text x="68" y="157" textAnchor="middle" fill="#2D8A6E" fontSize="9" fontWeight="bold">3</text>
+                    <rect x="84" y="150" width="120" height="5" rx="2.5" fill="#E8E0D4" />
+                    <circle cx="240" cy="44" r="16" fill="#E8724A" opacity=".9" />
+                    <text x="240" y="49" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">&euro;</text>
+                  </svg>
                 </div>
-                <div>
-                  <strong>Faccio il 730</strong>
-                  <span>I redditi del 730 sono tra i dati che servono per l&apos;ISEE.</span>
-                </div>
+                <h4>Come Fare il 730 nel 2026</h4>
+                <p>Detrazioni, scadenze, rimborso. Tutto sulla dichiarazione dei redditi.</p>
               </Link>
               <Link href="/spid" className="guide-related-card">
-                <div className="guide-related-icon" style={{background:'var(--blue-bg)'}}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <div className="guide-related-img" style={{background:'linear-gradient(135deg,#ECF0FA,#dce4f5)'}}>
+                  <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'80%',maxWidth:'260px'}}>
+                    <rect x="40" y="20" width="240" height="160" rx="12" fill="white" style={{filter:'drop-shadow(0 4px 12px rgba(0,0,0,.08))'}} />
+                    <rect x="56" y="36" width="60" height="8" rx="4" fill="#5B7EC5" opacity=".3" />
+                    <text x="56" y="62" fill="#1A1A2E" fontFamily="Georgia,serif" fontSize="14" fontWeight="bold">Accedi con SPID</text>
+                    <rect x="56" y="78" width="208" height="28" rx="6" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1" />
+                    <text x="68" y="96" fill="#B5B0A8" fontFamily="sans-serif" fontSize="10">Email o username</text>
+                    <rect x="56" y="114" width="208" height="28" rx="6" fill="#FAF8F4" stroke="#E8E0D4" strokeWidth="1" />
+                    <text x="68" y="132" fill="#B5B0A8" fontFamily="sans-serif" fontSize="10">Password</text>
+                    <rect x="56" y="150" width="208" height="24" rx="6" fill="#5B7EC5" />
+                    <text x="160" y="166" textAnchor="middle" fill="white" fontFamily="sans-serif" fontSize="10" fontWeight="bold">Entra con SPID</text>
+                    <circle cx="240" cy="44" r="16" fill="#5B7EC5" opacity=".9" />
+                    <path d="M240 36v8M236 40h8" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                  </svg>
                 </div>
-                <div>
-                  <strong>Faccio lo SPID</strong>
-                  <span>Per fare l&apos;ISEE online ti serve lo SPID.</span>
-                </div>
-              </Link>
-              <Link href="/bonus-bollette" className="guide-related-card">
-                <div className="guide-related-icon" style={{background:'var(--gold-bg)'}}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                </div>
-                <div>
-                  <strong>Bonus Bollette</strong>
-                  <span>Sconto automatico con ISEE basso.</span>
-                </div>
+                <h4>Come Fare lo SPID in 15 Minuti</h4>
+                <p>Per fare l&apos;ISEE online ti serve lo SPID. Ecco come ottenerlo gratis.</p>
               </Link>
             </div>
           </div>
