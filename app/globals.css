@@ -624,6 +624,8 @@ img { max-width: 100%; display: block }
   .nav-center { display:none }
   .nav-search { display:none }
   .hamburger { display:flex }
+  .nav-cta { padding:7px 14px; font-size:12px }
+  .nav-logo { font-size:15px }
 
   .hero { padding: calc(64px + 48px) 20px 60px }
   .features { padding:60px 20px }
