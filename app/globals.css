@@ -73,6 +73,9 @@ body {
 }
 ::selection { background: var(--green); color: #fff }
 a { color: inherit; text-decoration: none }
+a, button, input, select, textarea, [role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
 img { max-width: 100%; display: block }
 
 
@@ -165,9 +168,6 @@ img { max-width: 100%; display: block }
 .nav-cta:hover {
   transform:scale(1.05); background:var(--green-dark);
   box-shadow: 0 4px 16px rgba(45,138,110,.25);
-}
-.nav-cta, .nav-search, .hamburger, .hero-tag, .nav-logo {
-  -webkit-tap-highlight-color: transparent;
 }
 
 /* Hamburger — hidden on desktop, visible on mobile */
