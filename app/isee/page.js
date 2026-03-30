@@ -1,5 +1,5 @@
 import GuideIseeContent from './GuideIseeContent';
-import { SchemaOrg, articleSchema, faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { articleSchema, faqSchema } from '@/components/SchemaOrg';
 
 export const metadata = {
   title: "ISEE 2026: Come Farlo, Documenti Necessari e Simulazione",
