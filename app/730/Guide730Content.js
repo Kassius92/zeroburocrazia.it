@@ -57,7 +57,7 @@ export default function Guide730Content({ faqItems }) {
 
           {/* Hero image */}
           <div className="guide-hero-img">
-            <img src="/hero-730.png" alt="Guida al 730 2026: documento, calcolatrice, scadenza 30 settembre" style={{width:'100%',height:'100%',objectFit:'contain',padding:'16px'}} />
+            <img src="/hero-730.png" alt="Guida al 730 2026: documento, calcolatrice, scadenza 30 settembre" style={{width:'100%',height:'100%',objectFit:'cover'}} />
           </div>
           </div>
         </div>

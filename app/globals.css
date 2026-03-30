@@ -900,7 +900,7 @@ img { max-width: 100%; display: block }
   .guide-hero-top { margin-bottom:10px }
   .guide-crumb { margin-bottom:12px }
   .guide-hero-img { max-height:220px; min-height:auto }
-  .guide-hero-img img { padding:8px !important }
+  .guide-hero-img img { }
   .guide-body { padding-left:20px; padding-right:20px }
   .guide-compare { grid-template-columns:1fr }
   /* Infografiche SVG su mobile */
