@@ -899,6 +899,10 @@ img { max-width: 100%; display: block }
   .guide-hero-img img { padding:8px !important }
   .guide-body { padding-left:20px; padding-right:20px }
   .guide-compare { grid-template-columns:1fr }
+  /* Infografiche SVG più grandi su mobile */
+  .guide-img { padding:20px 12px; min-height:320px }
+  .guide-img svg { transform:scale(1.4); transform-origin:center center }
+  .guide-img:hover svg { transform:scale(1.46) }
 }
 /* ═══════════════════════════════════════════════════
    ZEROBUROCRAZIA V8 — Design System CSS
