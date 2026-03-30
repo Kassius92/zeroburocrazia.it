@@ -620,12 +620,14 @@ img { max-width: 100%; display: block }
    RESPONSIVE
    ═══════════════════════════════════ */
 @media (max-width:900px) {
-  .nav-inner { padding:0 16px }
+  .nav-inner { padding:0 12px; overflow:hidden }
   .nav-center { display:none }
   .nav-search { display:none }
-  .hamburger { display:flex }
-  .nav-cta { padding:7px 14px; font-size:12px }
-  .nav-logo { font-size:15px }
+  .hamburger { display:flex; flex-shrink:0 }
+  .nav-cta { padding:7px 12px; font-size:11px; white-space:nowrap; flex-shrink:0 }
+  .nav-logo { font-size:14px; flex-shrink:1; min-width:0; overflow:hidden }
+  .nav-left { flex-shrink:1; min-width:0; overflow:hidden }
+  .nav-right { flex-shrink:0; gap:8px }
 
   .hero { padding: calc(64px + 48px) 20px 60px }
   .features { padding:60px 20px }
