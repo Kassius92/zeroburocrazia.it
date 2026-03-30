@@ -315,7 +315,6 @@ export default function Guide730Content({ faqItems }) {
                 <text x="224" y="260" fill="#1A1A2E" fontFamily="sans-serif" fontSize="12" fontWeight="600">scolastiche</text>
               </svg>
             </div>
-            </div>
           </div>
 
           {/* ═══ ESEMPIO ═══ */}
