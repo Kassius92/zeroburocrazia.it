@@ -26,9 +26,8 @@ export default function Nav() {
           </div>
 
           <div className="nav-center">
-            <Link href="#guide">Guide</Link>
-            <Link href="#categorie">Categorie</Link>
-            <Link href="#come">Come funziona</Link>
+            <Link href="/guide">Guide</Link>
+            <Link href="/guide">Categorie</Link>
             <Link href="/novita">Novit&agrave;</Link>
           </div>
 
@@ -36,7 +35,7 @@ export default function Nav() {
             <button className="nav-search" aria-label="Cerca">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" /></svg>
             </button>
-            <Link href="#guide" className="nav-cta">Esplora le guide</Link>
+            <Link href="/guide" className="nav-cta">Esplora le guide</Link>
           </div>
         </div>
       </nav>

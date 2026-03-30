@@ -13,12 +13,12 @@ export const metadata = {
 };
 
 const heroTags = [
-  { label: 'Dichiarazione 730', href: '/730' },
-  { label: 'ISEE 2026', href: '/isee' },
-  { label: 'SPID', href: '/spid' },
-  { label: 'NASpI', href: '/naspi' },
+  { label: 'Dichiarazione 730', href: '/guide' },
+  { label: 'ISEE 2026', href: '/guide' },
+  { label: 'SPID', href: '/guide' },
+  { label: 'NASpI', href: '/guide' },
   { label: 'Partita IVA', href: '/piva' },
-  { label: 'Bonus Nido', href: '/bonus-nido' },
+  { label: 'Bonus Nido', href: '/guide' },
 ];
 
 const Arrow = () => (
@@ -67,7 +67,7 @@ export default function HomePage() {
           <div className="ftext rv-left">
             <h3>Dichiarazione <em>730</em></h3>
             <p>Precompilata, detrazioni, scadenze, errori da evitare. Tutto quello che devi sapere per fare il 730 nel 2026 senza ansia e senza commercialista.</p>
-            <Link href="/730" className="flink">Leggi la guida completa <Arrow /></Link>
+            <Link href="/guide" className="flink">Leggi la guida completa <Arrow /></Link>
           </div>
           <div className="fcard rv-right rv-d1">
             <div className="fcard-header">
@@ -91,7 +91,7 @@ export default function HomePage() {
           <div className="ftext rv-right">
             <h3>Come fare <em>l&apos;ISEE</em></h3>
             <p>Documenti, procedura al CAF, simulazione online. L&apos;ISEE &egrave; la chiave per accedere a bonus, agevolazioni e servizi a costo ridotto.</p>
-            <Link href="/isee" className="flink">Leggi la guida completa <Arrow /></Link>
+            <Link href="/guide" className="flink">Leggi la guida completa <Arrow /></Link>
           </div>
           <div className="fcard rv-left rv-d1">
             <div className="fcard-header">
@@ -115,7 +115,7 @@ export default function HomePage() {
           <div className="ftext rv-left">
             <h3>Come fare <em>lo SPID</em></h3>
             <p>Provider, costi 2026, riconoscimento gratis con CIE. L&apos;identit&agrave; digitale che serve per fare qualsiasi cosa con la PA.</p>
-            <Link href="/spid" className="flink">Leggi la guida completa <Arrow /></Link>
+            <Link href="/guide" className="flink">Leggi la guida completa <Arrow /></Link>
           </div>
           <div className="fcard rv-right rv-d1">
             <div className="fcard-header">
@@ -138,7 +138,7 @@ export default function HomePage() {
       {/* ── ALL GUIDES LINK ── */}
       <section className="more" style={{textAlign:'center',paddingBottom:'40px'}}>
         <Link href="/guide" className="cta-btn rv">
-          Scopri tutte le 33 guide
+          Scopri tutte le guide
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
         </Link>
       </section>
@@ -170,7 +170,7 @@ export default function HomePage() {
 
       {/* ── CTA ── */}
       <section className="cta">
-        <h2 className="rv">33 guide. Zero costi.<br /><em>Zero paroloni.</em></h2>
+        <h2 className="rv">Tante guide. Zero costi.<br /><em>Zero paroloni.</em></h2>
         <p className="rv rv-d1">La burocrazia non deve essere un incubo. Trova la guida e risolvi il problema.</p>
         <a href="#guide" className="cta-btn rv rv-d2">
           Esplora tutte le guide
