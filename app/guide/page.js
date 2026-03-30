@@ -28,7 +28,7 @@ export default function GuidePage() {
           <h2 className="gl-section-title rv">Le pi&ugrave; lette</h2>
           <div className="gl-top-grid">
             <Link href="/730" className="gl-big rv-left">
-              <div className="gl-big-img gl-bg-coral"><span>Come fare il 730<br /><em>nel 2026</em></span></div>
+              <div className="gl-big-img gl-bg-coral"><img src="/hero-730.png" alt="Guida 730 2026" /></div>
               <div className="gl-big-body">
                 <span className="gl-tag gl-t-coral">Fisco</span>
                 <h3>Come Fare il 730 nel 2026: Detrazioni, Scadenze e Rimborso</h3>

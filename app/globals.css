@@ -1714,6 +1714,7 @@ img { max-width: 100%; display: block }
 .gl-big-img { aspect-ratio:16/10; display:flex; align-items:center; justify-content:center; padding:32px }
 .gl-big-img span { font-family:var(--font-display),Georgia,serif; font-size:clamp(28px,3vw,38px); color:var(--ink); letter-spacing:-1px; text-align:center; line-height:1.15 }
 .gl-big-img span em { font-style:italic }
+.gl-big-img img { max-width:100%; max-height:100%; object-fit:contain }
 .gl-big-body { padding:24px 28px 28px }
 .gl-big-body h3 { font-size:22px; font-weight:700; line-height:1.25; margin-bottom:10px }
 .gl-big-body > p { font-size:14px; color:var(--soft); line-height:1.6; margin-bottom:14px }
