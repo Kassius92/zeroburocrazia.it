@@ -53,7 +53,7 @@ export default function GuideIseeContent({ faqItems }) {
           </div>
 
           <div className="guide-hero-img">
-            <img src="/hero-isee.png" alt="Guida ISEE 2026: documento, famiglia, bonus" style={{width:'100%',height:'100%',objectFit:'contain'}} />
+            <img src="/hero-isee.png" alt="Guida ISEE 2026: documento, famiglia, bonus" />
           </div>
           </div>
         </div>
