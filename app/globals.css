@@ -223,7 +223,7 @@ img { max-width: 100%; display: block }
   max-width:800px; margin:0 auto;
 }
 .hero h1 em {
-  font-style:italic; position:relative; display:inline-block;
+  font-style:italic; position:relative; display:inline-block; color:var(--green);
 }
 .hero h1 em::after {
   content:''; position:absolute; left:-4px; right:-4px; bottom:2px;

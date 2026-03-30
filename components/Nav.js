@@ -27,7 +27,6 @@ export default function Nav() {
 
           <div className="nav-center">
             <Link href="/guide">Guide</Link>
-            <Link href="/guide">Categorie</Link>
             <Link href="/novita">Novit&agrave;</Link>
           </div>
 
