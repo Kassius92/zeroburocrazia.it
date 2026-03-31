@@ -861,8 +861,8 @@ img { max-width: 100%; display: block }
 .fz-logo {
   height:28px; width:auto; display:block;
 }
-.fz-banner-title { font-size:20px; font-weight:700; margin-bottom:8px }
-.fz-banner-desc { font-size:14px; opacity:.9; margin:0 0 24px; line-height:1.6 }
+.fz-banner-title { font-size:20px; font-weight:700; margin-bottom:8px; color:#fff }
+.fz-banner-desc { font-size:15px; color:rgba(255,255,255,.95); margin:0 0 24px; line-height:1.7 }
 .fz-btn {
   display:inline-flex; align-items:center; gap:8px;
   padding:14px 28px; background:#fff; color:var(--green-deep);
