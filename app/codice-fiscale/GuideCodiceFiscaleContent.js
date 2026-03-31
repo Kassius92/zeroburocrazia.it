@@ -73,10 +73,8 @@ export default function GuideCodiceFiscaleContent({ faqItems }) {
         <div className="guide-callout" style={{borderLeftColor:'var(--green)'}}>
           <p>Se non puoi usare il servizio online, puoi inviare il <strong>modello AA4/8</strong> con copia del documento d&apos;identit&agrave; via PEC a un ufficio dell&apos;Agenzia delle Entrate. Oppure presentarti di persona: nessun appuntamento necessario, nessun costo.</p>
         </div>
-        <div  style={{marginTop:'24px'}}>
-          <CrossLink>
-            <Link href="/spid">Serve lo SPID per richiedere il duplicato online &rarr;</Link>
-          </CrossLink>
+        <div style={{marginTop:'24px'}}>
+          <Link href="/spid">Serve lo SPID per richiedere il duplicato online &rarr;</Link>
         </div>
       </div>
 
