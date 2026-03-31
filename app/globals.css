@@ -1783,6 +1783,19 @@ img { max-width: 100%; display: block }
 .gl-sm p { font-size:12px; color:var(--soft); line-height:1.5 }
 .gl-sm .gl-meta { margin-top:8px }
 
+/* Card arrows */
+.gl-big,.gl-icard,.gl-tcard,.gl-hz,.gl-sm,.gl-compact { position:relative }
+.gl-big::after,.gl-icard::after,.gl-tcard::after,.gl-hz::after,.gl-sm::after,.gl-compact::after {
+  content:''; position:absolute; bottom:16px; right:16px; width:20px; height:20px; opacity:.25;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%231A1A2E' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M17 7H8M17 7v9'/%3E%3C/svg%3E") no-repeat center/contain;
+  transition:opacity .3s,transform .3s
+}
+.gl-big:hover::after,.gl-icard:hover::after,.gl-tcard:hover::after,.gl-hz:hover::after,.gl-sm:hover::after,.gl-compact:hover::after {
+  opacity:.7; transform:translate(2px,-2px)
+}
+.gl-compact::after { bottom:auto; top:50%; right:0; transform:translateY(-50%) }
+.gl-compact:hover::after { transform:translateY(-50%) translate(2px,-2px); opacity:.7 }
+
 /* Responsive */
 @media (max-width:900px) {
   .gl-container { padding:0 20px; padding-top:64px }
