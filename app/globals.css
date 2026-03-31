@@ -210,7 +210,7 @@ img { max-width: 100%; display: block }
 
 /* Back to top */
 .backtop {
-  position:fixed; bottom:28px; right:28px; z-index:200;
+  position:fixed; bottom:76px; right:28px; z-index:200;
   width:44px; height:44px; border-radius:50%;
   background:var(--ink); color:#fff; border:none; cursor:pointer;
   display:flex; align-items:center; justify-content:center;
@@ -675,7 +675,7 @@ img { max-width: 100%; display: block }
 @media (max-width:600px) {
   .more-grid { grid-template-columns:1fr }
   .footer-inner { grid-template-columns:1fr }
-  .backtop { bottom:20px; right:16px; width:40px; height:40px }
+  .backtop { bottom:68px; right:16px; width:40px; height:40px }
 }
 
 
@@ -862,7 +862,7 @@ img { max-width: 100%; display: block }
   height:28px; width:auto; display:block;
 }
 .fz-banner-title { font-size:20px; font-weight:700; margin-bottom:8px }
-.fz-banner-desc { font-size:14px; opacity:.7; margin:0 0 24px; line-height:1.6 }
+.fz-banner-desc { font-size:14px; opacity:.9; margin:0 0 24px; line-height:1.6 }
 .fz-btn {
   display:inline-flex; align-items:center; gap:8px;
   padding:14px 28px; background:#fff; color:var(--green-deep);
