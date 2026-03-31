@@ -21,12 +21,12 @@ const faqItems = [
   { q: "E se le spese superano i 15.493\u20ac?", a: "Se il totale delle spese mediche supera <strong>15.493,71\u20ac</strong> in un anno, puoi scegliere di spalmare la detrazione in 4 anni (4 rate uguali). \u00c8 utile se non hai abbastanza IRPEF da compensare tutto in un anno." },
 ];
 
-const schemas = [
+
+export default function Page() {
+  const schemas = [
   articleSchema({ title: 'Spese mediche detraibili 2026: elenco completo e come scaricarle nel 730', description: 'Guida completa alle spese mediche detraibili nel 730 2026: elenco, franchigia, come pagare, documenti e calcolo del rimborso.', url: '/spese-mediche', image: 'ogspesemediche.png', datePublished: '2026-03-09', dateModified: '2026-03-28' }),
   faqSchema(faqItems),
 ];
-
-export default function Page() {
   return (
     <>
       <SchemaOrg schemas={schemas} />

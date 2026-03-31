@@ -20,12 +20,12 @@ const faqItems = [
   { q: "Codice fiscale e tessera sanitaria sono la stessa cosa?", a: "No. Il <strong>codice fiscale</strong> \u00e8 il numero di 16 caratteri. La <strong>tessera sanitaria</strong> \u00e8 la tessera fisica che lo contiene e d\u00e0 accesso al SSN. Puoi avere il codice anche senza la tessera." },
 ];
 
-const schemas = [
+
+export default function Page() {
+  const schemas = [
   articleSchema({ title: 'Come richiedere il codice fiscale 2026', description: 'Codice fiscale: come richiederlo, duplicato online, neonati, stranieri.', url: '/codice-fiscale', image: 'ogcodicefiscale.png', datePublished: '2026-03-20', dateModified: '2026-03-28' }),
   faqSchema(faqItems),
 ];
-
-export default function Page() {
   return (
     <>
       <SchemaOrg schemas={schemas} />

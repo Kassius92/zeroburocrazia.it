@@ -21,12 +21,12 @@ const faqItems = [
   { q: "Il bonus bollette \u00e8 cumulabile con altri bonus?", a: "<strong>S\u00ec, tutti i bonus sociali sono cumulabili tra loro.</strong> Con un unico ISEE sotto soglia puoi ricevere contemporaneamente: il bonus elettrico (fino a ~315\u20ac/anno con contributo straordinario), il bonus gas (da 60 a 200\u20ac/anno a seconda della zona e dell\u2019uso), il bonus acqua (50 litri gratis al giorno per persona), e il nuovo bonus TARI 2026 (25% di sconto sulla tassa rifiuti). Si attivano tutti automaticamente senza fare domande separate. Il bonus bollette \u00e8 inoltre cumulabile con l\u2019Assegno Unico, la social card e tutte le altre agevolazioni ISEE." },
 ];
 
-const schemas = [
+
+export default function Page() {
+  const schemas = [
   articleSchema({ title: 'Bonus Bollette 2026: requisiti ISEE, importi e come ottenerlo', description: 'Bonus bollette luce e gas 2026: chi ne ha diritto, quanto vale, come si ottiene.', url: '/bonus-bollette', image: 'ogbonusbollette.png', datePublished: '2026-03-20', dateModified: '2026-03-27' }),
   faqSchema(faqItems),
 ];
-
-export default function Page() {
   return (
     <>
       <SchemaOrg schemas={schemas} />

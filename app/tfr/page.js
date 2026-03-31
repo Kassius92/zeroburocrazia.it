@@ -21,12 +21,12 @@ const faqItems = [
   { q: "Il TFR va dichiarato nel 730?", a: "<strong>No.</strong> Il TFR ha tassazione separata, applicata direttamente dal datore (o dall\u2019INPS). Non va nel 730. Per\u00f2 compare nella CU (Certificazione Unica) che ricevi a marzo." },
 ];
 
-const schemas = [
+
+export default function Page() {
+  const schemas = [
   articleSchema({ title: 'TFR 2026: calcolo, tassazione, anticipo e quando spetta', description: 'TFR 2026: come si calcola la liquidazione, tassazione, anticipo e confronto azienda vs fondo pensione.', url: '/tfr', image: 'ogtfr.png', datePublished: '2026-03-07', dateModified: '2026-03-28' }),
   faqSchema(faqItems),
 ];
-
-export default function Page() {
   return (
     <>
       <SchemaOrg schemas={schemas} />

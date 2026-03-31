@@ -21,12 +21,12 @@ const faqItems = [
   { q: "Fino a che et\u00e0 spetta?", a: "Fino ai <strong>21 anni</strong> se il figlio studia, lavora con reddito sotto 8.000\u20ac annui, \u00e8 disoccupato in cerca di lavoro o svolge il servizio civile. Per i <strong>figli con disabilit\u00e0</strong> certificata ai sensi della Legge 104 non c\u2019\u00e8 limite di et\u00e0." },
 ];
 
-const schemas = [
+
+export default function Page() {
+  const schemas = [
   articleSchema({ title: 'Assegno Unico Figli 2026: importi, requisiti e domanda', description: 'Assegno Unico 2026: importi per fascia ISEE, maggiorazioni, come fare domanda.', url: '/assegno-unico', image: 'ogassegnounico.png', datePublished: '2026-03-20', dateModified: '2026-03-27' }),
   faqSchema(faqItems),
 ];
-
-export default function Page() {
   return (
     <>
       <SchemaOrg schemas={schemas} />

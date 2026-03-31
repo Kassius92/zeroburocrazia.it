@@ -21,12 +21,12 @@ const faqItems = [
   { q: "La CIE vale per andare all\u2019estero?", a: "S\u00ec, nei <strong>Paesi UE</strong> e in alcuni extra-UE (Svizzera, UK, Turchia, Egitto, ecc.), a patto che non riporti la dicitura \u201cNon valida per l\u2019espatrio\u201d. Controlla sempre su viaggiaresicuri.it prima di partire." },
 ];
 
-const schemas = [
+
+export default function Page() {
+  const schemas = [
   articleSchema({ title: 'CIE 2026: come richiedere la carta d\u2019identit\u00e0 elettronica', description: 'Come richiedere la CIE nel 2026: costi, tempi, documenti, app CieID e scadenza carta cartacea.', url: '/cie', image: 'ogcie.png', datePublished: '2026-03-11', dateModified: '2026-03-28' }),
   faqSchema(faqItems),
 ];
-
-export default function Page() {
   return (
     <>
       <SchemaOrg schemas={schemas} />

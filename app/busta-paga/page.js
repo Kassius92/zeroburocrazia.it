@@ -21,12 +21,12 @@ const faqItems = [
   { q: "Posso chiedere al datore di lavoro di spiegarmi la busta paga?", a: "<strong>S\u00ec, \u00e8 un tuo diritto.</strong> Il datore \u00e8 obbligato a consegnartela e a spiegarti le voci se lo chiedi. Se non ottieni chiarimenti, rivolgiti a un consulente del lavoro o al sindacato." },
 ];
 
-const schemas = [
+
+export default function Page() {
+  const schemas = [
   articleSchema({ title: 'Busta paga 2026: come leggerla, dal lordo al netto', description: 'Come leggere la busta paga nel 2026: voci, trattenute IRPEF, contributi INPS, detrazioni, TFR.', url: '/busta-paga', image: 'ogbustapaga.png', datePublished: '2026-03-11', dateModified: '2026-03-28' }),
   faqSchema(faqItems),
 ];
-
-export default function Page() {
   return (
     <>
       <SchemaOrg schemas={schemas} />

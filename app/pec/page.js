@@ -21,12 +21,12 @@ const faqItems = [
   { q: "Cosa succede se non leggo una PEC ricevuta?", a: "La PEC si considera <strong>consegnata nel momento in cui arriva</strong> nella tua casella, anche se non la leggi. Come una raccomandata depositata in cassetta. Per questo \u00e8 importante controllarla regolarmente." },
 ];
 
-const schemas = [
+
+export default function Page() {
+  const schemas = [
   articleSchema({ title: 'PEC 2026: cos\u2019\u00e8, come attivarla, costi e domicilio digitale', description: 'PEC 2026: come attivarla, costi, quando \u00e8 obbligatoria e domicilio digitale INAD.', url: '/pec', image: 'ogpec.png', datePublished: '2026-03-15', dateModified: '2026-03-28' }),
   faqSchema(faqItems),
 ];
-
-export default function Page() {
   return (
     <>
       <SchemaOrg schemas={schemas} />

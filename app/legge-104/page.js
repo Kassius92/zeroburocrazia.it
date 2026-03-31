@@ -21,12 +21,12 @@ const faqItems = [
   { q: "La 104 d\u00e0 diritto a soldi dall\u2019INPS?", a: "La 104 di per s\u00e9 <strong>non \u00e8 una prestazione economica</strong>. D\u00e0 diritto a permessi dal lavoro e agevolazioni fiscali, ma non a un assegno mensile. Per avere un assegno (pensione di invalidit\u00e0, indennit\u00e0 di accompagnamento) serve il riconoscimento dell\u2019<strong>invalidit\u00e0 civile</strong>, che \u00e8 una procedura parallela spesso fatta insieme alla 104." },
 ];
 
-const schemas = [
+
+export default function Page() {
+  const schemas = [
   articleSchema({ title: "Legge 104 nel 2026: Permessi, Agevolazioni e Procedura", description: "Come richiedere la Legge 104, chi ne ha diritto, permessi, congedo e agevolazioni.", url: '/legge-104', image: 'oglegge104.png', datePublished: '2026-03-20', dateModified: '2026-03-27' }),
   faqSchema(faqItems),
 ];
-
-export default function Page() {
   return (
     <>
       <SchemaOrg schemas={schemas} />

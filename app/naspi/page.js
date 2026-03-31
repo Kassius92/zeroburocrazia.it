@@ -22,12 +22,12 @@ const faqItems = [
   { q: "Cos\u2019\u00e8 la NASpI anticipata?", a: "Se vuoi aprire un\u2019attivit\u00e0 autonoma, una ditta individuale, o entrare come socio in una cooperativa, puoi chiedere all\u2019INPS di ricevere tutta la NASpI che ti resterebbe da percepire in un\u2019unica soluzione anticipata, come capitale iniziale per avviare la tua attivit\u00e0. Dal 2026 la NASpI anticipata viene pagata in due tranche: 70% subito dopo l\u2019accoglimento della domanda, 30% al termine della durata teorica. Attenzione: se chiudi l\u2019attivit\u00e0 entro 6 mesi o ti fai riassumere come dipendente, l\u2019INPS pu\u00f2 chiederti di restituire i soldi." },
 ];
 
-const schemas = [
+
+export default function Page() {
+  const schemas = [
   articleSchema({ title: 'NASpI 2026: requisiti, importo, durata e come fare domanda', description: 'NASpI 2026: chi ne ha diritto, come si calcola, quanto dura, come fare domanda INPS.', url: '/naspi', image: 'ognaspi.png', datePublished: '2026-03-07', dateModified: '2026-03-27' }),
   faqSchema(faqItems),
 ];
-
-export default function Page() {
   return (
     <>
       <SchemaOrg schemas={schemas} />
