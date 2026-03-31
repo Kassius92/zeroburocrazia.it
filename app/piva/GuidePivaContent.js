@@ -34,7 +34,7 @@ export default function GuidePivaContent({ faqItems }) {
             <div className="guide-hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>15 min di lettura</span></div>
           </div>
           <div className="guide-hero-img">
-            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="40" width="120" height="120" rx="12" fill="#E8724A" opacity=".06"/><text x="100" y="90" textAnchor="middle" fill="#E8724A" fontSize="28" fontWeight="700" opacity=".3">P.IVA</text><text x="100" y="120" textAnchor="middle" fill="#2D8A6E" fontSize="16" fontWeight="600">5-15%</text><text x="100" y="140" textAnchor="middle" fill="#8A857C" fontSize="10">forfettario</text></svg>
+            <img src="/hero-piva.png" alt="Guida Partita IVA 2026" width="400" height="400" />
           </div>
           </div>
         </div>

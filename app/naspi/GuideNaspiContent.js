@@ -53,7 +53,7 @@ export default function GuideNaspiContent({ faqItems }) {
           </div>
 
           <div className="guide-hero-img">
-            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="30" width="120" height="140" rx="8" fill="#E8724A" opacity=".12"/><rect x="50" y="50" width="100" height="8" rx="4" fill="#2D8A6E" opacity=".5"/><rect x="50" y="66" width="80" height="8" rx="4" fill="#2D8A6E" opacity=".3"/><rect x="50" y="82" width="90" height="8" rx="4" fill="#2D8A6E" opacity=".3"/><circle cx="100" cy="125" r="22" fill="#2D8A6E" opacity=".15"/><path d="M92 125l6 6 12-12" stroke="#2D8A6E" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/><text x="100" y="45" textAnchor="middle" fill="#E8724A" fontSize="14" fontWeight="700">NASpI</text></svg>
+            <img src="/hero-naspi.png" alt="Guida NASpI 2026" width="400" height="400" />
           </div>
           </div>
         </div>

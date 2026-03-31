@@ -45,7 +45,7 @@ export default function GuideAssegnoUnicoContent({ faqItems }) {
             </div>
           </div>
           <div className="guide-hero-img">
-            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" r="20" fill="#8B5CF6" opacity=".12"/><circle cx="120" cy="80" r="20" fill="#8B5CF6" opacity=".12"/><circle cx="100" cy="120" r="14" fill="#E8724A" opacity=".15"/><rect x="50" y="145" width="100" height="25" rx="6" fill="#2D8A6E" opacity=".1"/></svg>
+            <img src="/hero-assegno-unico.png" alt="Guida Assegno Unico 2026" width="400" height="400" />
           </div>
           </div>
         </div>
