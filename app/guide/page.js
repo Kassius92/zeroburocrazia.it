@@ -117,10 +117,10 @@ export default function GuidePage() {
           <h2 className="gl-browse-title">Cerca per argomento</h2>
           <div className="gl-browse-tags">
             <span className="gl-browse-tag">Fisco <span className="gl-browse-count">10</span></span>
-            <span className="gl-browse-tag">Documenti <span className="gl-browse-count">5</span></span>
-            <span className="gl-browse-tag">Lavoro <span className="gl-browse-count">4</span></span>
+            <span className="gl-browse-tag">Documenti <span className="gl-browse-count">6</span></span>
+            <span className="gl-browse-tag">Lavoro <span className="gl-browse-count">5</span></span>
             <span className="gl-browse-tag">Casa <span className="gl-browse-count">5</span></span>
-            <span className="gl-browse-tag">Famiglia <span className="gl-browse-count">6</span></span>
+            <span className="gl-browse-tag">Famiglia <span className="gl-browse-count">7</span></span>
             <span className="gl-browse-tag">Salute <span className="gl-browse-count">3</span></span>
             <span className="gl-browse-tag">730</span>
             <span className="gl-browse-tag">ISEE</span>
@@ -128,6 +128,7 @@ export default function GuidePage() {
             <span className="gl-browse-tag">NASpI</span>
             <span className="gl-browse-tag">Mutuo</span>
             <span className="gl-browse-tag">Bonus</span>
+            <span className="gl-browse-tag">Passaporto</span>
             <span className="gl-browse-tag">Detrazioni</span>
             <span className="gl-browse-tag">Contributi INPS</span>
           </div>
@@ -154,7 +155,7 @@ export default function GuidePage() {
 
         {/* ═══ DOCUMENTI — 3 image cards ═══ */}
         <section className="gl-cat">
-          <div className="gl-cat-header"><span className="gl-cat-name gl-c-blue">Documenti <span className="gl-cat-count gl-t-blue">5</span></span></div>
+          <div className="gl-cat-header"><span className="gl-cat-name gl-c-blue">Documenti <span className="gl-cat-count gl-t-blue">6</span></span></div>
           <div className="gl-img-grid">
             <Link href="/pec" className="gl-icard rv rv-d1">
               <div className="gl-icard-img gl-bg-blue"><span>PEC<br /><em>2026</em></span></div>
@@ -164,16 +165,19 @@ export default function GuidePage() {
               <div className="gl-icard-img gl-bg-blue"><span>Codice<br /><em>Fiscale</em></span></div>
               <div className="gl-icard-body"><h3>Codice Fiscale: Richiesta e Duplicato</h3><p>Come richiederlo, duplicato online, tessera sanitaria.</p><div className="gl-meta">5 min</div></div>
             </Link>
-            <Link href="/cambio-residenza" className="gl-icard rv rv-d3">
-              <div className="gl-icard-img gl-bg-blue"><span>Cambio<br /><em>Residenza</em></span></div>
-              <div className="gl-icard-body"><h3>Cambio Residenza: Procedura Completa</h3><p>Online su ANPR, tempi, documenti e verifiche.</p><div className="gl-meta">6 min</div></div>
+            <Link href="/passaporto" className="gl-icard rv rv-d3">
+              <div className="gl-icard-img gl-bg-blue"><span>Faccio il<br /><em>Passaporto</em></span></div>
+              <div className="gl-icard-body"><h3>Passaporto 2026: Costi, Documenti e Tempi</h3><p>Prenotazione online, costo 116&euro;, documenti e tempi di rilascio.</p><div className="gl-meta">12 min</div></div>
             </Link>
+          </div>
+          <div className="gl-text-row" style={{marginTop:'20px'}}>
+            <Link href="/cambio-residenza" className="gl-tcard rv rv-d1"><h3>Cambio Residenza: Procedura Online</h3><span className="gl-meta">8 min</span></Link>
           </div>
         </section>
 
         {/* ═══ LAVORO — hz + text ═══ */}
         <section className="gl-cat">
-          <div className="gl-cat-header"><span className="gl-cat-name gl-c-gold">Lavoro <span className="gl-cat-count gl-t-gold">4</span></span></div>
+          <div className="gl-cat-header"><span className="gl-cat-name gl-c-gold">Lavoro <span className="gl-cat-count gl-t-gold">5</span></span></div>
           <Link href="/busta-paga" className="gl-hz rv">
             <div className="gl-hz-img gl-bg-gold"><span>Busta<br /><em>Paga</em></span></div>
             <div className="gl-hz-body">
@@ -184,6 +188,8 @@ export default function GuidePage() {
           </Link>
           <div className="gl-text-row">
             <Link href="/tfr" className="gl-tcard rv rv-d1"><h3>TFR: Cos&apos;&egrave; e Come Si Calcola</h3><span className="gl-meta">8 min</span></Link>
+            <Link href="/naspi" className="gl-tcard rv rv-d2"><h3>NASpI: Disoccupazione 2026</h3><span className="gl-meta">10 min</span></Link>
+            <Link href="/dimissioni" className="gl-tcard rv rv-d3"><h3>Come Dare le Dimissioni</h3><span className="gl-meta">10 min</span></Link>
           </div>
         </section>
 
@@ -211,7 +217,7 @@ export default function GuidePage() {
 
         {/* ═══ FAMIGLIA — hz + small grid ═══ */}
         <section className="gl-cat">
-          <div className="gl-cat-header"><span className="gl-cat-name gl-c-violet">Famiglia <span className="gl-cat-count gl-t-violet">6</span></span></div>
+          <div className="gl-cat-header"><span className="gl-cat-name gl-c-violet">Famiglia <span className="gl-cat-count gl-t-violet">7</span></span></div>
           <Link href="/figlio" className="gl-hz rv">
             <div className="gl-hz-img gl-bg-violet"><span>Aspetto un<br /><em>Figlio</em></span></div>
             <div className="gl-hz-body">
@@ -222,8 +228,9 @@ export default function GuidePage() {
           </Link>
           <div className="gl-sm-grid">
             <Link href="/congedo-parentale" className="gl-sm rv rv-d1"><h4>Congedo Parentale</h4><p>Durata, retribuzione e come richiederlo.</p><div className="gl-meta">8 min</div></Link>
-            <Link href="/mi-sposo" className="gl-sm rv rv-d2"><h4>Mi Sposo: Documenti e Procedura</h4><p>Tutto quello che serve per sposarsi in Italia.</p><div className="gl-meta">8 min</div></Link>
-            <Link href="/successione" className="gl-sm rv rv-d3"><h4>Successione</h4><p>Eredit&agrave;, dichiarazione e scadenze.</p><div className="gl-meta">10 min</div></Link>
+            <Link href="/bonus-nido" className="gl-sm rv rv-d2"><h4>Bonus Asilo Nido 2026</h4><p>Rimborso fino a 3.600&euro;/anno. Importi per ISEE e domanda INPS.</p><div className="gl-meta">8 min</div></Link>
+            <Link href="/mi-sposo" className="gl-sm rv rv-d3"><h4>Mi Sposo: Documenti e Procedura</h4><p>Tutto quello che serve per sposarsi in Italia.</p><div className="gl-meta">8 min</div></Link>
+            <Link href="/successione" className="gl-sm rv rv-d4"><h4>Successione</h4><p>Eredit&agrave;, dichiarazione, imposte e scadenze.</p><div className="gl-meta">10 min</div></Link>
           </div>
         </section>
 
