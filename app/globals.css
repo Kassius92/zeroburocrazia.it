@@ -850,21 +850,16 @@ img { max-width: 100%; display: block }
 
 
 /* ═══════════════════════════════════
-   FISCOZEN BANNER (v2 — light bg)
+   FISCOZEN BANNER
    ═══════════════════════════════════ */
 .fz2 {
   margin:40px 0; border-radius:16px; padding:32px;
-  background:#fff; border:1px solid rgba(0,0,0,.06);
-  box-shadow:0 2px 16px rgba(0,0,0,.04);
-  border-top:4px solid var(--green);
+  background:var(--green-deep); color:#fff;
 }
-.fz2-badge {
-  display:inline-flex; align-items:center; padding:8px 16px;
-  background:var(--green-deep); border-radius:8px; margin-bottom:20px;
-}
-.fz2-logo { height:22px; width:auto; display:block }
+.fz2-badge { margin-bottom:20px }
+.fz2-logo { height:24px; width:auto; display:block }
 .fz2-title {
-  font-size:20px; font-weight:700; color:var(--ink);
+  font-size:20px; font-weight:700; color:#fff;
   line-height:1.35; margin-bottom:16px;
 }
 .fz2-perks {
@@ -872,17 +867,17 @@ img { max-width: 100%; display: block }
 }
 .fz2-perk {
   display:flex; align-items:center; gap:8px;
-  font-size:14px; color:var(--ink); line-height:1.5;
+  font-size:14px; color:#fff; line-height:1.5;
 }
-.fz2-perk svg { flex-shrink:0; color:var(--green) }
+.fz2-perk svg { flex-shrink:0; color:#5CBDA9 }
 .fz2-perk strong { font-weight:700 }
 .fz2-btn {
   display:inline-flex; align-items:center; gap:8px;
-  padding:14px 28px; background:var(--green); color:#fff;
+  padding:14px 28px; background:#fff; color:var(--green-deep);
   border-radius:var(--radius-full); font-size:14px; font-weight:700;
   transition:all .3s var(--bounce); text-decoration:none;
 }
-.fz2-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(45,138,110,.3) }
+.fz2-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.25) }
 .fz2-btn svg { flex-shrink:0 }
 
 .fz2-sticky {
