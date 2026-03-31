@@ -870,7 +870,8 @@ img { max-width: 100%; display: block }
   font-size:14px; color:#fff; line-height:1.5;
 }
 .fz2-perk svg { flex-shrink:0; color:#5CBDA9 }
-.fz2-perk strong { font-weight:700 }
+.fz2-perk strong { font-weight:700; color:#fff }
+.fz2 strong { color:#fff }
 .fz2-btn {
   display:inline-flex; align-items:center; gap:8px;
   padding:14px 28px; background:#fff; color:var(--green-deep);
